@@ -1,0 +1,1741 @@
+Archive member included because of file (symbol)
+
+./libee.a(ee_entry.o)         obj/pkg/mcu/freescale_mpc5674f/src/ee_boot.o (cpu_setup)
+./libee.a(ee_e200zx_cpu.o)    obj/code.o (EE_e200z7_setup_decrementer)
+./libee.a(ee_ivor.o)          ./libee.a(ee_entry.o) (ivor_setup)
+./libee.a(ee_irq.o)           obj/code.o (EE_e200z7_register_ISR)
+./libee.a(ee_terminat.o)      obj/code.o (EE_oo_TerminateTask)
+./libee.a(ee_irqendin.o)      ./libee.a(ee_irq.o) (EE_IRQ_end_instance)
+./libee.a(ee_tstub.o)         obj/eecfg.o (EE_oo_thread_stub)
+./libee.a(ee_lookup.o)        obj/code.o (EE_oo_IRQ_disable_count)
+./libee.a(ee_rq_exchg.o)      ./libee.a(ee_irqendin.o) (EE_rq2stk_exchange)
+./libee.a(ee_startos.o)       obj/code.o (EE_oo_StartOS)
+./libee.a(ee_altick.o)        ./libee.a(ee_startos.o) (EE_oo_counter_object_insert)
+./libee.a(ee_irq_stack.o)     ./libee.a(ee_irq.o) (EE_e200zx_call_ISR)
+./libee.a(ee_oo.o)            ./libee.a(ee_tstub.o) (EE_hal_terminate_savestk)
+./libee.a(ee_context.o)       ./libee.a(ee_irq.o) (EE_std_change_context)
+./libee.a(ee_hal_structs.o)   ./libee.a(ee_irq.o) (EE_std_endcycle_next_tid)
+./libee.a(ee_context.o)       ./libee.a(ee_context.o) (EE_std_run_task_code)
+./libee.a(ee_thendin.o)       ./libee.a(ee_context.o) (EE_thread_end_instance)
+./libee.a(ee_tnterm.o)        ./libee.a(ee_oo.o) (EE_thread_not_terminated)
+./libee.a(ee_rq_inser.o)      ./libee.a(ee_altick.o) (EE_rq_insert)
+
+Discarded input sections
+
+ .group         0x00000000        0x8 obj/eecfg.o
+ .group         0x00000000        0x8 obj/eecfg.o
+ .group         0x00000000        0x8 obj/eecfg.o
+ .group         0x00000000        0x8 obj/eecfg.o
+ .group         0x00000000        0x8 obj/eecfg.o
+ .group         0x00000000        0x8 obj/eecfg.o
+ .group         0x00000000        0x8 obj/eecfg.o
+ .group         0x00000000        0x8 obj/eecfg.o
+ .group         0x00000000        0x8 obj/eecfg.o
+ .group         0x00000000        0x8 obj/eecfg.o
+ .group         0x00000000        0x8 obj/eecfg.o
+ .group         0x00000000        0x8 obj/eecfg.o
+ .group         0x00000000        0x8 obj/eecfg.o
+ .group         0x00000000        0x8 obj/eecfg.o
+ .group         0x00000000        0x8 obj/eecfg.o
+ .group         0x00000000        0x8 obj/eecfg.o
+ .group         0x00000000        0x8 obj/eecfg.o
+ .group         0x00000000        0x8 obj/eecfg.o
+ .group         0x00000000        0x8 obj/eecfg.o
+ .group         0x00000000        0x8 obj/eecfg.o
+ .group         0x00000000        0x8 obj/eecfg.o
+ .group         0x00000000        0x8 obj/eecfg.o
+ .group         0x00000000        0x8 obj/eecfg.o
+ .group         0x00000000        0x8 obj/eecfg.o
+ .group         0x00000000        0x8 obj/eecfg.o
+ .text          0x00000000        0x0 obj/eecfg.o
+ .data          0x00000000        0x0 obj/eecfg.o
+ .bss           0x00000000        0x0 obj/eecfg.o
+ .rodata.EE_hal_thread_body
+                0x00000000        0x8 obj/eecfg.o
+ .group         0x00000000        0x8 obj/code.o
+ .group         0x00000000        0x8 obj/code.o
+ .group         0x00000000        0x8 obj/code.o
+ .group         0x00000000        0x8 obj/code.o
+ .group         0x00000000        0x8 obj/code.o
+ .group         0x00000000        0x8 obj/code.o
+ .group         0x00000000        0x8 obj/code.o
+ .group         0x00000000        0x8 obj/code.o
+ .group         0x00000000        0x8 obj/code.o
+ .group         0x00000000        0x8 obj/code.o
+ .group         0x00000000        0x8 obj/code.o
+ .group         0x00000000        0x8 obj/code.o
+ .group         0x00000000        0x8 obj/code.o
+ .group         0x00000000        0x8 obj/code.o
+ .group         0x00000000        0x8 obj/code.o
+ .group         0x00000000        0x8 obj/code.o
+ .group         0x00000000        0x8 obj/code.o
+ .group         0x00000000        0x8 obj/code.o
+ .group         0x00000000        0x8 obj/code.o
+ .group         0x00000000        0x8 obj/code.o
+ .group         0x00000000        0x8 obj/code.o
+ .group         0x00000000        0x8 obj/code.o
+ .group         0x00000000        0x8 obj/code.o
+ .group         0x00000000        0x8 obj/code.o
+ .group         0x00000000        0x8 obj/code.o
+ .group         0x00000000        0x8 obj/code.o
+ .text          0x00000000        0x0 obj/code.o
+ .data          0x00000000        0x0 obj/code.o
+ .bss           0x00000000        0x0 obj/code.o
+ .text.mydelay  0x00000000       0x38 obj/code.o
+ .text.led_blink
+                0x00000000      0x13c obj/code.o
+ .bss.task1_ctr
+                0x00000000        0x4 obj/code.o
+ .bss.task1_state
+                0x00000000        0x4 obj/code.o
+ .data.tunable_delay
+                0x00000000        0x4 obj/code.o
+ .bss.dummy_shared_variable
+                0x00000000        0x1 obj/code.o
+ .bss.timer_fired
+                0x00000000        0x4 obj/code.o
+ .debug_macro   0x00000000      0x5f8 obj/code.o
+ .debug_macro   0x00000000       0xb2 obj/code.o
+ .debug_macro   0x00000000       0x22 obj/code.o
+ .debug_macro   0x00000000       0x64 obj/code.o
+ .debug_macro   0x00000000      0x10c obj/code.o
+ .debug_macro   0x00000000       0x1d obj/code.o
+ .debug_macro   0x00000000       0x10 obj/code.o
+ .debug_macro   0x00000000       0x22 obj/code.o
+ .debug_macro   0x00000000       0x61 obj/code.o
+ .debug_macro   0x00000000       0x4c obj/code.o
+ .debug_macro   0x00000000       0x10 obj/code.o
+ .debug_macro   0x00000000       0x73 obj/code.o
+ .debug_macro   0x00000000      0x18c obj/code.o
+ .debug_macro   0x00000000       0x28 obj/code.o
+ .debug_macro   0x00000000       0xf3 obj/code.o
+ .debug_macro   0x00000000      0x342 obj/code.o
+ .debug_macro   0x00000000       0x35 obj/code.o
+ .debug_macro   0x00000000       0xab obj/code.o
+ .debug_macro   0x00000000      0x144 obj/code.o
+ .debug_macro   0x00000000       0x88 obj/code.o
+ .debug_macro   0x00000000       0xd1 obj/code.o
+ .debug_macro   0x00000000       0x6a obj/code.o
+ .debug_macro   0x00000000       0x18 obj/code.o
+ .debug_macro   0x00000000       0x16 obj/code.o
+ .debug_macro   0x00000000       0x1d obj/code.o
+ .text          0x00000000        0x0 obj/pkg/mcu/freescale_mpc5674f/src/ee_boot.o
+ .data          0x00000000        0x0 obj/pkg/mcu/freescale_mpc5674f/src/ee_boot.o
+ .bss           0x00000000        0x0 obj/pkg/mcu/freescale_mpc5674f/src/ee_boot.o
+ .data          0x00000000        0x0 ./libee.a(ee_entry.o)
+ .bss           0x00000000        0x0 ./libee.a(ee_entry.o)
+ .group         0x00000000        0x8 ./libee.a(ee_e200zx_cpu.o)
+ .group         0x00000000        0x8 ./libee.a(ee_e200zx_cpu.o)
+ .group         0x00000000        0x8 ./libee.a(ee_e200zx_cpu.o)
+ .group         0x00000000        0x8 ./libee.a(ee_e200zx_cpu.o)
+ .group         0x00000000        0x8 ./libee.a(ee_e200zx_cpu.o)
+ .group         0x00000000        0x8 ./libee.a(ee_e200zx_cpu.o)
+ .group         0x00000000        0x8 ./libee.a(ee_e200zx_cpu.o)
+ .group         0x00000000        0x8 ./libee.a(ee_e200zx_cpu.o)
+ .group         0x00000000        0x8 ./libee.a(ee_e200zx_cpu.o)
+ .group         0x00000000        0x8 ./libee.a(ee_e200zx_cpu.o)
+ .group         0x00000000        0x8 ./libee.a(ee_e200zx_cpu.o)
+ .group         0x00000000        0x8 ./libee.a(ee_e200zx_cpu.o)
+ .group         0x00000000        0x8 ./libee.a(ee_e200zx_cpu.o)
+ .group         0x00000000        0x8 ./libee.a(ee_e200zx_cpu.o)
+ .group         0x00000000        0x8 ./libee.a(ee_e200zx_cpu.o)
+ .group         0x00000000        0x8 ./libee.a(ee_e200zx_cpu.o)
+ .group         0x00000000        0x8 ./libee.a(ee_e200zx_cpu.o)
+ .group         0x00000000        0x8 ./libee.a(ee_e200zx_cpu.o)
+ .group         0x00000000        0x8 ./libee.a(ee_e200zx_cpu.o)
+ .group         0x00000000        0x8 ./libee.a(ee_e200zx_cpu.o)
+ .group         0x00000000        0x8 ./libee.a(ee_e200zx_cpu.o)
+ .group         0x00000000        0x8 ./libee.a(ee_e200zx_cpu.o)
+ .group         0x00000000        0x8 ./libee.a(ee_e200zx_cpu.o)
+ .group         0x00000000        0x8 ./libee.a(ee_e200zx_cpu.o)
+ .group         0x00000000        0x8 ./libee.a(ee_e200zx_cpu.o)
+ .text          0x00000000        0x0 ./libee.a(ee_e200zx_cpu.o)
+ .data          0x00000000        0x0 ./libee.a(ee_e200zx_cpu.o)
+ .bss           0x00000000        0x0 ./libee.a(ee_e200zx_cpu.o)
+ .text.EE_e200zx_setup_fixed_intv
+                0x00000000       0x2c ./libee.a(ee_e200zx_cpu.o)
+ .text.EE_e200zx_stop_fixed_intv
+                0x00000000       0x10 ./libee.a(ee_e200zx_cpu.o)
+ .text.EE_e200z7_setup_decrementer_oneshot
+                0x00000000       0x18 ./libee.a(ee_e200zx_cpu.o)
+ .text.EE_e200z7_stop_decrementer
+                0x00000000       0x30 ./libee.a(ee_e200zx_cpu.o)
+ .text.EE_e200zx_delay
+                0x00000000       0x18 ./libee.a(ee_e200zx_cpu.o)
+ .debug_macro   0x00000000      0x5f8 ./libee.a(ee_e200zx_cpu.o)
+ .debug_macro   0x00000000       0xb2 ./libee.a(ee_e200zx_cpu.o)
+ .debug_macro   0x00000000       0x22 ./libee.a(ee_e200zx_cpu.o)
+ .debug_macro   0x00000000       0x64 ./libee.a(ee_e200zx_cpu.o)
+ .debug_macro   0x00000000      0x10c ./libee.a(ee_e200zx_cpu.o)
+ .debug_macro   0x00000000       0x1d ./libee.a(ee_e200zx_cpu.o)
+ .debug_macro   0x00000000       0x10 ./libee.a(ee_e200zx_cpu.o)
+ .debug_macro   0x00000000       0x22 ./libee.a(ee_e200zx_cpu.o)
+ .debug_macro   0x00000000       0x61 ./libee.a(ee_e200zx_cpu.o)
+ .debug_macro   0x00000000       0x4c ./libee.a(ee_e200zx_cpu.o)
+ .debug_macro   0x00000000       0x10 ./libee.a(ee_e200zx_cpu.o)
+ .debug_macro   0x00000000       0x73 ./libee.a(ee_e200zx_cpu.o)
+ .debug_macro   0x00000000      0x18c ./libee.a(ee_e200zx_cpu.o)
+ .debug_macro   0x00000000       0x28 ./libee.a(ee_e200zx_cpu.o)
+ .debug_macro   0x00000000       0xf3 ./libee.a(ee_e200zx_cpu.o)
+ .debug_macro   0x00000000       0x18 ./libee.a(ee_e200zx_cpu.o)
+ .debug_macro   0x00000000      0x342 ./libee.a(ee_e200zx_cpu.o)
+ .debug_macro   0x00000000       0x35 ./libee.a(ee_e200zx_cpu.o)
+ .debug_macro   0x00000000       0xab ./libee.a(ee_e200zx_cpu.o)
+ .debug_macro   0x00000000      0x144 ./libee.a(ee_e200zx_cpu.o)
+ .debug_macro   0x00000000       0x88 ./libee.a(ee_e200zx_cpu.o)
+ .data          0x00000000        0x0 ./libee.a(ee_ivor.o)
+ .bss           0x00000000        0x0 ./libee.a(ee_ivor.o)
+ .group         0x00000000        0x8 ./libee.a(ee_irq.o)
+ .group         0x00000000        0x8 ./libee.a(ee_irq.o)
+ .group         0x00000000        0x8 ./libee.a(ee_irq.o)
+ .group         0x00000000        0x8 ./libee.a(ee_irq.o)
+ .group         0x00000000        0x8 ./libee.a(ee_irq.o)
+ .group         0x00000000        0x8 ./libee.a(ee_irq.o)
+ .group         0x00000000        0x8 ./libee.a(ee_irq.o)
+ .group         0x00000000        0x8 ./libee.a(ee_irq.o)
+ .group         0x00000000        0x8 ./libee.a(ee_irq.o)
+ .group         0x00000000        0x8 ./libee.a(ee_irq.o)
+ .group         0x00000000        0x8 ./libee.a(ee_irq.o)
+ .group         0x00000000        0x8 ./libee.a(ee_irq.o)
+ .group         0x00000000        0x8 ./libee.a(ee_irq.o)
+ .group         0x00000000        0x8 ./libee.a(ee_irq.o)
+ .group         0x00000000        0x8 ./libee.a(ee_irq.o)
+ .group         0x00000000        0x8 ./libee.a(ee_irq.o)
+ .group         0x00000000        0x8 ./libee.a(ee_irq.o)
+ .group         0x00000000        0x8 ./libee.a(ee_irq.o)
+ .group         0x00000000        0x8 ./libee.a(ee_irq.o)
+ .group         0x00000000        0x8 ./libee.a(ee_irq.o)
+ .group         0x00000000        0x8 ./libee.a(ee_irq.o)
+ .group         0x00000000        0x8 ./libee.a(ee_irq.o)
+ .group         0x00000000        0x8 ./libee.a(ee_irq.o)
+ .group         0x00000000        0x8 ./libee.a(ee_irq.o)
+ .group         0x00000000        0x8 ./libee.a(ee_irq.o)
+ .group         0x00000000        0x8 ./libee.a(ee_irq.o)
+ .group         0x00000000        0x8 ./libee.a(ee_irq.o)
+ .group         0x00000000        0x8 ./libee.a(ee_irq.o)
+ .text          0x00000000        0x0 ./libee.a(ee_irq.o)
+ .data          0x00000000        0x0 ./libee.a(ee_irq.o)
+ .bss           0x00000000        0x0 ./libee.a(ee_irq.o)
+ .debug_macro   0x00000000      0x5f8 ./libee.a(ee_irq.o)
+ .debug_macro   0x00000000       0xb2 ./libee.a(ee_irq.o)
+ .debug_macro   0x00000000       0x22 ./libee.a(ee_irq.o)
+ .debug_macro   0x00000000       0x64 ./libee.a(ee_irq.o)
+ .debug_macro   0x00000000      0x10c ./libee.a(ee_irq.o)
+ .debug_macro   0x00000000       0x1d ./libee.a(ee_irq.o)
+ .debug_macro   0x00000000       0x10 ./libee.a(ee_irq.o)
+ .debug_macro   0x00000000       0x22 ./libee.a(ee_irq.o)
+ .debug_macro   0x00000000       0x61 ./libee.a(ee_irq.o)
+ .debug_macro   0x00000000       0x4c ./libee.a(ee_irq.o)
+ .debug_macro   0x00000000       0x10 ./libee.a(ee_irq.o)
+ .debug_macro   0x00000000       0x73 ./libee.a(ee_irq.o)
+ .debug_macro   0x00000000      0x18c ./libee.a(ee_irq.o)
+ .debug_macro   0x00000000       0x28 ./libee.a(ee_irq.o)
+ .debug_macro   0x00000000       0xf3 ./libee.a(ee_irq.o)
+ .debug_macro   0x00000000       0x10 ./libee.a(ee_irq.o)
+ .debug_macro   0x00000000       0x18 ./libee.a(ee_irq.o)
+ .debug_macro   0x00000000       0x12 ./libee.a(ee_irq.o)
+ .debug_macro   0x00000000      0x342 ./libee.a(ee_irq.o)
+ .debug_macro   0x00000000       0x35 ./libee.a(ee_irq.o)
+ .debug_macro   0x00000000       0xab ./libee.a(ee_irq.o)
+ .debug_macro   0x00000000      0x144 ./libee.a(ee_irq.o)
+ .debug_macro   0x00000000       0x88 ./libee.a(ee_irq.o)
+ .debug_macro   0x00000000       0x26 ./libee.a(ee_irq.o)
+ .debug_macro   0x00000000       0xa4 ./libee.a(ee_irq.o)
+ .debug_macro   0x00000000       0x6a ./libee.a(ee_irq.o)
+ .debug_macro   0x00000000       0x1d ./libee.a(ee_irq.o)
+ .group         0x00000000        0x8 ./libee.a(ee_terminat.o)
+ .group         0x00000000        0x8 ./libee.a(ee_terminat.o)
+ .group         0x00000000        0x8 ./libee.a(ee_terminat.o)
+ .group         0x00000000        0x8 ./libee.a(ee_terminat.o)
+ .group         0x00000000        0x8 ./libee.a(ee_terminat.o)
+ .group         0x00000000        0x8 ./libee.a(ee_terminat.o)
+ .group         0x00000000        0x8 ./libee.a(ee_terminat.o)
+ .group         0x00000000        0x8 ./libee.a(ee_terminat.o)
+ .group         0x00000000        0x8 ./libee.a(ee_terminat.o)
+ .group         0x00000000        0x8 ./libee.a(ee_terminat.o)
+ .group         0x00000000        0x8 ./libee.a(ee_terminat.o)
+ .group         0x00000000        0x8 ./libee.a(ee_terminat.o)
+ .group         0x00000000        0x8 ./libee.a(ee_terminat.o)
+ .group         0x00000000        0x8 ./libee.a(ee_terminat.o)
+ .group         0x00000000        0x8 ./libee.a(ee_terminat.o)
+ .group         0x00000000        0x8 ./libee.a(ee_terminat.o)
+ .group         0x00000000        0x8 ./libee.a(ee_terminat.o)
+ .group         0x00000000        0x8 ./libee.a(ee_terminat.o)
+ .group         0x00000000        0x8 ./libee.a(ee_terminat.o)
+ .group         0x00000000        0x8 ./libee.a(ee_terminat.o)
+ .group         0x00000000        0x8 ./libee.a(ee_terminat.o)
+ .group         0x00000000        0x8 ./libee.a(ee_terminat.o)
+ .group         0x00000000        0x8 ./libee.a(ee_terminat.o)
+ .group         0x00000000        0x8 ./libee.a(ee_terminat.o)
+ .group         0x00000000        0x8 ./libee.a(ee_terminat.o)
+ .text          0x00000000        0x0 ./libee.a(ee_terminat.o)
+ .data          0x00000000        0x0 ./libee.a(ee_terminat.o)
+ .bss           0x00000000        0x0 ./libee.a(ee_terminat.o)
+ .debug_macro   0x00000000      0x5f8 ./libee.a(ee_terminat.o)
+ .debug_macro   0x00000000       0xb2 ./libee.a(ee_terminat.o)
+ .debug_macro   0x00000000       0x22 ./libee.a(ee_terminat.o)
+ .debug_macro   0x00000000       0x64 ./libee.a(ee_terminat.o)
+ .debug_macro   0x00000000      0x10c ./libee.a(ee_terminat.o)
+ .debug_macro   0x00000000       0x1d ./libee.a(ee_terminat.o)
+ .debug_macro   0x00000000       0x10 ./libee.a(ee_terminat.o)
+ .debug_macro   0x00000000       0x22 ./libee.a(ee_terminat.o)
+ .debug_macro   0x00000000       0x61 ./libee.a(ee_terminat.o)
+ .debug_macro   0x00000000       0x4c ./libee.a(ee_terminat.o)
+ .debug_macro   0x00000000       0x10 ./libee.a(ee_terminat.o)
+ .debug_macro   0x00000000       0x73 ./libee.a(ee_terminat.o)
+ .debug_macro   0x00000000      0x18c ./libee.a(ee_terminat.o)
+ .debug_macro   0x00000000       0x28 ./libee.a(ee_terminat.o)
+ .debug_macro   0x00000000       0xf3 ./libee.a(ee_terminat.o)
+ .debug_macro   0x00000000       0x10 ./libee.a(ee_terminat.o)
+ .debug_macro   0x00000000       0x18 ./libee.a(ee_terminat.o)
+ .debug_macro   0x00000000       0x12 ./libee.a(ee_terminat.o)
+ .debug_macro   0x00000000      0x342 ./libee.a(ee_terminat.o)
+ .debug_macro   0x00000000       0x35 ./libee.a(ee_terminat.o)
+ .debug_macro   0x00000000       0xab ./libee.a(ee_terminat.o)
+ .debug_macro   0x00000000      0x144 ./libee.a(ee_terminat.o)
+ .debug_macro   0x00000000       0x88 ./libee.a(ee_terminat.o)
+ .debug_macro   0x00000000       0x26 ./libee.a(ee_terminat.o)
+ .debug_macro   0x00000000       0xa4 ./libee.a(ee_terminat.o)
+ .group         0x00000000        0x8 ./libee.a(ee_irqendin.o)
+ .group         0x00000000        0x8 ./libee.a(ee_irqendin.o)
+ .group         0x00000000        0x8 ./libee.a(ee_irqendin.o)
+ .group         0x00000000        0x8 ./libee.a(ee_irqendin.o)
+ .group         0x00000000        0x8 ./libee.a(ee_irqendin.o)
+ .group         0x00000000        0x8 ./libee.a(ee_irqendin.o)
+ .group         0x00000000        0x8 ./libee.a(ee_irqendin.o)
+ .group         0x00000000        0x8 ./libee.a(ee_irqendin.o)
+ .group         0x00000000        0x8 ./libee.a(ee_irqendin.o)
+ .group         0x00000000        0x8 ./libee.a(ee_irqendin.o)
+ .group         0x00000000        0x8 ./libee.a(ee_irqendin.o)
+ .group         0x00000000        0x8 ./libee.a(ee_irqendin.o)
+ .group         0x00000000        0x8 ./libee.a(ee_irqendin.o)
+ .group         0x00000000        0x8 ./libee.a(ee_irqendin.o)
+ .group         0x00000000        0x8 ./libee.a(ee_irqendin.o)
+ .group         0x00000000        0x8 ./libee.a(ee_irqendin.o)
+ .group         0x00000000        0x8 ./libee.a(ee_irqendin.o)
+ .group         0x00000000        0x8 ./libee.a(ee_irqendin.o)
+ .group         0x00000000        0x8 ./libee.a(ee_irqendin.o)
+ .group         0x00000000        0x8 ./libee.a(ee_irqendin.o)
+ .group         0x00000000        0x8 ./libee.a(ee_irqendin.o)
+ .group         0x00000000        0x8 ./libee.a(ee_irqendin.o)
+ .group         0x00000000        0x8 ./libee.a(ee_irqendin.o)
+ .group         0x00000000        0x8 ./libee.a(ee_irqendin.o)
+ .group         0x00000000        0x8 ./libee.a(ee_irqendin.o)
+ .text          0x00000000        0x0 ./libee.a(ee_irqendin.o)
+ .data          0x00000000        0x0 ./libee.a(ee_irqendin.o)
+ .bss           0x00000000        0x0 ./libee.a(ee_irqendin.o)
+ .debug_macro   0x00000000      0x5f8 ./libee.a(ee_irqendin.o)
+ .debug_macro   0x00000000       0xb2 ./libee.a(ee_irqendin.o)
+ .debug_macro   0x00000000       0x22 ./libee.a(ee_irqendin.o)
+ .debug_macro   0x00000000       0x64 ./libee.a(ee_irqendin.o)
+ .debug_macro   0x00000000      0x10c ./libee.a(ee_irqendin.o)
+ .debug_macro   0x00000000       0x1d ./libee.a(ee_irqendin.o)
+ .debug_macro   0x00000000       0x10 ./libee.a(ee_irqendin.o)
+ .debug_macro   0x00000000       0x22 ./libee.a(ee_irqendin.o)
+ .debug_macro   0x00000000       0x61 ./libee.a(ee_irqendin.o)
+ .debug_macro   0x00000000       0x4c ./libee.a(ee_irqendin.o)
+ .debug_macro   0x00000000       0x10 ./libee.a(ee_irqendin.o)
+ .debug_macro   0x00000000       0x73 ./libee.a(ee_irqendin.o)
+ .debug_macro   0x00000000      0x18c ./libee.a(ee_irqendin.o)
+ .debug_macro   0x00000000       0x28 ./libee.a(ee_irqendin.o)
+ .debug_macro   0x00000000       0xf3 ./libee.a(ee_irqendin.o)
+ .debug_macro   0x00000000       0x10 ./libee.a(ee_irqendin.o)
+ .debug_macro   0x00000000       0x18 ./libee.a(ee_irqendin.o)
+ .debug_macro   0x00000000       0x12 ./libee.a(ee_irqendin.o)
+ .debug_macro   0x00000000      0x342 ./libee.a(ee_irqendin.o)
+ .debug_macro   0x00000000       0x35 ./libee.a(ee_irqendin.o)
+ .debug_macro   0x00000000       0xab ./libee.a(ee_irqendin.o)
+ .debug_macro   0x00000000      0x144 ./libee.a(ee_irqendin.o)
+ .debug_macro   0x00000000       0x88 ./libee.a(ee_irqendin.o)
+ .debug_macro   0x00000000       0x26 ./libee.a(ee_irqendin.o)
+ .debug_macro   0x00000000       0xa4 ./libee.a(ee_irqendin.o)
+ .group         0x00000000        0x8 ./libee.a(ee_tstub.o)
+ .group         0x00000000        0x8 ./libee.a(ee_tstub.o)
+ .group         0x00000000        0x8 ./libee.a(ee_tstub.o)
+ .group         0x00000000        0x8 ./libee.a(ee_tstub.o)
+ .group         0x00000000        0x8 ./libee.a(ee_tstub.o)
+ .group         0x00000000        0x8 ./libee.a(ee_tstub.o)
+ .group         0x00000000        0x8 ./libee.a(ee_tstub.o)
+ .group         0x00000000        0x8 ./libee.a(ee_tstub.o)
+ .group         0x00000000        0x8 ./libee.a(ee_tstub.o)
+ .group         0x00000000        0x8 ./libee.a(ee_tstub.o)
+ .group         0x00000000        0x8 ./libee.a(ee_tstub.o)
+ .group         0x00000000        0x8 ./libee.a(ee_tstub.o)
+ .group         0x00000000        0x8 ./libee.a(ee_tstub.o)
+ .group         0x00000000        0x8 ./libee.a(ee_tstub.o)
+ .group         0x00000000        0x8 ./libee.a(ee_tstub.o)
+ .group         0x00000000        0x8 ./libee.a(ee_tstub.o)
+ .group         0x00000000        0x8 ./libee.a(ee_tstub.o)
+ .group         0x00000000        0x8 ./libee.a(ee_tstub.o)
+ .group         0x00000000        0x8 ./libee.a(ee_tstub.o)
+ .group         0x00000000        0x8 ./libee.a(ee_tstub.o)
+ .group         0x00000000        0x8 ./libee.a(ee_tstub.o)
+ .group         0x00000000        0x8 ./libee.a(ee_tstub.o)
+ .group         0x00000000        0x8 ./libee.a(ee_tstub.o)
+ .group         0x00000000        0x8 ./libee.a(ee_tstub.o)
+ .group         0x00000000        0x8 ./libee.a(ee_tstub.o)
+ .text          0x00000000        0x0 ./libee.a(ee_tstub.o)
+ .data          0x00000000        0x0 ./libee.a(ee_tstub.o)
+ .bss           0x00000000        0x0 ./libee.a(ee_tstub.o)
+ .debug_macro   0x00000000      0x5f8 ./libee.a(ee_tstub.o)
+ .debug_macro   0x00000000       0xb2 ./libee.a(ee_tstub.o)
+ .debug_macro   0x00000000       0x22 ./libee.a(ee_tstub.o)
+ .debug_macro   0x00000000       0x64 ./libee.a(ee_tstub.o)
+ .debug_macro   0x00000000      0x10c ./libee.a(ee_tstub.o)
+ .debug_macro   0x00000000       0x1d ./libee.a(ee_tstub.o)
+ .debug_macro   0x00000000       0x10 ./libee.a(ee_tstub.o)
+ .debug_macro   0x00000000       0x22 ./libee.a(ee_tstub.o)
+ .debug_macro   0x00000000       0x61 ./libee.a(ee_tstub.o)
+ .debug_macro   0x00000000       0x4c ./libee.a(ee_tstub.o)
+ .debug_macro   0x00000000       0x10 ./libee.a(ee_tstub.o)
+ .debug_macro   0x00000000       0x73 ./libee.a(ee_tstub.o)
+ .debug_macro   0x00000000      0x18c ./libee.a(ee_tstub.o)
+ .debug_macro   0x00000000       0x28 ./libee.a(ee_tstub.o)
+ .debug_macro   0x00000000       0xf3 ./libee.a(ee_tstub.o)
+ .debug_macro   0x00000000       0x10 ./libee.a(ee_tstub.o)
+ .debug_macro   0x00000000       0x18 ./libee.a(ee_tstub.o)
+ .debug_macro   0x00000000       0x12 ./libee.a(ee_tstub.o)
+ .debug_macro   0x00000000      0x342 ./libee.a(ee_tstub.o)
+ .debug_macro   0x00000000       0x35 ./libee.a(ee_tstub.o)
+ .debug_macro   0x00000000       0xab ./libee.a(ee_tstub.o)
+ .debug_macro   0x00000000      0x144 ./libee.a(ee_tstub.o)
+ .debug_macro   0x00000000       0x88 ./libee.a(ee_tstub.o)
+ .debug_macro   0x00000000       0x26 ./libee.a(ee_tstub.o)
+ .debug_macro   0x00000000       0xa4 ./libee.a(ee_tstub.o)
+ .group         0x00000000        0x8 ./libee.a(ee_lookup.o)
+ .group         0x00000000        0x8 ./libee.a(ee_lookup.o)
+ .group         0x00000000        0x8 ./libee.a(ee_lookup.o)
+ .group         0x00000000        0x8 ./libee.a(ee_lookup.o)
+ .group         0x00000000        0x8 ./libee.a(ee_lookup.o)
+ .group         0x00000000        0x8 ./libee.a(ee_lookup.o)
+ .group         0x00000000        0x8 ./libee.a(ee_lookup.o)
+ .group         0x00000000        0x8 ./libee.a(ee_lookup.o)
+ .group         0x00000000        0x8 ./libee.a(ee_lookup.o)
+ .group         0x00000000        0x8 ./libee.a(ee_lookup.o)
+ .group         0x00000000        0x8 ./libee.a(ee_lookup.o)
+ .group         0x00000000        0x8 ./libee.a(ee_lookup.o)
+ .group         0x00000000        0x8 ./libee.a(ee_lookup.o)
+ .group         0x00000000        0x8 ./libee.a(ee_lookup.o)
+ .group         0x00000000        0x8 ./libee.a(ee_lookup.o)
+ .group         0x00000000        0x8 ./libee.a(ee_lookup.o)
+ .group         0x00000000        0x8 ./libee.a(ee_lookup.o)
+ .group         0x00000000        0x8 ./libee.a(ee_lookup.o)
+ .group         0x00000000        0x8 ./libee.a(ee_lookup.o)
+ .group         0x00000000        0x8 ./libee.a(ee_lookup.o)
+ .group         0x00000000        0x8 ./libee.a(ee_lookup.o)
+ .group         0x00000000        0x8 ./libee.a(ee_lookup.o)
+ .group         0x00000000        0x8 ./libee.a(ee_lookup.o)
+ .group         0x00000000        0x8 ./libee.a(ee_lookup.o)
+ .group         0x00000000        0x8 ./libee.a(ee_lookup.o)
+ .text          0x00000000        0x0 ./libee.a(ee_lookup.o)
+ .data          0x00000000        0x0 ./libee.a(ee_lookup.o)
+ .bss           0x00000000        0x0 ./libee.a(ee_lookup.o)
+ .bss.EE_oo_IRQ_suspend_status
+                0x00000000        0x4 ./libee.a(ee_lookup.o)
+ .debug_macro   0x00000000      0x5f8 ./libee.a(ee_lookup.o)
+ .debug_macro   0x00000000       0xb2 ./libee.a(ee_lookup.o)
+ .debug_macro   0x00000000       0x22 ./libee.a(ee_lookup.o)
+ .debug_macro   0x00000000       0x64 ./libee.a(ee_lookup.o)
+ .debug_macro   0x00000000      0x10c ./libee.a(ee_lookup.o)
+ .debug_macro   0x00000000       0x1d ./libee.a(ee_lookup.o)
+ .debug_macro   0x00000000       0x10 ./libee.a(ee_lookup.o)
+ .debug_macro   0x00000000       0x22 ./libee.a(ee_lookup.o)
+ .debug_macro   0x00000000       0x61 ./libee.a(ee_lookup.o)
+ .debug_macro   0x00000000       0x4c ./libee.a(ee_lookup.o)
+ .debug_macro   0x00000000       0x10 ./libee.a(ee_lookup.o)
+ .debug_macro   0x00000000       0x73 ./libee.a(ee_lookup.o)
+ .debug_macro   0x00000000      0x18c ./libee.a(ee_lookup.o)
+ .debug_macro   0x00000000       0x28 ./libee.a(ee_lookup.o)
+ .debug_macro   0x00000000       0xf3 ./libee.a(ee_lookup.o)
+ .debug_macro   0x00000000       0x10 ./libee.a(ee_lookup.o)
+ .debug_macro   0x00000000       0x18 ./libee.a(ee_lookup.o)
+ .debug_macro   0x00000000       0x12 ./libee.a(ee_lookup.o)
+ .debug_macro   0x00000000      0x342 ./libee.a(ee_lookup.o)
+ .debug_macro   0x00000000       0x35 ./libee.a(ee_lookup.o)
+ .debug_macro   0x00000000       0xab ./libee.a(ee_lookup.o)
+ .debug_macro   0x00000000      0x144 ./libee.a(ee_lookup.o)
+ .debug_macro   0x00000000       0x88 ./libee.a(ee_lookup.o)
+ .debug_macro   0x00000000       0x26 ./libee.a(ee_lookup.o)
+ .debug_macro   0x00000000       0xa4 ./libee.a(ee_lookup.o)
+ .group         0x00000000        0x8 ./libee.a(ee_rq_exchg.o)
+ .group         0x00000000        0x8 ./libee.a(ee_rq_exchg.o)
+ .group         0x00000000        0x8 ./libee.a(ee_rq_exchg.o)
+ .group         0x00000000        0x8 ./libee.a(ee_rq_exchg.o)
+ .group         0x00000000        0x8 ./libee.a(ee_rq_exchg.o)
+ .group         0x00000000        0x8 ./libee.a(ee_rq_exchg.o)
+ .group         0x00000000        0x8 ./libee.a(ee_rq_exchg.o)
+ .group         0x00000000        0x8 ./libee.a(ee_rq_exchg.o)
+ .group         0x00000000        0x8 ./libee.a(ee_rq_exchg.o)
+ .group         0x00000000        0x8 ./libee.a(ee_rq_exchg.o)
+ .group         0x00000000        0x8 ./libee.a(ee_rq_exchg.o)
+ .group         0x00000000        0x8 ./libee.a(ee_rq_exchg.o)
+ .group         0x00000000        0x8 ./libee.a(ee_rq_exchg.o)
+ .group         0x00000000        0x8 ./libee.a(ee_rq_exchg.o)
+ .group         0x00000000        0x8 ./libee.a(ee_rq_exchg.o)
+ .group         0x00000000        0x8 ./libee.a(ee_rq_exchg.o)
+ .group         0x00000000        0x8 ./libee.a(ee_rq_exchg.o)
+ .group         0x00000000        0x8 ./libee.a(ee_rq_exchg.o)
+ .group         0x00000000        0x8 ./libee.a(ee_rq_exchg.o)
+ .group         0x00000000        0x8 ./libee.a(ee_rq_exchg.o)
+ .group         0x00000000        0x8 ./libee.a(ee_rq_exchg.o)
+ .group         0x00000000        0x8 ./libee.a(ee_rq_exchg.o)
+ .group         0x00000000        0x8 ./libee.a(ee_rq_exchg.o)
+ .group         0x00000000        0x8 ./libee.a(ee_rq_exchg.o)
+ .group         0x00000000        0x8 ./libee.a(ee_rq_exchg.o)
+ .text          0x00000000        0x0 ./libee.a(ee_rq_exchg.o)
+ .data          0x00000000        0x0 ./libee.a(ee_rq_exchg.o)
+ .bss           0x00000000        0x0 ./libee.a(ee_rq_exchg.o)
+ .debug_macro   0x00000000      0x5f8 ./libee.a(ee_rq_exchg.o)
+ .debug_macro   0x00000000       0xb2 ./libee.a(ee_rq_exchg.o)
+ .debug_macro   0x00000000       0x22 ./libee.a(ee_rq_exchg.o)
+ .debug_macro   0x00000000       0x64 ./libee.a(ee_rq_exchg.o)
+ .debug_macro   0x00000000      0x10c ./libee.a(ee_rq_exchg.o)
+ .debug_macro   0x00000000       0x1d ./libee.a(ee_rq_exchg.o)
+ .debug_macro   0x00000000       0x10 ./libee.a(ee_rq_exchg.o)
+ .debug_macro   0x00000000       0x22 ./libee.a(ee_rq_exchg.o)
+ .debug_macro   0x00000000       0x61 ./libee.a(ee_rq_exchg.o)
+ .debug_macro   0x00000000       0x4c ./libee.a(ee_rq_exchg.o)
+ .debug_macro   0x00000000       0x10 ./libee.a(ee_rq_exchg.o)
+ .debug_macro   0x00000000       0x73 ./libee.a(ee_rq_exchg.o)
+ .debug_macro   0x00000000      0x18c ./libee.a(ee_rq_exchg.o)
+ .debug_macro   0x00000000       0x28 ./libee.a(ee_rq_exchg.o)
+ .debug_macro   0x00000000       0xf3 ./libee.a(ee_rq_exchg.o)
+ .debug_macro   0x00000000       0x10 ./libee.a(ee_rq_exchg.o)
+ .debug_macro   0x00000000       0x18 ./libee.a(ee_rq_exchg.o)
+ .debug_macro   0x00000000       0x12 ./libee.a(ee_rq_exchg.o)
+ .debug_macro   0x00000000      0x342 ./libee.a(ee_rq_exchg.o)
+ .debug_macro   0x00000000       0x35 ./libee.a(ee_rq_exchg.o)
+ .debug_macro   0x00000000       0xab ./libee.a(ee_rq_exchg.o)
+ .debug_macro   0x00000000      0x144 ./libee.a(ee_rq_exchg.o)
+ .debug_macro   0x00000000       0x88 ./libee.a(ee_rq_exchg.o)
+ .debug_macro   0x00000000       0x26 ./libee.a(ee_rq_exchg.o)
+ .debug_macro   0x00000000       0xa4 ./libee.a(ee_rq_exchg.o)
+ .group         0x00000000        0x8 ./libee.a(ee_startos.o)
+ .group         0x00000000        0x8 ./libee.a(ee_startos.o)
+ .group         0x00000000        0x8 ./libee.a(ee_startos.o)
+ .group         0x00000000        0x8 ./libee.a(ee_startos.o)
+ .group         0x00000000        0x8 ./libee.a(ee_startos.o)
+ .group         0x00000000        0x8 ./libee.a(ee_startos.o)
+ .group         0x00000000        0x8 ./libee.a(ee_startos.o)
+ .group         0x00000000        0x8 ./libee.a(ee_startos.o)
+ .group         0x00000000        0x8 ./libee.a(ee_startos.o)
+ .group         0x00000000        0x8 ./libee.a(ee_startos.o)
+ .group         0x00000000        0x8 ./libee.a(ee_startos.o)
+ .group         0x00000000        0x8 ./libee.a(ee_startos.o)
+ .group         0x00000000        0x8 ./libee.a(ee_startos.o)
+ .group         0x00000000        0x8 ./libee.a(ee_startos.o)
+ .group         0x00000000        0x8 ./libee.a(ee_startos.o)
+ .group         0x00000000        0x8 ./libee.a(ee_startos.o)
+ .group         0x00000000        0x8 ./libee.a(ee_startos.o)
+ .group         0x00000000        0x8 ./libee.a(ee_startos.o)
+ .group         0x00000000        0x8 ./libee.a(ee_startos.o)
+ .group         0x00000000        0x8 ./libee.a(ee_startos.o)
+ .group         0x00000000        0x8 ./libee.a(ee_startos.o)
+ .group         0x00000000        0x8 ./libee.a(ee_startos.o)
+ .group         0x00000000        0x8 ./libee.a(ee_startos.o)
+ .group         0x00000000        0x8 ./libee.a(ee_startos.o)
+ .group         0x00000000        0x8 ./libee.a(ee_startos.o)
+ .text          0x00000000        0x0 ./libee.a(ee_startos.o)
+ .data          0x00000000        0x0 ./libee.a(ee_startos.o)
+ .bss           0x00000000        0x0 ./libee.a(ee_startos.o)
+ .debug_macro   0x00000000      0x5f8 ./libee.a(ee_startos.o)
+ .debug_macro   0x00000000       0xb2 ./libee.a(ee_startos.o)
+ .debug_macro   0x00000000       0x22 ./libee.a(ee_startos.o)
+ .debug_macro   0x00000000       0x64 ./libee.a(ee_startos.o)
+ .debug_macro   0x00000000      0x10c ./libee.a(ee_startos.o)
+ .debug_macro   0x00000000       0x1d ./libee.a(ee_startos.o)
+ .debug_macro   0x00000000       0x10 ./libee.a(ee_startos.o)
+ .debug_macro   0x00000000       0x22 ./libee.a(ee_startos.o)
+ .debug_macro   0x00000000       0x61 ./libee.a(ee_startos.o)
+ .debug_macro   0x00000000       0x4c ./libee.a(ee_startos.o)
+ .debug_macro   0x00000000       0x10 ./libee.a(ee_startos.o)
+ .debug_macro   0x00000000       0x73 ./libee.a(ee_startos.o)
+ .debug_macro   0x00000000      0x18c ./libee.a(ee_startos.o)
+ .debug_macro   0x00000000       0x28 ./libee.a(ee_startos.o)
+ .debug_macro   0x00000000       0xf3 ./libee.a(ee_startos.o)
+ .debug_macro   0x00000000       0x10 ./libee.a(ee_startos.o)
+ .debug_macro   0x00000000       0x18 ./libee.a(ee_startos.o)
+ .debug_macro   0x00000000       0x12 ./libee.a(ee_startos.o)
+ .debug_macro   0x00000000      0x342 ./libee.a(ee_startos.o)
+ .debug_macro   0x00000000       0x35 ./libee.a(ee_startos.o)
+ .debug_macro   0x00000000       0xab ./libee.a(ee_startos.o)
+ .debug_macro   0x00000000      0x144 ./libee.a(ee_startos.o)
+ .debug_macro   0x00000000       0x88 ./libee.a(ee_startos.o)
+ .debug_macro   0x00000000       0x26 ./libee.a(ee_startos.o)
+ .debug_macro   0x00000000       0xa4 ./libee.a(ee_startos.o)
+ .group         0x00000000        0x8 ./libee.a(ee_altick.o)
+ .group         0x00000000        0x8 ./libee.a(ee_altick.o)
+ .group         0x00000000        0x8 ./libee.a(ee_altick.o)
+ .group         0x00000000        0x8 ./libee.a(ee_altick.o)
+ .group         0x00000000        0x8 ./libee.a(ee_altick.o)
+ .group         0x00000000        0x8 ./libee.a(ee_altick.o)
+ .group         0x00000000        0x8 ./libee.a(ee_altick.o)
+ .group         0x00000000        0x8 ./libee.a(ee_altick.o)
+ .group         0x00000000        0x8 ./libee.a(ee_altick.o)
+ .group         0x00000000        0x8 ./libee.a(ee_altick.o)
+ .group         0x00000000        0x8 ./libee.a(ee_altick.o)
+ .group         0x00000000        0x8 ./libee.a(ee_altick.o)
+ .group         0x00000000        0x8 ./libee.a(ee_altick.o)
+ .group         0x00000000        0x8 ./libee.a(ee_altick.o)
+ .group         0x00000000        0x8 ./libee.a(ee_altick.o)
+ .group         0x00000000        0x8 ./libee.a(ee_altick.o)
+ .group         0x00000000        0x8 ./libee.a(ee_altick.o)
+ .group         0x00000000        0x8 ./libee.a(ee_altick.o)
+ .group         0x00000000        0x8 ./libee.a(ee_altick.o)
+ .group         0x00000000        0x8 ./libee.a(ee_altick.o)
+ .group         0x00000000        0x8 ./libee.a(ee_altick.o)
+ .group         0x00000000        0x8 ./libee.a(ee_altick.o)
+ .group         0x00000000        0x8 ./libee.a(ee_altick.o)
+ .group         0x00000000        0x8 ./libee.a(ee_altick.o)
+ .group         0x00000000        0x8 ./libee.a(ee_altick.o)
+ .text          0x00000000        0x0 ./libee.a(ee_altick.o)
+ .data          0x00000000        0x0 ./libee.a(ee_altick.o)
+ .bss           0x00000000        0x0 ./libee.a(ee_altick.o)
+ .text.EE_oo_IncrementCounterHardware
+                0x00000000       0x44 ./libee.a(ee_altick.o)
+ .debug_macro   0x00000000      0x5f8 ./libee.a(ee_altick.o)
+ .debug_macro   0x00000000       0xb2 ./libee.a(ee_altick.o)
+ .debug_macro   0x00000000       0x22 ./libee.a(ee_altick.o)
+ .debug_macro   0x00000000       0x64 ./libee.a(ee_altick.o)
+ .debug_macro   0x00000000      0x10c ./libee.a(ee_altick.o)
+ .debug_macro   0x00000000       0x1d ./libee.a(ee_altick.o)
+ .debug_macro   0x00000000       0x10 ./libee.a(ee_altick.o)
+ .debug_macro   0x00000000       0x22 ./libee.a(ee_altick.o)
+ .debug_macro   0x00000000       0x61 ./libee.a(ee_altick.o)
+ .debug_macro   0x00000000       0x4c ./libee.a(ee_altick.o)
+ .debug_macro   0x00000000       0x10 ./libee.a(ee_altick.o)
+ .debug_macro   0x00000000       0x73 ./libee.a(ee_altick.o)
+ .debug_macro   0x00000000      0x18c ./libee.a(ee_altick.o)
+ .debug_macro   0x00000000       0x28 ./libee.a(ee_altick.o)
+ .debug_macro   0x00000000       0xf3 ./libee.a(ee_altick.o)
+ .debug_macro   0x00000000       0x10 ./libee.a(ee_altick.o)
+ .debug_macro   0x00000000       0x18 ./libee.a(ee_altick.o)
+ .debug_macro   0x00000000       0x12 ./libee.a(ee_altick.o)
+ .debug_macro   0x00000000      0x342 ./libee.a(ee_altick.o)
+ .debug_macro   0x00000000       0x35 ./libee.a(ee_altick.o)
+ .debug_macro   0x00000000       0xab ./libee.a(ee_altick.o)
+ .debug_macro   0x00000000      0x144 ./libee.a(ee_altick.o)
+ .debug_macro   0x00000000       0x88 ./libee.a(ee_altick.o)
+ .debug_macro   0x00000000       0x26 ./libee.a(ee_altick.o)
+ .debug_macro   0x00000000       0xa4 ./libee.a(ee_altick.o)
+ .data          0x00000000        0x0 ./libee.a(ee_irq_stack.o)
+ .data          0x00000000        0x0 ./libee.a(ee_oo.o)
+ .bss           0x00000000        0x0 ./libee.a(ee_oo.o)
+ .data          0x00000000        0x0 ./libee.a(ee_context.o)
+ .bss           0x00000000        0x0 ./libee.a(ee_context.o)
+ .group         0x00000000        0x8 ./libee.a(ee_hal_structs.o)
+ .group         0x00000000        0x8 ./libee.a(ee_hal_structs.o)
+ .group         0x00000000        0x8 ./libee.a(ee_hal_structs.o)
+ .group         0x00000000        0x8 ./libee.a(ee_hal_structs.o)
+ .group         0x00000000        0x8 ./libee.a(ee_hal_structs.o)
+ .group         0x00000000        0x8 ./libee.a(ee_hal_structs.o)
+ .group         0x00000000        0x8 ./libee.a(ee_hal_structs.o)
+ .group         0x00000000        0x8 ./libee.a(ee_hal_structs.o)
+ .group         0x00000000        0x8 ./libee.a(ee_hal_structs.o)
+ .group         0x00000000        0x8 ./libee.a(ee_hal_structs.o)
+ .group         0x00000000        0x8 ./libee.a(ee_hal_structs.o)
+ .group         0x00000000        0x8 ./libee.a(ee_hal_structs.o)
+ .group         0x00000000        0x8 ./libee.a(ee_hal_structs.o)
+ .group         0x00000000        0x8 ./libee.a(ee_hal_structs.o)
+ .group         0x00000000        0x8 ./libee.a(ee_hal_structs.o)
+ .group         0x00000000        0x8 ./libee.a(ee_hal_structs.o)
+ .group         0x00000000        0x8 ./libee.a(ee_hal_structs.o)
+ .group         0x00000000        0x8 ./libee.a(ee_hal_structs.o)
+ .group         0x00000000        0x8 ./libee.a(ee_hal_structs.o)
+ .group         0x00000000        0x8 ./libee.a(ee_hal_structs.o)
+ .group         0x00000000        0x8 ./libee.a(ee_hal_structs.o)
+ .group         0x00000000        0x8 ./libee.a(ee_hal_structs.o)
+ .group         0x00000000        0x8 ./libee.a(ee_hal_structs.o)
+ .group         0x00000000        0x8 ./libee.a(ee_hal_structs.o)
+ .group         0x00000000        0x8 ./libee.a(ee_hal_structs.o)
+ .text          0x00000000        0x0 ./libee.a(ee_hal_structs.o)
+ .data          0x00000000        0x0 ./libee.a(ee_hal_structs.o)
+ .bss           0x00000000        0x0 ./libee.a(ee_hal_structs.o)
+ .debug_macro   0x00000000      0x5f8 ./libee.a(ee_hal_structs.o)
+ .debug_macro   0x00000000       0xb2 ./libee.a(ee_hal_structs.o)
+ .debug_macro   0x00000000       0x22 ./libee.a(ee_hal_structs.o)
+ .debug_macro   0x00000000       0x64 ./libee.a(ee_hal_structs.o)
+ .debug_macro   0x00000000      0x10c ./libee.a(ee_hal_structs.o)
+ .debug_macro   0x00000000       0x1d ./libee.a(ee_hal_structs.o)
+ .debug_macro   0x00000000       0x10 ./libee.a(ee_hal_structs.o)
+ .debug_macro   0x00000000       0x22 ./libee.a(ee_hal_structs.o)
+ .debug_macro   0x00000000       0x61 ./libee.a(ee_hal_structs.o)
+ .debug_macro   0x00000000       0x4c ./libee.a(ee_hal_structs.o)
+ .debug_macro   0x00000000       0x10 ./libee.a(ee_hal_structs.o)
+ .debug_macro   0x00000000       0x73 ./libee.a(ee_hal_structs.o)
+ .debug_macro   0x00000000      0x18c ./libee.a(ee_hal_structs.o)
+ .debug_macro   0x00000000       0x28 ./libee.a(ee_hal_structs.o)
+ .debug_macro   0x00000000       0xf3 ./libee.a(ee_hal_structs.o)
+ .debug_macro   0x00000000       0x10 ./libee.a(ee_hal_structs.o)
+ .debug_macro   0x00000000       0x18 ./libee.a(ee_hal_structs.o)
+ .debug_macro   0x00000000       0x12 ./libee.a(ee_hal_structs.o)
+ .debug_macro   0x00000000      0x342 ./libee.a(ee_hal_structs.o)
+ .debug_macro   0x00000000       0x35 ./libee.a(ee_hal_structs.o)
+ .debug_macro   0x00000000       0xab ./libee.a(ee_hal_structs.o)
+ .debug_macro   0x00000000      0x144 ./libee.a(ee_hal_structs.o)
+ .debug_macro   0x00000000       0x88 ./libee.a(ee_hal_structs.o)
+ .debug_macro   0x00000000       0x26 ./libee.a(ee_hal_structs.o)
+ .debug_macro   0x00000000       0xa4 ./libee.a(ee_hal_structs.o)
+ .group         0x00000000        0x8 ./libee.a(ee_context.o)
+ .group         0x00000000        0x8 ./libee.a(ee_context.o)
+ .group         0x00000000        0x8 ./libee.a(ee_context.o)
+ .group         0x00000000        0x8 ./libee.a(ee_context.o)
+ .group         0x00000000        0x8 ./libee.a(ee_context.o)
+ .group         0x00000000        0x8 ./libee.a(ee_context.o)
+ .group         0x00000000        0x8 ./libee.a(ee_context.o)
+ .group         0x00000000        0x8 ./libee.a(ee_context.o)
+ .group         0x00000000        0x8 ./libee.a(ee_context.o)
+ .group         0x00000000        0x8 ./libee.a(ee_context.o)
+ .group         0x00000000        0x8 ./libee.a(ee_context.o)
+ .group         0x00000000        0x8 ./libee.a(ee_context.o)
+ .group         0x00000000        0x8 ./libee.a(ee_context.o)
+ .group         0x00000000        0x8 ./libee.a(ee_context.o)
+ .group         0x00000000        0x8 ./libee.a(ee_context.o)
+ .group         0x00000000        0x8 ./libee.a(ee_context.o)
+ .group         0x00000000        0x8 ./libee.a(ee_context.o)
+ .group         0x00000000        0x8 ./libee.a(ee_context.o)
+ .group         0x00000000        0x8 ./libee.a(ee_context.o)
+ .group         0x00000000        0x8 ./libee.a(ee_context.o)
+ .group         0x00000000        0x8 ./libee.a(ee_context.o)
+ .group         0x00000000        0x8 ./libee.a(ee_context.o)
+ .group         0x00000000        0x8 ./libee.a(ee_context.o)
+ .group         0x00000000        0x8 ./libee.a(ee_context.o)
+ .group         0x00000000        0x8 ./libee.a(ee_context.o)
+ .text          0x00000000        0x0 ./libee.a(ee_context.o)
+ .data          0x00000000        0x0 ./libee.a(ee_context.o)
+ .bss           0x00000000        0x0 ./libee.a(ee_context.o)
+ .debug_macro   0x00000000      0x5f8 ./libee.a(ee_context.o)
+ .debug_macro   0x00000000       0xb2 ./libee.a(ee_context.o)
+ .debug_macro   0x00000000       0x22 ./libee.a(ee_context.o)
+ .debug_macro   0x00000000       0x64 ./libee.a(ee_context.o)
+ .debug_macro   0x00000000      0x10c ./libee.a(ee_context.o)
+ .debug_macro   0x00000000       0x1d ./libee.a(ee_context.o)
+ .debug_macro   0x00000000       0x10 ./libee.a(ee_context.o)
+ .debug_macro   0x00000000       0x22 ./libee.a(ee_context.o)
+ .debug_macro   0x00000000       0x61 ./libee.a(ee_context.o)
+ .debug_macro   0x00000000       0x4c ./libee.a(ee_context.o)
+ .debug_macro   0x00000000       0x10 ./libee.a(ee_context.o)
+ .debug_macro   0x00000000       0x73 ./libee.a(ee_context.o)
+ .debug_macro   0x00000000      0x18c ./libee.a(ee_context.o)
+ .debug_macro   0x00000000       0x28 ./libee.a(ee_context.o)
+ .debug_macro   0x00000000       0xf3 ./libee.a(ee_context.o)
+ .debug_macro   0x00000000       0x10 ./libee.a(ee_context.o)
+ .debug_macro   0x00000000       0x18 ./libee.a(ee_context.o)
+ .debug_macro   0x00000000       0x12 ./libee.a(ee_context.o)
+ .debug_macro   0x00000000      0x342 ./libee.a(ee_context.o)
+ .debug_macro   0x00000000       0x35 ./libee.a(ee_context.o)
+ .debug_macro   0x00000000       0xab ./libee.a(ee_context.o)
+ .debug_macro   0x00000000      0x144 ./libee.a(ee_context.o)
+ .debug_macro   0x00000000       0x88 ./libee.a(ee_context.o)
+ .debug_macro   0x00000000       0x26 ./libee.a(ee_context.o)
+ .debug_macro   0x00000000       0xa4 ./libee.a(ee_context.o)
+ .group         0x00000000        0x8 ./libee.a(ee_thendin.o)
+ .group         0x00000000        0x8 ./libee.a(ee_thendin.o)
+ .group         0x00000000        0x8 ./libee.a(ee_thendin.o)
+ .group         0x00000000        0x8 ./libee.a(ee_thendin.o)
+ .group         0x00000000        0x8 ./libee.a(ee_thendin.o)
+ .group         0x00000000        0x8 ./libee.a(ee_thendin.o)
+ .group         0x00000000        0x8 ./libee.a(ee_thendin.o)
+ .group         0x00000000        0x8 ./libee.a(ee_thendin.o)
+ .group         0x00000000        0x8 ./libee.a(ee_thendin.o)
+ .group         0x00000000        0x8 ./libee.a(ee_thendin.o)
+ .group         0x00000000        0x8 ./libee.a(ee_thendin.o)
+ .group         0x00000000        0x8 ./libee.a(ee_thendin.o)
+ .group         0x00000000        0x8 ./libee.a(ee_thendin.o)
+ .group         0x00000000        0x8 ./libee.a(ee_thendin.o)
+ .group         0x00000000        0x8 ./libee.a(ee_thendin.o)
+ .group         0x00000000        0x8 ./libee.a(ee_thendin.o)
+ .group         0x00000000        0x8 ./libee.a(ee_thendin.o)
+ .group         0x00000000        0x8 ./libee.a(ee_thendin.o)
+ .group         0x00000000        0x8 ./libee.a(ee_thendin.o)
+ .group         0x00000000        0x8 ./libee.a(ee_thendin.o)
+ .group         0x00000000        0x8 ./libee.a(ee_thendin.o)
+ .group         0x00000000        0x8 ./libee.a(ee_thendin.o)
+ .group         0x00000000        0x8 ./libee.a(ee_thendin.o)
+ .group         0x00000000        0x8 ./libee.a(ee_thendin.o)
+ .group         0x00000000        0x8 ./libee.a(ee_thendin.o)
+ .text          0x00000000        0x0 ./libee.a(ee_thendin.o)
+ .data          0x00000000        0x0 ./libee.a(ee_thendin.o)
+ .bss           0x00000000        0x0 ./libee.a(ee_thendin.o)
+ .debug_macro   0x00000000      0x5f8 ./libee.a(ee_thendin.o)
+ .debug_macro   0x00000000       0xb2 ./libee.a(ee_thendin.o)
+ .debug_macro   0x00000000       0x22 ./libee.a(ee_thendin.o)
+ .debug_macro   0x00000000       0x64 ./libee.a(ee_thendin.o)
+ .debug_macro   0x00000000      0x10c ./libee.a(ee_thendin.o)
+ .debug_macro   0x00000000       0x1d ./libee.a(ee_thendin.o)
+ .debug_macro   0x00000000       0x10 ./libee.a(ee_thendin.o)
+ .debug_macro   0x00000000       0x22 ./libee.a(ee_thendin.o)
+ .debug_macro   0x00000000       0x61 ./libee.a(ee_thendin.o)
+ .debug_macro   0x00000000       0x4c ./libee.a(ee_thendin.o)
+ .debug_macro   0x00000000       0x10 ./libee.a(ee_thendin.o)
+ .debug_macro   0x00000000       0x73 ./libee.a(ee_thendin.o)
+ .debug_macro   0x00000000      0x18c ./libee.a(ee_thendin.o)
+ .debug_macro   0x00000000       0x28 ./libee.a(ee_thendin.o)
+ .debug_macro   0x00000000       0xf3 ./libee.a(ee_thendin.o)
+ .debug_macro   0x00000000       0x10 ./libee.a(ee_thendin.o)
+ .debug_macro   0x00000000       0x18 ./libee.a(ee_thendin.o)
+ .debug_macro   0x00000000       0x12 ./libee.a(ee_thendin.o)
+ .debug_macro   0x00000000      0x342 ./libee.a(ee_thendin.o)
+ .debug_macro   0x00000000       0x35 ./libee.a(ee_thendin.o)
+ .debug_macro   0x00000000       0xab ./libee.a(ee_thendin.o)
+ .debug_macro   0x00000000      0x144 ./libee.a(ee_thendin.o)
+ .debug_macro   0x00000000       0x88 ./libee.a(ee_thendin.o)
+ .debug_macro   0x00000000       0x26 ./libee.a(ee_thendin.o)
+ .debug_macro   0x00000000       0xa4 ./libee.a(ee_thendin.o)
+ .group         0x00000000        0x8 ./libee.a(ee_tnterm.o)
+ .group         0x00000000        0x8 ./libee.a(ee_tnterm.o)
+ .group         0x00000000        0x8 ./libee.a(ee_tnterm.o)
+ .group         0x00000000        0x8 ./libee.a(ee_tnterm.o)
+ .group         0x00000000        0x8 ./libee.a(ee_tnterm.o)
+ .group         0x00000000        0x8 ./libee.a(ee_tnterm.o)
+ .group         0x00000000        0x8 ./libee.a(ee_tnterm.o)
+ .group         0x00000000        0x8 ./libee.a(ee_tnterm.o)
+ .group         0x00000000        0x8 ./libee.a(ee_tnterm.o)
+ .group         0x00000000        0x8 ./libee.a(ee_tnterm.o)
+ .group         0x00000000        0x8 ./libee.a(ee_tnterm.o)
+ .group         0x00000000        0x8 ./libee.a(ee_tnterm.o)
+ .group         0x00000000        0x8 ./libee.a(ee_tnterm.o)
+ .group         0x00000000        0x8 ./libee.a(ee_tnterm.o)
+ .group         0x00000000        0x8 ./libee.a(ee_tnterm.o)
+ .group         0x00000000        0x8 ./libee.a(ee_tnterm.o)
+ .group         0x00000000        0x8 ./libee.a(ee_tnterm.o)
+ .group         0x00000000        0x8 ./libee.a(ee_tnterm.o)
+ .group         0x00000000        0x8 ./libee.a(ee_tnterm.o)
+ .group         0x00000000        0x8 ./libee.a(ee_tnterm.o)
+ .group         0x00000000        0x8 ./libee.a(ee_tnterm.o)
+ .group         0x00000000        0x8 ./libee.a(ee_tnterm.o)
+ .group         0x00000000        0x8 ./libee.a(ee_tnterm.o)
+ .group         0x00000000        0x8 ./libee.a(ee_tnterm.o)
+ .group         0x00000000        0x8 ./libee.a(ee_tnterm.o)
+ .text          0x00000000        0x0 ./libee.a(ee_tnterm.o)
+ .data          0x00000000        0x0 ./libee.a(ee_tnterm.o)
+ .bss           0x00000000        0x0 ./libee.a(ee_tnterm.o)
+ .debug_macro   0x00000000      0x5f8 ./libee.a(ee_tnterm.o)
+ .debug_macro   0x00000000       0xb2 ./libee.a(ee_tnterm.o)
+ .debug_macro   0x00000000       0x22 ./libee.a(ee_tnterm.o)
+ .debug_macro   0x00000000       0x64 ./libee.a(ee_tnterm.o)
+ .debug_macro   0x00000000      0x10c ./libee.a(ee_tnterm.o)
+ .debug_macro   0x00000000       0x1d ./libee.a(ee_tnterm.o)
+ .debug_macro   0x00000000       0x10 ./libee.a(ee_tnterm.o)
+ .debug_macro   0x00000000       0x22 ./libee.a(ee_tnterm.o)
+ .debug_macro   0x00000000       0x61 ./libee.a(ee_tnterm.o)
+ .debug_macro   0x00000000       0x4c ./libee.a(ee_tnterm.o)
+ .debug_macro   0x00000000       0x10 ./libee.a(ee_tnterm.o)
+ .debug_macro   0x00000000       0x73 ./libee.a(ee_tnterm.o)
+ .debug_macro   0x00000000      0x18c ./libee.a(ee_tnterm.o)
+ .debug_macro   0x00000000       0x28 ./libee.a(ee_tnterm.o)
+ .debug_macro   0x00000000       0xf3 ./libee.a(ee_tnterm.o)
+ .debug_macro   0x00000000       0x10 ./libee.a(ee_tnterm.o)
+ .debug_macro   0x00000000       0x18 ./libee.a(ee_tnterm.o)
+ .debug_macro   0x00000000       0x12 ./libee.a(ee_tnterm.o)
+ .debug_macro   0x00000000      0x342 ./libee.a(ee_tnterm.o)
+ .debug_macro   0x00000000       0x35 ./libee.a(ee_tnterm.o)
+ .debug_macro   0x00000000       0xab ./libee.a(ee_tnterm.o)
+ .debug_macro   0x00000000      0x144 ./libee.a(ee_tnterm.o)
+ .debug_macro   0x00000000       0x88 ./libee.a(ee_tnterm.o)
+ .debug_macro   0x00000000       0x26 ./libee.a(ee_tnterm.o)
+ .debug_macro   0x00000000       0xa4 ./libee.a(ee_tnterm.o)
+ .group         0x00000000        0x8 ./libee.a(ee_rq_inser.o)
+ .group         0x00000000        0x8 ./libee.a(ee_rq_inser.o)
+ .group         0x00000000        0x8 ./libee.a(ee_rq_inser.o)
+ .group         0x00000000        0x8 ./libee.a(ee_rq_inser.o)
+ .group         0x00000000        0x8 ./libee.a(ee_rq_inser.o)
+ .group         0x00000000        0x8 ./libee.a(ee_rq_inser.o)
+ .group         0x00000000        0x8 ./libee.a(ee_rq_inser.o)
+ .group         0x00000000        0x8 ./libee.a(ee_rq_inser.o)
+ .group         0x00000000        0x8 ./libee.a(ee_rq_inser.o)
+ .group         0x00000000        0x8 ./libee.a(ee_rq_inser.o)
+ .group         0x00000000        0x8 ./libee.a(ee_rq_inser.o)
+ .group         0x00000000        0x8 ./libee.a(ee_rq_inser.o)
+ .group         0x00000000        0x8 ./libee.a(ee_rq_inser.o)
+ .group         0x00000000        0x8 ./libee.a(ee_rq_inser.o)
+ .group         0x00000000        0x8 ./libee.a(ee_rq_inser.o)
+ .group         0x00000000        0x8 ./libee.a(ee_rq_inser.o)
+ .group         0x00000000        0x8 ./libee.a(ee_rq_inser.o)
+ .group         0x00000000        0x8 ./libee.a(ee_rq_inser.o)
+ .group         0x00000000        0x8 ./libee.a(ee_rq_inser.o)
+ .group         0x00000000        0x8 ./libee.a(ee_rq_inser.o)
+ .group         0x00000000        0x8 ./libee.a(ee_rq_inser.o)
+ .group         0x00000000        0x8 ./libee.a(ee_rq_inser.o)
+ .group         0x00000000        0x8 ./libee.a(ee_rq_inser.o)
+ .group         0x00000000        0x8 ./libee.a(ee_rq_inser.o)
+ .group         0x00000000        0x8 ./libee.a(ee_rq_inser.o)
+ .text          0x00000000        0x0 ./libee.a(ee_rq_inser.o)
+ .data          0x00000000        0x0 ./libee.a(ee_rq_inser.o)
+ .bss           0x00000000        0x0 ./libee.a(ee_rq_inser.o)
+ .debug_macro   0x00000000      0x5f8 ./libee.a(ee_rq_inser.o)
+ .debug_macro   0x00000000       0xb2 ./libee.a(ee_rq_inser.o)
+ .debug_macro   0x00000000       0x22 ./libee.a(ee_rq_inser.o)
+ .debug_macro   0x00000000       0x64 ./libee.a(ee_rq_inser.o)
+ .debug_macro   0x00000000      0x10c ./libee.a(ee_rq_inser.o)
+ .debug_macro   0x00000000       0x1d ./libee.a(ee_rq_inser.o)
+ .debug_macro   0x00000000       0x10 ./libee.a(ee_rq_inser.o)
+ .debug_macro   0x00000000       0x22 ./libee.a(ee_rq_inser.o)
+ .debug_macro   0x00000000       0x61 ./libee.a(ee_rq_inser.o)
+ .debug_macro   0x00000000       0x4c ./libee.a(ee_rq_inser.o)
+ .debug_macro   0x00000000       0x10 ./libee.a(ee_rq_inser.o)
+ .debug_macro   0x00000000       0x73 ./libee.a(ee_rq_inser.o)
+ .debug_macro   0x00000000      0x18c ./libee.a(ee_rq_inser.o)
+ .debug_macro   0x00000000       0x28 ./libee.a(ee_rq_inser.o)
+ .debug_macro   0x00000000       0xf3 ./libee.a(ee_rq_inser.o)
+ .debug_macro   0x00000000       0x10 ./libee.a(ee_rq_inser.o)
+ .debug_macro   0x00000000       0x18 ./libee.a(ee_rq_inser.o)
+ .debug_macro   0x00000000       0x12 ./libee.a(ee_rq_inser.o)
+ .debug_macro   0x00000000      0x342 ./libee.a(ee_rq_inser.o)
+ .debug_macro   0x00000000       0x35 ./libee.a(ee_rq_inser.o)
+ .debug_macro   0x00000000       0xab ./libee.a(ee_rq_inser.o)
+ .debug_macro   0x00000000      0x144 ./libee.a(ee_rq_inser.o)
+ .debug_macro   0x00000000       0x88 ./libee.a(ee_rq_inser.o)
+ .debug_macro   0x00000000       0x26 ./libee.a(ee_rq_inser.o)
+ .debug_macro   0x00000000       0xa4 ./libee.a(ee_rq_inser.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+iboot            0x00000000         0x00020000         xr
+iflash           0x00020000         0x001c0000         xr
+isram            0x40000000         0x00040000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+                0x40000000                isram_base = ORIGIN (isram)
+                0x00040000                isram_len = 0x40000
+
+.boot           0x40000000      0x104
+ *(.boot)
+ .boot          0x40000000       0xfc obj/pkg/mcu/freescale_mpc5674f/src/ee_boot.o
+                0x40000000                __start
+ *fill*         0x400000fc        0x4 
+ .boot          0x40000100        0x4 ./libee.a(ee_entry.o)
+                0x40000100                sram_setup
+
+.text           0x40000200     0x1734
+ *(.text)
+ .text          0x40000200      0x128 ./libee.a(ee_entry.o)
+                0x400002bc                EE_e200zx_external_input_handler
+                0x400002d8                EE_e200zx_decrementer_handler
+                0x400002f0                EE_e200zx_fixed_intv_handler
+                0x40000308                cpu_setup
+ *fill*         0x40000328       0xd8 
+ .text          0x40000400      0x1e0 ./libee.a(ee_ivor.o)
+                0x40000510                ivor_setup
+ .text          0x400005e0       0x60 ./libee.a(ee_irq_stack.o)
+                0x400005e0                EE_e200zx_call_ISR
+ .text          0x40000640       0xf4 ./libee.a(ee_oo.o)
+                0x40000640                EE_hal_terminate_savestk
+                0x400006cc                EE_hal_terminate_task
+ .text          0x40000734      0x118 ./libee.a(ee_context.o)
+                0x40000734                EE_std_change_context
+ *(.text.*)
+ .text.Buttons_Interrupt
+                0x4000084c       0x24 obj/code.o
+ .text.Counter_Interrupt
+                0x40000870       0x40 obj/code.o
+ .text.FuncTask1
+                0x400008b0       0x80 obj/code.o
+                0x400008b0                FuncTask1
+ .text.FuncTask2
+                0x40000930       0x80 obj/code.o
+                0x40000930                FuncTask2
+ .text.main     0x400009b0      0x180 obj/code.o
+                0x400009b0                main
+ .text.EE_e200z7_setup_decrementer
+                0x40000b30       0x18 ./libee.a(ee_e200zx_cpu.o)
+                0x40000b30                EE_e200z7_setup_decrementer
+ .text.EE_e200z7_register_ISR
+                0x40000b48       0x34 ./libee.a(ee_irq.o)
+                0x40000b48                EE_e200z7_register_ISR
+ .text.EE_e200z7_irq
+                0x40000b7c       0xe8 ./libee.a(ee_irq.o)
+                0x40000b7c                EE_e200z7_irq
+ .text.EE_oo_TerminateTask
+                0x40000c64       0x80 ./libee.a(ee_terminat.o)
+                0x40000c64                EE_oo_TerminateTask
+ .text.EE_IRQ_end_instance
+                0x40000ce4      0x104 ./libee.a(ee_irqendin.o)
+                0x40000ce4                EE_IRQ_end_instance
+ .text.EE_IRQ_end_post_stub
+                0x40000de8       0x2c ./libee.a(ee_irqendin.o)
+                0x40000de8                EE_IRQ_end_post_stub
+ .text.EE_oo_thread_stub
+                0x40000e14       0x28 ./libee.a(ee_tstub.o)
+                0x40000e14                EE_oo_thread_stub
+ .text.EE_rq2stk_exchange
+                0x40000e3c       0x30 ./libee.a(ee_rq_exchg.o)
+                0x40000e3c                EE_rq2stk_exchange
+ .text.EE_oo_StartOS
+                0x40000e6c      0x1d0 ./libee.a(ee_startos.o)
+                0x40000e6c                EE_oo_StartOS
+ .text.EE_oo_counter_object_insert
+                0x4000103c      0x12c ./libee.a(ee_altick.o)
+                0x4000103c                EE_oo_counter_object_insert
+ .text.EE_oo_IncrementCounterImplementation
+                0x40001168      0x390 ./libee.a(ee_altick.o)
+                0x40001168                EE_oo_IncrementCounterImplementation
+ .text.EE_oo_IncrementCounter
+                0x400014f8      0x154 ./libee.a(ee_altick.o)
+                0x400014f8                EE_oo_IncrementCounter
+ .text.EE_std_run_task_code
+                0x4000164c       0x34 ./libee.a(ee_context.o)
+                0x4000164c                EE_std_run_task_code
+ .text.EE_thread_end_instance
+                0x40001680      0x1d4 ./libee.a(ee_thendin.o)
+                0x40001680                EE_thread_end_instance
+ .text.EE_thread_not_terminated
+                0x40001854       0x28 ./libee.a(ee_tnterm.o)
+                0x40001854                EE_thread_not_terminated
+ .text.EE_rq_insert
+                0x4000187c       0xb8 ./libee.a(ee_rq_inser.o)
+                0x4000187c                EE_rq_insert
+ *(.init)
+ *(.fini)
+ *(rdata)
+ *(.eini)
+
+.glink          0x40001934        0x0
+ .glink         0x00000000        0x0 obj/eecfg.o
+
+.rodata         0x40001934       0xa0
+ *(.rodata)
+ *(.rodata.*)
+ .rodata.EE_oo_autostart_alarm_data
+                0x40001934        0x8 obj/eecfg.o
+                0x40001934                EE_oo_autostart_alarm_data
+ .rodata.EE_th_is_extended
+                0x4000193c        0x8 obj/eecfg.o
+                0x4000193c                EE_th_is_extended
+ .rodata.EE_th_dispatch_prio
+                0x40001944        0x8 obj/eecfg.o
+                0x40001944                EE_th_dispatch_prio
+ .rodata.EE_std_thread_tos
+                0x4000194c        0xc obj/eecfg.o
+                0x4000194c                EE_std_thread_tos
+ .rodata.EE_oo_autostart_alarm_mode_OSDEFAULTAPPMODE
+                0x40001958        0x8 obj/eecfg.o
+ .rodata.EE_oo_counter_object_ROM
+                0x40001960       0x18 obj/eecfg.o
+                0x40001960                EE_oo_counter_object_ROM
+ .rodata.EE_oo_action_ROM
+                0x40001978       0x28 obj/eecfg.o
+                0x40001978                EE_oo_action_ROM
+ .rodata.EE_alarm_ROM
+                0x400019a0        0x8 obj/eecfg.o
+                0x400019a0                EE_alarm_ROM
+ .rodata.EE_counter_ROM
+                0x400019a8        0xc obj/eecfg.o
+                0x400019a8                EE_counter_ROM
+ .rodata.EE_th_ready_prio
+                0x400019b4        0x8 obj/eecfg.o
+                0x400019b4                EE_th_ready_prio
+ .rodata.EE_oo_autostart_alarm_increment
+                0x400019bc        0x8 obj/eecfg.o
+                0x400019bc                EE_oo_autostart_alarm_increment
+ .rodata.EE_terminate_real_th_body
+                0x400019c4        0x8 obj/eecfg.o
+                0x400019c4                EE_terminate_real_th_body
+ .rodata.EE_oo_autostart_alarm_cycle
+                0x400019cc        0x8 obj/eecfg.o
+                0x400019cc                EE_oo_autostart_alarm_cycle
+
+.eh_frame       0x400019d4        0x0
+ .eh_frame      0x00000000        0x0 obj/eecfg.o
+
+.eh_frame_hdr   0x400019d4        0x0
+ .eh_frame_hdr  0x00000000        0x0 ./libee.a(ee_rq_inser.o)
+
+.rela.dyn       0x400019d4        0x0
+ .rela.iplt     0x00000000        0x0 obj/eecfg.o
+ .rela.rodata.EE_hal_thread_body
+                0x00000000        0x0 obj/eecfg.o
+ .rela.rodata.EE_terminate_real_th_body
+                0x00000000        0x0 obj/eecfg.o
+ .rela.text.led_blink
+                0x00000000        0x0 obj/eecfg.o
+ .rela.boot     0x00000000        0x0 obj/eecfg.o
+ .rela.text.EE_e200z7_irq
+                0x00000000        0x0 obj/eecfg.o
+ .rela.text.EE_oo_TerminateTask
+                0x00000000        0x0 obj/eecfg.o
+ .rela.text.EE_IRQ_end_instance
+                0x00000000        0x0 obj/eecfg.o
+ .rela.text.EE_IRQ_end_post_stub
+                0x00000000        0x0 obj/eecfg.o
+ .rela.text.EE_oo_IncrementCounter
+                0x00000000        0x0 obj/eecfg.o
+
+.sdata2         0x400019d4        0x0
+                0x00008000                _SDA2_BASE_ = 0x8000
+ *(.sdata2)
+ *(.sdata2.*)
+
+.sbss2          0x400019d4        0x0
+                0x400019d4                ee_ssbss2 = .
+ *(.sbss2)
+ *(.sbss2.*)
+                0x400019d4                ee_esbss2 = .
+
+.data           0x400019d4       0x40
+                0x400019d4                ee_load_ram = .
+                0x400019d4                ee_sdata = .
+ *(.data)
+ *(.data.*)
+ .data.EE_rq_first
+                0x400019d4        0x4 obj/eecfg.o
+                0x400019d4                EE_rq_first
+ .data.EE_th_terminate_nextask
+                0x400019d8        0x8 obj/eecfg.o
+                0x400019d8                EE_th_terminate_nextask
+ .data.EE_e200z7_system_tos
+                0x400019e0        0xc obj/eecfg.o
+                0x400019e0                EE_e200z7_system_tos
+ .data.EE_th_rnact
+                0x400019ec        0x8 obj/eecfg.o
+                0x400019ec                EE_th_rnact
+ .data.EE_stkfirst
+                0x400019f4        0x4 obj/eecfg.o
+                0x400019f4                EE_stkfirst
+ .data.EE_th_next
+                0x400019f8        0x8 obj/eecfg.o
+                0x400019f8                EE_th_next
+ .data.EE_e200z7_IRQ_tos
+                0x40001a00        0x4 obj/eecfg.o
+                0x40001a00                EE_e200z7_IRQ_tos
+ .data.EE_th_status
+                0x40001a04        0x8 obj/eecfg.o
+                0x40001a04                EE_th_status
+ .data.EE_counter_RAM
+                0x40001a0c        0x8 obj/eecfg.o
+                0x40001a0c                EE_counter_RAM
+
+.sdata          0x40001a14        0x0
+                0x00008000                _SDA_BASE_ = 0x8000
+ *(.sdata)
+ *(.sdata.*)
+
+.sbss           0x40001a14        0x0
+                0x40001a14                ee_sbss = .
+ *(.sbss)
+ *(.sbss.*)
+
+.bss            0x40001a14      0x838
+ *(.bss)
+ .bss           0x40001a14        0x4 ./libee.a(ee_irq_stack.o)
+                0x40001a14                EE_e200zx_tmp_tos
+ *(.bss.*)
+ .bss.EE_e200z7_active_tos
+                0x40001a18        0x4 obj/eecfg.o
+                0x40001a18                EE_e200z7_active_tos
+ .bss.EE_ApplicationMode
+                0x40001a1c        0x4 obj/eecfg.o
+                0x40001a1c                EE_ApplicationMode
+ .bss.EE_sys_ceiling
+                0x40001a20        0x4 obj/eecfg.o
+                0x40001a20                EE_sys_ceiling
+ .bss.EE_terminate_data
+                0x40001a24        0x8 obj/eecfg.o
+                0x40001a24                EE_terminate_data
+ .bss.EE_th_waswaiting
+                0x40001a2c        0x8 obj/eecfg.o
+                0x40001a2c                EE_th_waswaiting
+ .bss.EE_oo_counter_object_RAM
+                0x40001a34       0x20 obj/eecfg.o
+                0x40001a34                EE_oo_counter_object_RAM
+ .bss.EE_th_event_waitmask
+                0x40001a54        0x8 obj/eecfg.o
+                0x40001a54                EE_th_event_waitmask
+ .bss.EE_th_event_active
+                0x40001a5c        0x8 obj/eecfg.o
+                0x40001a5c                EE_th_event_active
+ .bss.LED7.8573
+                0x40001a64        0x4 obj/code.o
+ .bss.button_fired
+                0x40001a68        0x4 obj/code.o
+                0x40001a68                button_fired
+ .bss.task1_fired
+                0x40001a6c        0x4 obj/code.o
+                0x40001a6c                task1_fired
+ .bss.timer_divisor
+                0x40001a70        0x4 obj/code.o
+                0x40001a70                timer_divisor
+ .bss.LED3.8569
+                0x40001a74        0x4 obj/code.o
+ .bss.task2_fired
+                0x40001a78        0x4 obj/code.o
+                0x40001a78                task2_fired
+ .bss.EE_e200z7_ISR_table
+                0x40001a7c      0x7a8 ./libee.a(ee_irq.o)
+                0x40001a7c                EE_e200z7_ISR_table
+ .bss.EE_oo_IRQ_disable_count
+                0x40002224        0x4 ./libee.a(ee_lookup.o)
+                0x40002224                EE_oo_IRQ_disable_count
+ .bss.EE_ORTI_lasterror
+                0x40002228        0x1 ./libee.a(ee_startos.o)
+                0x40002228                EE_ORTI_lasterror
+ .bss.EE_ORTI_servicetrace
+                0x40002229        0x1 ./libee.a(ee_startos.o)
+                0x40002229                EE_ORTI_servicetrace
+ *fill*         0x4000222a        0x2 
+ .bss.EE_ORTI_runningisr2
+                0x4000222c        0x4 ./libee.a(ee_startos.o)
+                0x4000222c                EE_ORTI_runningisr2
+ .bss.EE_ORTI_th_priority
+                0x40002230        0x8 ./libee.a(ee_startos.o)
+                0x40002230                EE_ORTI_th_priority
+ .bss.EE_oo_started
+                0x40002238        0x4 ./libee.a(ee_startos.o)
+                0x40002238                EE_oo_started
+ .bss.EE_ORTI_alarmtime
+                0x4000223c        0x8 ./libee.a(ee_altick.o)
+ .bss.EE_IRQ_nesting_level
+                0x40002244        0x4 ./libee.a(ee_hal_structs.o)
+                0x40002244                EE_IRQ_nesting_level
+ .bss.EE_std_endcycle_next_tid
+                0x40002248        0x4 ./libee.a(ee_hal_structs.o)
+                0x40002248                EE_std_endcycle_next_tid
+                0x4000224c                ee_ebss = .
+
+.iplt           0x40002250        0x0
+ .iplt          0x00000000        0x0 obj/eecfg.o
+
+.stack          0x40002250     0x4000
+                0x40002250                ee_sstack = .
+ *(.stack)
+ .stack         0x40002250     0x3000 obj/eecfg.o
+ .stack         0x40005250     0x1000 ./libee.a(ee_e200zx_cpu.o)
+                0x40005250                EE_e200zx_sys_stack
+                0x40006250                ee_estack = .
+LOAD obj/eecfg.o
+LOAD obj/code.o
+LOAD obj/pkg/mcu/freescale_mpc5674f/src/ee_boot.o
+LOAD ./libee.a
+OUTPUT(ppc.elf elf32-powerpc)
+
+.debug_info     0x00000000     0x82ac
+ .debug_info    0x00000000      0x86e obj/eecfg.o
+ .debug_info    0x0000086e      0xb09 obj/code.o
+ .debug_info    0x00001377       0xca obj/pkg/mcu/freescale_mpc5674f/src/ee_boot.o
+ .debug_info    0x00001441       0xbb ./libee.a(ee_entry.o)
+ .debug_info    0x000014fc      0x967 ./libee.a(ee_e200zx_cpu.o)
+ .debug_info    0x00001e63       0xbe ./libee.a(ee_ivor.o)
+ .debug_info    0x00001f21      0xab7 ./libee.a(ee_irq.o)
+ .debug_info    0x000029d8      0x710 ./libee.a(ee_terminat.o)
+ .debug_info    0x000030e8      0x747 ./libee.a(ee_irqendin.o)
+ .debug_info    0x0000382f      0x5de ./libee.a(ee_tstub.o)
+ .debug_info    0x00003e0d      0x513 ./libee.a(ee_lookup.o)
+ .debug_info    0x00004320      0x540 ./libee.a(ee_rq_exchg.o)
+ .debug_info    0x00004860      0xb08 ./libee.a(ee_startos.o)
+ .debug_info    0x00005368      0xeaf ./libee.a(ee_altick.o)
+ .debug_info    0x00006217       0xc3 ./libee.a(ee_irq_stack.o)
+ .debug_info    0x000062da       0xbc ./libee.a(ee_oo.o)
+ .debug_info    0x00006396       0xc1 ./libee.a(ee_context.o)
+ .debug_info    0x00006457      0x513 ./libee.a(ee_hal_structs.o)
+ .debug_info    0x0000696a      0x5d9 ./libee.a(ee_context.o)
+ .debug_info    0x00006f43      0x85d ./libee.a(ee_thendin.o)
+ .debug_info    0x000077a0      0x5a9 ./libee.a(ee_tnterm.o)
+ .debug_info    0x00007d49      0x563 ./libee.a(ee_rq_inser.o)
+
+.debug_abbrev   0x00000000     0x210c
+ .debug_abbrev  0x00000000      0x15c obj/eecfg.o
+ .debug_abbrev  0x0000015c      0x349 obj/code.o
+ .debug_abbrev  0x000004a5       0x14 obj/pkg/mcu/freescale_mpc5674f/src/ee_boot.o
+ .debug_abbrev  0x000004b9       0x12 ./libee.a(ee_entry.o)
+ .debug_abbrev  0x000004cb      0x216 ./libee.a(ee_e200zx_cpu.o)
+ .debug_abbrev  0x000006e1       0x14 ./libee.a(ee_ivor.o)
+ .debug_abbrev  0x000006f5      0x302 ./libee.a(ee_irq.o)
+ .debug_abbrev  0x000009f7      0x247 ./libee.a(ee_terminat.o)
+ .debug_abbrev  0x00000c3e      0x226 ./libee.a(ee_irqendin.o)
+ .debug_abbrev  0x00000e64      0x18b ./libee.a(ee_tstub.o)
+ .debug_abbrev  0x00000fef      0x10e ./libee.a(ee_lookup.o)
+ .debug_abbrev  0x000010fd      0x12e ./libee.a(ee_rq_exchg.o)
+ .debug_abbrev  0x0000122b      0x32c ./libee.a(ee_startos.o)
+ .debug_abbrev  0x00001557      0x39a ./libee.a(ee_altick.o)
+ .debug_abbrev  0x000018f1       0x14 ./libee.a(ee_irq_stack.o)
+ .debug_abbrev  0x00001905       0x14 ./libee.a(ee_oo.o)
+ .debug_abbrev  0x00001919       0x14 ./libee.a(ee_context.o)
+ .debug_abbrev  0x0000192d      0x10e ./libee.a(ee_hal_structs.o)
+ .debug_abbrev  0x00001a3b      0x188 ./libee.a(ee_context.o)
+ .debug_abbrev  0x00001bc3      0x252 ./libee.a(ee_thendin.o)
+ .debug_abbrev  0x00001e15      0x1ad ./libee.a(ee_tnterm.o)
+ .debug_abbrev  0x00001fc2      0x14a ./libee.a(ee_rq_inser.o)
+
+.debug_aranges  0x00000000      0x330
+ .debug_aranges
+                0x00000000       0x18 obj/eecfg.o
+ .debug_aranges
+                0x00000018       0x50 obj/code.o
+ .debug_aranges
+                0x00000068       0x20 obj/pkg/mcu/freescale_mpc5674f/src/ee_boot.o
+ .debug_aranges
+                0x00000088       0x28 ./libee.a(ee_entry.o)
+ .debug_aranges
+                0x000000b0       0x48 ./libee.a(ee_e200zx_cpu.o)
+ .debug_aranges
+                0x000000f8       0x20 ./libee.a(ee_ivor.o)
+ .debug_aranges
+                0x00000118       0x28 ./libee.a(ee_irq.o)
+ .debug_aranges
+                0x00000140       0x20 ./libee.a(ee_terminat.o)
+ .debug_aranges
+                0x00000160       0x28 ./libee.a(ee_irqendin.o)
+ .debug_aranges
+                0x00000188       0x20 ./libee.a(ee_tstub.o)
+ .debug_aranges
+                0x000001a8       0x18 ./libee.a(ee_lookup.o)
+ .debug_aranges
+                0x000001c0       0x20 ./libee.a(ee_rq_exchg.o)
+ .debug_aranges
+                0x000001e0       0x20 ./libee.a(ee_startos.o)
+ .debug_aranges
+                0x00000200       0x38 ./libee.a(ee_altick.o)
+ .debug_aranges
+                0x00000238       0x20 ./libee.a(ee_irq_stack.o)
+ .debug_aranges
+                0x00000258       0x20 ./libee.a(ee_oo.o)
+ .debug_aranges
+                0x00000278       0x20 ./libee.a(ee_context.o)
+ .debug_aranges
+                0x00000298       0x18 ./libee.a(ee_hal_structs.o)
+ .debug_aranges
+                0x000002b0       0x20 ./libee.a(ee_context.o)
+ .debug_aranges
+                0x000002d0       0x20 ./libee.a(ee_thendin.o)
+ .debug_aranges
+                0x000002f0       0x20 ./libee.a(ee_tnterm.o)
+ .debug_aranges
+                0x00000310       0x20 ./libee.a(ee_rq_inser.o)
+
+.debug_macro    0x00000000     0x2d83
+ .debug_macro   0x00000000      0x187 obj/eecfg.o
+ .debug_macro   0x00000187      0x5f8 obj/eecfg.o
+ .debug_macro   0x0000077f       0xb2 obj/eecfg.o
+ .debug_macro   0x00000831       0x22 obj/eecfg.o
+ .debug_macro   0x00000853       0x64 obj/eecfg.o
+ .debug_macro   0x000008b7      0x10c obj/eecfg.o
+ .debug_macro   0x000009c3       0x1d obj/eecfg.o
+ .debug_macro   0x000009e0       0x10 obj/eecfg.o
+ .debug_macro   0x000009f0       0x22 obj/eecfg.o
+ .debug_macro   0x00000a12       0x61 obj/eecfg.o
+ .debug_macro   0x00000a73       0x4c obj/eecfg.o
+ .debug_macro   0x00000abf       0x10 obj/eecfg.o
+ .debug_macro   0x00000acf       0x73 obj/eecfg.o
+ .debug_macro   0x00000b42      0x18c obj/eecfg.o
+ .debug_macro   0x00000cce       0x28 obj/eecfg.o
+ .debug_macro   0x00000cf6       0xf3 obj/eecfg.o
+ .debug_macro   0x00000de9      0x342 obj/eecfg.o
+ .debug_macro   0x0000112b       0x35 obj/eecfg.o
+ .debug_macro   0x00001160       0xab obj/eecfg.o
+ .debug_macro   0x0000120b      0x144 obj/eecfg.o
+ .debug_macro   0x0000134f       0x88 obj/eecfg.o
+ .debug_macro   0x000013d7       0xd1 obj/eecfg.o
+ .debug_macro   0x000014a8       0x6a obj/eecfg.o
+ .debug_macro   0x00001512       0x18 obj/eecfg.o
+ .debug_macro   0x0000152a       0x16 obj/eecfg.o
+ .debug_macro   0x00001540       0x1d obj/eecfg.o
+ .debug_macro   0x0000155d      0x18e obj/code.o
+ .debug_macro   0x000016eb      0x11a obj/code.o
+ .debug_macro   0x00001805      0x170 ./libee.a(ee_e200zx_cpu.o)
+ .debug_macro   0x00001975       0x10 ./libee.a(ee_e200zx_cpu.o)
+ .debug_macro   0x00001985       0x12 ./libee.a(ee_e200zx_cpu.o)
+ .debug_macro   0x00001997       0x26 ./libee.a(ee_e200zx_cpu.o)
+ .debug_macro   0x000019bd       0xa4 ./libee.a(ee_e200zx_cpu.o)
+ .debug_macro   0x00001a61      0x199 ./libee.a(ee_irq.o)
+ .debug_macro   0x00001bfa       0x1c ./libee.a(ee_irq.o)
+ .debug_macro   0x00001c16      0x170 ./libee.a(ee_terminat.o)
+ .debug_macro   0x00001d86      0x176 ./libee.a(ee_irqendin.o)
+ .debug_macro   0x00001efc      0x170 ./libee.a(ee_tstub.o)
+ .debug_macro   0x0000206c      0x170 ./libee.a(ee_lookup.o)
+ .debug_macro   0x000021dc      0x170 ./libee.a(ee_rq_exchg.o)
+ .debug_macro   0x0000234c      0x184 ./libee.a(ee_startos.o)
+ .debug_macro   0x000024d0      0x17d ./libee.a(ee_altick.o)
+ .debug_macro   0x0000264d      0x170 ./libee.a(ee_hal_structs.o)
+ .debug_macro   0x000027bd      0x170 ./libee.a(ee_context.o)
+ .debug_macro   0x0000292d      0x176 ./libee.a(ee_thendin.o)
+ .debug_macro   0x00002aa3      0x170 ./libee.a(ee_tnterm.o)
+ .debug_macro   0x00002c13      0x170 ./libee.a(ee_rq_inser.o)
+
+.debug_line     0x00000000     0x5da6
+ .debug_line    0x00000000      0x4b6 obj/eecfg.o
+ .debug_line    0x000004b6      0x6ad obj/code.o
+ .debug_line    0x00000b63       0xef obj/pkg/mcu/freescale_mpc5674f/src/ee_boot.o
+ .debug_line    0x00000c52       0xfe ./libee.a(ee_entry.o)
+ .debug_line    0x00000d50      0x61a ./libee.a(ee_e200zx_cpu.o)
+ .debug_line    0x0000136a       0xc5 ./libee.a(ee_ivor.o)
+ .debug_line    0x0000142f      0x5b8 ./libee.a(ee_irq.o)
+ .debug_line    0x000019e7      0x566 ./libee.a(ee_terminat.o)
+ .debug_line    0x00001f4d      0x57b ./libee.a(ee_irqendin.o)
+ .debug_line    0x000024c8      0x52f ./libee.a(ee_tstub.o)
+ .debug_line    0x000029f7      0x51f ./libee.a(ee_lookup.o)
+ .debug_line    0x00002f16      0x535 ./libee.a(ee_rq_exchg.o)
+ .debug_line    0x0000344b      0x5c3 ./libee.a(ee_startos.o)
+ .debug_line    0x00003a0e      0x680 ./libee.a(ee_altick.o)
+ .debug_line    0x0000408e       0xbd ./libee.a(ee_irq_stack.o)
+ .debug_line    0x0000414b       0xdc ./libee.a(ee_oo.o)
+ .debug_line    0x00004227       0xeb ./libee.a(ee_context.o)
+ .debug_line    0x00004312      0x525 ./libee.a(ee_hal_structs.o)
+ .debug_line    0x00004837      0x549 ./libee.a(ee_context.o)
+ .debug_line    0x00004d80      0x59f ./libee.a(ee_thendin.o)
+ .debug_line    0x0000531f      0x542 ./libee.a(ee_tnterm.o)
+ .debug_line    0x00005861      0x545 ./libee.a(ee_rq_inser.o)
+
+.debug_str      0x00000000     0x8c45
+ .debug_str     0x00000000     0x6cd1 obj/eecfg.o
+                               0x6e41 (size before relaxing)
+ .debug_str     0x00006cd1      0x779 obj/code.o
+                               0x716a (size before relaxing)
+ .debug_str     0x0000744a      0xa41 ./libee.a(ee_e200zx_cpu.o)
+                               0x6e99 (size before relaxing)
+ .debug_str     0x00007e8b      0x267 ./libee.a(ee_irq.o)
+                               0x7247 (size before relaxing)
+ .debug_str     0x000080f2       0xf3 ./libee.a(ee_terminat.o)
+                               0x6e6c (size before relaxing)
+ .debug_str     0x000081e5      0x202 ./libee.a(ee_irqendin.o)
+                               0x6f6c (size before relaxing)
+ .debug_str     0x000083e7       0x9c ./libee.a(ee_tstub.o)
+                               0x6e9e (size before relaxing)
+ .debug_str     0x00008483       0x72 ./libee.a(ee_lookup.o)
+                               0x6d54 (size before relaxing)
+ .debug_str     0x000084f5       0x74 ./libee.a(ee_rq_exchg.o)
+                               0x6d6e (size before relaxing)
+ .debug_str     0x00008569      0x1cf ./libee.a(ee_startos.o)
+                               0x718c (size before relaxing)
+ .debug_str     0x00008738      0x21b ./libee.a(ee_altick.o)
+                               0x72d6 (size before relaxing)
+ .debug_str     0x00008953       0x78 ./libee.a(ee_hal_structs.o)
+                               0x6d5a (size before relaxing)
+ .debug_str     0x000089cb       0xa0 ./libee.a(ee_context.o)
+                               0x6de0 (size before relaxing)
+ .debug_str     0x00008a6b       0xdb ./libee.a(ee_thendin.o)
+                               0x6fd2 (size before relaxing)
+ .debug_str     0x00008b46       0x8b ./libee.a(ee_tnterm.o)
+                               0x6dc4 (size before relaxing)
+ .debug_str     0x00008bd1       0x74 ./libee.a(ee_rq_inser.o)
+                               0x6d68 (size before relaxing)
+
+.comment        0x00000000       0x11
+ .comment       0x00000000       0x11 obj/eecfg.o
+                                 0x12 (size before relaxing)
+ .comment       0x00000000       0x12 obj/code.o
+ .comment       0x00000000       0x12 ./libee.a(ee_e200zx_cpu.o)
+ .comment       0x00000000       0x12 ./libee.a(ee_irq.o)
+ .comment       0x00000000       0x12 ./libee.a(ee_terminat.o)
+ .comment       0x00000000       0x12 ./libee.a(ee_irqendin.o)
+ .comment       0x00000000       0x12 ./libee.a(ee_tstub.o)
+ .comment       0x00000000       0x12 ./libee.a(ee_lookup.o)
+ .comment       0x00000000       0x12 ./libee.a(ee_rq_exchg.o)
+ .comment       0x00000000       0x12 ./libee.a(ee_startos.o)
+ .comment       0x00000000       0x12 ./libee.a(ee_altick.o)
+ .comment       0x00000000       0x12 ./libee.a(ee_hal_structs.o)
+ .comment       0x00000000       0x12 ./libee.a(ee_context.o)
+ .comment       0x00000000       0x12 ./libee.a(ee_thendin.o)
+ .comment       0x00000000       0x12 ./libee.a(ee_tnterm.o)
+ .comment       0x00000000       0x12 ./libee.a(ee_rq_inser.o)
+
+.PPC.EMB.apuinfo
+                0x00000000       0x1c
+ .PPC.EMB.apuinfo
+                0x00000000       0x1c obj/code.o
+ .PPC.EMB.apuinfo
+                0x0000001c       0x18 obj/pkg/mcu/freescale_mpc5674f/src/ee_boot.o
+ .PPC.EMB.apuinfo
+                0x00000034       0x18 ./libee.a(ee_entry.o)
+ .PPC.EMB.apuinfo
+                0x0000004c       0x18 ./libee.a(ee_e200zx_cpu.o)
+ .PPC.EMB.apuinfo
+                0x00000064       0x18 ./libee.a(ee_ivor.o)
+ .PPC.EMB.apuinfo
+                0x0000007c       0x18 ./libee.a(ee_irq.o)
+ .PPC.EMB.apuinfo
+                0x00000094       0x18 ./libee.a(ee_terminat.o)
+ .PPC.EMB.apuinfo
+                0x000000ac       0x18 ./libee.a(ee_irqendin.o)
+ .PPC.EMB.apuinfo
+                0x000000c4       0x18 ./libee.a(ee_tstub.o)
+ .PPC.EMB.apuinfo
+                0x000000dc       0x18 ./libee.a(ee_rq_exchg.o)
+ .PPC.EMB.apuinfo
+                0x000000f4       0x18 ./libee.a(ee_startos.o)
+ .PPC.EMB.apuinfo
+                0x0000010c       0x18 ./libee.a(ee_altick.o)
+ .PPC.EMB.apuinfo
+                0x00000124       0x18 ./libee.a(ee_irq_stack.o)
+ .PPC.EMB.apuinfo
+                0x0000013c       0x18 ./libee.a(ee_oo.o)
+ .PPC.EMB.apuinfo
+                0x00000154       0x18 ./libee.a(ee_context.o)
+ .PPC.EMB.apuinfo
+                0x0000016c       0x18 ./libee.a(ee_context.o)
+ .PPC.EMB.apuinfo
+                0x00000184       0x18 ./libee.a(ee_thendin.o)
+ .PPC.EMB.apuinfo
+                0x0000019c       0x18 ./libee.a(ee_tnterm.o)
+ .PPC.EMB.apuinfo
+                0x000001b4       0x18 ./libee.a(ee_rq_inser.o)
+
+.debug_loc      0x00000000     0x1154
+ .debug_loc     0x00000000      0x309 obj/code.o
+ .debug_loc     0x00000309       0xff ./libee.a(ee_e200zx_cpu.o)
+ .debug_loc     0x00000408       0xfe ./libee.a(ee_irq.o)
+ .debug_loc     0x00000506       0x7e ./libee.a(ee_terminat.o)
+ .debug_loc     0x00000584       0xe5 ./libee.a(ee_irqendin.o)
+ .debug_loc     0x00000669       0x2c ./libee.a(ee_tstub.o)
+ .debug_loc     0x00000695      0x18d ./libee.a(ee_startos.o)
+ .debug_loc     0x00000822      0x6d7 ./libee.a(ee_altick.o)
+ .debug_loc     0x00000ef9       0x4d ./libee.a(ee_context.o)
+ .debug_loc     0x00000f46      0x13e ./libee.a(ee_thendin.o)
+ .debug_loc     0x00001084       0x20 ./libee.a(ee_tnterm.o)
+ .debug_loc     0x000010a4       0xb0 ./libee.a(ee_rq_inser.o)
+
+.debug_ranges   0x00000000      0x260
+ .debug_ranges  0x00000000       0x40 obj/code.o
+ .debug_ranges  0x00000040       0x20 ./libee.a(ee_entry.o)
+ .debug_ranges  0x00000060       0x38 ./libee.a(ee_e200zx_cpu.o)
+ .debug_ranges  0x00000098       0x18 ./libee.a(ee_irq.o)
+ .debug_ranges  0x000000b0       0x10 ./libee.a(ee_terminat.o)
+ .debug_ranges  0x000000c0       0x18 ./libee.a(ee_irqendin.o)
+ .debug_ranges  0x000000d8       0x10 ./libee.a(ee_tstub.o)
+ .debug_ranges  0x000000e8       0x10 ./libee.a(ee_rq_exchg.o)
+ .debug_ranges  0x000000f8       0x58 ./libee.a(ee_startos.o)
+ .debug_ranges  0x00000150       0xd0 ./libee.a(ee_altick.o)
+ .debug_ranges  0x00000220       0x10 ./libee.a(ee_context.o)
+ .debug_ranges  0x00000230       0x10 ./libee.a(ee_thendin.o)
+ .debug_ranges  0x00000240       0x10 ./libee.a(ee_tnterm.o)
+ .debug_ranges  0x00000250       0x10 ./libee.a(ee_rq_inser.o)
+
+.debug_frame    0x00000000      0x3c8
+ .debug_frame   0x00000000       0xc8 obj/code.o
+ .debug_frame   0x000000c8       0x70 ./libee.a(ee_e200zx_cpu.o)
+ .debug_frame   0x00000138       0x48 ./libee.a(ee_irq.o)
+ .debug_frame   0x00000180       0x2c ./libee.a(ee_terminat.o)
+ .debug_frame   0x000001ac       0x48 ./libee.a(ee_irqendin.o)
+ .debug_frame   0x000001f4       0x2c ./libee.a(ee_tstub.o)
+ .debug_frame   0x00000220       0x20 ./libee.a(ee_rq_exchg.o)
+ .debug_frame   0x00000240       0x4c ./libee.a(ee_startos.o)
+ .debug_frame   0x0000028c       0x98 ./libee.a(ee_altick.o)
+ .debug_frame   0x00000324       0x2c ./libee.a(ee_context.o)
+ .debug_frame   0x00000350       0x30 ./libee.a(ee_thendin.o)
+ .debug_frame   0x00000380       0x28 ./libee.a(ee_tnterm.o)
+ .debug_frame   0x000003a8       0x20 ./libee.a(ee_rq_inser.o)
+
+Cross Reference Table
+
+Symbol                                            File
+EE_ApplicationMode                                obj/eecfg.o
+                                                  ./libee.a(ee_startos.o)
+EE_IRQ_end_instance                               ./libee.a(ee_irqendin.o)
+                                                  ./libee.a(ee_irq.o)
+EE_IRQ_end_post_stub                              ./libee.a(ee_irqendin.o)
+                                                  ./libee.a(ee_irq.o)
+EE_IRQ_nesting_level                              ./libee.a(ee_hal_structs.o)
+                                                  ./libee.a(ee_altick.o)
+                                                  ./libee.a(ee_terminat.o)
+                                                  ./libee.a(ee_irq.o)
+EE_ORTI_lasterror                                 ./libee.a(ee_startos.o)
+                                                  ./libee.a(ee_tnterm.o)
+                                                  ./libee.a(ee_altick.o)
+                                                  ./libee.a(ee_irqendin.o)
+                                                  ./libee.a(ee_terminat.o)
+EE_ORTI_runningisr2                               ./libee.a(ee_startos.o)
+                                                  ./libee.a(ee_irq.o)
+EE_ORTI_servicetrace                              ./libee.a(ee_startos.o)
+                                                  ./libee.a(ee_altick.o)
+                                                  ./libee.a(ee_terminat.o)
+                                                  obj/code.o
+EE_ORTI_th_priority                               ./libee.a(ee_startos.o)
+                                                  ./libee.a(ee_thendin.o)
+                                                  ./libee.a(ee_altick.o)
+                                                  ./libee.a(ee_irqendin.o)
+EE_alarm_ROM                                      obj/eecfg.o
+                                                  ./libee.a(ee_altick.o)
+EE_counter_RAM                                    obj/eecfg.o
+                                                  ./libee.a(ee_altick.o)
+EE_counter_ROM                                    obj/eecfg.o
+                                                  ./libee.a(ee_altick.o)
+EE_e200z7_IRQ_tos                                 obj/eecfg.o
+                                                  ./libee.a(ee_irq_stack.o)
+EE_e200z7_ISR_table                               ./libee.a(ee_irq.o)
+EE_e200z7_active_tos                              obj/eecfg.o
+                                                  ./libee.a(ee_context.o)
+                                                  ./libee.a(ee_irq.o)
+EE_e200z7_irq                                     ./libee.a(ee_irq.o)
+                                                  ./libee.a(ee_entry.o)
+EE_e200z7_register_ISR                            ./libee.a(ee_irq.o)
+                                                  obj/code.o
+EE_e200z7_setup_decrementer                       ./libee.a(ee_e200zx_cpu.o)
+                                                  obj/code.o
+EE_e200z7_setup_decrementer_oneshot               ./libee.a(ee_e200zx_cpu.o)
+EE_e200z7_stop_decrementer                        ./libee.a(ee_e200zx_cpu.o)
+EE_e200z7_system_tos                              obj/eecfg.o
+                                                  ./libee.a(ee_context.o)
+EE_e200zx_call_ISR                                ./libee.a(ee_irq_stack.o)
+                                                  ./libee.a(ee_irq.o)
+EE_e200zx_decrementer_handler                     ./libee.a(ee_entry.o)
+                                                  ./libee.a(ee_ivor.o)
+EE_e200zx_delay                                   ./libee.a(ee_e200zx_cpu.o)
+EE_e200zx_external_input_handler                  ./libee.a(ee_entry.o)
+                                                  ./libee.a(ee_ivor.o)
+EE_e200zx_fixed_intv_handler                      ./libee.a(ee_entry.o)
+                                                  ./libee.a(ee_ivor.o)
+EE_e200zx_setup_fixed_intv                        ./libee.a(ee_e200zx_cpu.o)
+EE_e200zx_stop_fixed_intv                         ./libee.a(ee_e200zx_cpu.o)
+EE_e200zx_sys_stack                               ./libee.a(ee_e200zx_cpu.o)
+                                                  obj/pkg/mcu/freescale_mpc5674f/src/ee_boot.o
+EE_e200zx_tmp_tos                                 ./libee.a(ee_irq_stack.o)
+EE_hal_terminate_savestk                          ./libee.a(ee_oo.o)
+                                                  ./libee.a(ee_tstub.o)
+EE_hal_terminate_task                             ./libee.a(ee_oo.o)
+                                                  ./libee.a(ee_tnterm.o)
+                                                  ./libee.a(ee_terminat.o)
+EE_hal_thread_body                                obj/eecfg.o
+EE_oo_IRQ_disable_count                           ./libee.a(ee_lookup.o)
+                                                  ./libee.a(ee_thendin.o)
+                                                  ./libee.a(ee_irqendin.o)
+                                                  obj/code.o
+EE_oo_IRQ_suspend_status                          ./libee.a(ee_lookup.o)
+EE_oo_IncrementCounter                            ./libee.a(ee_altick.o)
+                                                  obj/code.o
+EE_oo_IncrementCounterHardware                    ./libee.a(ee_altick.o)
+EE_oo_IncrementCounterImplementation              ./libee.a(ee_altick.o)
+EE_oo_StartOS                                     ./libee.a(ee_startos.o)
+                                                  obj/code.o
+EE_oo_TerminateTask                               ./libee.a(ee_terminat.o)
+                                                  obj/code.o
+EE_oo_action_ROM                                  obj/eecfg.o
+                                                  ./libee.a(ee_altick.o)
+EE_oo_autostart_alarm_cycle                       obj/eecfg.o
+                                                  ./libee.a(ee_startos.o)
+EE_oo_autostart_alarm_data                        obj/eecfg.o
+                                                  ./libee.a(ee_startos.o)
+EE_oo_autostart_alarm_increment                   obj/eecfg.o
+                                                  ./libee.a(ee_startos.o)
+EE_oo_counter_object_RAM                          obj/eecfg.o
+                                                  ./libee.a(ee_altick.o)
+                                                  ./libee.a(ee_startos.o)
+EE_oo_counter_object_ROM                          obj/eecfg.o
+                                                  ./libee.a(ee_altick.o)
+EE_oo_counter_object_insert                       ./libee.a(ee_altick.o)
+                                                  ./libee.a(ee_startos.o)
+EE_oo_started                                     ./libee.a(ee_startos.o)
+EE_oo_thread_stub                                 ./libee.a(ee_tstub.o)
+                                                  ./libee.a(ee_context.o)
+                                                  obj/eecfg.o
+EE_rq2stk_exchange                                ./libee.a(ee_rq_exchg.o)
+                                                  ./libee.a(ee_thendin.o)
+                                                  ./libee.a(ee_altick.o)
+                                                  ./libee.a(ee_startos.o)
+                                                  ./libee.a(ee_irqendin.o)
+EE_rq_first                                       obj/eecfg.o
+                                                  ./libee.a(ee_rq_inser.o)
+                                                  ./libee.a(ee_thendin.o)
+                                                  ./libee.a(ee_altick.o)
+                                                  ./libee.a(ee_startos.o)
+                                                  ./libee.a(ee_rq_exchg.o)
+                                                  ./libee.a(ee_irqendin.o)
+EE_rq_insert                                      ./libee.a(ee_rq_inser.o)
+                                                  ./libee.a(ee_thendin.o)
+                                                  ./libee.a(ee_altick.o)
+EE_std_change_context                             ./libee.a(ee_context.o)
+                                                  ./libee.a(ee_altick.o)
+                                                  ./libee.a(ee_startos.o)
+                                                  ./libee.a(ee_irq.o)
+EE_std_endcycle_next_tid                          ./libee.a(ee_hal_structs.o)
+                                                  ./libee.a(ee_thendin.o)
+                                                  ./libee.a(ee_context.o)
+                                                  ./libee.a(ee_irqendin.o)
+                                                  ./libee.a(ee_irq.o)
+EE_std_run_task_code                              ./libee.a(ee_context.o)
+                                                  ./libee.a(ee_context.o)
+EE_std_thread_tos                                 obj/eecfg.o
+                                                  ./libee.a(ee_context.o)
+                                                  ./libee.a(ee_irq.o)
+EE_stkfirst                                       obj/eecfg.o
+                                                  ./libee.a(ee_tnterm.o)
+                                                  ./libee.a(ee_thendin.o)
+                                                  ./libee.a(ee_altick.o)
+                                                  ./libee.a(ee_rq_exchg.o)
+                                                  ./libee.a(ee_tstub.o)
+                                                  ./libee.a(ee_irqendin.o)
+                                                  ./libee.a(ee_terminat.o)
+EE_sys_ceiling                                    obj/eecfg.o
+                                                  ./libee.a(ee_thendin.o)
+                                                  ./libee.a(ee_altick.o)
+                                                  ./libee.a(ee_startos.o)
+                                                  ./libee.a(ee_irqendin.o)
+EE_terminate_data                                 obj/eecfg.o
+                                                  ./libee.a(ee_oo.o)
+EE_terminate_real_th_body                         obj/eecfg.o
+                                                  ./libee.a(ee_oo.o)
+EE_th_dispatch_prio                               obj/eecfg.o
+                                                  ./libee.a(ee_thendin.o)
+                                                  ./libee.a(ee_altick.o)
+                                                  ./libee.a(ee_startos.o)
+                                                  ./libee.a(ee_irqendin.o)
+EE_th_event_active                                obj/eecfg.o
+                                                  ./libee.a(ee_thendin.o)
+                                                  ./libee.a(ee_altick.o)
+EE_th_event_waitmask                              obj/eecfg.o
+                                                  ./libee.a(ee_altick.o)
+EE_th_is_extended                                 obj/eecfg.o
+                                                  ./libee.a(ee_altick.o)
+EE_th_next                                        obj/eecfg.o
+                                                  ./libee.a(ee_rq_inser.o)
+                                                  ./libee.a(ee_thendin.o)
+                                                  ./libee.a(ee_rq_exchg.o)
+EE_th_ready_prio                                  obj/eecfg.o
+                                                  ./libee.a(ee_rq_inser.o)
+                                                  ./libee.a(ee_thendin.o)
+                                                  ./libee.a(ee_altick.o)
+                                                  ./libee.a(ee_irqendin.o)
+EE_th_rnact                                       obj/eecfg.o
+                                                  ./libee.a(ee_thendin.o)
+                                                  ./libee.a(ee_altick.o)
+EE_th_status                                      obj/eecfg.o
+                                                  ./libee.a(ee_thendin.o)
+                                                  ./libee.a(ee_altick.o)
+                                                  ./libee.a(ee_startos.o)
+                                                  ./libee.a(ee_irqendin.o)
+EE_th_terminate_nextask                           obj/eecfg.o
+                                                  ./libee.a(ee_thendin.o)
+                                                  ./libee.a(ee_terminat.o)
+EE_th_waswaiting                                  obj/eecfg.o
+                                                  ./libee.a(ee_thendin.o)
+                                                  ./libee.a(ee_altick.o)
+                                                  ./libee.a(ee_irqendin.o)
+EE_thread_end_instance                            ./libee.a(ee_thendin.o)
+                                                  ./libee.a(ee_context.o)
+EE_thread_not_terminated                          ./libee.a(ee_tnterm.o)
+                                                  ./libee.a(ee_oo.o)
+FuncTask1                                         obj/code.o
+                                                  obj/eecfg.o
+FuncTask2                                         obj/code.o
+                                                  obj/eecfg.o
+_SDA2_BASE_                                       obj/pkg/mcu/freescale_mpc5674f/src/ee_boot.o
+_SDA_BASE_                                        obj/pkg/mcu/freescale_mpc5674f/src/ee_boot.o
+__start                                           obj/pkg/mcu/freescale_mpc5674f/src/ee_boot.o
+button_fired                                      obj/code.o
+cpu_setup                                         ./libee.a(ee_entry.o)
+                                                  obj/pkg/mcu/freescale_mpc5674f/src/ee_boot.o
+dummy_shared_variable                             obj/code.o
+ee_ebss                                           obj/pkg/mcu/freescale_mpc5674f/src/ee_boot.o
+ee_esbss2                                         obj/pkg/mcu/freescale_mpc5674f/src/ee_boot.o
+ee_estack                                         obj/pkg/mcu/freescale_mpc5674f/src/ee_boot.o
+ee_load_ram                                       obj/pkg/mcu/freescale_mpc5674f/src/ee_boot.o
+ee_sbss                                           obj/pkg/mcu/freescale_mpc5674f/src/ee_boot.o
+ee_sdata                                          obj/pkg/mcu/freescale_mpc5674f/src/ee_boot.o
+ee_ssbss2                                         obj/pkg/mcu/freescale_mpc5674f/src/ee_boot.o
+ee_sstack                                         obj/pkg/mcu/freescale_mpc5674f/src/ee_boot.o
+ivor_setup                                        ./libee.a(ee_ivor.o)
+                                                  ./libee.a(ee_entry.o)
+led_blink                                         obj/code.o
+main                                              obj/code.o
+                                                  obj/pkg/mcu/freescale_mpc5674f/src/ee_boot.o
+mydelay                                           obj/code.o
+sram_setup                                        ./libee.a(ee_entry.o)
+                                                  obj/pkg/mcu/freescale_mpc5674f/src/ee_boot.o
+task1_ctr                                         obj/code.o
+task1_fired                                       obj/code.o
+task1_state                                       obj/code.o
+task2_fired                                       obj/code.o
+timer_divisor                                     obj/code.o
+timer_fired                                       obj/code.o
+tunable_delay                                     obj/code.o
