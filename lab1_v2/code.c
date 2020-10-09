@@ -27,7 +27,8 @@ DeclareTask( Task1);
 DeclareTask( Task2);
 
 /* Event declaration */
-DeclareEvent( TimerEvent);
+DeclareEvent(task1_wakeup);
+DeclareEvent(task2_wakeup);
 
 /* some other prototypes */
 void mydelay(long int end);
@@ -54,43 +55,78 @@ void led_blink(unsigned char theled) {
 	EnableAllInterrupts();
 }
 
-/* Task1: blink led3 */
-TASK( Task1) {
-	task1_fired++;
+/* Task1: blink led3, basic*/
+//TASK( Task1) {
+//	task1_fired++;
+//
+//	static int LED3=0;
+//
+//	if( LED3 == 0 )
+//	{
+//		EE_led_3_off();
+//	}
+//	else
+//	{
+//		EE_led_3_on();
+//	}
+//	LED3 = !LED3;
+//
+//	TerminateTask();
+//}
+//
+///* Task2: blink led7, basic */
+//TASK( Task2) {
+//	task2_fired++;
+//	static int LED7=0;
+//
+//	if( LED7 == 0 )
+//	{
+//		EE_led_7_off();
+//	}
+//	else
+//	{
+//		EE_led_7_on();
+//	}
+//	LED7 = !LED7;
+//
+//	TerminateTask();
+//}
 
+/* Task1: blink led3, extended*/
+TASK( Task1){
 	static int LED3=0;
-
-	if( LED3 == 0 )
-	{
-		EE_led_3_off();
+	for(;;){
+		WaitEvent(task1_wakeup);
+		ClearEvent(task1_wakeup);
+		if( LED3 == 0 )
+		{
+			EE_led_3_off();
+		}
+		else
+		{
+			EE_led_3_on();
+		}
+		LED3 = !LED3;
 	}
-	else
-	{
-		EE_led_3_on();
-	}
-	LED3 = !LED3;
-
-	TerminateTask();
 }
 
-/* Task2: blink led7 */
-TASK( Task2) {
-	task2_fired++;
+/* Task2: blink led7, extended*/
+TASK( Task2){
 	static int LED7=0;
-
-	if( LED7 == 0 )
-	{
-		EE_led_7_off();
-	}
-	else
-	{
-		EE_led_7_on();
-	}
-	LED7 = !LED7;
-
-	TerminateTask();
+		for(;;){
+			WaitEvent(task2_wakeup);
+			ClearEvent(task2_wakeup);
+			if( LED7 == 0 )
+			{
+				EE_led_7_off();
+			}
+			else
+			{
+				EE_led_7_on();
+			}
+			LED7 = !LED7;
+		}
 }
-
 static void Buttons_Interrupt(void) {
 	button_fired++;
 	EE_buttons_clear_ISRflag(BUTTON_0);

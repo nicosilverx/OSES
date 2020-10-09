@@ -120,7 +120,7 @@
         { 0U, 0U};
 
     const EE_TYPEPRIO EE_th_is_extended[EE_MAX_TASK] =
-        { 0U, 0U};
+        { 1U, 1U};
 
 
 
@@ -170,8 +170,8 @@
  **************************************************************************/
     const EE_oo_action_ROM_type   EE_oo_action_ROM[EE_ACTION_ROM_SIZE] = {
 
-        {EE_ACTION_TASK    , Task1, 0U, (EE_VOID_CALLBACK)NULL, (EE_TYPECOUNTER)-1 },
-        {EE_ACTION_TASK    , Task2, 0U, (EE_VOID_CALLBACK)NULL, (EE_TYPECOUNTER)-1 }
+        {EE_ACTION_EVENT   , Task1, task1_wakeup, (EE_VOID_CALLBACK)NULL, (EE_TYPECOUNTER)-1 },
+        {EE_ACTION_EVENT   , Task2, task2_wakeup, (EE_VOID_CALLBACK)NULL, (EE_TYPECOUNTER)-1 }
     };
 
 
@@ -182,6 +182,19 @@
  *
  **************************************************************************/
     EE_TYPEAPPMODE EE_ApplicationMode;
+
+
+/***************************************************************************
+ *
+ * Auto Start (TASK)
+ *
+ **************************************************************************/
+    static const EE_TID EE_oo_autostart_task_mode_OSDEFAULTAPPMODE[EE_OO_AUTOSTART_TASK_MODE_OSDEFAULTAPPMODE_SIZE] = 
+        { Task1, Task2 };
+
+    const struct EE_oo_autostart_task_type EE_oo_autostart_task_data[EE_MAX_APPMODE] = {
+        { 2U, EE_oo_autostart_task_mode_OSDEFAULTAPPMODE}
+    };
 
 
 /***************************************************************************

@@ -40,55 +40,73 @@ CPU test_application {
 		ORTI_SECTIONS = ALL;
 	};
 
+	EVENT task1_wakeup {
+		MASK = AUTO;
+	};
+	
+	EVENT task2_wakeup {
+		MASK = AUTO;
+	};
 	
 	TASK Task1 {
 		PRIORITY = 0x01; /* High priority */
 		SCHEDULE = FULL;
-		AUTOSTART = FALSE;
+		AUTOSTART = TRUE;
 		STACK = PRIVATE {
 			SYS_SIZE = 4096;
 		};
 		ACTIVATION = 1; /* only one pending activation */
+		EVENT = task1_wakeup;
 	};
 
 
 	TASK Task2 {
 		PRIORITY = 0x01; /* Low priority */
 		SCHEDULE = FULL; 
-		AUTOSTART = FALSE; /* try setting this to false */
+		AUTOSTART = TRUE; /* try setting this to false */
 		STACK = PRIVATE {
 			SYS_SIZE = 4096;
 		};
 		ACTIVATION = 1;
+		EVENT = task2_wakeup;
 	};
-	EVENT TimerEvent {
-		MASK = AUTO;
-	};
+	
 	COUNTER Counter1 {
 		MINCYCLE = 2;
 		MAXALLOWEDVALUE = 65535;
 		TICKSPERBASE = 1;
 	};
+	
 	ALARM AlarmTask1 {
 		COUNTER = Counter1;
-		ACTION = ACTIVATETASK {
+//		ACTION = ACTIVATETASK {
+//			TASK = Task1;
+//		};
+		ACTION = SETEVENT {
 			TASK = Task1;
+			EVENT = task1_wakeup;
 		};
 		AUTOSTART = TRUE {
 			ALARMTIME = 1;
 			CYCLETIME = 100;
 		};
+		
 	};
 	
 	ALARM AlarmTask2 {
 		COUNTER = Counter1;
-		ACTION = ACTIVATETASK {
+//		ACTION = ACTIVATETASK {
+//			TASK = Task2;
+//		};
+		ACTION = SETEVENT {
 			TASK = Task2;
+			EVENT = task2_wakeup;
 		};
 		AUTOSTART = TRUE {
 			ALARMTIME = 1;
 			CYCLETIME = 200;
 		};
+		
 	};
 	
 };

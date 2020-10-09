@@ -21,7 +21,8 @@
     #define EE_MAX_RESOURCE 0U
 
     /* EVENT definition */
-    #define TimerEvent 0x1U
+    #define task1_wakeup 0x1U
+    #define task2_wakeup 0x2U
 
     /* ALARM definition */
     #define EE_MAX_ALARM 2U
@@ -87,6 +88,7 @@
 #define __IRQ_STACK_NEEDED__
 #define __MULTI__
 #define __OO_NO_RESOURCES__
+#define __OO_AUTOSTART_TASK__
 #define __OO_AUTOSTART_ALARM__
 #define __ALLOW_NESTED_IRQ__
 
@@ -119,6 +121,7 @@
     #define EE_COUNTER_ROM_SIZE 1
     #define EE_E200Z7_SYSTEM_TOS_SIZE 3
     #define EE_OO_AUTOSTART_ALARM_MODE_OSDEFAULTAPPMODE_SIZE 2
+    #define EE_OO_AUTOSTART_TASK_MODE_OSDEFAULTAPPMODE_SIZE 2
 
 
 #endif
