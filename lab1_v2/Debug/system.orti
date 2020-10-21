@@ -206,7 +206,7 @@ ALARM AlarmTask1 {
     ALARMTIME = "EE_ORTI_alarmtime[0]";
     CYCLETIME = "EE_oo_counter_object_RAM[0].cycle";
     STATE = "(EE_oo_counter_object_RAM[0].used == 0) ? 0 : 1";
-    ACTION = "set task1_wakeup on Task1";
+    ACTION = "activate task Task1";
     COUNTER = "Counter1";
     COUNTERVALUE = "EE_counter_RAM[EE_oo_counter_object_ROM[0].c].value";
 };
@@ -214,7 +214,7 @@ ALARM AlarmTask2 {
     ALARMTIME = "EE_ORTI_alarmtime[1]";
     CYCLETIME = "EE_oo_counter_object_RAM[1].cycle";
     STATE = "(EE_oo_counter_object_RAM[1].used == 0) ? 0 : 1";
-    ACTION = "set task2_wakeup on Task2";
+    ACTION = "activate task Task2";
     COUNTER = "Counter1";
     COUNTERVALUE = "EE_counter_RAM[EE_oo_counter_object_ROM[1].c].value";
 };

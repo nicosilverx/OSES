@@ -83,7 +83,7 @@
 #define __OO_ORTI_STACK__
 #define __OO_ORTI_ALARMTIME__
 #define __OO_ORTI_RUNNINGISR2__
-#define __OO_ECC1__
+#define __OO_ECC2__
 #define __OO_EXTENDED_STATUS__
 #define __IRQ_STACK_NEEDED__
 #define __MULTI__
@@ -122,6 +122,10 @@
     #define EE_E200Z7_SYSTEM_TOS_SIZE 3
     #define EE_OO_AUTOSTART_ALARM_MODE_OSDEFAULTAPPMODE_SIZE 2
     #define EE_OO_AUTOSTART_TASK_MODE_OSDEFAULTAPPMODE_SIZE 2
+    #define EE_RQ_PAIRS_NEXT_SIZE 2
+    #define EE_RQ_PAIRS_TID_SIZE 2
+    #define EE_RQ_QUEUES_HEAD_SIZE 16
+    #define EE_RQ_QUEUES_TAIL_SIZE 16
 
 
 #endif

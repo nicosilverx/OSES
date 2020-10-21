@@ -21,7 +21,8 @@ volatile int task1_ctr = 0;
 
 /* Added for a finest debugger (run-time) tuning */
 int tunable_delay = 2;
-
+int shared_global_variable = 0;
+int is_task2_executing = 0;
 /* Let's declare the tasks identifiers */
 DeclareTask( Task1);
 DeclareTask( Task2);
@@ -29,6 +30,9 @@ DeclareTask( Task2);
 /* Event declaration */
 DeclareEvent(task1_wakeup);
 DeclareEvent(task2_wakeup);
+
+DeclareMessage(msgDataSend);
+DeclareMessage(msgDataReceive);
 
 /* some other prototypes */
 void mydelay(long int end);
@@ -93,11 +97,91 @@ void led_blink(unsigned char theled) {
 //}
 
 /* Task1: blink led3, extended*/
-TASK( Task1){
+//TASK( Task1){
+//	static int LED3=0;
+//	for(;;){
+//		WaitEvent(task1_wakeup);
+//		ClearEvent(task1_wakeup);
+//		if( LED3 == 0 )
+//		{
+//			EE_led_3_off();
+//		}
+//		else
+//		{
+//			EE_led_3_on();
+//		}
+//		LED3 = !LED3;
+//	}
+//}
+
+/* Task2: blink led7, extended*/
+//TASK( Task2){
+//	static int LED7=0;
+//		for(;;){
+//			WaitEvent(task2_wakeup);
+//			ClearEvent(task2_wakeup);
+//			if( LED7 == 0 )
+//			{
+//				EE_led_7_off();
+//			}
+//			else
+//			{
+//				EE_led_7_on();
+//			}
+//			LED7 = !LED7;
+//		}
+//}
+
+///* Step3 : Task1*/
+//TASK(Task1){
+//	shared_global_variable = (shared_global_variable + 1)%10;
+//	TerminateTask();
+//}
+//
+///* Step3 : Task2*/
+//TASK(Task2){
+//	static calls_number = 0;
+//	static int LED3=0;
+//
+//	calls_number++;
+//
+//	if((calls_number % 2 == 0) && shared_global_variable<5){
+//		is_task2_executing = 1;
+//		if( LED3 == 0 )
+//		{
+//			EE_led_3_off();
+//		}
+//		else
+//		{
+//			EE_led_3_on();
+//		}
+//		LED3 = !LED3;
+//	}else{
+//		is_task2_executing = 0;
+//	}
+//	TerminateTask();
+//}
+
+/*Step 4 Task 1*/
+TASK (Task1){
+	static local_variable = 0;
+	local_variable = (local_variable + 1) % 10;
+	SendMessage("msgDataSend", &local_variable);
+	TerminateTask();
+}
+
+/*Step 4 Task 2*/
+TASK (Task2){
+	int var_from_task1;
+	static int calls_number = 0;
 	static int LED3=0;
-	for(;;){
-		WaitEvent(task1_wakeup);
-		ClearEvent(task1_wakeup);
+
+	ReceiveMessage("msgDataReceive", &var_from_task1);
+
+	calls_number++;
+
+	if((calls_number % 2 == 0) && var_from_task1<5){
+		is_task2_executing = 1;
 		if( LED3 == 0 )
 		{
 			EE_led_3_off();
@@ -107,25 +191,11 @@ TASK( Task1){
 			EE_led_3_on();
 		}
 		LED3 = !LED3;
+	}else{
+		is_task2_executing = 0;
 	}
-}
+	TerminateTask();
 
-/* Task2: blink led7, extended*/
-TASK( Task2){
-	static int LED7=0;
-		for(;;){
-			WaitEvent(task2_wakeup);
-			ClearEvent(task2_wakeup);
-			if( LED7 == 0 )
-			{
-				EE_led_7_off();
-			}
-			else
-			{
-				EE_led_7_on();
-			}
-			LED7 = !LED7;
-		}
 }
 static void Buttons_Interrupt(void) {
 	button_fired++;

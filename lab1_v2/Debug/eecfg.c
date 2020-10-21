@@ -87,13 +87,37 @@
     /* system ceiling */
     EE_TYPEPRIO EE_sys_ceiling= 0x0000U;
 
-    /* remaining nact: init= maximum pending activations of a Task */
-    /* MUST BE 1 for BCC1 and ECC1 */
-    EE_TYPENACT   EE_th_rnact[EE_MAX_TASK] =
-        { 1U, 1U};
+    /* The priority queues: (16 priorities maximum!) */
+    EE_TYPEPAIR EE_rq_queues_head[EE_RQ_QUEUES_HEAD_SIZE] =
+        { -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1};
+    EE_TYPEPAIR EE_rq_queues_tail[EE_RQ_QUEUES_TAIL_SIZE] =
+        { -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1};
 
-    /* First task in the ready queue (initvalue = EE_NIL) */
-    EE_TID EE_rq_first  = EE_NIL;
+    EE_TYPE_RQ_MASK EE_rq_bitmask = 0U;
+
+    /* remaining nact: init= maximum pending activations of a Task */
+    EE_TYPENACT EE_th_rnact[EE_MAX_TASK] = {
+        1U,		 /* thread Task1 */
+        1U		 /* thread Task2 */
+    };
+
+    const EE_TYPENACT EE_th_rnact_max[EE_MAX_TASK] = {
+        1U,		 /* thread Task1 */
+        1U		 /* thread Task2 */
+    };
+
+    EE_TYPEPRIO EE_rq_link[EE_MAX_TASK] =
+        { 0U, 0U};
+
+    /* The pairs that are enqueued into the priority queues (2 is the total number of task activations) */
+    EE_TYPEPAIR EE_rq_pairs_next[EE_RQ_PAIRS_NEXT_SIZE] =
+        { 1, -1};
+
+    /* no need to be initialized */
+    EE_TID EE_rq_pairs_tid[EE_RQ_PAIRS_TID_SIZE];
+
+    /* a list of unused pairs */
+    EE_TYPEPAIR EE_rq_free = 0; /* pointer to a free pair */
 
     #ifndef __OO_NO_CHAINTASK__
         /* The next task to be activated after a ChainTask. initvalue=all EE_NIL */
@@ -120,7 +144,7 @@
         { 0U, 0U};
 
     const EE_TYPEPRIO EE_th_is_extended[EE_MAX_TASK] =
-        { 1U, 1U};
+        { 0U, 0U};
 
 
 
@@ -170,8 +194,8 @@
  **************************************************************************/
     const EE_oo_action_ROM_type   EE_oo_action_ROM[EE_ACTION_ROM_SIZE] = {
 
-        {EE_ACTION_EVENT   , Task1, task1_wakeup, (EE_VOID_CALLBACK)NULL, (EE_TYPECOUNTER)-1 },
-        {EE_ACTION_EVENT   , Task2, task2_wakeup, (EE_VOID_CALLBACK)NULL, (EE_TYPECOUNTER)-1 }
+        {EE_ACTION_TASK    , Task1, 0U, (EE_VOID_CALLBACK)NULL, (EE_TYPECOUNTER)-1 },
+        {EE_ACTION_TASK    , Task2, 0U, (EE_VOID_CALLBACK)NULL, (EE_TYPECOUNTER)-1 }
     };
 
 
@@ -220,5 +244,5 @@
         {1U, 1U };
 
     const EE_TYPETICK EE_oo_autostart_alarm_cycle[EE_MAX_ALARM] =
-        {100U, 200U };
+        {1000U, 1000U };
 

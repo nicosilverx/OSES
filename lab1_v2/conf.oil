@@ -34,7 +34,7 @@ CPU test_application {
 		USERESSCHEDULER = FALSE;
 
 		/* Setup Kernel Type */
-		KERNEL_TYPE = ECC1;
+		KERNEL_TYPE = ECC2;
 
 		/* Enable ORTI support for Lauterbach Tracer */
 		ORTI_SECTIONS = ALL;
@@ -48,6 +48,23 @@ CPU test_application {
 		MASK = AUTO;
 	};
 	
+	MESSAGE msgDataSend{
+		MESSAGEPROPERTY = SEND_STATIC_INTERNAL {
+			CDATATYPE = "uint32";
+		};
+	};
+	
+	MESSAGE msgDataReceive{
+		MESSAGEPROPERTY = RECEIVE_UNQUEUED_INTERNAL {
+			SENDINGMESSAGE = msgDataSend;
+			FILTER = NEWISDIFFERENT;
+			INITIALVALUE = 0x00;
+		};
+		NOTIFICATION = ACTIVATETASK {
+			TASK = Task2;
+		};
+	};	
+	
 	TASK Task1 {
 		PRIORITY = 0x01; /* High priority */
 		SCHEDULE = FULL;
@@ -56,7 +73,8 @@ CPU test_application {
 			SYS_SIZE = 4096;
 		};
 		ACTIVATION = 1; /* only one pending activation */
-		EVENT = task1_wakeup;
+		//EVENT = task1_wakeup; Step 2
+		MESSAGE = msgDataSend;
 	};
 
 
@@ -68,7 +86,8 @@ CPU test_application {
 			SYS_SIZE = 4096;
 		};
 		ACTIVATION = 1;
-		EVENT = task2_wakeup;
+		//EVENT = task2_wakeup; Step 2
+		MESSAGE = msgDataReceive;
 	};
 	
 	COUNTER Counter1 {
@@ -79,34 +98,37 @@ CPU test_application {
 	
 	ALARM AlarmTask1 {
 		COUNTER = Counter1;
-//		ACTION = ACTIVATETASK {
-//			TASK = Task1;
-//		};
-		ACTION = SETEVENT {
+		ACTION = ACTIVATETASK {
 			TASK = Task1;
-			EVENT = task1_wakeup;
 		};
+		
+//		ACTION = SETEVENT {
+//			TASK = Task1;
+//			EVENT = task1_wakeup;
+//		}; Step 2
 		AUTOSTART = TRUE {
 			ALARMTIME = 1;
-			CYCLETIME = 100;
+			CYCLETIME = 1000;
 		};
 		
 	};
 	
 	ALARM AlarmTask2 {
 		COUNTER = Counter1;
-//		ACTION = ACTIVATETASK {
-//			TASK = Task2;
-//		};
-		ACTION = SETEVENT {
+		ACTION = ACTIVATETASK {
 			TASK = Task2;
-			EVENT = task2_wakeup;
 		};
+//		ACTION = SETEVENT {
+//			TASK = Task2;
+//			EVENT = task2_wakeup;
+//		}; Step 2
 		AUTOSTART = TRUE {
 			ALARMTIME = 1;
-			CYCLETIME = 200;
+			CYCLETIME = 1000; //For step1 and step2 200
 		};
 		
 	};
+	
+
 	
 };
