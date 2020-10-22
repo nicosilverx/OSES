@@ -1,0 +1,407 @@
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_oo_api_osek.h:544: warning: unbalanced grouping commands
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_hal_internal_types.h:42: warning: the name 'ee_internal_types.h' supplied as the argument in the \file statement is not an input file
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_hal_internal_types.h:67: warning: Compound OsEE_CTX_tag is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_hal_internal_types.h:99: warning: Compound OsEE_HDB_tag is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_hal_internal_types.h:90: warning: Compound OsEE_SCB_tag is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_hal_internal_types.h:94: warning: Compound OsEE_SDB_tag is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_arch_compiler_gcc.h:63: warning: Member OSEE_INIT (macro definition) of file ee_arch_compiler_gcc.h is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_avr8_compiler.h:46: warning: explicit link request to 'defines' could not be resolved
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_avr8_irq.h:64: warning: Member DeclareIsr1(f) (macro definition) of file ee_avr8_irq.h is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_avr8_irq.h:67: warning: Member ISR1(f) (macro definition) of file ee_avr8_irq.h is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_avr8_irq.h:70: warning: Member DeclareIsr2(f) (macro definition) of file ee_avr8_irq.h is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_avr8_irq.h:73: warning: Member ISR2(f) (macro definition) of file ee_avr8_irq.h is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_avr8_irqstub.h:89: warning: Member OSEE_AVR8_PROVIDE_IRQ_ENTRY(entry) (macro definition) of file ee_avr8_irqstub.h is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_avr8_irqstub.h:95: warning: Member OSEE_AVR8_REQUEST_IRQ_ENTRY(entry) (macro definition) of file ee_avr8_irqstub.h is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_avr8_irqstub.h:101: warning: Member OSEE_AVR8_ISR_PRESTUB() (macro definition) of file ee_avr8_irqstub.h is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_avr8_irqstub.h:107: warning: Member OSEE_AVR8_ISR_PREINSTUB() (macro definition) of file ee_avr8_irqstub.h is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_avr8_irqstub.h:129: warning: Member OSEE_AVR8_ISR_POSTSTUB() (macro definition) of file ee_avr8_irqstub.h is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_avr8_irqstub.h:135: warning: Member OSEE_AVR8_ISR_POSTINSTUB() (macro definition) of file ee_avr8_irqstub.h is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_avr8_irqstub.h:155: warning: Member OSEE_AVR8_ISR1_DEFINITION(v, f) (macro definition) of file ee_avr8_irqstub.h is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_avr8_irqstub.h:169: warning: Member OSEE_AVR8_ISR2_DEFINITION(v, t) (macro definition) of file ee_avr8_irqstub.h is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_avr8_irqstub.h:181: warning: Member OSEE_AVR8_ISR_NOT_DEFINED(v) (macro definition) of file ee_avr8_irqstub.h is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_avr8_irqstub.h:71: warning: Member osEE_avr8_isr1_stub(OsEE_void_cb f) (function) of file ee_avr8_irqstub.h is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_avr8_irqstub.h:76: warning: Member osEE_avr8_isr2_stub(TaskType t) (function) of file ee_avr8_irqstub.h is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_avr8_irqstub.h:155: warning: parameters of member OSEE_AVR8_ISR1_DEFINITION are not (all) documented
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_avr8_irqstub.h:169: warning: parameters of member OSEE_AVR8_ISR2_DEFINITION are not (all) documented
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_avr8_irqstub.h:181: warning: parameters of member OSEE_AVR8_ISR_NOT_DEFINED are not (all) documented
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_avr8_irqstub.h:135: warning: parameters of member OSEE_AVR8_ISR_POSTINSTUB are not (all) documented
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_avr8_irqstub.h:129: warning: parameters of member OSEE_AVR8_ISR_POSTSTUB are not (all) documented
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_avr8_irqstub.h:107: warning: parameters of member OSEE_AVR8_ISR_PREINSTUB are not (all) documented
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_avr8_irqstub.h:101: warning: parameters of member OSEE_AVR8_ISR_PRESTUB are not (all) documented
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_avr8_utils.h:74: warning: Member F_CPU (macro definition) of file ee_avr8_utils.h is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_avr8_utils.h:77: warning: Member EE_DELAY(_us) (macro definition) of file ee_avr8_utils.h is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_avr8_utils.h:95: warning: documented empty return type of EE_avr8_WriteCCPReg
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_get_kernel_and_core.h:75: warning: Member osEE_get_curr_core(void) (function) of file ee_get_kernel_and_core.h is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_get_kernel_and_core.h:79: warning: Member osEE_get_core(CoreIdType core_id) (function) of file ee_get_kernel_and_core.h is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_get_kernel_and_core.h:84: warning: Member osEE_get_kernel(void) (function) of file ee_get_kernel_and_core.h is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_get_kernel_and_core.h:88: warning: Member osEE_lock_kernel(void) (function) of file ee_get_kernel_and_core.h is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_get_kernel_and_core.h:90: warning: Member osEE_lock_and_get_kernel(void) (function) of file ee_get_kernel_and_core.h is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_get_kernel_and_core.h:95: warning: Member osEE_unlock_kernel(void) (function) of file ee_get_kernel_and_core.h is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_get_kernel_and_core.h:97: warning: Member osEE_lock_and_get_curr_core_id(void) (function) of file ee_get_kernel_and_core.h is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_get_kernel_and_core.h:101: warning: Member osEE_lock_core_id(CoreIdType core_id) (function) of file ee_get_kernel_and_core.h is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_get_kernel_and_core.h:105: warning: Member osEE_lock_core(OsEE_CDB *const p_cdb) (function) of file ee_get_kernel_and_core.h is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_get_kernel_and_core.h:109: warning: Member osEE_lock_and_get_core(CoreIdType core_id) (function) of file ee_get_kernel_and_core.h is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_get_kernel_and_core.h:114: warning: Member osEE_lock_and_get_curr_core(void) (function) of file ee_get_kernel_and_core.h is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_get_kernel_and_core.h:118: warning: Member osEE_unlock_core_id(CoreIdType core_id) (function) of file ee_get_kernel_and_core.h is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_get_kernel_and_core.h:122: warning: Member osEE_unlock_core(OsEE_CDB *const p_cdb) (function) of file ee_get_kernel_and_core.h is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_get_kernel_and_core.h:126: warning: Member osEE_unlock_curr_core(void) (function) of file ee_get_kernel_and_core.h is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_get_kernel_and_core.h:63: warning: Member osEE_kdb_var (variable) of file ee_get_kernel_and_core.h is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_get_kernel_and_core.h:64: warning: Member osEE_cdb_var (variable) of file ee_get_kernel_and_core.h is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_get_kernel_and_core.h:65: warning: Member osEE_kcb_var (variable) of file ee_get_kernel_and_core.h is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_get_kernel_and_core.h:66: warning: Member osEE_ccb_var (variable) of file ee_get_kernel_and_core.h is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_hal.h:82: warning: Member OSEE_FILL_PATTERN (macro definition) of file ee_hal.h is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_hal.h:86: warning: Member OSEE_FILL_ARRAY(array) (macro definition) of file ee_hal.h is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_hal.h:102: warning: Member osEE_get_SP(void) (function) of file ee_hal.h is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_hal.h:107: warning: Member osEE_get_curr_core_id(void) (function) of file ee_hal.h is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_platform_types.h:85: warning: Member OSEE_BOOL_TYPE (macro definition) of file ee_platform_types.h is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_platform_types.h:99: warning: Member OSEE_OBJECT_ID_TYPE (macro definition) of file ee_platform_types.h is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_platform_types.h:102: warning: Member OSEE_MEM_SIZE_TYPE (macro definition) of file ee_platform_types.h is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_platform_types.h:106: warning: Member OSEE_TICK_TYPE (macro definition) of file ee_platform_types.h is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_platform_types.h:110: warning: Member OSEE_EVENT_MASK_TYPE (macro definition) of file ee_platform_types.h is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_platform_types.h:113: warning: Member OSEE_ISR_SOURCE_TYPE (macro definition) of file ee_platform_types.h is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_platform_types.h:116: warning: Member OSEE_CORE_ID_TYPE (macro definition) of file ee_platform_types.h is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_platform_types.h:89: warning: Member OsEE_addr (typedef) of file ee_platform_types.h is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_platform_types.h:90: warning: Member OsEE_sreg (typedef) of file ee_platform_types.h is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_platform_types.h:91: warning: Member OsEE_reg (typedef) of file ee_platform_types.h is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_platform_types.h:92: warning: Member OsEE_stack (typedef) of file ee_platform_types.h is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_platform_types.h:95: warning: Member OsEE_uint16 (typedef) of file ee_platform_types.h is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_platform_types.h:98: warning: Member OsEE_object_id_type (typedef) of file ee_platform_types.h is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_platform_types.h:101: warning: Member OsEE_mem_size (typedef) of file ee_platform_types.h is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_platform_types.h:104: warning: Member OsEE_tick_type (typedef) of file ee_platform_types.h is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_platform_types.h:109: warning: Member OsEE_event_mask (typedef) of file ee_platform_types.h is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_platform_types.h:112: warning: Member OsEE_isr_src_id (typedef) of file ee_platform_types.h is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_platform_types.h:115: warning: Member OsEE_core_id (typedef) of file ee_platform_types.h is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_platform_types.h:118: warning: Member OsEE_void_cb)(void) (typedef) of file ee_platform_types.h is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_platform_types.h:81: warning: Member OsEE_bool (enumeration) of file ee_platform_types.h is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_scheduler_types.h:118: warning: return type of member osEE_sn_release is not documented
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_hal_internal_types.h:68: warning: Member r29 (variable) of class OsEE_CTX_tag is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_hal_internal_types.h:69: warning: Member r28 (variable) of class OsEE_CTX_tag is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_hal_internal_types.h:70: warning: Member r17 (variable) of class OsEE_CTX_tag is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_hal_internal_types.h:71: warning: Member r16 (variable) of class OsEE_CTX_tag is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_hal_internal_types.h:72: warning: Member r15 (variable) of class OsEE_CTX_tag is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_hal_internal_types.h:73: warning: Member r14 (variable) of class OsEE_CTX_tag is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_hal_internal_types.h:74: warning: Member r13 (variable) of class OsEE_CTX_tag is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_hal_internal_types.h:75: warning: Member r12 (variable) of class OsEE_CTX_tag is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_hal_internal_types.h:76: warning: Member r11 (variable) of class OsEE_CTX_tag is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_hal_internal_types.h:77: warning: Member r10 (variable) of class OsEE_CTX_tag is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_hal_internal_types.h:78: warning: Member r9 (variable) of class OsEE_CTX_tag is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_hal_internal_types.h:79: warning: Member r8 (variable) of class OsEE_CTX_tag is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_hal_internal_types.h:80: warning: Member r7 (variable) of class OsEE_CTX_tag is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_hal_internal_types.h:81: warning: Member r6 (variable) of class OsEE_CTX_tag is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_hal_internal_types.h:82: warning: Member r5 (variable) of class OsEE_CTX_tag is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_hal_internal_types.h:83: warning: Member r4 (variable) of class OsEE_CTX_tag is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_hal_internal_types.h:84: warning: Member r3 (variable) of class OsEE_CTX_tag is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_hal_internal_types.h:85: warning: Member r2 (variable) of class OsEE_CTX_tag is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_hal_internal_types.h:86: warning: Member p_ctx (variable) of class OsEE_CTX_tag is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_hal_internal_types.h:100: warning: Member p_sdb (variable) of class OsEE_HDB_tag is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_hal_internal_types.h:101: warning: Member p_scb (variable) of class OsEE_HDB_tag is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_hal_internal_types.h:91: warning: Member p_tos (variable) of class OsEE_SCB_tag is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_hal_internal_types.h:95: warning: Member p_bos (variable) of class OsEE_SDB_tag is not documented.
+/cygdrive/c/tmp_workspace/lab2_v2/erika/inc/ee_hal_internal_types.h:96: warning: Member stack_size (variable) of class OsEE_SDB_tag is not documented.
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee_8h__dep__incl.dot" -Tpng -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee_8h__dep__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee_8h__incl.dot" -Tpng -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee_8h__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__api_8h__dep__incl.dot" -Tpng -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__api_8h__dep__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__api_8h__incl.dot" -Tpng -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__api_8h__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__api__types_8h__dep__incl.dot" -Tpng -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__api__types_8h__dep__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__api__types_8h__incl.dot" -Tpng -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__api__types_8h__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__arch__compiler__gcc_8h__dep__incl.dot" -Tpng -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__arch__compiler__gcc_8h__dep__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__arch__override_8h__dep__incl.dot" -Tpng -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__arch__override_8h__dep__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__avr8__compiler_8h__dep__incl.dot" -Tpng -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__avr8__compiler_8h__dep__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__avr8__compiler_8h__incl.dot" -Tpng -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__avr8__compiler_8h__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__avr8__irq_8h__dep__incl.dot" -Tpng -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__avr8__irq_8h__dep__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__avr8__irqstub_8h__incl.dot" -Tpng -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__avr8__irqstub_8h__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__avr8__irq_8h__incl.dot" -Tpng -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__avr8__irq_8h__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__cfg_8h__incl.dot" -Tpng -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__cfg_8h__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__cfg_8h__dep__incl.dot" -Tpng -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__cfg_8h__dep__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__compiler_8h__dep__incl.dot" -Tpng -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__compiler_8h__dep__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__compiler_8h__incl.dot" -Tpng -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__compiler_8h__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__compiler__cfg_8h__dep__incl.dot" -Tpng -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__compiler__cfg_8h__dep__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__compiler__cfg_8h__incl.dot" -Tpng -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__compiler__cfg_8h__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__compiler__gcc_8h__incl.dot" -Tpng -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__compiler__gcc_8h__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__conf_8h__incl.dot" -Tpng -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__conf_8h__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__get__kernel__and__core_8h__dep__incl.dot" -Tpng -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__get__kernel__and__core_8h__dep__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__hal_8h__dep__incl.dot" -Tpng -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__hal_8h__dep__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__get__kernel__and__core_8h__incl.dot" -Tpng -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__get__kernel__and__core_8h__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__hal_8h__incl.dot" -Tpng -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__hal_8h__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__kernel__types_8h__dep__incl.dot" -Tpng -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__kernel__types_8h__dep__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__kernel__types_8h__incl.dot" -Tpng -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__kernel__types_8h__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__oo__api__dynamic_8h__dep__incl.dot" -Tpng -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__oo__api__dynamic_8h__dep__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__oo__api__dynamic_8h__incl.dot" -Tpng -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__oo__api__dynamic_8h__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__oo__api__extension_8h__dep__incl.dot" -Tpng -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__oo__api__extension_8h__dep__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__oo__api__extension_8h__incl.dot" -Tpng -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__oo__api__extension_8h__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__oo__api__osek_8h__dep__incl.dot" -Tpng -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__oo__api__osek_8h__dep__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__oo__api__osek_8h__incl.dot" -Tpng -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__oo__api__osek_8h__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__platform__types_8h__dep__incl.dot" -Tpng -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__platform__types_8h__dep__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__scheduler__types_8h__dep__incl.dot" -Tpng -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__scheduler__types_8h__dep__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__scheduler__types_8h__incl.dot" -Tpng -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__scheduler__types_8h__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__platform__types_8h__incl.dot" -Tpng -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__platform__types_8h__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/graph_legend.dot" -Tpng -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/graph_legend.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__AlarmDB__tag__coll__graph.dot" -Tpng -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__AlarmDB__tag__coll__graph.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__CCB__coll__graph.dot" -Tpng -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__CCB__coll__graph.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__CDB__coll__graph.dot" -Tpng -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__CDB__coll__graph.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__CTX__tag__coll__graph.dot" -Tpng -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__CTX__tag__coll__graph.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__CounterCB__coll__graph.dot" -Tpng -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__CounterCB__coll__graph.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__CounterDB__coll__graph.dot" -Tpng -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__CounterDB__coll__graph.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__KDB__coll__graph.dot" -Tpng -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__KDB__coll__graph.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__HDB__tag__coll__graph.dot" -Tpng -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__HDB__tag__coll__graph.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__MCB__coll__graph.dot" -Tpng -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__MCB__coll__graph.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__MDB__tag__coll__graph.dot" -Tpng -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__MDB__tag__coll__graph.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__SCB__tag__coll__graph.dot" -Tpng -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__SCB__tag__coll__graph.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__SDB__tag__coll__graph.dot" -Tpng -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__SDB__tag__coll__graph.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__SN__tag__coll__graph.dot" -Tpng -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__SN__tag__coll__graph.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__SchedTabCB__tag__coll__graph.dot" -Tpng -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__SchedTabCB__tag__coll__graph.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__TCB__coll__graph.dot" -Tpng -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__TCB__coll__graph.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__SchedTabDB__tag__coll__graph.dot" -Tpng -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__SchedTabDB__tag__coll__graph.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__TDB__tag__coll__graph.dot" -Tpng -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__TDB__tag__coll__graph.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__TW__coll__graph.dot" -Tpng -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__TW__coll__graph.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__TriggerCB__coll__graph.dot" -Tpng -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__TriggerCB__coll__graph.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__TriggerDB__tag__coll__graph.dot" -Tpng -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__TriggerDB__tag__coll__graph.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__action__coll__graph.dot" -Tpng -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__action__coll__graph.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__action__param__coll__graph.dot" -Tpng -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__action__param__coll__graph.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__st__exipiry__point__tag__coll__graph.dot" -Tpng -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__st__exipiry__point__tag__coll__graph.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__sem__tag__coll__graph.dot" -Tpng -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__sem__tag__coll__graph.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee_8h__dep__incl.dot" -Tpdf -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee_8h__dep__incl.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee_8h__incl.dot" -Tpdf -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee_8h__incl.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee__api_8h__dep__incl.dot" -Tpdf -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee__api_8h__dep__incl.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee__api_8h__incl.dot" -Tpdf -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee__api_8h__incl.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee__api__types_8h__dep__incl.dot" -Tpdf -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee__api__types_8h__dep__incl.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee__api__types_8h__incl.dot" -Tpdf -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee__api__types_8h__incl.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee__arch__override_8h__dep__incl.dot" -Tpdf -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee__arch__override_8h__dep__incl.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee__arch__compiler__gcc_8h__dep__incl.dot" -Tpdf -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee__arch__compiler__gcc_8h__dep__incl.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee__avr8__compiler_8h__dep__incl.dot" -Tpdf -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee__avr8__compiler_8h__dep__incl.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee__avr8__compiler_8h__incl.dot" -Tpdf -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee__avr8__compiler_8h__incl.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee__avr8__irq_8h__dep__incl.dot" -Tpdf -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee__avr8__irq_8h__dep__incl.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee__avr8__irqstub_8h__incl.dot" -Tpdf -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee__avr8__irqstub_8h__incl.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee__avr8__irq_8h__incl.dot" -Tpdf -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee__avr8__irq_8h__incl.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee__cfg_8h__dep__incl.dot" -Tpdf -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee__cfg_8h__dep__incl.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee__cfg_8h__incl.dot" -Tpdf -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee__cfg_8h__incl.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee__compiler_8h__dep__incl.dot" -Tpdf -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee__compiler_8h__dep__incl.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee__compiler_8h__incl.dot" -Tpdf -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee__compiler_8h__incl.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee__compiler__cfg_8h__dep__incl.dot" -Tpdf -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee__compiler__cfg_8h__dep__incl.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee__compiler__gcc_8h__incl.dot" -Tpdf -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee__compiler__gcc_8h__incl.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee__compiler__cfg_8h__incl.dot" -Tpdf -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee__compiler__cfg_8h__incl.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee__conf_8h__incl.dot" -Tpdf -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee__conf_8h__incl.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee__get__kernel__and__core_8h__dep__incl.dot" -Tpdf -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee__get__kernel__and__core_8h__dep__incl.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee__get__kernel__and__core_8h__incl.dot" -Tpdf -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee__get__kernel__and__core_8h__incl.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee__hal_8h__dep__incl.dot" -Tpdf -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee__hal_8h__dep__incl.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee__kernel__types_8h__dep__incl.dot" -Tpdf -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee__kernel__types_8h__dep__incl.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee__hal_8h__incl.dot" -Tpdf -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee__hal_8h__incl.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee__kernel__types_8h__incl.dot" -Tpdf -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee__kernel__types_8h__incl.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee__oo__api__dynamic_8h__dep__incl.dot" -Tpdf -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee__oo__api__dynamic_8h__dep__incl.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee__oo__api__dynamic_8h__incl.dot" -Tpdf -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee__oo__api__dynamic_8h__incl.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee__oo__api__extension_8h__dep__incl.dot" -Tpdf -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee__oo__api__extension_8h__dep__incl.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee__oo__api__osek_8h__dep__incl.dot" -Tpdf -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee__oo__api__osek_8h__dep__incl.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee__oo__api__osek_8h__incl.dot" -Tpdf -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee__oo__api__osek_8h__incl.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee__oo__api__extension_8h__incl.dot" -Tpdf -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee__oo__api__extension_8h__incl.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee__platform__types_8h__dep__incl.dot" -Tpdf -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee__platform__types_8h__dep__incl.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee__platform__types_8h__incl.dot" -Tpdf -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee__platform__types_8h__incl.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee__scheduler__types_8h__dep__incl.dot" -Tpdf -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee__scheduler__types_8h__dep__incl.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee__scheduler__types_8h__incl.dot" -Tpdf -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/ee__scheduler__types_8h__incl.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/structOsEE__AlarmDB__tag__coll__graph.dot" -Tpdf -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/structOsEE__AlarmDB__tag__coll__graph.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/structOsEE__CCB__coll__graph.dot" -Tpdf -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/structOsEE__CCB__coll__graph.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/structOsEE__CDB__coll__graph.dot" -Tpdf -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/structOsEE__CDB__coll__graph.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/structOsEE__CTX__tag__coll__graph.dot" -Tpdf -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/structOsEE__CTX__tag__coll__graph.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/structOsEE__CounterCB__coll__graph.dot" -Tpdf -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/structOsEE__CounterCB__coll__graph.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/structOsEE__CounterDB__coll__graph.dot" -Tpdf -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/structOsEE__CounterDB__coll__graph.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/structOsEE__HDB__tag__coll__graph.dot" -Tpdf -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/structOsEE__HDB__tag__coll__graph.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/structOsEE__MCB__coll__graph.dot" -Tpdf -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/structOsEE__MCB__coll__graph.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/structOsEE__KDB__coll__graph.dot" -Tpdf -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/structOsEE__KDB__coll__graph.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/structOsEE__MDB__tag__coll__graph.dot" -Tpdf -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/structOsEE__MDB__tag__coll__graph.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/structOsEE__SCB__tag__coll__graph.dot" -Tpdf -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/structOsEE__SCB__tag__coll__graph.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/structOsEE__SDB__tag__coll__graph.dot" -Tpdf -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/structOsEE__SDB__tag__coll__graph.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/structOsEE__SN__tag__coll__graph.dot" -Tpdf -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/structOsEE__SN__tag__coll__graph.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/structOsEE__SchedTabCB__tag__coll__graph.dot" -Tpdf -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/structOsEE__SchedTabCB__tag__coll__graph.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/structOsEE__SchedTabDB__tag__coll__graph.dot" -Tpdf -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/structOsEE__SchedTabDB__tag__coll__graph.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/structOsEE__TCB__coll__graph.dot" -Tpdf -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/structOsEE__TCB__coll__graph.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/structOsEE__TDB__tag__coll__graph.dot" -Tpdf -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/structOsEE__TDB__tag__coll__graph.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/structOsEE__TW__coll__graph.dot" -Tpdf -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/structOsEE__TW__coll__graph.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/structOsEE__TriggerCB__coll__graph.dot" -Tpdf -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/structOsEE__TriggerCB__coll__graph.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/structOsEE__TriggerDB__tag__coll__graph.dot" -Tpdf -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/structOsEE__TriggerDB__tag__coll__graph.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/structOsEE__action__coll__graph.dot" -Tpdf -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/structOsEE__action__coll__graph.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/structOsEE__action__param__coll__graph.dot" -Tpdf -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/structOsEE__action__param__coll__graph.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/structOsEE__sem__tag__coll__graph.dot" -Tpdf -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/structOsEE__sem__tag__coll__graph.pdf"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/structOsEE__st__exipiry__point__tag__coll__graph.dot" -Tpdf -o "/cygdrive/c/tmp_workspace/lab2_v2/erika/doc/latex/structOsEE__st__exipiry__point__tag__coll__graph.pdf"'
+error: problems opening map file /cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee_8h__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee_8h__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__api_8h__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__api_8h__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__api__types_8h__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__api__types_8h__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__arch__compiler__gcc_8h__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__arch__override_8h__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__avr8__compiler_8h__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__avr8__compiler_8h__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__avr8__irq_8h__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__avr8__irq_8h__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__avr8__irqstub_8h__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__cfg_8h__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__cfg_8h__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__compiler_8h__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__compiler_8h__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__compiler__cfg_8h__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__compiler__cfg_8h__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__compiler__gcc_8h__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__conf_8h__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__get__kernel__and__core_8h__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__get__kernel__and__core_8h__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__hal_8h__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__hal_8h__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__kernel__types_8h__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__kernel__types_8h__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__oo__api__dynamic_8h__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__oo__api__dynamic_8h__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__oo__api__extension_8h__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__oo__api__extension_8h__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__oo__api__osek_8h__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__oo__api__osek_8h__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__platform__types_8h__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__platform__types_8h__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__scheduler__types_8h__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/ee__scheduler__types_8h__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__AlarmDB__tag__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__CCB__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__CDB__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__CTX__tag__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__CounterCB__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__CounterDB__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__HDB__tag__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__KDB__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__MCB__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__MDB__tag__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__SCB__tag__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__SDB__tag__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__SN__tag__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__SchedTabCB__tag__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__SchedTabDB__tag__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__TCB__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__TDB__tag__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__TW__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__TriggerCB__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__TriggerDB__tag__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__action__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__action__param__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__sem__tag__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /cygdrive/c/tmp_workspace/lab2_v2/erika/doc/html/structOsEE__st__exipiry__point__tag__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problem writing FIG 0 figure!

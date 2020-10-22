@@ -1,0 +1,44 @@
+\hypertarget{ee__oo__api__extension_8h}{}\doxysection{inc/ee\+\_\+oo\+\_\+api\+\_\+extension.h File Reference}
+\label{ee__oo__api__extension_8h}\index{inc/ee\_oo\_api\_extension.h@{inc/ee\_oo\_api\_extension.h}}
+
+
+O\+S\+EK Kernel Extended A\+P\+Is.  
+
+
+{\ttfamily \#include \char`\"{}ee\+\_\+cfg.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ee\+\_\+api\+\_\+types.\+h\char`\"{}}\newline
+Include dependency graph for ee\+\_\+oo\+\_\+api\+\_\+extension.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{ee__oo__api__extension_8h_ac8460cb6d056c32024f4c220cc68f1a1}\label{ee__oo__api__extension_8h_ac8460cb6d056c32024f4c220cc68f1a1}} 
+\#define \mbox{\hyperlink{ee__oo__api__extension_8h_ac8460cb6d056c32024f4c220cc68f1a1}{O\+S\+E\+E\+\_\+\+C\+O\+U\+N\+T\+\_\+\+T\+Y\+PE}}~\mbox{\hyperlink{ee__compiler_8h_a44fc42ed93abd1afe9c2268543bc8faf}{V\+AR}}(Os\+E\+E\+\_\+reg, \mbox{\hyperlink{ee__compiler_8h_a11a4114a8973be51c022ce946b643033}{T\+Y\+P\+E\+D\+EF}})
+\begin{DoxyCompactList}\small\item\em Internal type for the semaphore counter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structOsEE__sem__tag}{Os\+E\+E\+\_\+sem\+\_\+tag}} $\ast$ \mbox{\hyperlink{group__primitives-sem_ga1574c4988376d4da5d86cc2a497c8554}{Sem\+Ref\+Type}}
+\begin{DoxyCompactList}\small\item\em Pointer to a Semaphore data structure. \end{DoxyCompactList}\item 
+typedef \mbox{\hyperlink{ee__oo__api__extension_8h_ac8460cb6d056c32024f4c220cc68f1a1}{O\+S\+E\+E\+\_\+\+C\+O\+U\+N\+T\+\_\+\+T\+Y\+PE}} \mbox{\hyperlink{group__primitives-sem_ga9eb6a71d96d32f3abce772439cdb1553}{Count\+Type}}
+\begin{DoxyCompactList}\small\item\em Type for the semaphore counter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{ee__api__types_8h_a79bf54a17078edb124b553c51129396a}{Status\+Type}} \mbox{\hyperlink{group__primitives-sem_ga5bb3b8183f625a50136af41b26dadc61}{Wait\+Sem}} (\mbox{\hyperlink{group__primitives-sem_ga1574c4988376d4da5d86cc2a497c8554}{Sem\+Ref\+Type}} Sem)
+\begin{DoxyCompactList}\small\item\em Semaphore blocking wait. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ee__api__types_8h_a79bf54a17078edb124b553c51129396a}{Status\+Type}} \mbox{\hyperlink{group__primitives-sem_gaf7a0e230d519a6b2564f6280b7288df4}{Post\+Sem}} (\mbox{\hyperlink{group__primitives-sem_ga1574c4988376d4da5d86cc2a497c8554}{Sem\+Ref\+Type}} Sem)
+\begin{DoxyCompactList}\small\item\em Post on a semaphore. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This files contains all O\+S\+EK Kernel Extended A\+P\+Is in Erika Enterprise.
+
+\begin{DoxyAuthor}{Author}
+Errico Guidieri 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2016 
+\end{DoxyDate}

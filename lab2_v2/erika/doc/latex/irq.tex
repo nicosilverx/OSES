@@ -1,0 +1,13 @@
+O\+S\+E\+K/\+V\+DX and A\+U\+T\+O\+S\+AR OS identify two kind of interrupt sources\+:
+
+
+\begin{DoxyItemize}
+\item I\+SR Type 1\+: they are interrupt handlers specified in a way independent from the OS. Most of the primitives of the OS cannot be called inside an I\+SR Type 1 handler. These interrupt handlers are typically specified using compiler dependent keywords. Section 7.\+7 of A\+U\+T\+O\+S\+AR OS gives restrictions on the usage of I\+SR Type 1 in case of Memory/\+Timing protection
+\item I\+SR Type 2\+: they are interrupt handlers handled by the OS. These handlers execute the OS scheduler at their end; it is possible to call various OS primitives inside a I\+SR Type 2.
+\end{DoxyItemize}
+
+In E\+R\+I\+K\+A3, I\+SR Type 2 are implemented in a way similar to tasks, and as well they appear inside the O\+R\+TI specification of the Running Task.
+
+I\+SR Type 2 needs to be declared in the E\+R\+I\+K\+A3 O\+IL File (in particular, the R\+T-\/\+Druid code generator needs the I\+SR Priority in order to resolve priority allocation and resource usage at interrupt level). E\+R\+I\+K\+A3 is in general responsible for the generation of the microcontroller Interrupt Vector.
+
+I\+SR Type 1 needs to have a priority greater than all the I\+SR Type 2 in the system. 

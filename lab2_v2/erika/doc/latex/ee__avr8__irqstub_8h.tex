@@ -1,0 +1,201 @@
+\hypertarget{ee__avr8__irqstub_8h}{}\doxysection{inc/ee\+\_\+avr8\+\_\+irqstub.h File Reference}
+\label{ee__avr8__irqstub_8h}\index{inc/ee\_avr8\_irqstub.h@{inc/ee\_avr8\_irqstub.h}}
+
+
+A\+V\+R8 I\+R\+Qs Internals.  
+
+
+{\ttfamily \#include \char`\"{}ee\+\_\+internal.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ee\+\_\+avr8\+\_\+irq.\+h\char`\"{}}\newline
+Include dependency graph for ee\+\_\+avr8\+\_\+irqstub.\+h\+:
+% FIG 0
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{ee__avr8__irqstub_8h_a47e1009f68bf2fba2d2db2db4f80f75e}\label{ee__avr8__irqstub_8h_a47e1009f68bf2fba2d2db2db4f80f75e}} 
+\#define {\bfseries O\+S\+E\+E\+\_\+\+A\+V\+R8\+\_\+\+P\+R\+O\+V\+I\+D\+E\+\_\+\+I\+R\+Q\+\_\+\+E\+N\+T\+RY}(entry)~O\+S\+E\+E\+\_\+\+A\+V\+R8\+\_\+\+P\+R\+O\+V\+I\+D\+E\+\_\+\+S\+YM(O\+S\+E\+E\+\_\+\+S\+\_\+J(tag\+\_\+,entry))
+\item 
+\mbox{\Hypertarget{ee__avr8__irqstub_8h_aa0cb2aefc9746f726eeb73639c210240}\label{ee__avr8__irqstub_8h_aa0cb2aefc9746f726eeb73639c210240}} 
+\#define {\bfseries O\+S\+E\+E\+\_\+\+A\+V\+R8\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+I\+R\+Q\+\_\+\+E\+N\+T\+RY}(entry)~O\+S\+E\+E\+\_\+\+A\+V\+R8\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+YM(O\+S\+E\+E\+\_\+\+S\+\_\+J(tag\+\_\+,entry))
+\item 
+\#define {\bfseries O\+S\+E\+E\+\_\+\+A\+V\+R8\+\_\+\+I\+S\+R\+\_\+\+P\+R\+E\+S\+T\+UB}()
+\item 
+\#define {\bfseries O\+S\+E\+E\+\_\+\+A\+V\+R8\+\_\+\+I\+S\+R\+\_\+\+P\+R\+E\+I\+N\+S\+T\+UB}()
+\item 
+\#define {\bfseries O\+S\+E\+E\+\_\+\+A\+V\+R8\+\_\+\+I\+S\+R\+\_\+\+P\+O\+S\+T\+S\+T\+UB}()
+\item 
+\#define {\bfseries O\+S\+E\+E\+\_\+\+A\+V\+R8\+\_\+\+I\+S\+R\+\_\+\+P\+O\+S\+T\+I\+N\+S\+T\+UB}()
+\item 
+\#define {\bfseries O\+S\+E\+E\+\_\+\+A\+V\+R8\+\_\+\+I\+S\+R1\+\_\+\+D\+E\+F\+I\+N\+I\+T\+I\+ON}(v,  f)
+\item 
+\#define {\bfseries O\+S\+E\+E\+\_\+\+A\+V\+R8\+\_\+\+I\+S\+R2\+\_\+\+D\+E\+F\+I\+N\+I\+T\+I\+ON}(v,  t)
+\item 
+\#define {\bfseries O\+S\+E\+E\+\_\+\+A\+V\+R8\+\_\+\+I\+S\+R\+\_\+\+N\+O\+T\+\_\+\+D\+E\+F\+I\+N\+ED}(v)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{ee__avr8__irqstub_8h_ae5360e938ecc94479913739fc0bd78c2}\label{ee__avr8__irqstub_8h_ae5360e938ecc94479913739fc0bd78c2}} 
+void \mbox{\hyperlink{ee__compiler__gcc_8h_a052e7cf4322037a5a63a3947f1b585f3}{O\+S\+E\+E\+\_\+\+C\+O\+M\+P\+I\+L\+E\+R\+\_\+\+K\+E\+EP}} {\bfseries os\+E\+E\+\_\+avr8\+\_\+isr1\+\_\+stub} (Os\+E\+E\+\_\+void\+\_\+cb f)
+\item 
+\mbox{\Hypertarget{ee__avr8__irqstub_8h_a35a3ce6f1e94303cd81d010a9bf355a5}\label{ee__avr8__irqstub_8h_a35a3ce6f1e94303cd81d010a9bf355a5}} 
+void \mbox{\hyperlink{ee__compiler__gcc_8h_a052e7cf4322037a5a63a3947f1b585f3}{O\+S\+E\+E\+\_\+\+C\+O\+M\+P\+I\+L\+E\+R\+\_\+\+K\+E\+EP}} {\bfseries os\+E\+E\+\_\+avr8\+\_\+isr2\+\_\+stub} (\mbox{\hyperlink{group__primitives-task_ga9733da8629f4d0984967785419b15d4a}{Task\+Type}} t)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This files contains the internals of the I\+R\+Qs support for A\+V\+R8 Architecture available in Erika Enterprise.
+
+\begin{DoxyNote}{Note}
+TO BE D\+O\+C\+U\+M\+E\+N\+T\+E\+D!!!
+\end{DoxyNote}
+\begin{DoxyAuthor}{Author}
+Giuseppe Serano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2016 
+\end{DoxyDate}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{ee__avr8__irqstub_8h_a80b8b8d11a8a825324421d964a341969}\label{ee__avr8__irqstub_8h_a80b8b8d11a8a825324421d964a341969}} 
+\index{ee\_avr8\_irqstub.h@{ee\_avr8\_irqstub.h}!OSEE\_AVR8\_ISR1\_DEFINITION@{OSEE\_AVR8\_ISR1\_DEFINITION}}
+\index{OSEE\_AVR8\_ISR1\_DEFINITION@{OSEE\_AVR8\_ISR1\_DEFINITION}!ee\_avr8\_irqstub.h@{ee\_avr8\_irqstub.h}}
+\doxysubsubsection{\texorpdfstring{OSEE\_AVR8\_ISR1\_DEFINITION}{OSEE\_AVR8\_ISR1\_DEFINITION}}
+{\footnotesize\ttfamily \#define O\+S\+E\+E\+\_\+\+A\+V\+R8\+\_\+\+I\+S\+R1\+\_\+\+D\+E\+F\+I\+N\+I\+T\+I\+ON(\begin{DoxyParamCaption}\item[{}]{v,  }\item[{}]{f }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{/* Declare The ISR User handler */}    \(\backslash\)}
+\DoxyCodeLine{extern \textcolor{keywordtype}{void} f ( \textcolor{keywordtype}{void} );               \(\backslash\)}
+\DoxyCodeLine{ISR(v, ISR\_NAKED)                     \(\backslash\)}
+\DoxyCodeLine{\{                                     \(\backslash\)}
+\DoxyCodeLine{  OSEE\_AVR8\_PROVIDE\_IRQ\_ENTRY(v);     \(\backslash\)}
+\DoxyCodeLine{  OSEE\_AVR8\_ISR\_PRESTUB();            \(\backslash\)}
+\DoxyCodeLine{  osEE\_avr8\_isr1\_stub(f);             \(\backslash\)}
+\DoxyCodeLine{  EE\_AVR8\_ISR\_POSTSTUB();             \(\backslash\)}
+\DoxyCodeLine{  reti();                             \(\backslash\)}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{ee__avr8__irqstub_8h_a0927857e4012f3c6b0c48d04edb072c1}\label{ee__avr8__irqstub_8h_a0927857e4012f3c6b0c48d04edb072c1}} 
+\index{ee\_avr8\_irqstub.h@{ee\_avr8\_irqstub.h}!OSEE\_AVR8\_ISR2\_DEFINITION@{OSEE\_AVR8\_ISR2\_DEFINITION}}
+\index{OSEE\_AVR8\_ISR2\_DEFINITION@{OSEE\_AVR8\_ISR2\_DEFINITION}!ee\_avr8\_irqstub.h@{ee\_avr8\_irqstub.h}}
+\doxysubsubsection{\texorpdfstring{OSEE\_AVR8\_ISR2\_DEFINITION}{OSEE\_AVR8\_ISR2\_DEFINITION}}
+{\footnotesize\ttfamily \#define O\+S\+E\+E\+\_\+\+A\+V\+R8\+\_\+\+I\+S\+R2\+\_\+\+D\+E\+F\+I\+N\+I\+T\+I\+ON(\begin{DoxyParamCaption}\item[{}]{v,  }\item[{}]{t }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{/* Declare The ISR User handler */}    \(\backslash\)}
+\DoxyCodeLine{ISR(v, ISR\_NAKED)                     \(\backslash\)}
+\DoxyCodeLine{\{                                     \(\backslash\)}
+\DoxyCodeLine{  OSEE\_AVR8\_PROVIDE\_IRQ\_ENTRY(v);     \(\backslash\)}
+\DoxyCodeLine{  OSEE\_AVR8\_ISR\_PRESTUB();            \(\backslash\)}
+\DoxyCodeLine{  osEE\_avr8\_isr2\_stub(t);             \(\backslash\)}
+\DoxyCodeLine{  OSEE\_AVR8\_ISR\_POSTSTUB();           \(\backslash\)}
+\DoxyCodeLine{  reti();                             \(\backslash\)}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{ee__avr8__irqstub_8h_a4b68acae46dc47c592063a09a06286c1}\label{ee__avr8__irqstub_8h_a4b68acae46dc47c592063a09a06286c1}} 
+\index{ee\_avr8\_irqstub.h@{ee\_avr8\_irqstub.h}!OSEE\_AVR8\_ISR\_NOT\_DEFINED@{OSEE\_AVR8\_ISR\_NOT\_DEFINED}}
+\index{OSEE\_AVR8\_ISR\_NOT\_DEFINED@{OSEE\_AVR8\_ISR\_NOT\_DEFINED}!ee\_avr8\_irqstub.h@{ee\_avr8\_irqstub.h}}
+\doxysubsubsection{\texorpdfstring{OSEE\_AVR8\_ISR\_NOT\_DEFINED}{OSEE\_AVR8\_ISR\_NOT\_DEFINED}}
+{\footnotesize\ttfamily \#define O\+S\+E\+E\+\_\+\+A\+V\+R8\+\_\+\+I\+S\+R\+\_\+\+N\+O\+T\+\_\+\+D\+E\+F\+I\+N\+ED(\begin{DoxyParamCaption}\item[{}]{v }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{/* Define a NAKED ISR handler */}    \(\backslash\)}
+\DoxyCodeLine{ISR(v, ISR\_NAKED)                   \(\backslash\)}
+\DoxyCodeLine{\{                                   \(\backslash\)}
+\DoxyCodeLine{  OSEE\_AVR8\_PROVIDE\_IRQ\_ENTRY(v);   \(\backslash\)}
+\DoxyCodeLine{  \textcolor{comment}{/* Disables IRQ  */}               \(\backslash\)}
+\DoxyCodeLine{  cli();                            \(\backslash\)}
+\DoxyCodeLine{  \textcolor{comment}{/* Hangs in a infinite loop!!! */} \(\backslash\)}
+\DoxyCodeLine{  for(;;) \{                         \(\backslash\)}
+\DoxyCodeLine{    ;                               \(\backslash\)}
+\DoxyCodeLine{  \}                                 \(\backslash\)}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{ee__avr8__irqstub_8h_aa086eaa8f831bc1144ec9194fc2fc919}\label{ee__avr8__irqstub_8h_aa086eaa8f831bc1144ec9194fc2fc919}} 
+\index{ee\_avr8\_irqstub.h@{ee\_avr8\_irqstub.h}!OSEE\_AVR8\_ISR\_POSTINSTUB@{OSEE\_AVR8\_ISR\_POSTINSTUB}}
+\index{OSEE\_AVR8\_ISR\_POSTINSTUB@{OSEE\_AVR8\_ISR\_POSTINSTUB}!ee\_avr8\_irqstub.h@{ee\_avr8\_irqstub.h}}
+\doxysubsubsection{\texorpdfstring{OSEE\_AVR8\_ISR\_POSTINSTUB}{OSEE\_AVR8\_ISR\_POSTINSTUB}}
+{\footnotesize\ttfamily \#define O\+S\+E\+E\+\_\+\+A\+V\+R8\+\_\+\+I\+S\+R\+\_\+\+P\+O\+S\+T\+I\+N\+S\+T\+UB(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{do} \{                                      \(\backslash\)}
+\DoxyCodeLine{  \_\_asm\_\_ \_\_volatile\_\_(\textcolor{stringliteral}{"pop r31\(\backslash\)n"});      \(\backslash\)}
+\DoxyCodeLine{  \_\_asm\_\_ \_\_volatile\_\_(\textcolor{stringliteral}{"pop r30\(\backslash\)n"});      \(\backslash\)}
+\DoxyCodeLine{  \_\_asm\_\_ \_\_volatile\_\_(\textcolor{stringliteral}{"pop r27\(\backslash\)n"});      \(\backslash\)}
+\DoxyCodeLine{  \_\_asm\_\_ \_\_volatile\_\_(\textcolor{stringliteral}{"pop r26\(\backslash\)n"});      \(\backslash\)}
+\DoxyCodeLine{  \_\_asm\_\_ \_\_volatile\_\_(\textcolor{stringliteral}{"pop r23\(\backslash\)n"});      \(\backslash\)}
+\DoxyCodeLine{  \_\_asm\_\_ \_\_volatile\_\_(\textcolor{stringliteral}{"pop r22\(\backslash\)n"});      \(\backslash\)}
+\DoxyCodeLine{  \_\_asm\_\_ \_\_volatile\_\_(\textcolor{stringliteral}{"pop r21\(\backslash\)n"});      \(\backslash\)}
+\DoxyCodeLine{  \_\_asm\_\_ \_\_volatile\_\_(\textcolor{stringliteral}{"pop r20\(\backslash\)n"});      \(\backslash\)}
+\DoxyCodeLine{  \_\_asm\_\_ \_\_volatile\_\_(\textcolor{stringliteral}{"pop r19\(\backslash\)n"});      \(\backslash\)}
+\DoxyCodeLine{  \_\_asm\_\_ \_\_volatile\_\_(\textcolor{stringliteral}{"pop r18\(\backslash\)n"});      \(\backslash\)}
+\DoxyCodeLine{  \_\_asm\_\_ \_\_volatile\_\_(\textcolor{stringliteral}{"pop r0\(\backslash\)n"});       \(\backslash\)}
+\DoxyCodeLine{  \_\_asm\_\_ \_\_volatile\_\_(\textcolor{stringliteral}{"out 0x3f, r0\(\backslash\)n"}); \(\backslash\)}
+\DoxyCodeLine{  \_\_asm\_\_ \_\_volatile\_\_(\textcolor{stringliteral}{"pop r0\(\backslash\)n"});       \(\backslash\)}
+\DoxyCodeLine{  \_\_asm\_\_ \_\_volatile\_\_(\textcolor{stringliteral}{"pop r1\(\backslash\)n"});       \(\backslash\)}
+\DoxyCodeLine{\} \textcolor{keywordflow}{while}(0)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{ee__avr8__irqstub_8h_a78a9a609f5d2f477384afc5dcc072c38}\label{ee__avr8__irqstub_8h_a78a9a609f5d2f477384afc5dcc072c38}} 
+\index{ee\_avr8\_irqstub.h@{ee\_avr8\_irqstub.h}!OSEE\_AVR8\_ISR\_POSTSTUB@{OSEE\_AVR8\_ISR\_POSTSTUB}}
+\index{OSEE\_AVR8\_ISR\_POSTSTUB@{OSEE\_AVR8\_ISR\_POSTSTUB}!ee\_avr8\_irqstub.h@{ee\_avr8\_irqstub.h}}
+\doxysubsubsection{\texorpdfstring{OSEE\_AVR8\_ISR\_POSTSTUB}{OSEE\_AVR8\_ISR\_POSTSTUB}}
+{\footnotesize\ttfamily \#define O\+S\+E\+E\+\_\+\+A\+V\+R8\+\_\+\+I\+S\+R\+\_\+\+P\+O\+S\+T\+S\+T\+UB(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{do} \{                                \(\backslash\)}
+\DoxyCodeLine{  \_\_asm\_\_ \_\_volatile\_\_(\textcolor{stringliteral}{"pop r25\(\backslash\)n"});\(\backslash\)}
+\DoxyCodeLine{  \_\_asm\_\_ \_\_volatile\_\_(\textcolor{stringliteral}{"pop r24\(\backslash\)n"});\(\backslash\)}
+\DoxyCodeLine{\} \textcolor{keywordflow}{while}(0)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{ee__avr8__irqstub_8h_a85280c75a600d8930c78a27b8c06a9f6}\label{ee__avr8__irqstub_8h_a85280c75a600d8930c78a27b8c06a9f6}} 
+\index{ee\_avr8\_irqstub.h@{ee\_avr8\_irqstub.h}!OSEE\_AVR8\_ISR\_PREINSTUB@{OSEE\_AVR8\_ISR\_PREINSTUB}}
+\index{OSEE\_AVR8\_ISR\_PREINSTUB@{OSEE\_AVR8\_ISR\_PREINSTUB}!ee\_avr8\_irqstub.h@{ee\_avr8\_irqstub.h}}
+\doxysubsubsection{\texorpdfstring{OSEE\_AVR8\_ISR\_PREINSTUB}{OSEE\_AVR8\_ISR\_PREINSTUB}}
+{\footnotesize\ttfamily \#define O\+S\+E\+E\+\_\+\+A\+V\+R8\+\_\+\+I\+S\+R\+\_\+\+P\+R\+E\+I\+N\+S\+T\+UB(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{do} \{                                      \(\backslash\)}
+\DoxyCodeLine{  \_\_asm\_\_ \_\_volatile\_\_(\textcolor{stringliteral}{"push r1\(\backslash\)n"});      \(\backslash\)}
+\DoxyCodeLine{  \_\_asm\_\_ \_\_volatile\_\_(\textcolor{stringliteral}{"push r0\(\backslash\)n"});      \(\backslash\)}
+\DoxyCodeLine{  \_\_asm\_\_ \_\_volatile\_\_(\textcolor{stringliteral}{"in   r0, 0x3f\(\backslash\)n"});\(\backslash\)}
+\DoxyCodeLine{  \_\_asm\_\_ \_\_volatile\_\_(\textcolor{stringliteral}{"push r0\(\backslash\)n"});      \(\backslash\)}
+\DoxyCodeLine{  \_\_asm\_\_ \_\_volatile\_\_(\textcolor{stringliteral}{"eor  r1, r1\(\backslash\)n"});  \(\backslash\)}
+\DoxyCodeLine{  \_\_asm\_\_ \_\_volatile\_\_(\textcolor{stringliteral}{"push r18\(\backslash\)n"});     \(\backslash\)}
+\DoxyCodeLine{  \_\_asm\_\_ \_\_volatile\_\_(\textcolor{stringliteral}{"push r19\(\backslash\)n"});     \(\backslash\)}
+\DoxyCodeLine{  \_\_asm\_\_ \_\_volatile\_\_(\textcolor{stringliteral}{"push r20\(\backslash\)n"});     \(\backslash\)}
+\DoxyCodeLine{  \_\_asm\_\_ \_\_volatile\_\_(\textcolor{stringliteral}{"push r21\(\backslash\)n"});     \(\backslash\)}
+\DoxyCodeLine{  \_\_asm\_\_ \_\_volatile\_\_(\textcolor{stringliteral}{"push r22\(\backslash\)n"});     \(\backslash\)}
+\DoxyCodeLine{  \_\_asm\_\_ \_\_volatile\_\_(\textcolor{stringliteral}{"push r23\(\backslash\)n"});     \(\backslash\)}
+\DoxyCodeLine{  \_\_asm\_\_ \_\_volatile\_\_(\textcolor{stringliteral}{"push r26\(\backslash\)n"});     \(\backslash\)}
+\DoxyCodeLine{  \_\_asm\_\_ \_\_volatile\_\_(\textcolor{stringliteral}{"push r27\(\backslash\)n"});     \(\backslash\)}
+\DoxyCodeLine{  \_\_asm\_\_ \_\_volatile\_\_(\textcolor{stringliteral}{"push r30\(\backslash\)n"});     \(\backslash\)}
+\DoxyCodeLine{  \_\_asm\_\_ \_\_volatile\_\_(\textcolor{stringliteral}{"push r31\(\backslash\)n"});     \(\backslash\)}
+\DoxyCodeLine{\} \textcolor{keywordflow}{while}(0)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{ee__avr8__irqstub_8h_ab2363f17f4ab0389d99f4e2bf6277691}\label{ee__avr8__irqstub_8h_ab2363f17f4ab0389d99f4e2bf6277691}} 
+\index{ee\_avr8\_irqstub.h@{ee\_avr8\_irqstub.h}!OSEE\_AVR8\_ISR\_PRESTUB@{OSEE\_AVR8\_ISR\_PRESTUB}}
+\index{OSEE\_AVR8\_ISR\_PRESTUB@{OSEE\_AVR8\_ISR\_PRESTUB}!ee\_avr8\_irqstub.h@{ee\_avr8\_irqstub.h}}
+\doxysubsubsection{\texorpdfstring{OSEE\_AVR8\_ISR\_PRESTUB}{OSEE\_AVR8\_ISR\_PRESTUB}}
+{\footnotesize\ttfamily \#define O\+S\+E\+E\+\_\+\+A\+V\+R8\+\_\+\+I\+S\+R\+\_\+\+P\+R\+E\+S\+T\+UB(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{do} \{                                  \(\backslash\)}
+\DoxyCodeLine{  \_\_asm\_\_ \_\_volatile\_\_(\textcolor{stringliteral}{"push r24\(\backslash\)n"}); \(\backslash\)}
+\DoxyCodeLine{  \_\_asm\_\_ \_\_volatile\_\_(\textcolor{stringliteral}{"push r25\(\backslash\)n"}); \(\backslash\)}
+\DoxyCodeLine{\} \textcolor{keywordflow}{while}(0)}
+
+\end{DoxyCode}

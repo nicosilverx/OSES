@@ -1,0 +1,19 @@
+digraph "inc/ee_avr8_irqstub.h"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="inc/ee_avr8_irqstub.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="AVR8 IRQs Internals."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="ee_internal.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="ee_avr8_irq.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ee__avr8__irq_8h.html",tooltip="AVR8 IRQs."];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="ee_compiler.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ee__compiler_8h.html",tooltip="Compilers Abstraction File."];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="ee_compiler_cfg.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ee__compiler__cfg_8h.html",tooltip="Compilers Cfg Collector."];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="ee_cfg.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ee__cfg_8h.html",tooltip="Common Configuration Collector."];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="ee_applcfg.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+}

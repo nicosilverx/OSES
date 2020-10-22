@@ -1,0 +1,13 @@
+digraph "inc/ee_avr8_irq.h"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="inc/ee_avr8_irq.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="AVR8 IRQs."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="inc/ee.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ee_8h.html",tooltip="Main Collector."];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="inc/ee_conf.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ee__conf_8h.html",tooltip="Main Configuration Collector."];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="inc/ee_avr8_irqstub.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ee__avr8__irqstub_8h.html",tooltip="AVR8 IRQs Internals."];
+}

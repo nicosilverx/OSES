@@ -1,0 +1,16 @@
+Mutual Exclusion in E\+R\+I\+K\+A3 can be obtained in various ways.
+
+
+\begin{DoxyItemize}
+\item by Interrupt Disabling. This can be obtained by using the six primitives \mbox{\hyperlink{group__primitives-interrupt_ga071764bd533d349d7b74c1f0eba27e2d}{Disable\+All\+Interrupts()}}, \mbox{\hyperlink{group__primitives-interrupt_gae85134ff704512cc311c33c0b45cef5f}{Enable\+All\+Interrupts()}}, \mbox{\hyperlink{group__primitives-interrupt_ga2de84d7e2cb952f13a22752454283db5}{Suspend\+All\+Interrupts()}}, \mbox{\hyperlink{group__primitives-interrupt_ga5e78cef9a3dbbdbaa85bb2e228051c93}{Resume\+All\+Interrupts()}}, \mbox{\hyperlink{group__primitives-interrupt_ga04bd5d41274b9695cf55e0341092ba66}{Suspend\+O\+S\+Interrupts()}}, \mbox{\hyperlink{group__primitives-interrupt_ga7c49cf33445ba4b9efe4507f98ce7ae5}{Resume\+O\+S\+Interrupts()}}.
+\item by non-\/preemptive execution. This can be obtained in the following ways\+:
+\begin{DoxyItemize}
+\item by declaring all tasks needing the access to the shared resource as non-\/preemptive.
+\item by using non-\/preemptive critical sections. This can be obtained by locking the special resource named R\+E\+S\+\_\+\+S\+C\+H\+E\+D\+U\+L\+ER, which implicitly is used by all tasks (locking it raises the caller task priority to the highest priority of the tasks in the system). Please note that the usage of R\+E\+S\+\_\+\+S\+C\+H\+E\+D\+U\+L\+ER has been deprecated by A\+U\+T\+O\+S\+AR.
+\end{DoxyItemize}
+\item by using Resources. Resources in O\+S\+E\+K/\+V\+DX are handled using the Immediate Priority Ceiling scheduling algorithm. Basically each time a resource is locked, the priority of the locking task is raised to the maximum priority of all tasks using the resource. This guarantees bounded blocking times, absence of deadlock, absence of chained blocking, and ultimately allows stack sharing among tasks.
+\end{DoxyItemize}
+
+E\+R\+I\+K\+A3 supports the O\+S\+E\+K/\+V\+DX optional feature related to the usage of Resources at Interrupt level (I\+S\+O17356-\/3 Section 8.\+7).
+
+All the techniques above work on single core applications. For multi-\/core applications, the application developer will need to use Spin Locks. 

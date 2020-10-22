@@ -1,0 +1,24 @@
+The typical initialization workflow of an E\+R\+I\+K\+A3 application works as follows\+:
+
+
+\begin{DoxyItemize}
+\item At the microcontroller reset, typically a routine (traditionally named on most microcontrollers {\itshape crt0}) is executed which is responsible for the initialization of the microcontroller memory. That initialization is typically divided in three parts\+:
+\begin{DoxyItemize}
+\item a memory copy of the initialized data memory;
+\item a cleanup (set to 0) of the B\+SS area;
+\item an initialization of the stack to a given fillpattern (typically for E\+R\+I\+K\+A3 the fillpattern is 0x\+A5\+A5\+A5\+A5, and is used by debuggers using the O\+R\+TI specification to later on determine the stack usage in the system).
+\end{DoxyItemize}
+\item After the initialization routine, the code jumps to the main() function;
+\item The main() function executes some implementation dependent code, and finally calls \mbox{\hyperlink{group__primitives-startup_ga5fb8a3c5837da7854c4da9972cefda96}{Start\+O\+S()}}, which is the last function call of the main().
+\item The call to \mbox{\hyperlink{group__primitives-startup_ga5fb8a3c5837da7854c4da9972cefda96}{Start\+O\+S()}} calls the \mbox{\hyperlink{group__primitives-hook_ga5cb66285b5a4c562ec9c47bd9f7eb2b6}{Startup\+Hook()}}, handles the task and alarms autostart, and finally starts the first ready task.
+\item \mbox{\hyperlink{group__primitives-startup_ga5fb8a3c5837da7854c4da9972cefda96}{Start\+O\+S()}} is also responsible for the background task. By default, the background task is implemented as a forever loop that continuously calls the {\itshape idle hook} specified in the O\+IL File. \mbox{\hyperlink{group__primitives-startup_ga5fb8a3c5837da7854c4da9972cefda96}{Start\+O\+S()}} never returns.
+\end{DoxyItemize}
+
+As for the application initialization, in general, there are various places where the application designer may put the application startup code\+:
+
+
+\begin{DoxyItemize}
+\item in the main() function, before the call to \mbox{\hyperlink{group__primitives-startup_ga5fb8a3c5837da7854c4da9972cefda96}{Start\+O\+S()}}. This case is typically used for non-\/\+OS related initializations, because calling E\+R\+I\+K\+A3 primitives before \mbox{\hyperlink{group__primitives-startup_ga5fb8a3c5837da7854c4da9972cefda96}{Start\+O\+S()}} may have in general unpredictable results. It is noit safe to activate peripheral raising I\+SR Type 2 in this part of the code, unless you can guarantee that any I\+SR Type 2 will be raised after the \mbox{\hyperlink{group__primitives-startup_ga5fb8a3c5837da7854c4da9972cefda96}{Start\+O\+S()}} call.
+\item inside \mbox{\hyperlink{group__primitives-hook_ga5cb66285b5a4c562ec9c47bd9f7eb2b6}{Startup\+Hook()}}. This case is used for the initializations that require a call to a limited number of E\+R\+I\+K\+A3 primitives. Please note that \mbox{\hyperlink{group__primitives-hook_ga5cb66285b5a4c562ec9c47bd9f7eb2b6}{Startup\+Hook()}} is called before the rescheduling in \mbox{\hyperlink{group__primitives-startup_ga5fb8a3c5837da7854c4da9972cefda96}{Start\+O\+S()}} takes place, with {\itshape interrupt disabled}.
+\item inside a task automatically activated with A\+U\+T\+O\+S\+T\+A\+RT. In this case you need to create a {\itshape startup} task which is responsible for the initial application initialization and peripheral setting. 
+\end{DoxyItemize}

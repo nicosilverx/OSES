@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['schedule_568',['Schedule',['../group__primitives-task.html#gab4c3463247a1aa258800f903b0a52a9d',1,'ee_oo_api_osek.h']]],
+  ['setabsalarm_569',['SetAbsAlarm',['../group__primitives-alarm.html#gaa8dae0adc5647efdfb479e7c82f89754',1,'ee_oo_api_osek.h']]],
+  ['setevent_570',['SetEvent',['../group__primitives-event.html#gaac434a0543f07263c453d1519a0205ac',1,'ee_oo_api_osek.h']]],
+  ['setrelalarm_571',['SetRelAlarm',['../group__primitives-alarm.html#ga53c97ea958364f5d99684f871a462aad',1,'ee_oo_api_osek.h']]],
+  ['shutdownallcores_572',['ShutdownAllCores',['../group__primitives-multicore.html#ga85e07aa7f2cbc297551f75dec56f6179',1,'ee_oo_api_osek.h']]],
+  ['shutdownhook_573',['ShutdownHook',['../group__primitives-hook.html#ga0aa20efaae2d6dfc08579cc92576a890',1,'ee_oo_api_osek.h']]],
+  ['shutdownos_574',['ShutdownOS',['../group__primitives-startup.html#ga6df6f7c4e5965c72bd089c9f381f6ef2',1,'ee_oo_api_osek.h']]],
+  ['startcore_575',['StartCore',['../group__primitives-multicore.html#ga0dedbca2841ebeae01131e0a4dd4f68e',1,'ee_oo_api_osek.h']]],
+  ['startnonautosarcore_576',['StartNonAutosarCore',['../group__primitives-multicore.html#ga3b63d4a21ba5d759f7f45689a9b39d97',1,'ee_oo_api_osek.h']]],
+  ['startos_577',['StartOS',['../group__primitives-startup.html#ga5fb8a3c5837da7854c4da9972cefda96',1,'ee_oo_api_osek.h']]],
+  ['startscheduletableabs_578',['StartScheduleTableAbs',['../group__primitives-schtable.html#ga81ccfeb43304c2ceba45ed8876f6aedf',1,'ee_oo_api_osek.h']]],
+  ['startscheduletablerel_579',['StartScheduleTableRel',['../group__primitives-schtable.html#gaa384e9107ba444f5645b55d9356d9fd7',1,'ee_oo_api_osek.h']]],
+  ['startuphook_580',['StartupHook',['../group__primitives-hook.html#ga5cb66285b5a4c562ec9c47bd9f7eb2b6',1,'ee_oo_api_osek.h']]],
+  ['stopscheduletable_581',['StopScheduleTable',['../group__primitives-schtable.html#gad3d659c08b2702e817d42ed171b7dfd5',1,'ee_oo_api_osek.h']]],
+  ['suspendallinterrupts_582',['SuspendAllInterrupts',['../group__primitives-interrupt.html#ga2de84d7e2cb952f13a22752454283db5',1,'ee_oo_api_osek.h']]],
+  ['suspendosinterrupts_583',['SuspendOSInterrupts',['../group__primitives-interrupt.html#ga04bd5d41274b9695cf55e0341092ba66',1,'ee_oo_api_osek.h']]],
+  ['syncscheduletable_584',['SyncScheduleTable',['../group__primitives-schtable.html#gafcca9960de4197f10ea1636eda6dfc40',1,'ee_oo_api_osek.h']]]
+];

@@ -1,0 +1,38 @@
+digraph "OsEE_CDB"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="OsEE_CDB",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="This is the Core Descriptor Block."];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" p_idle_task" ,fontname="Helvetica"];
+  Node2 [label="OsEE_TDB_tag",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structOsEE__TDB__tag.html",tooltip="The Task Descriptor Block."];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" p_tcb" ,fontname="Helvetica"];
+  Node3 [label="OsEE_TCB",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structOsEE__TCB.html",tooltip="The Task Control Block."];
+  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" p_own_sn" ,fontname="Helvetica"];
+  Node4 [label="OsEE_SN_tag",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structOsEE__SN__tag.html",tooltip="Scheduler node data structure."];
+  Node4 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" p_next" ,fontname="Helvetica"];
+  Node2 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" p_tdb" ,fontname="Helvetica"];
+  Node5 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" p_last_m" ,fontname="Helvetica"];
+  Node5 [label="OsEE_MDB_tag",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structOsEE__MDB__tag.html",tooltip="Mutual exclusion descriptor block."];
+  Node6 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" p_cb" ,fontname="Helvetica"];
+  Node6 [label="OsEE_MCB",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structOsEE__MCB.html",tooltip="Mutual exclusion control block."];
+  Node2 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" p_owner" ,fontname="Helvetica"];
+  Node5 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" p_next" ,fontname="Helvetica"];
+  Node7 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" hdb" ,fontname="Helvetica"];
+  Node7 [label="OsEE_HDB_tag",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structOsEE__HDB__tag.html",tooltip=" "];
+  Node8 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" p_scb" ,fontname="Helvetica"];
+  Node8 [label="OsEE_SCB_tag",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structOsEE__SCB__tag.html",tooltip=" "];
+  Node9 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" p_tos" ,fontname="Helvetica"];
+  Node9 [label="OsEE_CTX_tag",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structOsEE__CTX__tag.html",tooltip=" "];
+  Node9 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" p_ctx" ,fontname="Helvetica"];
+  Node10 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" p_sdb" ,fontname="Helvetica"];
+  Node10 [label="OsEE_SDB_tag",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structOsEE__SDB__tag.html",tooltip=" "];
+  Node9 -> Node10 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" p_bos" ,fontname="Helvetica"];
+  Node11 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" p_ccb" ,fontname="Helvetica"];
+  Node11 [label="OsEE_CCB",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structOsEE__CCB.html",tooltip="This is the Core Control Block."];
+  Node4 -> Node11 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" p_free_sn\np_stk_sn\nrq" ,fontname="Helvetica"];
+  Node12 -> Node11 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" api_param1\napi_param2\napi_param3" ,fontname="Helvetica"];
+  Node12 [label="OsEE_api_param",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$unionOsEE__api__param.html",tooltip="We use a union to hold the a function parameter to be used in the ErrorHook macros."];
+  Node2 -> Node11 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" p_curr\np_last_tdb_hook" ,fontname="Helvetica"];
+  Node5 -> Node11 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" p_last_spinlock" ,fontname="Helvetica"];
+}

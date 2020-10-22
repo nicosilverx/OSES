@@ -1,0 +1,23 @@
+E\+R\+I\+K\+A3 supports stack sharing among tasks and interrupt handlers.
+
+The basic rules of stack sharing in single core E\+R\+I\+K\+A3 configurations are the following\+:
+\begin{DoxyItemize}
+\item E\+R\+I\+K\+A3 always support the configuration of one or more stacks;
+\item Each stack can host one or more tasks;
+\item Each task in E\+R\+I\+K\+A3 is statically assigned to a stack;
+\item There is always a {\itshape main} stack. The {\itshape main} stack is used to run the main() function, and it is initialized by the crt0 boot routine;
+\item The R\+T-\/\+Druid configurator provides the possibility, for each stack, to configure a {\itshape shared} or a {\itshape private} stack.
+\begin{DoxyItemize}
+\item When the {\itshape shared} stack is selected for a task, R\+T-\/\+Druid assigns the {\itshape main} stack to the task.
+\item When a {\itshape private} stack is selected, R\+T-\/\+Druid assigns a separate stack where only that task will be allocated.
+\end{DoxyItemize}
+\item Interrupts Type 1 handlers are executed on the stack which is active at the interrupt arrival.
+\item Interrupts Type 2 handlers are executed on the {\itshape main} stack.
+\end{DoxyItemize}
+
+When running on a multicore system, the stack layout is similar to the single core case, with the following additional rules\+:
+\begin{DoxyItemize}
+\item Each core has a separate {\itshape main} stack;
+\item Interrupts Type 2 execute on the {\itshape main} stack of the C\+PU where they are raised.
+\item Private stacks of tasks are allocated to the core where the stack is statically partitioned. 
+\end{DoxyItemize}

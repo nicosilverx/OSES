@@ -1,0 +1,4025 @@
+
+arduino.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         000000ea  00800100  0000138a  0000141e  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         0000138a  00000000  00000000  00000094  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          0000013c  008001ea  008001ea  00001508  2**0
+                  ALLOC
+  3 .comment      00000011  00000000  00000000  00001508  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  0000151c  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 00000600  00000000  00000000  00001560  2**3
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   000140ad  00000000  00000000  00001b60  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 000035b1  00000000  00000000  00015c0d  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   00003f42  00000000  00000000  000191be  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  00000df0  00000000  00000000  0001d100  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    000039f4  00000000  00000000  0001def0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    00006142  00000000  00000000  000218e4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 00000708  00000000  00000000  00027a26  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+       0:	0c 94 5d 00 	jmp	0xba	; 0xba <__ctors_end>
+       4:	0c 94 85 00 	jmp	0x10a	; 0x10a <__bad_interrupt>
+       8:	0c 94 85 00 	jmp	0x10a	; 0x10a <__bad_interrupt>
+       c:	0c 94 85 00 	jmp	0x10a	; 0x10a <__bad_interrupt>
+      10:	0c 94 85 00 	jmp	0x10a	; 0x10a <__bad_interrupt>
+      14:	0c 94 85 00 	jmp	0x10a	; 0x10a <__bad_interrupt>
+      18:	0c 94 85 00 	jmp	0x10a	; 0x10a <__bad_interrupt>
+      1c:	0c 94 85 00 	jmp	0x10a	; 0x10a <__bad_interrupt>
+      20:	0c 94 85 00 	jmp	0x10a	; 0x10a <__bad_interrupt>
+      24:	0c 94 85 00 	jmp	0x10a	; 0x10a <__bad_interrupt>
+      28:	0c 94 85 00 	jmp	0x10a	; 0x10a <__bad_interrupt>
+      2c:	0c 94 53 08 	jmp	0x10a6	; 0x10a6 <__vector_11>
+      30:	0c 94 85 00 	jmp	0x10a	; 0x10a <__bad_interrupt>
+      34:	0c 94 85 00 	jmp	0x10a	; 0x10a <__bad_interrupt>
+      38:	0c 94 85 00 	jmp	0x10a	; 0x10a <__bad_interrupt>
+      3c:	0c 94 85 00 	jmp	0x10a	; 0x10a <__bad_interrupt>
+      40:	0c 94 a4 01 	jmp	0x348	; 0x348 <__vector_16>
+      44:	0c 94 85 00 	jmp	0x10a	; 0x10a <__bad_interrupt>
+      48:	0c 94 f8 03 	jmp	0x7f0	; 0x7f0 <__vector_18>
+      4c:	0c 94 2a 04 	jmp	0x854	; 0x854 <__vector_19>
+      50:	0c 94 85 00 	jmp	0x10a	; 0x10a <__bad_interrupt>
+      54:	0c 94 85 00 	jmp	0x10a	; 0x10a <__bad_interrupt>
+      58:	0c 94 85 00 	jmp	0x10a	; 0x10a <__bad_interrupt>
+      5c:	0c 94 85 00 	jmp	0x10a	; 0x10a <__bad_interrupt>
+      60:	0c 94 85 00 	jmp	0x10a	; 0x10a <__bad_interrupt>
+      64:	0c 94 85 00 	jmp	0x10a	; 0x10a <__bad_interrupt>
+
+00000068 <__trampolines_end>:
+      68:	00 00       	nop
+      6a:	00 08       	sbc	r0, r0
+      6c:	00 02       	muls	r16, r16
+      6e:	01 00       	.word	0x0001	; ????
+      70:	00 03       	mulsu	r16, r16
+      72:	04 07       	cpc	r16, r20
+	...
+
+0000007c <digital_pin_to_bit_mask_PGM>:
+      7c:	01 02 04 08 10 20 40 80 01 02 04 08 10 20 01 02     ..... @...... ..
+      8c:	04 08 10 20                                         ... 
+
+00000090 <digital_pin_to_port_PGM>:
+      90:	04 04 04 04 04 04 04 04 02 02 02 02 02 02 03 03     ................
+      a0:	03 03 03 03                                         ....
+
+000000a4 <port_to_output_PGM>:
+      a4:	00 00 00 00 25 00 28 00 2b 00                       ....%.(.+.
+
+000000ae <port_to_mode_PGM>:
+      ae:	00 00 00 00 24 00 27 00 2a 00                       ....$.'.*.
+
+000000b8 <__ctors_start>:
+      b8:	5a 04       	cpc	r5, r10
+
+000000ba <__ctors_end>:
+      ba:	11 24       	eor	r1, r1
+      bc:	1f be       	out	0x3f, r1	; 63
+      be:	cf ef       	ldi	r28, 0xFF	; 255
+      c0:	d8 e0       	ldi	r29, 0x08	; 8
+      c2:	de bf       	out	0x3e, r29	; 62
+      c4:	cd bf       	out	0x3d, r28	; 61
+
+000000c6 <__do_copy_data>:
+      c6:	11 e0       	ldi	r17, 0x01	; 1
+      c8:	a0 e0       	ldi	r26, 0x00	; 0
+      ca:	b1 e0       	ldi	r27, 0x01	; 1
+      cc:	ea e8       	ldi	r30, 0x8A	; 138
+      ce:	f3 e1       	ldi	r31, 0x13	; 19
+      d0:	02 c0       	rjmp	.+4      	; 0xd6 <__do_copy_data+0x10>
+      d2:	05 90       	lpm	r0, Z+
+      d4:	0d 92       	st	X+, r0
+      d6:	aa 3e       	cpi	r26, 0xEA	; 234
+      d8:	b1 07       	cpc	r27, r17
+      da:	d9 f7       	brne	.-10     	; 0xd2 <__do_copy_data+0xc>
+
+000000dc <__do_clear_bss>:
+      dc:	23 e0       	ldi	r18, 0x03	; 3
+      de:	aa ee       	ldi	r26, 0xEA	; 234
+      e0:	b1 e0       	ldi	r27, 0x01	; 1
+      e2:	01 c0       	rjmp	.+2      	; 0xe6 <.do_clear_bss_start>
+
+000000e4 <.do_clear_bss_loop>:
+      e4:	1d 92       	st	X+, r1
+
+000000e6 <.do_clear_bss_start>:
+      e6:	a6 32       	cpi	r26, 0x26	; 38
+      e8:	b2 07       	cpc	r27, r18
+      ea:	e1 f7       	brne	.-8      	; 0xe4 <.do_clear_bss_loop>
+
+000000ec <__do_global_ctors>:
+      ec:	10 e0       	ldi	r17, 0x00	; 0
+      ee:	cd e5       	ldi	r28, 0x5D	; 93
+      f0:	d0 e0       	ldi	r29, 0x00	; 0
+      f2:	04 c0       	rjmp	.+8      	; 0xfc <__do_global_ctors+0x10>
+      f4:	21 97       	sbiw	r28, 0x01	; 1
+      f6:	fe 01       	movw	r30, r28
+      f8:	0e 94 bd 09 	call	0x137a	; 0x137a <__tablejump2__>
+      fc:	cc 35       	cpi	r28, 0x5C	; 92
+      fe:	d1 07       	cpc	r29, r17
+     100:	c9 f7       	brne	.-14     	; 0xf4 <__do_global_ctors+0x8>
+     102:	0e 94 38 01 	call	0x270	; 0x270 <main>
+     106:	0c 94 c3 09 	jmp	0x1386	; 0x1386 <_exit>
+
+0000010a <__bad_interrupt>:
+     10a:	0c 94 4f 08 	jmp	0x109e	; 0x109e <__vector_default>
+	...
+
+00000110 <osEE_hal_save_ctx_and_restore_ctx>:
+  .type osEE_hal_save_ctx_and_restore_ctx, @function
+osEE_hal_save_ctx_and_restore_ctx:
+  /*  r25:r24 parameter:  OsEE_TDB * p_to_tdb
+      r23:r22 parameter:  OsEE_SCB * p_to_scb
+      r21:r20 parameter:  OsEE_SCB * p_from_scb */
+    osEE_hal_save_vcontext_m r21 r20
+     110:	2f 92       	push	r2
+     112:	3f 92       	push	r3
+     114:	4f 92       	push	r4
+     116:	5f 92       	push	r5
+     118:	6f 92       	push	r6
+     11a:	7f 92       	push	r7
+     11c:	8f 92       	push	r8
+     11e:	9f 92       	push	r9
+     120:	af 92       	push	r10
+     122:	bf 92       	push	r11
+     124:	cf 92       	push	r12
+     126:	df 92       	push	r13
+     128:	ef 92       	push	r14
+     12a:	ff 92       	push	r15
+     12c:	0f 93       	push	r16
+     12e:	1f 93       	push	r17
+     130:	cf 93       	push	r28
+     132:	df 93       	push	r29
+     134:	e4 2f       	mov	r30, r20
+     136:	f5 2f       	mov	r31, r21
+     138:	41 90       	ld	r4, Z+
+     13a:	50 80       	ld	r5, Z
+     13c:	4f 92       	push	r4
+     13e:	5f 92       	push	r5
+     140:	e4 2f       	mov	r30, r20
+     142:	f5 2f       	mov	r31, r21
+     144:	4d b6       	in	r4, 0x3d	; 61
+     146:	5e b6       	in	r5, 0x3e	; 62
+     148:	41 92       	st	Z+, r4
+     14a:	50 82       	st	Z, r5
+
+/* Unconditional brach to restore context */
+    jmp osEE_hal_restore_ctx
+     14c:	0c 94 a8 00 	jmp	0x150	; 0x150 <osEE_hal_restore_ctx>
+
+00000150 <osEE_hal_restore_ctx>:
+  .globl osEE_hal_restore_ctx
+  .type osEE_hal_restore_ctx, @function
+osEE_hal_restore_ctx:
+  /*  r25:r24 parameter:  OsEE_TDB * p_to_tdb
+      r23:r22 parameter:  OsEE_SCB * p_to_scb */
+    osEE_hal_restore_vcontext_m r23 r22
+     150:	e6 2f       	mov	r30, r22
+     152:	f7 2f       	mov	r31, r23
+     154:	41 90       	ld	r4, Z+
+     156:	50 80       	ld	r5, Z
+     158:	4d be       	out	0x3d, r4	; 61
+     15a:	5e be       	out	0x3e, r5	; 62
+     15c:	5f 90       	pop	r5
+     15e:	4f 90       	pop	r4
+     160:	e6 2f       	mov	r30, r22
+     162:	f7 2f       	mov	r31, r23
+     164:	41 92       	st	Z+, r4
+     166:	50 82       	st	Z, r5
+     168:	df 91       	pop	r29
+     16a:	cf 91       	pop	r28
+     16c:	1f 91       	pop	r17
+     16e:	0f 91       	pop	r16
+     170:	ff 90       	pop	r15
+     172:	ef 90       	pop	r14
+     174:	df 90       	pop	r13
+     176:	cf 90       	pop	r12
+     178:	bf 90       	pop	r11
+     17a:	af 90       	pop	r10
+     17c:	9f 90       	pop	r9
+     17e:	8f 90       	pop	r8
+     180:	7f 90       	pop	r7
+     182:	6f 90       	pop	r6
+     184:	5f 90       	pop	r5
+     186:	4f 90       	pop	r4
+     188:	3f 90       	pop	r3
+     18a:	2f 90       	pop	r2
+    jmp osEE_scheduler_task_wrapper_restore
+     18c:	0c 94 64 05 	jmp	0xac8	; 0xac8 <osEE_scheduler_task_wrapper_restore>
+
+00000190 <osEE_hal_ready2stacked>:
+  .type   osEE_hal_ready2stacked, @function
+osEE_hal_ready2stacked:
+  /*  r25:r24 parameter:  OsEE_TDB * p_to_tdb
+      r23:r22 parameter:  OsEE_SCB * p_to_scb
+      r21:r20 local       p_to_scb->p_tos */
+    mov r30, r22
+     190:	e6 2f       	mov	r30, r22
+    mov r31, r23
+     192:	f7 2f       	mov	r31, r23
+    ld  r20, z+
+     194:	41 91       	ld	r20, Z+
+    ld  r21, z
+     196:	50 81       	ld	r21, Z
+/* sp = 21:20 */
+    out 0x3D, r20
+     198:	4d bf       	out	0x3d, r20	; 61
+    out 0x3E, r21
+     19a:	5e bf       	out	0x3e, r21	; 62
+
+    jmp osEE_scheduler_task_wrapper_run
+     19c:	0c 94 6d 05 	jmp	0xada	; 0xada <osEE_scheduler_task_wrapper_run>
+
+000001a0 <osEE_hal_save_ctx_and_ready2stacked>:
+  .type osEE_hal_save_ctx_and_ready2stacked, @function
+osEE_hal_save_ctx_and_ready2stacked:
+  /*  r25:r24 parameter:  OsEE_TDB * p_to_tdb
+      r23:r22 parameter:  OsEE_SCB * p_to_scb
+      r21:r20 parameter:  OsEE_SCB * p_from_scb */
+    osEE_hal_save_vcontext_m r21 r20
+     1a0:	2f 92       	push	r2
+     1a2:	3f 92       	push	r3
+     1a4:	4f 92       	push	r4
+     1a6:	5f 92       	push	r5
+     1a8:	6f 92       	push	r6
+     1aa:	7f 92       	push	r7
+     1ac:	8f 92       	push	r8
+     1ae:	9f 92       	push	r9
+     1b0:	af 92       	push	r10
+     1b2:	bf 92       	push	r11
+     1b4:	cf 92       	push	r12
+     1b6:	df 92       	push	r13
+     1b8:	ef 92       	push	r14
+     1ba:	ff 92       	push	r15
+     1bc:	0f 93       	push	r16
+     1be:	1f 93       	push	r17
+     1c0:	cf 93       	push	r28
+     1c2:	df 93       	push	r29
+     1c4:	e4 2f       	mov	r30, r20
+     1c6:	f5 2f       	mov	r31, r21
+     1c8:	41 90       	ld	r4, Z+
+     1ca:	50 80       	ld	r5, Z
+     1cc:	4f 92       	push	r4
+     1ce:	5f 92       	push	r5
+     1d0:	e4 2f       	mov	r30, r20
+     1d2:	f5 2f       	mov	r31, r21
+     1d4:	4d b6       	in	r4, 0x3d	; 61
+     1d6:	5e b6       	in	r5, 0x3e	; 62
+     1d8:	41 92       	st	Z+, r4
+     1da:	50 82       	st	Z, r5
+    jmp osEE_hal_ready2stacked
+     1dc:	0c 94 c8 00 	jmp	0x190	; 0x190 <osEE_hal_ready2stacked>
+
+000001e0 <osEE_hal_terminate_ctx>:
+  .type osEE_hal_terminate_ctx, @function
+osEE_hal_terminate_ctx:
+  /*  r25:r24 parameter:  OsEE_SCB * p_term_scb
+      r23:r22 parameter:  kernel_cb
+      r21:r20 local       p_term_scb->p_tos */
+    mov r30, r24
+     1e0:	e8 2f       	mov	r30, r24
+    mov r31, r25
+     1e2:	f9 2f       	mov	r31, r25
+    ld  r20, z+
+     1e4:	41 91       	ld	r20, Z+
+    ld  r21, z
+     1e6:	50 81       	ld	r21, Z
+
+/* Unwind SP */
+    out 0x3D, r20 /* r20 -> spl */
+     1e8:	4d bf       	out	0x3d, r20	; 61
+    out 0x3E, r21 /* r21 -> sph */
+     1ea:	5e bf       	out	0x3e, r21	; 62
+
+/*  Jump to kern_callback (that schedule) */
+    mov r30, r22
+     1ec:	e6 2f       	mov	r30, r22
+    mov r31, r23
+     1ee:	f7 2f       	mov	r31, r23
+
+    ijmp
+     1f0:	09 94       	ijmp
+	...
+
+000001f4 <loop>:
+     1f4:	80 91 ec 01 	lds	r24, 0x01EC	; 0x8001ec <stk_wrong>
+     1f8:	81 11       	cpse	r24, r1
+     1fa:	19 c0       	rjmp	.+50     	; 0x22e <loop+0x3a>
+     1fc:	80 91 ea 01 	lds	r24, 0x01EA	; 0x8001ea <__data_end>
+     200:	90 91 eb 01 	lds	r25, 0x01EB	; 0x8001eb <__data_end+0x1>
+     204:	89 2b       	or	r24, r25
+     206:	39 f4       	brne	.+14     	; 0x216 <loop+0x22>
+     208:	8d b7       	in	r24, 0x3d	; 61
+     20a:	9e b7       	in	r25, 0x3e	; 62
+     20c:	90 93 eb 01 	sts	0x01EB, r25	; 0x8001eb <__data_end+0x1>
+     210:	80 93 ea 01 	sts	0x01EA, r24	; 0x8001ea <__data_end>
+     214:	08 95       	ret
+     216:	8d b7       	in	r24, 0x3d	; 61
+     218:	9e b7       	in	r25, 0x3e	; 62
+     21a:	20 91 ea 01 	lds	r18, 0x01EA	; 0x8001ea <__data_end>
+     21e:	30 91 eb 01 	lds	r19, 0x01EB	; 0x8001eb <__data_end+0x1>
+     222:	28 17       	cp	r18, r24
+     224:	39 07       	cpc	r19, r25
+     226:	19 f0       	breq	.+6      	; 0x22e <loop+0x3a>
+     228:	81 e0       	ldi	r24, 0x01	; 1
+     22a:	80 93 ec 01 	sts	0x01EC, r24	; 0x8001ec <stk_wrong>
+     22e:	08 95       	ret
+
+00000230 <idle_hook>:
+     230:	0e 94 fa 00 	call	0x1f4	; 0x1f4 <loop>
+     234:	89 ef       	ldi	r24, 0xF9	; 249
+     236:	92 e0       	ldi	r25, 0x02	; 2
+     238:	89 2b       	or	r24, r25
+     23a:	11 f0       	breq	.+4      	; 0x240 <idle_hook+0x10>
+     23c:	0c 94 f9 02 	jmp	0x5f2	; 0x5f2 <_Z14serialEventRunv>
+     240:	08 95       	ret
+
+00000242 <setup>:
+     242:	cf 93       	push	r28
+     244:	df 93       	push	r29
+     246:	c0 e0       	ldi	r28, 0x00	; 0
+     248:	d1 e0       	ldi	r29, 0x01	; 1
+     24a:	61 e0       	ldi	r22, 0x01	; 1
+     24c:	88 81       	ld	r24, Y
+     24e:	0e 94 52 02 	call	0x4a4	; 0x4a4 <pinMode>
+     252:	60 e0       	ldi	r22, 0x00	; 0
+     254:	88 81       	ld	r24, Y
+     256:	0e 94 8e 02 	call	0x51c	; 0x51c <digitalWrite>
+     25a:	26 e0       	ldi	r18, 0x06	; 6
+     25c:	40 e0       	ldi	r20, 0x00	; 0
+     25e:	52 ec       	ldi	r21, 0xC2	; 194
+     260:	61 e0       	ldi	r22, 0x01	; 1
+     262:	70 e0       	ldi	r23, 0x00	; 0
+     264:	88 e8       	ldi	r24, 0x88	; 136
+     266:	92 e0       	ldi	r25, 0x02	; 2
+     268:	df 91       	pop	r29
+     26a:	cf 91       	pop	r28
+     26c:	0c 94 96 03 	jmp	0x72c	; 0x72c <_ZN14HardwareSerial5beginEmh>
+
+00000270 <main>:
+     270:	0e 94 ee 01 	call	0x3dc	; 0x3dc <init>
+     274:	0e 94 21 01 	call	0x242	; 0x242 <setup>
+     278:	80 e0       	ldi	r24, 0x00	; 0
+     27a:	0e 94 c0 04 	call	0x980	; 0x980 <StartOS>
+     27e:	90 e0       	ldi	r25, 0x00	; 0
+     280:	80 e0       	ldi	r24, 0x00	; 0
+     282:	08 95       	ret
+
+00000284 <FuncTaskL1>:
+     284:	20 91 7d 02 	lds	r18, 0x027D	; 0x80027d <codeword_pointer.2348>
+     288:	30 91 7e 02 	lds	r19, 0x027E	; 0x80027e <codeword_pointer.2348+0x1>
+     28c:	23 32       	cpi	r18, 0x23	; 35
+     28e:	31 05       	cpc	r19, r1
+     290:	34 f4       	brge	.+12     	; 0x29e <FuncTaskL1+0x1a>
+     292:	80 91 7b 02 	lds	r24, 0x027B	; 0x80027b <end_of_message.2350>
+     296:	90 91 7c 02 	lds	r25, 0x027C	; 0x80027c <end_of_message.2350+0x1>
+     29a:	01 97       	sbiw	r24, 0x01	; 1
+     29c:	79 f5       	brne	.+94     	; 0x2fc <FuncTaskL1+0x78>
+     29e:	10 92 7e 02 	sts	0x027E, r1	; 0x80027e <codeword_pointer.2348+0x1>
+     2a2:	10 92 7d 02 	sts	0x027D, r1	; 0x80027d <codeword_pointer.2348>
+     2a6:	81 e0       	ldi	r24, 0x01	; 1
+     2a8:	90 e0       	ldi	r25, 0x00	; 0
+     2aa:	90 93 7c 02 	sts	0x027C, r25	; 0x80027c <end_of_message.2350+0x1>
+     2ae:	80 93 7b 02 	sts	0x027B, r24	; 0x80027b <end_of_message.2350>
+     2b2:	80 91 79 02 	lds	r24, 0x0279	; 0x800279 <pause_pointer.2349>
+     2b6:	90 91 7a 02 	lds	r25, 0x027A	; 0x80027a <pause_pointer.2349+0x1>
+     2ba:	84 30       	cpi	r24, 0x04	; 4
+     2bc:	91 05       	cpc	r25, r1
+     2be:	51 f4       	brne	.+20     	; 0x2d4 <FuncTaskL1+0x50>
+     2c0:	10 92 7a 02 	sts	0x027A, r1	; 0x80027a <pause_pointer.2349+0x1>
+     2c4:	10 92 79 02 	sts	0x0279, r1	; 0x800279 <pause_pointer.2349>
+     2c8:	10 92 7c 02 	sts	0x027C, r1	; 0x80027c <end_of_message.2350+0x1>
+     2cc:	10 92 7b 02 	sts	0x027B, r1	; 0x80027b <end_of_message.2350>
+     2d0:	0c 94 4a 05 	jmp	0xa94	; 0xa94 <TerminateTask>
+     2d4:	88 0f       	add	r24, r24
+     2d6:	99 1f       	adc	r25, r25
+     2d8:	fc 01       	movw	r30, r24
+     2da:	e2 56       	subi	r30, 0x62	; 98
+     2dc:	fe 4f       	sbci	r31, 0xFE	; 254
+     2de:	60 81       	ld	r22, Z
+     2e0:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__data_start>
+     2e4:	0e 94 8e 02 	call	0x51c	; 0x51c <digitalWrite>
+     2e8:	80 91 79 02 	lds	r24, 0x0279	; 0x800279 <pause_pointer.2349>
+     2ec:	90 91 7a 02 	lds	r25, 0x027A	; 0x80027a <pause_pointer.2349+0x1>
+     2f0:	01 96       	adiw	r24, 0x01	; 1
+     2f2:	90 93 7a 02 	sts	0x027A, r25	; 0x80027a <pause_pointer.2349+0x1>
+     2f6:	80 93 79 02 	sts	0x0279, r24	; 0x800279 <pause_pointer.2349>
+     2fa:	ea cf       	rjmp	.-44     	; 0x2d0 <FuncTaskL1+0x4c>
+     2fc:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__data_start>
+     300:	2a 30       	cpi	r18, 0x0A	; 10
+     302:	31 05       	cpc	r19, r1
+     304:	94 f4       	brge	.+36     	; 0x32a <FuncTaskL1+0xa6>
+     306:	22 0f       	add	r18, r18
+     308:	33 1f       	adc	r19, r19
+     30a:	f9 01       	movw	r30, r18
+     30c:	ec 53       	subi	r30, 0x3C	; 60
+     30e:	fe 4f       	sbci	r31, 0xFE	; 254
+     310:	60 81       	ld	r22, Z
+     312:	0e 94 8e 02 	call	0x51c	; 0x51c <digitalWrite>
+     316:	80 91 7d 02 	lds	r24, 0x027D	; 0x80027d <codeword_pointer.2348>
+     31a:	90 91 7e 02 	lds	r25, 0x027E	; 0x80027e <codeword_pointer.2348+0x1>
+     31e:	01 96       	adiw	r24, 0x01	; 1
+     320:	90 93 7e 02 	sts	0x027E, r25	; 0x80027e <codeword_pointer.2348+0x1>
+     324:	80 93 7d 02 	sts	0x027D, r24	; 0x80027d <codeword_pointer.2348>
+     328:	d3 cf       	rjmp	.-90     	; 0x2d0 <FuncTaskL1+0x4c>
+     32a:	29 31       	cpi	r18, 0x19	; 25
+     32c:	31 05       	cpc	r19, r1
+     32e:	34 f4       	brge	.+12     	; 0x33c <FuncTaskL1+0xb8>
+     330:	22 0f       	add	r18, r18
+     332:	33 1f       	adc	r19, r19
+     334:	f9 01       	movw	r30, r18
+     336:	ee 56       	subi	r30, 0x6E	; 110
+     338:	fe 4f       	sbci	r31, 0xFE	; 254
+     33a:	ea cf       	rjmp	.-44     	; 0x310 <FuncTaskL1+0x8c>
+     33c:	22 0f       	add	r18, r18
+     33e:	33 1f       	adc	r19, r19
+     340:	f9 01       	movw	r30, r18
+     342:	ee 56       	subi	r30, 0x6E	; 110
+     344:	fe 4f       	sbci	r31, 0xFE	; 254
+     346:	e4 cf       	rjmp	.-56     	; 0x310 <FuncTaskL1+0x8c>
+
+00000348 <__vector_16>:
+	__asm__ __volatile__ (
+		"1: sbiw %0,1" "\n\t" // 2 cycles
+		"brne 1b" : "=w" (us) : "0" (us) // 2 cycles
+	);
+	// return = 4 cycles
+}
+     348:	1f 92       	push	r1
+     34a:	0f 92       	push	r0
+     34c:	0f b6       	in	r0, 0x3f	; 63
+     34e:	0f 92       	push	r0
+     350:	11 24       	eor	r1, r1
+     352:	2f 93       	push	r18
+     354:	3f 93       	push	r19
+     356:	8f 93       	push	r24
+     358:	9f 93       	push	r25
+     35a:	af 93       	push	r26
+     35c:	bf 93       	push	r27
+     35e:	80 91 80 02 	lds	r24, 0x0280	; 0x800280 <timer0_millis>
+     362:	90 91 81 02 	lds	r25, 0x0281	; 0x800281 <timer0_millis+0x1>
+     366:	a0 91 82 02 	lds	r26, 0x0282	; 0x800282 <timer0_millis+0x2>
+     36a:	b0 91 83 02 	lds	r27, 0x0283	; 0x800283 <timer0_millis+0x3>
+     36e:	30 91 7f 02 	lds	r19, 0x027F	; 0x80027f <timer0_fract>
+     372:	23 e0       	ldi	r18, 0x03	; 3
+     374:	23 0f       	add	r18, r19
+     376:	2d 37       	cpi	r18, 0x7D	; 125
+     378:	58 f5       	brcc	.+86     	; 0x3d0 <__vector_16+0x88>
+     37a:	01 96       	adiw	r24, 0x01	; 1
+     37c:	a1 1d       	adc	r26, r1
+     37e:	b1 1d       	adc	r27, r1
+     380:	20 93 7f 02 	sts	0x027F, r18	; 0x80027f <timer0_fract>
+     384:	80 93 80 02 	sts	0x0280, r24	; 0x800280 <timer0_millis>
+     388:	90 93 81 02 	sts	0x0281, r25	; 0x800281 <timer0_millis+0x1>
+     38c:	a0 93 82 02 	sts	0x0282, r26	; 0x800282 <timer0_millis+0x2>
+     390:	b0 93 83 02 	sts	0x0283, r27	; 0x800283 <timer0_millis+0x3>
+     394:	80 91 84 02 	lds	r24, 0x0284	; 0x800284 <timer0_overflow_count>
+     398:	90 91 85 02 	lds	r25, 0x0285	; 0x800285 <timer0_overflow_count+0x1>
+     39c:	a0 91 86 02 	lds	r26, 0x0286	; 0x800286 <timer0_overflow_count+0x2>
+     3a0:	b0 91 87 02 	lds	r27, 0x0287	; 0x800287 <timer0_overflow_count+0x3>
+     3a4:	01 96       	adiw	r24, 0x01	; 1
+     3a6:	a1 1d       	adc	r26, r1
+     3a8:	b1 1d       	adc	r27, r1
+     3aa:	80 93 84 02 	sts	0x0284, r24	; 0x800284 <timer0_overflow_count>
+     3ae:	90 93 85 02 	sts	0x0285, r25	; 0x800285 <timer0_overflow_count+0x1>
+     3b2:	a0 93 86 02 	sts	0x0286, r26	; 0x800286 <timer0_overflow_count+0x2>
+     3b6:	b0 93 87 02 	sts	0x0287, r27	; 0x800287 <timer0_overflow_count+0x3>
+     3ba:	bf 91       	pop	r27
+     3bc:	af 91       	pop	r26
+     3be:	9f 91       	pop	r25
+     3c0:	8f 91       	pop	r24
+     3c2:	3f 91       	pop	r19
+     3c4:	2f 91       	pop	r18
+     3c6:	0f 90       	pop	r0
+     3c8:	0f be       	out	0x3f, r0	; 63
+     3ca:	0f 90       	pop	r0
+     3cc:	1f 90       	pop	r1
+     3ce:	18 95       	reti
+     3d0:	26 e8       	ldi	r18, 0x86	; 134
+     3d2:	23 0f       	add	r18, r19
+     3d4:	02 96       	adiw	r24, 0x02	; 2
+     3d6:	a1 1d       	adc	r26, r1
+     3d8:	b1 1d       	adc	r27, r1
+     3da:	d2 cf       	rjmp	.-92     	; 0x380 <__vector_16+0x38>
+
+000003dc <init>:
+
+void init()
+{
+	// this needs to be called before setup() or some functions won't
+	// work there
+	sei();
+     3dc:	78 94       	sei
+	
+	// on the ATmega168, timer 0 is also used for fast hardware pwm
+	// (using phase-correct PWM would mean that timer 0 overflowed half as often
+	// resulting in different millis() behavior on the ATmega8 and ATmega168)
+#if defined(TCCR0A) && defined(WGM01)
+	sbi(TCCR0A, WGM01);
+     3de:	84 b5       	in	r24, 0x24	; 36
+     3e0:	82 60       	ori	r24, 0x02	; 2
+     3e2:	84 bd       	out	0x24, r24	; 36
+	sbi(TCCR0A, WGM00);
+     3e4:	84 b5       	in	r24, 0x24	; 36
+     3e6:	81 60       	ori	r24, 0x01	; 1
+     3e8:	84 bd       	out	0x24, r24	; 36
+	// this combination is for the standard atmega8
+	sbi(TCCR0, CS01);
+	sbi(TCCR0, CS00);
+#elif defined(TCCR0B) && defined(CS01) && defined(CS00)
+	// this combination is for the standard 168/328/1280/2560
+	sbi(TCCR0B, CS01);
+     3ea:	85 b5       	in	r24, 0x25	; 37
+     3ec:	82 60       	ori	r24, 0x02	; 2
+     3ee:	85 bd       	out	0x25, r24	; 37
+	sbi(TCCR0B, CS00);
+     3f0:	85 b5       	in	r24, 0x25	; 37
+     3f2:	81 60       	ori	r24, 0x01	; 1
+     3f4:	85 bd       	out	0x25, r24	; 37
+
+	// enable timer 0 overflow interrupt
+#if defined(TIMSK) && defined(TOIE0)
+	sbi(TIMSK, TOIE0);
+#elif defined(TIMSK0) && defined(TOIE0)
+	sbi(TIMSK0, TOIE0);
+     3f6:	ee e6       	ldi	r30, 0x6E	; 110
+     3f8:	f0 e0       	ldi	r31, 0x00	; 0
+     3fa:	80 81       	ld	r24, Z
+     3fc:	81 60       	ori	r24, 0x01	; 1
+     3fe:	80 83       	st	Z, r24
+	// this is better for motors as it ensures an even waveform
+	// note, however, that fast pwm mode can achieve a frequency of up
+	// 8 MHz (with a 16 MHz clock) at 50% duty cycle
+
+#if defined(TCCR1B) && defined(CS11) && defined(CS10)
+	TCCR1B = 0;
+     400:	e1 e8       	ldi	r30, 0x81	; 129
+     402:	f0 e0       	ldi	r31, 0x00	; 0
+     404:	10 82       	st	Z, r1
+
+	// set timer 1 prescale factor to 64
+	sbi(TCCR1B, CS11);
+     406:	80 81       	ld	r24, Z
+     408:	82 60       	ori	r24, 0x02	; 2
+     40a:	80 83       	st	Z, r24
+#if F_CPU >= 8000000L
+	sbi(TCCR1B, CS10);
+     40c:	80 81       	ld	r24, Z
+     40e:	81 60       	ori	r24, 0x01	; 1
+     410:	80 83       	st	Z, r24
+	sbi(TCCR1, CS10);
+#endif
+#endif
+	// put timer 1 in 8-bit phase correct pwm mode
+#if defined(TCCR1A) && defined(WGM10)
+	sbi(TCCR1A, WGM10);
+     412:	e0 e8       	ldi	r30, 0x80	; 128
+     414:	f0 e0       	ldi	r31, 0x00	; 0
+     416:	80 81       	ld	r24, Z
+     418:	81 60       	ori	r24, 0x01	; 1
+     41a:	80 83       	st	Z, r24
+
+	// set timer 2 prescale factor to 64
+#if defined(TCCR2) && defined(CS22)
+	sbi(TCCR2, CS22);
+#elif defined(TCCR2B) && defined(CS22)
+	sbi(TCCR2B, CS22);
+     41c:	e1 eb       	ldi	r30, 0xB1	; 177
+     41e:	f0 e0       	ldi	r31, 0x00	; 0
+     420:	80 81       	ld	r24, Z
+     422:	84 60       	ori	r24, 0x04	; 4
+     424:	80 83       	st	Z, r24
+
+	// configure timer 2 for phase correct pwm (8-bit)
+#if defined(TCCR2) && defined(WGM20)
+	sbi(TCCR2, WGM20);
+#elif defined(TCCR2A) && defined(WGM20)
+	sbi(TCCR2A, WGM20);
+     426:	e0 eb       	ldi	r30, 0xB0	; 176
+     428:	f0 e0       	ldi	r31, 0x00	; 0
+     42a:	80 81       	ld	r24, Z
+     42c:	81 60       	ori	r24, 0x01	; 1
+     42e:	80 83       	st	Z, r24
+#endif
+
+#if defined(ADCSRA)
+	// set a2d prescaler so we are inside the desired 50-200 KHz range.
+	#if F_CPU >= 16000000 // 16 MHz / 128 = 125 KHz
+		sbi(ADCSRA, ADPS2);
+     430:	ea e7       	ldi	r30, 0x7A	; 122
+     432:	f0 e0       	ldi	r31, 0x00	; 0
+     434:	80 81       	ld	r24, Z
+     436:	84 60       	ori	r24, 0x04	; 4
+     438:	80 83       	st	Z, r24
+		sbi(ADCSRA, ADPS1);
+     43a:	80 81       	ld	r24, Z
+     43c:	82 60       	ori	r24, 0x02	; 2
+     43e:	80 83       	st	Z, r24
+		sbi(ADCSRA, ADPS0);
+     440:	80 81       	ld	r24, Z
+     442:	81 60       	ori	r24, 0x01	; 1
+     444:	80 83       	st	Z, r24
+		cbi(ADCSRA, ADPS2);
+		cbi(ADCSRA, ADPS1);
+		sbi(ADCSRA, ADPS0);
+	#endif
+	// enable a2d conversions
+	sbi(ADCSRA, ADEN);
+     446:	80 81       	ld	r24, Z
+     448:	80 68       	ori	r24, 0x80	; 128
+     44a:	80 83       	st	Z, r24
+	// here so they can be used as normal digital i/o; they will be
+	// reconnected in Serial.begin()
+#if defined(UCSRB)
+	UCSRB = 0;
+#elif defined(UCSR0B)
+	UCSR0B = 0;
+     44c:	10 92 c1 00 	sts	0x00C1, r1	; 0x8000c1 <__DATA_REGION_ORIGIN__+0x61>
+#endif
+}
+     450:	08 95       	ret
+
+00000452 <turnOffPWM>:
+//
+//static inline void turnOffPWM(uint8_t timer) __attribute__ ((always_inline));
+//static inline void turnOffPWM(uint8_t timer)
+static void turnOffPWM(uint8_t timer)
+{
+	switch (timer)
+     452:	83 30       	cpi	r24, 0x03	; 3
+     454:	81 f0       	breq	.+32     	; 0x476 <turnOffPWM+0x24>
+     456:	28 f4       	brcc	.+10     	; 0x462 <turnOffPWM+0x10>
+     458:	81 30       	cpi	r24, 0x01	; 1
+     45a:	99 f0       	breq	.+38     	; 0x482 <turnOffPWM+0x30>
+     45c:	82 30       	cpi	r24, 0x02	; 2
+     45e:	a9 f0       	breq	.+42     	; 0x48a <turnOffPWM+0x38>
+     460:	08 95       	ret
+     462:	87 30       	cpi	r24, 0x07	; 7
+     464:	a9 f0       	breq	.+42     	; 0x490 <turnOffPWM+0x3e>
+     466:	88 30       	cpi	r24, 0x08	; 8
+     468:	c9 f0       	breq	.+50     	; 0x49c <turnOffPWM+0x4a>
+     46a:	84 30       	cpi	r24, 0x04	; 4
+     46c:	b1 f4       	brne	.+44     	; 0x49a <turnOffPWM+0x48>
+	{
+		#if defined(TCCR1A) && defined(COM1A1)
+		case TIMER1A:   cbi(TCCR1A, COM1A1);    break;
+		#endif
+		#if defined(TCCR1A) && defined(COM1B1)
+		case TIMER1B:   cbi(TCCR1A, COM1B1);    break;
+     46e:	80 91 80 00 	lds	r24, 0x0080	; 0x800080 <__DATA_REGION_ORIGIN__+0x20>
+     472:	8f 7d       	andi	r24, 0xDF	; 223
+     474:	03 c0       	rjmp	.+6      	; 0x47c <turnOffPWM+0x2a>
+static void turnOffPWM(uint8_t timer)
+{
+	switch (timer)
+	{
+		#if defined(TCCR1A) && defined(COM1A1)
+		case TIMER1A:   cbi(TCCR1A, COM1A1);    break;
+     476:	80 91 80 00 	lds	r24, 0x0080	; 0x800080 <__DATA_REGION_ORIGIN__+0x20>
+     47a:	8f 77       	andi	r24, 0x7F	; 127
+		#endif
+		#if defined(TCCR1A) && defined(COM1B1)
+		case TIMER1B:   cbi(TCCR1A, COM1B1);    break;
+     47c:	80 93 80 00 	sts	0x0080, r24	; 0x800080 <__DATA_REGION_ORIGIN__+0x20>
+     480:	08 95       	ret
+		#if defined(TCCR2) && defined(COM21)
+		case  TIMER2:   cbi(TCCR2, COM21);      break;
+		#endif
+		
+		#if defined(TCCR0A) && defined(COM0A1)
+		case  TIMER0A:  cbi(TCCR0A, COM0A1);    break;
+     482:	84 b5       	in	r24, 0x24	; 36
+     484:	8f 77       	andi	r24, 0x7F	; 127
+		#endif
+		
+		#if defined(TCCR0A) && defined(COM0B1)
+		case  TIMER0B:  cbi(TCCR0A, COM0B1);    break;
+     486:	84 bd       	out	0x24, r24	; 36
+     488:	08 95       	ret
+     48a:	84 b5       	in	r24, 0x24	; 36
+     48c:	8f 7d       	andi	r24, 0xDF	; 223
+     48e:	fb cf       	rjmp	.-10     	; 0x486 <turnOffPWM+0x34>
+		#endif
+		#if defined(TCCR2A) && defined(COM2A1)
+		case  TIMER2A:  cbi(TCCR2A, COM2A1);    break;
+     490:	80 91 b0 00 	lds	r24, 0x00B0	; 0x8000b0 <__DATA_REGION_ORIGIN__+0x50>
+     494:	8f 77       	andi	r24, 0x7F	; 127
+		#endif
+		#if defined(TCCR2A) && defined(COM2B1)
+		case  TIMER2B:  cbi(TCCR2A, COM2B1);    break;
+     496:	80 93 b0 00 	sts	0x00B0, r24	; 0x8000b0 <__DATA_REGION_ORIGIN__+0x50>
+		case  TIMER5A:  cbi(TCCR5A, COM5A1);    break;
+		case  TIMER5B:  cbi(TCCR5A, COM5B1);    break;
+		case  TIMER5C:  cbi(TCCR5A, COM5C1);    break;
+		#endif
+	}
+}
+     49a:	08 95       	ret
+		#endif
+		#if defined(TCCR2A) && defined(COM2A1)
+		case  TIMER2A:  cbi(TCCR2A, COM2A1);    break;
+		#endif
+		#if defined(TCCR2A) && defined(COM2B1)
+		case  TIMER2B:  cbi(TCCR2A, COM2B1);    break;
+     49c:	80 91 b0 00 	lds	r24, 0x00B0	; 0x8000b0 <__DATA_REGION_ORIGIN__+0x50>
+     4a0:	8f 7d       	andi	r24, 0xDF	; 223
+     4a2:	f9 cf       	rjmp	.-14     	; 0x496 <turnOffPWM+0x44>
+
+000004a4 <pinMode>:
+#define ARDUINO_MAIN
+#include "wiring_private.h"
+#include "pins_arduino.h"
+
+void pinMode(uint8_t pin, uint8_t mode)
+{
+     4a4:	cf 93       	push	r28
+     4a6:	df 93       	push	r29
+	uint8_t bit = digitalPinToBitMask(pin);
+     4a8:	90 e0       	ldi	r25, 0x00	; 0
+     4aa:	fc 01       	movw	r30, r24
+     4ac:	e4 58       	subi	r30, 0x84	; 132
+     4ae:	ff 4f       	sbci	r31, 0xFF	; 255
+     4b0:	24 91       	lpm	r18, Z
+	uint8_t port = digitalPinToPort(pin);
+     4b2:	80 57       	subi	r24, 0x70	; 112
+     4b4:	9f 4f       	sbci	r25, 0xFF	; 255
+     4b6:	fc 01       	movw	r30, r24
+     4b8:	84 91       	lpm	r24, Z
+	volatile uint8_t *reg, *out;
+
+	if (port == NOT_A_PIN) return;
+     4ba:	88 23       	and	r24, r24
+     4bc:	c9 f0       	breq	.+50     	; 0x4f0 <pinMode+0x4c>
+
+	// JWS: can I let the optimizer do this?
+	reg = portModeRegister(port);
+     4be:	90 e0       	ldi	r25, 0x00	; 0
+     4c0:	88 0f       	add	r24, r24
+     4c2:	99 1f       	adc	r25, r25
+     4c4:	fc 01       	movw	r30, r24
+     4c6:	e2 55       	subi	r30, 0x52	; 82
+     4c8:	ff 4f       	sbci	r31, 0xFF	; 255
+     4ca:	a5 91       	lpm	r26, Z+
+     4cc:	b4 91       	lpm	r27, Z
+	out = portOutputRegister(port);
+     4ce:	fc 01       	movw	r30, r24
+     4d0:	ec 55       	subi	r30, 0x5C	; 92
+     4d2:	ff 4f       	sbci	r31, 0xFF	; 255
+     4d4:	c5 91       	lpm	r28, Z+
+     4d6:	d4 91       	lpm	r29, Z
+
+	if (mode == INPUT) { 
+     4d8:	61 11       	cpse	r22, r1
+     4da:	0d c0       	rjmp	.+26     	; 0x4f6 <pinMode+0x52>
+		uint8_t oldSREG = SREG;
+     4dc:	9f b7       	in	r25, 0x3f	; 63
+                cli();
+     4de:	f8 94       	cli
+		*reg &= ~bit;
+     4e0:	8c 91       	ld	r24, X
+     4e2:	20 95       	com	r18
+     4e4:	82 23       	and	r24, r18
+     4e6:	8c 93       	st	X, r24
+		*out &= ~bit;
+     4e8:	88 81       	ld	r24, Y
+     4ea:	28 23       	and	r18, r24
+		SREG = oldSREG;
+	} else if (mode == INPUT_PULLUP) {
+		uint8_t oldSREG = SREG;
+                cli();
+		*reg &= ~bit;
+		*out |= bit;
+     4ec:	28 83       	st	Y, r18
+		SREG = oldSREG;
+     4ee:	9f bf       	out	0x3f, r25	; 63
+		uint8_t oldSREG = SREG;
+                cli();
+		*reg |= bit;
+		SREG = oldSREG;
+	}
+}
+     4f0:	df 91       	pop	r29
+     4f2:	cf 91       	pop	r28
+     4f4:	08 95       	ret
+		uint8_t oldSREG = SREG;
+                cli();
+		*reg &= ~bit;
+		*out &= ~bit;
+		SREG = oldSREG;
+	} else if (mode == INPUT_PULLUP) {
+     4f6:	62 30       	cpi	r22, 0x02	; 2
+     4f8:	51 f4       	brne	.+20     	; 0x50e <pinMode+0x6a>
+		uint8_t oldSREG = SREG;
+     4fa:	9f b7       	in	r25, 0x3f	; 63
+                cli();
+     4fc:	f8 94       	cli
+		*reg &= ~bit;
+     4fe:	3c 91       	ld	r19, X
+     500:	82 2f       	mov	r24, r18
+     502:	80 95       	com	r24
+     504:	83 23       	and	r24, r19
+     506:	8c 93       	st	X, r24
+		*out |= bit;
+     508:	e8 81       	ld	r30, Y
+     50a:	2e 2b       	or	r18, r30
+     50c:	ef cf       	rjmp	.-34     	; 0x4ec <pinMode+0x48>
+		SREG = oldSREG;
+	} else {
+		uint8_t oldSREG = SREG;
+     50e:	8f b7       	in	r24, 0x3f	; 63
+                cli();
+     510:	f8 94       	cli
+		*reg |= bit;
+     512:	ec 91       	ld	r30, X
+     514:	2e 2b       	or	r18, r30
+     516:	2c 93       	st	X, r18
+		SREG = oldSREG;
+     518:	8f bf       	out	0x3f, r24	; 63
+     51a:	ea cf       	rjmp	.-44     	; 0x4f0 <pinMode+0x4c>
+
+0000051c <digitalWrite>:
+		#endif
+	}
+}
+
+void digitalWrite(uint8_t pin, uint8_t val)
+{
+     51c:	1f 93       	push	r17
+     51e:	cf 93       	push	r28
+     520:	df 93       	push	r29
+	uint8_t timer = digitalPinToTimer(pin);
+     522:	28 2f       	mov	r18, r24
+     524:	30 e0       	ldi	r19, 0x00	; 0
+     526:	f9 01       	movw	r30, r18
+     528:	e8 59       	subi	r30, 0x98	; 152
+     52a:	ff 4f       	sbci	r31, 0xFF	; 255
+     52c:	84 91       	lpm	r24, Z
+	uint8_t bit = digitalPinToBitMask(pin);
+     52e:	f9 01       	movw	r30, r18
+     530:	e4 58       	subi	r30, 0x84	; 132
+     532:	ff 4f       	sbci	r31, 0xFF	; 255
+     534:	d4 91       	lpm	r29, Z
+	uint8_t port = digitalPinToPort(pin);
+     536:	f9 01       	movw	r30, r18
+     538:	e0 57       	subi	r30, 0x70	; 112
+     53a:	ff 4f       	sbci	r31, 0xFF	; 255
+     53c:	c4 91       	lpm	r28, Z
+	volatile uint8_t *out;
+
+	if (port == NOT_A_PIN) return;
+     53e:	cc 23       	and	r28, r28
+     540:	a9 f0       	breq	.+42     	; 0x56c <digitalWrite+0x50>
+     542:	16 2f       	mov	r17, r22
+
+	// If the pin that support PWM output, we need to turn it off
+	// before doing a digital write.
+	if (timer != NOT_ON_TIMER) turnOffPWM(timer);
+     544:	81 11       	cpse	r24, r1
+     546:	0e 94 29 02 	call	0x452	; 0x452 <turnOffPWM>
+
+	out = portOutputRegister(port);
+     54a:	ec 2f       	mov	r30, r28
+     54c:	f0 e0       	ldi	r31, 0x00	; 0
+     54e:	ee 0f       	add	r30, r30
+     550:	ff 1f       	adc	r31, r31
+     552:	ec 55       	subi	r30, 0x5C	; 92
+     554:	ff 4f       	sbci	r31, 0xFF	; 255
+     556:	a5 91       	lpm	r26, Z+
+     558:	b4 91       	lpm	r27, Z
+
+	uint8_t oldSREG = SREG;
+     55a:	8f b7       	in	r24, 0x3f	; 63
+	cli();
+     55c:	f8 94       	cli
+
+	if (val == LOW) {
+		*out &= ~bit;
+     55e:	ec 91       	ld	r30, X
+	out = portOutputRegister(port);
+
+	uint8_t oldSREG = SREG;
+	cli();
+
+	if (val == LOW) {
+     560:	11 11       	cpse	r17, r1
+     562:	08 c0       	rjmp	.+16     	; 0x574 <digitalWrite+0x58>
+		*out &= ~bit;
+     564:	d0 95       	com	r29
+     566:	de 23       	and	r29, r30
+	} else {
+		*out |= bit;
+     568:	dc 93       	st	X, r29
+	}
+
+	SREG = oldSREG;
+     56a:	8f bf       	out	0x3f, r24	; 63
+}
+     56c:	df 91       	pop	r29
+     56e:	cf 91       	pop	r28
+     570:	1f 91       	pop	r17
+     572:	08 95       	ret
+	cli();
+
+	if (val == LOW) {
+		*out &= ~bit;
+	} else {
+		*out |= bit;
+     574:	de 2b       	or	r29, r30
+     576:	f8 cf       	rjmp	.-16     	; 0x568 <digitalWrite+0x4c>
+
+00000578 <_ZN14HardwareSerial9availableEv>:
+  // clear any received data
+  _rx_buffer_head = _rx_buffer_tail;
+}
+
+int HardwareSerial::available(void)
+{
+     578:	fc 01       	movw	r30, r24
+  return ((unsigned int)(SERIAL_RX_BUFFER_SIZE + _rx_buffer_head - _rx_buffer_tail)) % SERIAL_RX_BUFFER_SIZE;
+     57a:	91 8d       	ldd	r25, Z+25	; 0x19
+     57c:	22 8d       	ldd	r18, Z+26	; 0x1a
+     57e:	89 2f       	mov	r24, r25
+     580:	90 e0       	ldi	r25, 0x00	; 0
+     582:	80 5c       	subi	r24, 0xC0	; 192
+     584:	9f 4f       	sbci	r25, 0xFF	; 255
+     586:	82 1b       	sub	r24, r18
+     588:	91 09       	sbc	r25, r1
+}
+     58a:	8f 73       	andi	r24, 0x3F	; 63
+     58c:	99 27       	eor	r25, r25
+     58e:	08 95       	ret
+
+00000590 <_ZN14HardwareSerial4peekEv>:
+
+int HardwareSerial::peek(void)
+{
+     590:	fc 01       	movw	r30, r24
+  if (_rx_buffer_head == _rx_buffer_tail) {
+     592:	91 8d       	ldd	r25, Z+25	; 0x19
+     594:	82 8d       	ldd	r24, Z+26	; 0x1a
+     596:	98 17       	cp	r25, r24
+     598:	31 f0       	breq	.+12     	; 0x5a6 <_ZN14HardwareSerial4peekEv+0x16>
+    return -1;
+  } else {
+    return _rx_buffer[_rx_buffer_tail];
+     59a:	82 8d       	ldd	r24, Z+26	; 0x1a
+     59c:	e8 0f       	add	r30, r24
+     59e:	f1 1d       	adc	r31, r1
+     5a0:	85 8d       	ldd	r24, Z+29	; 0x1d
+     5a2:	90 e0       	ldi	r25, 0x00	; 0
+     5a4:	08 95       	ret
+}
+
+int HardwareSerial::peek(void)
+{
+  if (_rx_buffer_head == _rx_buffer_tail) {
+    return -1;
+     5a6:	8f ef       	ldi	r24, 0xFF	; 255
+     5a8:	9f ef       	ldi	r25, 0xFF	; 255
+  } else {
+    return _rx_buffer[_rx_buffer_tail];
+  }
+}
+     5aa:	08 95       	ret
+
+000005ac <_ZN14HardwareSerial4readEv>:
+
+int HardwareSerial::read(void)
+{
+     5ac:	fc 01       	movw	r30, r24
+  // if the head isn't ahead of the tail, we don't have any characters
+  if (_rx_buffer_head == _rx_buffer_tail) {
+     5ae:	91 8d       	ldd	r25, Z+25	; 0x19
+     5b0:	82 8d       	ldd	r24, Z+26	; 0x1a
+     5b2:	98 17       	cp	r25, r24
+     5b4:	61 f0       	breq	.+24     	; 0x5ce <_ZN14HardwareSerial4readEv+0x22>
+    return -1;
+  } else {
+    unsigned char c = _rx_buffer[_rx_buffer_tail];
+     5b6:	a2 8d       	ldd	r26, Z+26	; 0x1a
+     5b8:	ae 0f       	add	r26, r30
+     5ba:	bf 2f       	mov	r27, r31
+     5bc:	b1 1d       	adc	r27, r1
+     5be:	5d 96       	adiw	r26, 0x1d	; 29
+     5c0:	8c 91       	ld	r24, X
+    _rx_buffer_tail = (rx_buffer_index_t)(_rx_buffer_tail + 1) % SERIAL_RX_BUFFER_SIZE;
+     5c2:	92 8d       	ldd	r25, Z+26	; 0x1a
+     5c4:	9f 5f       	subi	r25, 0xFF	; 255
+     5c6:	9f 73       	andi	r25, 0x3F	; 63
+     5c8:	92 8f       	std	Z+26, r25	; 0x1a
+    return c;
+     5ca:	90 e0       	ldi	r25, 0x00	; 0
+     5cc:	08 95       	ret
+
+int HardwareSerial::read(void)
+{
+  // if the head isn't ahead of the tail, we don't have any characters
+  if (_rx_buffer_head == _rx_buffer_tail) {
+    return -1;
+     5ce:	8f ef       	ldi	r24, 0xFF	; 255
+     5d0:	9f ef       	ldi	r25, 0xFF	; 255
+  } else {
+    unsigned char c = _rx_buffer[_rx_buffer_tail];
+    _rx_buffer_tail = (rx_buffer_index_t)(_rx_buffer_tail + 1) % SERIAL_RX_BUFFER_SIZE;
+    return c;
+  }
+}
+     5d2:	08 95       	ret
+
+000005d4 <_ZN14HardwareSerial17availableForWriteEv>:
+{
+  tx_buffer_index_t head;
+  tx_buffer_index_t tail;
+
+  TX_BUFFER_ATOMIC {
+    head = _tx_buffer_head;
+     5d4:	fc 01       	movw	r30, r24
+     5d6:	53 8d       	ldd	r21, Z+27	; 0x1b
+    tail = _tx_buffer_tail;
+     5d8:	44 8d       	ldd	r20, Z+28	; 0x1c
+     5da:	25 2f       	mov	r18, r21
+     5dc:	30 e0       	ldi	r19, 0x00	; 0
+     5de:	84 2f       	mov	r24, r20
+     5e0:	90 e0       	ldi	r25, 0x00	; 0
+  }
+  if (head >= tail) return SERIAL_TX_BUFFER_SIZE - 1 - head + tail;
+     5e2:	82 1b       	sub	r24, r18
+     5e4:	93 0b       	sbc	r25, r19
+     5e6:	54 17       	cp	r21, r20
+     5e8:	10 f0       	brcs	.+4      	; 0x5ee <_ZN14HardwareSerial17availableForWriteEv+0x1a>
+     5ea:	cf 96       	adiw	r24, 0x3f	; 63
+     5ec:	08 95       	ret
+  return tail - head - 1;
+     5ee:	01 97       	sbiw	r24, 0x01	; 1
+}
+     5f0:	08 95       	ret
+
+000005f2 <_Z14serialEventRunv>:
+#endif
+
+void serialEventRun(void)
+{
+#if defined(HAVE_HWSERIAL0)
+  if (Serial0_available && serialEvent && Serial0_available()) serialEvent();
+     5f2:	80 e5       	ldi	r24, 0x50	; 80
+     5f4:	94 e0       	ldi	r25, 0x04	; 4
+     5f6:	89 2b       	or	r24, r25
+     5f8:	49 f0       	breq	.+18     	; 0x60c <_Z14serialEventRunv+0x1a>
+     5fa:	80 e0       	ldi	r24, 0x00	; 0
+     5fc:	90 e0       	ldi	r25, 0x00	; 0
+     5fe:	89 2b       	or	r24, r25
+     600:	29 f0       	breq	.+10     	; 0x60c <_Z14serialEventRunv+0x1a>
+     602:	0e 94 50 04 	call	0x8a0	; 0x8a0 <_Z17Serial0_availablev>
+     606:	81 11       	cpse	r24, r1
+     608:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+  if (Serial2_available && serialEvent2 && Serial2_available()) serialEvent2();
+#endif
+#if defined(HAVE_HWSERIAL3)
+  if (Serial3_available && serialEvent3 && Serial3_available()) serialEvent3();
+#endif
+}
+     60c:	08 95       	ret
+
+0000060e <_ZN14HardwareSerial17_tx_udr_empty_irqEv>:
+#endif
+
+// Actual interrupt handlers //////////////////////////////////////////////////////////////
+
+void HardwareSerial::_tx_udr_empty_irq(void)
+{
+     60e:	fc 01       	movw	r30, r24
+  // If interrupts are enabled, there must be more data in the output
+  // buffer. Send the next byte
+  unsigned char c = _tx_buffer[_tx_buffer_tail];
+     610:	a4 8d       	ldd	r26, Z+28	; 0x1c
+     612:	a8 0f       	add	r26, r24
+     614:	b9 2f       	mov	r27, r25
+     616:	b1 1d       	adc	r27, r1
+     618:	a3 5a       	subi	r26, 0xA3	; 163
+     61a:	bf 4f       	sbci	r27, 0xFF	; 255
+     61c:	2c 91       	ld	r18, X
+  _tx_buffer_tail = (_tx_buffer_tail + 1) % SERIAL_TX_BUFFER_SIZE;
+     61e:	84 8d       	ldd	r24, Z+28	; 0x1c
+     620:	90 e0       	ldi	r25, 0x00	; 0
+     622:	01 96       	adiw	r24, 0x01	; 1
+     624:	8f 73       	andi	r24, 0x3F	; 63
+     626:	99 27       	eor	r25, r25
+     628:	84 8f       	std	Z+28, r24	; 0x1c
+
+  *_udr = c;
+     62a:	a6 89       	ldd	r26, Z+22	; 0x16
+     62c:	b7 89       	ldd	r27, Z+23	; 0x17
+     62e:	2c 93       	st	X, r18
+  // location". This makes sure flush() won't return until the bytes
+  // actually got written. Other r/w bits are preserved, and zeroes
+  // written to the rest.
+
+#ifdef MPCM0
+  *_ucsra = ((*_ucsra) & ((1 << U2X0) | (1 << MPCM0))) | (1 << TXC0);
+     630:	a0 89       	ldd	r26, Z+16	; 0x10
+     632:	b1 89       	ldd	r27, Z+17	; 0x11
+     634:	8c 91       	ld	r24, X
+     636:	83 70       	andi	r24, 0x03	; 3
+     638:	80 64       	ori	r24, 0x40	; 64
+     63a:	8c 93       	st	X, r24
+#else
+  *_ucsra = ((*_ucsra) & ((1 << U2X0) | (1 << TXC0)));
+#endif
+
+  if (_tx_buffer_head == _tx_buffer_tail) {
+     63c:	93 8d       	ldd	r25, Z+27	; 0x1b
+     63e:	84 8d       	ldd	r24, Z+28	; 0x1c
+     640:	98 13       	cpse	r25, r24
+     642:	06 c0       	rjmp	.+12     	; 0x650 <_ZN14HardwareSerial17_tx_udr_empty_irqEv+0x42>
+    // Buffer empty, so disable interrupts
+    cbi(*_ucsrb, UDRIE0);
+     644:	02 88       	ldd	r0, Z+18	; 0x12
+     646:	f3 89       	ldd	r31, Z+19	; 0x13
+     648:	e0 2d       	mov	r30, r0
+     64a:	80 81       	ld	r24, Z
+     64c:	8f 7d       	andi	r24, 0xDF	; 223
+     64e:	80 83       	st	Z, r24
+  }
+}
+     650:	08 95       	ret
+
+00000652 <_ZN14HardwareSerial5flushEv>:
+  if (head >= tail) return SERIAL_TX_BUFFER_SIZE - 1 - head + tail;
+  return tail - head - 1;
+}
+
+void HardwareSerial::flush()
+{
+     652:	cf 93       	push	r28
+     654:	df 93       	push	r29
+     656:	ec 01       	movw	r28, r24
+  // If we have never written a byte, no need to flush. This special
+  // case is needed since there is no way to force the TXC (transmit
+  // complete) bit to 1 during initialization
+  if (!_written)
+     658:	88 8d       	ldd	r24, Y+24	; 0x18
+     65a:	88 23       	and	r24, r24
+     65c:	b9 f0       	breq	.+46     	; 0x68c <_ZN14HardwareSerial5flushEv+0x3a>
+    return;
+
+  while (bit_is_set(*_ucsrb, UDRIE0) || bit_is_clear(*_ucsra, TXC0)) {
+     65e:	aa 89       	ldd	r26, Y+18	; 0x12
+     660:	bb 89       	ldd	r27, Y+19	; 0x13
+     662:	e8 89       	ldd	r30, Y+16	; 0x10
+     664:	f9 89       	ldd	r31, Y+17	; 0x11
+     666:	8c 91       	ld	r24, X
+     668:	85 fd       	sbrc	r24, 5
+     66a:	03 c0       	rjmp	.+6      	; 0x672 <_ZN14HardwareSerial5flushEv+0x20>
+     66c:	80 81       	ld	r24, Z
+     66e:	86 fd       	sbrc	r24, 6
+     670:	0d c0       	rjmp	.+26     	; 0x68c <_ZN14HardwareSerial5flushEv+0x3a>
+    if (bit_is_clear(SREG, SREG_I) && bit_is_set(*_ucsrb, UDRIE0))
+     672:	0f b6       	in	r0, 0x3f	; 63
+     674:	07 fc       	sbrc	r0, 7
+     676:	f7 cf       	rjmp	.-18     	; 0x666 <_ZN14HardwareSerial5flushEv+0x14>
+     678:	8c 91       	ld	r24, X
+     67a:	85 ff       	sbrs	r24, 5
+     67c:	f2 cf       	rjmp	.-28     	; 0x662 <_ZN14HardwareSerial5flushEv+0x10>
+	// Interrupts are globally disabled, but the DR empty
+	// interrupt should be enabled, so poll the DR empty flag to
+	// prevent deadlock
+	if (bit_is_set(*_ucsra, UDRE0))
+     67e:	80 81       	ld	r24, Z
+     680:	85 ff       	sbrs	r24, 5
+     682:	ed cf       	rjmp	.-38     	; 0x65e <_ZN14HardwareSerial5flushEv+0xc>
+	  _tx_udr_empty_irq();
+     684:	ce 01       	movw	r24, r28
+     686:	0e 94 07 03 	call	0x60e	; 0x60e <_ZN14HardwareSerial17_tx_udr_empty_irqEv>
+     68a:	e9 cf       	rjmp	.-46     	; 0x65e <_ZN14HardwareSerial5flushEv+0xc>
+  }
+  // If we get here, nothing is queued anymore (DRIE is disabled) and
+  // the hardware finished tranmission (TXC is set).
+}
+     68c:	df 91       	pop	r29
+     68e:	cf 91       	pop	r28
+     690:	08 95       	ret
+
+00000692 <_ZN14HardwareSerial5writeEh>:
+
+size_t HardwareSerial::write(uint8_t c)
+{
+     692:	ef 92       	push	r14
+     694:	ff 92       	push	r15
+     696:	0f 93       	push	r16
+     698:	1f 93       	push	r17
+     69a:	cf 93       	push	r28
+     69c:	df 93       	push	r29
+     69e:	ec 01       	movw	r28, r24
+  _written = true;
+     6a0:	81 e0       	ldi	r24, 0x01	; 1
+     6a2:	88 8f       	std	Y+24, r24	; 0x18
+  // If the buffer and the data register is empty, just write the byte
+  // to the data register and be done. This shortcut helps
+  // significantly improve the effective datarate at high (>
+  // 500kbit/s) bitrates, where interrupt overhead becomes a slowdown.
+  if (_tx_buffer_head == _tx_buffer_tail && bit_is_set(*_ucsra, UDRE0)) {
+     6a4:	9b 8d       	ldd	r25, Y+27	; 0x1b
+     6a6:	8c 8d       	ldd	r24, Y+28	; 0x1c
+     6a8:	98 13       	cpse	r25, r24
+     6aa:	1a c0       	rjmp	.+52     	; 0x6e0 <_ZN14HardwareSerial5writeEh+0x4e>
+     6ac:	e8 89       	ldd	r30, Y+16	; 0x10
+     6ae:	f9 89       	ldd	r31, Y+17	; 0x11
+     6b0:	80 81       	ld	r24, Z
+     6b2:	85 ff       	sbrs	r24, 5
+     6b4:	15 c0       	rjmp	.+42     	; 0x6e0 <_ZN14HardwareSerial5writeEh+0x4e>
+    // So writing UDR must happen first.
+    // Writing UDR and clearing TC must be done atomically, otherwise
+    // interrupts might delay the TXC clear so the byte written to UDR
+    // is transmitted (setting TXC) before clearing TXC. Then TXC will
+    // be cleared when no bytes are left, causing flush() to hang
+    ATOMIC_BLOCK(ATOMIC_RESTORESTATE) {
+     6b6:	9f b7       	in	r25, 0x3f	; 63
+    return 1;
+}
+
+static __inline__ uint8_t __iCliRetVal(void)
+{
+    cli();
+     6b8:	f8 94       	cli
+      *_udr = c;
+     6ba:	ee 89       	ldd	r30, Y+22	; 0x16
+     6bc:	ff 89       	ldd	r31, Y+23	; 0x17
+     6be:	60 83       	st	Z, r22
+#ifdef MPCM0
+      *_ucsra = ((*_ucsra) & ((1 << U2X0) | (1 << MPCM0))) | (1 << TXC0);
+     6c0:	e8 89       	ldd	r30, Y+16	; 0x10
+     6c2:	f9 89       	ldd	r31, Y+17	; 0x11
+     6c4:	80 81       	ld	r24, Z
+     6c6:	83 70       	andi	r24, 0x03	; 3
+     6c8:	80 64       	ori	r24, 0x40	; 64
+  // make atomic to prevent execution of ISR between setting the
+  // head pointer and setting the interrupt flag resulting in buffer
+  // retransmission
+  ATOMIC_BLOCK(ATOMIC_RESTORESTATE) {
+    _tx_buffer_head = i;
+    sbi(*_ucsrb, UDRIE0);
+     6ca:	80 83       	st	Z, r24
+    (void)__s;
+}
+
+static __inline__ void __iRestore(const  uint8_t *__s)
+{
+    SREG = *__s;
+     6cc:	9f bf       	out	0x3f, r25	; 63
+  }
+  
+  return 1;
+}
+     6ce:	81 e0       	ldi	r24, 0x01	; 1
+     6d0:	90 e0       	ldi	r25, 0x00	; 0
+     6d2:	df 91       	pop	r29
+     6d4:	cf 91       	pop	r28
+     6d6:	1f 91       	pop	r17
+     6d8:	0f 91       	pop	r16
+     6da:	ff 90       	pop	r15
+     6dc:	ef 90       	pop	r14
+     6de:	08 95       	ret
+     6e0:	f6 2e       	mov	r15, r22
+      *_ucsra = ((*_ucsra) & ((1 << U2X0) | (1 << TXC0)));
+#endif
+    }
+    return 1;
+  }
+  tx_buffer_index_t i = (_tx_buffer_head + 1) % SERIAL_TX_BUFFER_SIZE;
+     6e2:	0b 8d       	ldd	r16, Y+27	; 0x1b
+     6e4:	10 e0       	ldi	r17, 0x00	; 0
+     6e6:	0f 5f       	subi	r16, 0xFF	; 255
+     6e8:	1f 4f       	sbci	r17, 0xFF	; 255
+     6ea:	0f 73       	andi	r16, 0x3F	; 63
+     6ec:	11 27       	eor	r17, r17
+     6ee:	e0 2e       	mov	r14, r16
+	
+  // If the output buffer is full, there's nothing for it other than to 
+  // wait for the interrupt handler to empty it a bit
+  while (i == _tx_buffer_tail) {
+     6f0:	8c 8d       	ldd	r24, Y+28	; 0x1c
+     6f2:	8e 11       	cpse	r24, r14
+     6f4:	0c c0       	rjmp	.+24     	; 0x70e <_ZN14HardwareSerial5writeEh+0x7c>
+    if (bit_is_clear(SREG, SREG_I)) {
+     6f6:	0f b6       	in	r0, 0x3f	; 63
+     6f8:	07 fc       	sbrc	r0, 7
+     6fa:	fa cf       	rjmp	.-12     	; 0x6f0 <_ZN14HardwareSerial5writeEh+0x5e>
+      // Interrupts are disabled, so we'll have to poll the data
+      // register empty flag ourselves. If it is set, pretend an
+      // interrupt has happened and call the handler to free up
+      // space for us.
+      if(bit_is_set(*_ucsra, UDRE0))
+     6fc:	e8 89       	ldd	r30, Y+16	; 0x10
+     6fe:	f9 89       	ldd	r31, Y+17	; 0x11
+     700:	80 81       	ld	r24, Z
+     702:	85 ff       	sbrs	r24, 5
+     704:	f5 cf       	rjmp	.-22     	; 0x6f0 <_ZN14HardwareSerial5writeEh+0x5e>
+	_tx_udr_empty_irq();
+     706:	ce 01       	movw	r24, r28
+     708:	0e 94 07 03 	call	0x60e	; 0x60e <_ZN14HardwareSerial17_tx_udr_empty_irqEv>
+     70c:	f1 cf       	rjmp	.-30     	; 0x6f0 <_ZN14HardwareSerial5writeEh+0x5e>
+    } else {
+      // nop, the interrupt handler will free up space for us
+    }
+  }
+
+  _tx_buffer[_tx_buffer_head] = c;
+     70e:	eb 8d       	ldd	r30, Y+27	; 0x1b
+     710:	ec 0f       	add	r30, r28
+     712:	fd 2f       	mov	r31, r29
+     714:	f1 1d       	adc	r31, r1
+     716:	e3 5a       	subi	r30, 0xA3	; 163
+     718:	ff 4f       	sbci	r31, 0xFF	; 255
+     71a:	f0 82       	st	Z, r15
+
+  // make atomic to prevent execution of ISR between setting the
+  // head pointer and setting the interrupt flag resulting in buffer
+  // retransmission
+  ATOMIC_BLOCK(ATOMIC_RESTORESTATE) {
+     71c:	9f b7       	in	r25, 0x3f	; 63
+    return 1;
+}
+
+static __inline__ uint8_t __iCliRetVal(void)
+{
+    cli();
+     71e:	f8 94       	cli
+    _tx_buffer_head = i;
+     720:	0b 8f       	std	Y+27, r16	; 0x1b
+    sbi(*_ucsrb, UDRIE0);
+     722:	ea 89       	ldd	r30, Y+18	; 0x12
+     724:	fb 89       	ldd	r31, Y+19	; 0x13
+     726:	80 81       	ld	r24, Z
+     728:	80 62       	ori	r24, 0x20	; 32
+     72a:	cf cf       	rjmp	.-98     	; 0x6ca <_ZN14HardwareSerial5writeEh+0x38>
+
+0000072c <_ZN14HardwareSerial5beginEmh>:
+}
+
+// Public Methods //////////////////////////////////////////////////////////////
+
+void HardwareSerial::begin(unsigned long baud, byte config)
+{
+     72c:	cf 92       	push	r12
+     72e:	df 92       	push	r13
+     730:	ef 92       	push	r14
+     732:	ff 92       	push	r15
+     734:	1f 93       	push	r17
+     736:	cf 93       	push	r28
+     738:	df 93       	push	r29
+     73a:	ec 01       	movw	r28, r24
+     73c:	6a 01       	movw	r12, r20
+     73e:	7b 01       	movw	r14, r22
+     740:	12 2f       	mov	r17, r18
+  // Try u2x mode first
+  uint16_t baud_setting = (F_CPU / 4 / baud - 1) / 2;
+  *_ucsra = 1 << U2X0;
+     742:	e8 89       	ldd	r30, Y+16	; 0x10
+     744:	f9 89       	ldd	r31, Y+17	; 0x11
+     746:	82 e0       	ldi	r24, 0x02	; 2
+     748:	80 83       	st	Z, r24
+  // hardcoded exception for 57600 for compatibility with the bootloader
+  // shipped with the Duemilanove and previous boards and the firmware
+  // on the 8U2 on the Uno and Mega 2560. Also, The baud_setting cannot
+  // be > 4095, so switch back to non-u2x mode if the baud rate is too
+  // low.
+  if (((F_CPU == 16000000UL) && (baud == 57600)) || (baud_setting >4095))
+     74a:	c1 14       	cp	r12, r1
+     74c:	81 ee       	ldi	r24, 0xE1	; 225
+     74e:	d8 06       	cpc	r13, r24
+     750:	e1 04       	cpc	r14, r1
+     752:	f1 04       	cpc	r15, r1
+     754:	a1 f0       	breq	.+40     	; 0x77e <_ZN14HardwareSerial5beginEmh+0x52>
+// Public Methods //////////////////////////////////////////////////////////////
+
+void HardwareSerial::begin(unsigned long baud, byte config)
+{
+  // Try u2x mode first
+  uint16_t baud_setting = (F_CPU / 4 / baud - 1) / 2;
+     756:	60 e0       	ldi	r22, 0x00	; 0
+     758:	79 e0       	ldi	r23, 0x09	; 9
+     75a:	8d e3       	ldi	r24, 0x3D	; 61
+     75c:	90 e0       	ldi	r25, 0x00	; 0
+     75e:	a7 01       	movw	r20, r14
+     760:	96 01       	movw	r18, r12
+     762:	0e 94 9b 09 	call	0x1336	; 0x1336 <__udivmodsi4>
+     766:	21 50       	subi	r18, 0x01	; 1
+     768:	31 09       	sbc	r19, r1
+     76a:	41 09       	sbc	r20, r1
+     76c:	51 09       	sbc	r21, r1
+     76e:	56 95       	lsr	r21
+     770:	47 95       	ror	r20
+     772:	37 95       	ror	r19
+     774:	27 95       	ror	r18
+  // hardcoded exception for 57600 for compatibility with the bootloader
+  // shipped with the Duemilanove and previous boards and the firmware
+  // on the 8U2 on the Uno and Mega 2560. Also, The baud_setting cannot
+  // be > 4095, so switch back to non-u2x mode if the baud rate is too
+  // low.
+  if (((F_CPU == 16000000UL) && (baud == 57600)) || (baud_setting >4095))
+     776:	21 15       	cp	r18, r1
+     778:	80 e1       	ldi	r24, 0x10	; 16
+     77a:	38 07       	cpc	r19, r24
+     77c:	98 f0       	brcs	.+38     	; 0x7a4 <_ZN14HardwareSerial5beginEmh+0x78>
+  {
+    *_ucsra = 0;
+     77e:	e8 89       	ldd	r30, Y+16	; 0x10
+     780:	f9 89       	ldd	r31, Y+17	; 0x11
+     782:	10 82       	st	Z, r1
+    baud_setting = (F_CPU / 8 / baud - 1) / 2;
+     784:	60 e8       	ldi	r22, 0x80	; 128
+     786:	74 e8       	ldi	r23, 0x84	; 132
+     788:	8e e1       	ldi	r24, 0x1E	; 30
+     78a:	90 e0       	ldi	r25, 0x00	; 0
+     78c:	a7 01       	movw	r20, r14
+     78e:	96 01       	movw	r18, r12
+     790:	0e 94 9b 09 	call	0x1336	; 0x1336 <__udivmodsi4>
+     794:	21 50       	subi	r18, 0x01	; 1
+     796:	31 09       	sbc	r19, r1
+     798:	41 09       	sbc	r20, r1
+     79a:	51 09       	sbc	r21, r1
+     79c:	56 95       	lsr	r21
+     79e:	47 95       	ror	r20
+     7a0:	37 95       	ror	r19
+     7a2:	27 95       	ror	r18
+  }
+
+  // assign the baud_setting, a.k.a. ubrr (USART Baud Rate Register)
+  *_ubrrh = baud_setting >> 8;
+     7a4:	ec 85       	ldd	r30, Y+12	; 0x0c
+     7a6:	fd 85       	ldd	r31, Y+13	; 0x0d
+     7a8:	30 83       	st	Z, r19
+  *_ubrrl = baud_setting;
+     7aa:	ee 85       	ldd	r30, Y+14	; 0x0e
+     7ac:	ff 85       	ldd	r31, Y+15	; 0x0f
+     7ae:	20 83       	st	Z, r18
+
+  _written = false;
+     7b0:	18 8e       	std	Y+24, r1	; 0x18
+
+  //set the data bits, parity, and stop bits
+#if defined(__AVR_ATmega8__)
+  config |= 0x80; // select UCSRC register (shared with UBRRH)
+#endif
+  *_ucsrc = config;
+     7b2:	ec 89       	ldd	r30, Y+20	; 0x14
+     7b4:	fd 89       	ldd	r31, Y+21	; 0x15
+     7b6:	10 83       	st	Z, r17
+  
+  sbi(*_ucsrb, RXEN0);
+     7b8:	ea 89       	ldd	r30, Y+18	; 0x12
+     7ba:	fb 89       	ldd	r31, Y+19	; 0x13
+     7bc:	80 81       	ld	r24, Z
+     7be:	80 61       	ori	r24, 0x10	; 16
+     7c0:	80 83       	st	Z, r24
+  sbi(*_ucsrb, TXEN0);
+     7c2:	ea 89       	ldd	r30, Y+18	; 0x12
+     7c4:	fb 89       	ldd	r31, Y+19	; 0x13
+     7c6:	80 81       	ld	r24, Z
+     7c8:	88 60       	ori	r24, 0x08	; 8
+     7ca:	80 83       	st	Z, r24
+  sbi(*_ucsrb, RXCIE0);
+     7cc:	ea 89       	ldd	r30, Y+18	; 0x12
+     7ce:	fb 89       	ldd	r31, Y+19	; 0x13
+     7d0:	80 81       	ld	r24, Z
+     7d2:	80 68       	ori	r24, 0x80	; 128
+     7d4:	80 83       	st	Z, r24
+  cbi(*_ucsrb, UDRIE0);
+     7d6:	ea 89       	ldd	r30, Y+18	; 0x12
+     7d8:	fb 89       	ldd	r31, Y+19	; 0x13
+     7da:	80 81       	ld	r24, Z
+     7dc:	8f 7d       	andi	r24, 0xDF	; 223
+     7de:	80 83       	st	Z, r24
+}
+     7e0:	df 91       	pop	r29
+     7e2:	cf 91       	pop	r28
+     7e4:	1f 91       	pop	r17
+     7e6:	ff 90       	pop	r15
+     7e8:	ef 90       	pop	r14
+     7ea:	df 90       	pop	r13
+     7ec:	cf 90       	pop	r12
+     7ee:	08 95       	ret
+
+000007f0 <__vector_18>:
+#elif defined(USART_RXC_vect)
+  ISR(USART_RXC_vect) // ATmega8
+#else
+  #error "Don't know what the Data Received vector is called for Serial"
+#endif
+  {
+     7f0:	1f 92       	push	r1
+     7f2:	0f 92       	push	r0
+     7f4:	0f b6       	in	r0, 0x3f	; 63
+     7f6:	0f 92       	push	r0
+     7f8:	11 24       	eor	r1, r1
+     7fa:	2f 93       	push	r18
+     7fc:	8f 93       	push	r24
+     7fe:	9f 93       	push	r25
+     800:	ef 93       	push	r30
+     802:	ff 93       	push	r31
+
+// Actual interrupt handlers //////////////////////////////////////////////////////////////
+
+void HardwareSerial::_rx_complete_irq(void)
+{
+  if (bit_is_clear(*_ucsra, UPE0)) {
+     804:	e0 91 98 02 	lds	r30, 0x0298	; 0x800298 <Serial+0x10>
+     808:	f0 91 99 02 	lds	r31, 0x0299	; 0x800299 <Serial+0x11>
+     80c:	80 81       	ld	r24, Z
+     80e:	e0 91 9e 02 	lds	r30, 0x029E	; 0x80029e <Serial+0x16>
+     812:	f0 91 9f 02 	lds	r31, 0x029F	; 0x80029f <Serial+0x17>
+     816:	82 fd       	sbrc	r24, 2
+     818:	1b c0       	rjmp	.+54     	; 0x850 <__vector_18+0x60>
+    // No Parity error, read byte and store it in the buffer if there is
+    // room
+    unsigned char c = *_udr;
+     81a:	90 81       	ld	r25, Z
+    rx_buffer_index_t i = (unsigned int)(_rx_buffer_head + 1) % SERIAL_RX_BUFFER_SIZE;
+     81c:	80 91 a1 02 	lds	r24, 0x02A1	; 0x8002a1 <Serial+0x19>
+     820:	8f 5f       	subi	r24, 0xFF	; 255
+     822:	8f 73       	andi	r24, 0x3F	; 63
+
+    // if we should be storing the received character into the location
+    // just before the tail (meaning that the head would advance to the
+    // current location of the tail), we're about to overflow the buffer
+    // and so we don't write the character or advance the head.
+    if (i != _rx_buffer_tail) {
+     824:	20 91 a2 02 	lds	r18, 0x02A2	; 0x8002a2 <Serial+0x1a>
+     828:	82 17       	cp	r24, r18
+     82a:	41 f0       	breq	.+16     	; 0x83c <__vector_18+0x4c>
+      _rx_buffer[_rx_buffer_head] = c;
+     82c:	e0 91 a1 02 	lds	r30, 0x02A1	; 0x8002a1 <Serial+0x19>
+     830:	f0 e0       	ldi	r31, 0x00	; 0
+     832:	e8 57       	subi	r30, 0x78	; 120
+     834:	fd 4f       	sbci	r31, 0xFD	; 253
+     836:	95 8f       	std	Z+29, r25	; 0x1d
+      _rx_buffer_head = i;
+     838:	80 93 a1 02 	sts	0x02A1, r24	; 0x8002a1 <Serial+0x19>
+    Serial._rx_complete_irq();
+  }
+     83c:	ff 91       	pop	r31
+     83e:	ef 91       	pop	r30
+     840:	9f 91       	pop	r25
+     842:	8f 91       	pop	r24
+     844:	2f 91       	pop	r18
+     846:	0f 90       	pop	r0
+     848:	0f be       	out	0x3f, r0	; 63
+     84a:	0f 90       	pop	r0
+     84c:	1f 90       	pop	r1
+     84e:	18 95       	reti
+    }
+  } else {
+    // Parity error, read byte but discard it
+    *_udr;
+     850:	80 81       	ld	r24, Z
+     852:	f4 cf       	rjmp	.-24     	; 0x83c <__vector_18+0x4c>
+
+00000854 <__vector_19>:
+#elif defined(USART_UDRE_vect)
+ISR(USART_UDRE_vect)
+#else
+  #error "Don't know what the Data Register Empty vector is called for Serial"
+#endif
+{
+     854:	1f 92       	push	r1
+     856:	0f 92       	push	r0
+     858:	0f b6       	in	r0, 0x3f	; 63
+     85a:	0f 92       	push	r0
+     85c:	11 24       	eor	r1, r1
+     85e:	2f 93       	push	r18
+     860:	3f 93       	push	r19
+     862:	4f 93       	push	r20
+     864:	5f 93       	push	r21
+     866:	6f 93       	push	r22
+     868:	7f 93       	push	r23
+     86a:	8f 93       	push	r24
+     86c:	9f 93       	push	r25
+     86e:	af 93       	push	r26
+     870:	bf 93       	push	r27
+     872:	ef 93       	push	r30
+     874:	ff 93       	push	r31
+  Serial._tx_udr_empty_irq();
+     876:	88 e8       	ldi	r24, 0x88	; 136
+     878:	92 e0       	ldi	r25, 0x02	; 2
+     87a:	0e 94 07 03 	call	0x60e	; 0x60e <_ZN14HardwareSerial17_tx_udr_empty_irqEv>
+}
+     87e:	ff 91       	pop	r31
+     880:	ef 91       	pop	r30
+     882:	bf 91       	pop	r27
+     884:	af 91       	pop	r26
+     886:	9f 91       	pop	r25
+     888:	8f 91       	pop	r24
+     88a:	7f 91       	pop	r23
+     88c:	6f 91       	pop	r22
+     88e:	5f 91       	pop	r21
+     890:	4f 91       	pop	r20
+     892:	3f 91       	pop	r19
+     894:	2f 91       	pop	r18
+     896:	0f 90       	pop	r0
+     898:	0f be       	out	0x3f, r0	; 63
+     89a:	0f 90       	pop	r0
+     89c:	1f 90       	pop	r1
+     89e:	18 95       	reti
+
+000008a0 <_Z17Serial0_availablev>:
+#endif
+
+// Function that can be weakly referenced by serialEventRun to prevent
+// pulling in this file if it's not otherwise used.
+bool Serial0_available() {
+  return Serial.available();
+     8a0:	88 e8       	ldi	r24, 0x88	; 136
+     8a2:	92 e0       	ldi	r25, 0x02	; 2
+     8a4:	0e 94 bc 02 	call	0x578	; 0x578 <_ZN14HardwareSerial9availableEv>
+     8a8:	21 e0       	ldi	r18, 0x01	; 1
+     8aa:	89 2b       	or	r24, r25
+     8ac:	09 f4       	brne	.+2      	; 0x8b0 <_Z17Serial0_availablev+0x10>
+     8ae:	20 e0       	ldi	r18, 0x00	; 0
+}
+     8b0:	82 2f       	mov	r24, r18
+     8b2:	08 95       	ret
+
+000008b4 <_GLOBAL__sub_I___vector_18>:
+    size_t printNumber(unsigned long, uint8_t);
+    size_t printFloat(double, uint8_t);
+  protected:
+    void setWriteError(int err = 1) { write_error = err; }
+  public:
+    Print() : write_error(0) {}
+     8b4:	e8 e8       	ldi	r30, 0x88	; 136
+     8b6:	f2 e0       	ldi	r31, 0x02	; 2
+     8b8:	13 82       	std	Z+3, r1	; 0x03
+     8ba:	12 82       	std	Z+2, r1	; 0x02
+  public:
+    virtual int available() = 0;
+    virtual int read() = 0;
+    virtual int peek() = 0;
+
+    Stream() {_timeout=1000;}
+     8bc:	88 ee       	ldi	r24, 0xE8	; 232
+     8be:	93 e0       	ldi	r25, 0x03	; 3
+     8c0:	a0 e0       	ldi	r26, 0x00	; 0
+     8c2:	b0 e0       	ldi	r27, 0x00	; 0
+     8c4:	84 83       	std	Z+4, r24	; 0x04
+     8c6:	95 83       	std	Z+5, r25	; 0x05
+     8c8:	a6 83       	std	Z+6, r26	; 0x06
+     8ca:	b7 83       	std	Z+7, r27	; 0x07
+  volatile uint8_t *ucsrc, volatile uint8_t *udr) :
+    _ubrrh(ubrrh), _ubrrl(ubrrl),
+    _ucsra(ucsra), _ucsrb(ucsrb), _ucsrc(ucsrc),
+    _udr(udr),
+    _rx_buffer_head(0), _rx_buffer_tail(0),
+    _tx_buffer_head(0), _tx_buffer_tail(0)
+     8cc:	8c ed       	ldi	r24, 0xDC	; 220
+     8ce:	91 e0       	ldi	r25, 0x01	; 1
+     8d0:	91 83       	std	Z+1, r25	; 0x01
+     8d2:	80 83       	st	Z, r24
+     8d4:	85 ec       	ldi	r24, 0xC5	; 197
+     8d6:	90 e0       	ldi	r25, 0x00	; 0
+     8d8:	95 87       	std	Z+13, r25	; 0x0d
+     8da:	84 87       	std	Z+12, r24	; 0x0c
+     8dc:	84 ec       	ldi	r24, 0xC4	; 196
+     8de:	90 e0       	ldi	r25, 0x00	; 0
+     8e0:	97 87       	std	Z+15, r25	; 0x0f
+     8e2:	86 87       	std	Z+14, r24	; 0x0e
+     8e4:	80 ec       	ldi	r24, 0xC0	; 192
+     8e6:	90 e0       	ldi	r25, 0x00	; 0
+     8e8:	91 8b       	std	Z+17, r25	; 0x11
+     8ea:	80 8b       	std	Z+16, r24	; 0x10
+     8ec:	81 ec       	ldi	r24, 0xC1	; 193
+     8ee:	90 e0       	ldi	r25, 0x00	; 0
+     8f0:	93 8b       	std	Z+19, r25	; 0x13
+     8f2:	82 8b       	std	Z+18, r24	; 0x12
+     8f4:	82 ec       	ldi	r24, 0xC2	; 194
+     8f6:	90 e0       	ldi	r25, 0x00	; 0
+     8f8:	95 8b       	std	Z+21, r25	; 0x15
+     8fa:	84 8b       	std	Z+20, r24	; 0x14
+     8fc:	86 ec       	ldi	r24, 0xC6	; 198
+     8fe:	90 e0       	ldi	r25, 0x00	; 0
+     900:	97 8b       	std	Z+23, r25	; 0x17
+     902:	86 8b       	std	Z+22, r24	; 0x16
+     904:	11 8e       	std	Z+25, r1	; 0x19
+     906:	12 8e       	std	Z+26, r1	; 0x1a
+     908:	13 8e       	std	Z+27, r1	; 0x1b
+     90a:	14 8e       	std	Z+28, r1	; 0x1c
+     90c:	08 95       	ret
+
+0000090e <_ZN5Print5writeEPKhj>:
+
+// Public Methods //////////////////////////////////////////////////////////////
+
+/* default implementation: may be overridden */
+size_t Print::write(const uint8_t *buffer, size_t size)
+{
+     90e:	af 92       	push	r10
+     910:	bf 92       	push	r11
+     912:	cf 92       	push	r12
+     914:	df 92       	push	r13
+     916:	ef 92       	push	r14
+     918:	ff 92       	push	r15
+     91a:	0f 93       	push	r16
+     91c:	1f 93       	push	r17
+     91e:	cf 93       	push	r28
+     920:	df 93       	push	r29
+     922:	6c 01       	movw	r12, r24
+     924:	7b 01       	movw	r14, r22
+     926:	8b 01       	movw	r16, r22
+     928:	04 0f       	add	r16, r20
+     92a:	15 1f       	adc	r17, r21
+     92c:	eb 01       	movw	r28, r22
+     92e:	5e 01       	movw	r10, r28
+     930:	ae 18       	sub	r10, r14
+     932:	bf 08       	sbc	r11, r15
+  size_t n = 0;
+  while (size--) {
+     934:	c0 17       	cp	r28, r16
+     936:	d1 07       	cpc	r29, r17
+     938:	59 f0       	breq	.+22     	; 0x950 <_ZN5Print5writeEPKhj+0x42>
+    if (write(*buffer++)) n++;
+     93a:	69 91       	ld	r22, Y+
+     93c:	d6 01       	movw	r26, r12
+     93e:	ed 91       	ld	r30, X+
+     940:	fc 91       	ld	r31, X
+     942:	01 90       	ld	r0, Z+
+     944:	f0 81       	ld	r31, Z
+     946:	e0 2d       	mov	r30, r0
+     948:	c6 01       	movw	r24, r12
+     94a:	09 95       	icall
+     94c:	89 2b       	or	r24, r25
+     94e:	79 f7       	brne	.-34     	; 0x92e <_ZN5Print5writeEPKhj+0x20>
+    else break;
+  }
+  return n;
+}
+     950:	c5 01       	movw	r24, r10
+     952:	df 91       	pop	r29
+     954:	cf 91       	pop	r28
+     956:	1f 91       	pop	r17
+     958:	0f 91       	pop	r16
+     95a:	ff 90       	pop	r15
+     95c:	ef 90       	pop	r14
+     95e:	df 90       	pop	r13
+     960:	cf 90       	pop	r12
+     962:	bf 90       	pop	r11
+     964:	af 90       	pop	r10
+     966:	08 95       	ret
+
+00000968 <osEE_avr8_system_timer_init>:
+#define OSEE_AVR8_TIMER0_COMPA  (1U)
+
+#if	(defined(OSEE_SYSTEM_TIMER_DEVICE))
+#if	(OSEE_SYSTEM_TIMER_DEVICE == OSEE_AVR8_TIMER1_COMPA)
+void osEE_avr8_system_timer_init(void) {
+  OsEE_atmega_startTimer1(OSTICKDURATION / OSEE_KILO);
+     968:	68 ee       	ldi	r22, 0xE8	; 232
+     96a:	73 e0       	ldi	r23, 0x03	; 3
+     96c:	80 e0       	ldi	r24, 0x00	; 0
+     96e:	90 e0       	ldi	r25, 0x00	; 0
+     970:	0c 94 7b 08 	jmp	0x10f6	; 0x10f6 <OsEE_atmega_startTimer1>
+
+00000974 <osEE_avr8_system_timer_handler>:
+	 */
+#endif	/* OSEE_SYSTEM_TIMER_DEVICE */
+
+ISR2(osEE_avr8_system_timer_handler) {
+  OsEE_CDB * p_cdb = osEE_get_curr_core();
+  osEE_counter_increment(p_cdb->p_sys_counter_db);
+     974:	80 91 40 01 	lds	r24, 0x0140	; 0x800140 <osEE_cdb_var+0x6>
+     978:	90 91 41 01 	lds	r25, 0x0141	; 0x800141 <osEE_cdb_var+0x7>
+     97c:	0c 94 27 07 	jmp	0xe4e	; 0xe4e <osEE_counter_increment>
+
+00000980 <StartOS>:
+}
+
+OSEE_STATIC_INLINE void osEE_hal_resumeIRQ ( OsEE_reg flags )
+{
+  OSEE_BARRIER();
+  SREG = flags;
+     980:	7f 92       	push	r7
+     982:	8f 92       	push	r8
+     984:	9f 92       	push	r9
+     986:	af 92       	push	r10
+     988:	bf 92       	push	r11
+     98a:	cf 92       	push	r12
+     98c:	df 92       	push	r13
+     98e:	ef 92       	push	r14
+     990:	ff 92       	push	r15
+     992:	0f 93       	push	r16
+     994:	1f 93       	push	r17
+     996:	cf 93       	push	r28
+     998:	df 93       	push	r29
+     99a:	00 d0       	rcall	.+0      	; 0x99c <StartOS+0x1c>
+     99c:	cd b7       	in	r28, 0x3d	; 61
+     99e:	de b7       	in	r29, 0x3e	; 62
+     9a0:	00 91 3a 01 	lds	r16, 0x013A	; 0x80013a <osEE_cdb_var>
+     9a4:	10 91 3b 01 	lds	r17, 0x013B	; 0x80013b <osEE_cdb_var+0x1>
+     9a8:	9f b7       	in	r25, 0x3f	; 63
+     9aa:	f8 94       	cli
+     9ac:	d8 01       	movw	r26, r16
+     9ae:	18 96       	adiw	r26, 0x08	; 8
+     9b0:	2d 91       	ld	r18, X+
+     9b2:	3c 91       	ld	r19, X
+     9b4:	23 2b       	or	r18, r19
+     9b6:	99 f0       	breq	.+38     	; 0x9de <StartOS+0x5e>
+     9b8:	9f bf       	out	0x3f, r25	; 63
+     9ba:	81 e0       	ldi	r24, 0x01	; 1
+     9bc:	90 e0       	ldi	r25, 0x00	; 0
+     9be:	0f 90       	pop	r0
+     9c0:	0f 90       	pop	r0
+     9c2:	df 91       	pop	r29
+     9c4:	cf 91       	pop	r28
+     9c6:	1f 91       	pop	r17
+     9c8:	0f 91       	pop	r16
+     9ca:	ff 90       	pop	r15
+     9cc:	ef 90       	pop	r14
+     9ce:	df 90       	pop	r13
+     9d0:	cf 90       	pop	r12
+     9d2:	bf 90       	pop	r11
+     9d4:	af 90       	pop	r10
+     9d6:	9f 90       	pop	r9
+     9d8:	8f 90       	pop	r8
+     9da:	7f 90       	pop	r7
+     9dc:	08 95       	ret
+     9de:	f8 2e       	mov	r15, r24
+     9e0:	81 e5       	ldi	r24, 0x51	; 81
+     9e2:	98 e0       	ldi	r25, 0x08	; 8
+     9e4:	9a 83       	std	Y+2, r25	; 0x02
+     9e6:	89 83       	std	Y+1, r24	; 0x01
+     9e8:	0e 94 b4 04 	call	0x968	; 0x968 <osEE_avr8_system_timer_init>
+     9ec:	c0 90 3e 01 	lds	r12, 0x013E	; 0x80013e <osEE_cdb_var+0x4>
+     9f0:	d0 90 3f 01 	lds	r13, 0x013F	; 0x80013f <osEE_cdb_var+0x5>
+     9f4:	81 e0       	ldi	r24, 0x01	; 1
+     9f6:	90 e0       	ldi	r25, 0x00	; 0
+     9f8:	f8 01       	movw	r30, r16
+     9fa:	91 87       	std	Z+9, r25	; 0x09
+     9fc:	80 87       	std	Z+8, r24	; 0x08
+     9fe:	f2 86       	std	Z+10, r15	; 0x0a
+     a00:	e0 91 42 01 	lds	r30, 0x0142	; 0x800142 <osEE_cdb_var+0x8>
+     a04:	f0 91 43 01 	lds	r31, 0x0143	; 0x800143 <osEE_cdb_var+0x9>
+     a08:	24 e0       	ldi	r18, 0x04	; 4
+     a0a:	f2 9e       	mul	r15, r18
+     a0c:	c0 01       	movw	r24, r0
+     a0e:	11 24       	eor	r1, r1
+     a10:	e8 0f       	add	r30, r24
+     a12:	f9 1f       	adc	r31, r25
+     a14:	a2 80       	ldd	r10, Z+2	; 0x02
+     a16:	b3 80       	ldd	r11, Z+3	; 0x03
+     a18:	f1 2c       	mov	r15, r1
+     a1a:	e1 2c       	mov	r14, r1
+     a1c:	4f 01       	movw	r8, r30
+     a1e:	86 e0       	ldi	r24, 0x06	; 6
+     a20:	78 2e       	mov	r7, r24
+     a22:	ea 14       	cp	r14, r10
+     a24:	fb 04       	cpc	r15, r11
+     a26:	e1 f4       	brne	.+56     	; 0xa60 <StartOS+0xe0>
+     a28:	f8 01       	movw	r30, r16
+     a2a:	80 85       	ldd	r24, Z+8	; 0x08
+     a2c:	91 85       	ldd	r25, Z+9	; 0x09
+     a2e:	01 97       	sbiw	r24, 0x01	; 1
+     a30:	21 f4       	brne	.+8      	; 0xa3a <StartOS+0xba>
+     a32:	82 e0       	ldi	r24, 0x02	; 2
+     a34:	90 e0       	ldi	r25, 0x00	; 0
+     a36:	91 87       	std	Z+9, r25	; 0x09
+     a38:	80 87       	std	Z+8, r24	; 0x08
+     a3a:	d8 01       	movw	r26, r16
+     a3c:	18 96       	adiw	r26, 0x08	; 8
+     a3e:	8d 91       	ld	r24, X+
+     a40:	9c 91       	ld	r25, X
+     a42:	02 97       	sbiw	r24, 0x02	; 2
+     a44:	51 f4       	brne	.+20     	; 0xa5a <StartOS+0xda>
+     a46:	f6 01       	movw	r30, r12
+     a48:	62 81       	ldd	r22, Z+2	; 0x02
+     a4a:	73 81       	ldd	r23, Z+3	; 0x03
+     a4c:	ab 01       	movw	r20, r22
+     a4e:	c6 01       	movw	r24, r12
+     a50:	0e 94 d0 00 	call	0x1a0	; 0x1a0 <osEE_hal_save_ctx_and_ready2stacked>
+     a54:	c6 01       	movw	r24, r12
+     a56:	0e 94 c5 05 	call	0xb8a	; 0xb8a <osEE_task_end>
+     a5a:	90 e0       	ldi	r25, 0x00	; 0
+     a5c:	80 e0       	ldi	r24, 0x00	; 0
+     a5e:	af cf       	rjmp	.-162    	; 0x9be <StartOS+0x3e>
+     a60:	d4 01       	movw	r26, r8
+     a62:	ed 91       	ld	r30, X+
+     a64:	fc 91       	ld	r31, X
+     a66:	7e 9c       	mul	r7, r14
+     a68:	c0 01       	movw	r24, r0
+     a6a:	7f 9c       	mul	r7, r15
+     a6c:	90 0d       	add	r25, r0
+     a6e:	11 24       	eor	r1, r1
+     a70:	e8 0f       	add	r30, r24
+     a72:	f9 1f       	adc	r31, r25
+     a74:	a0 81       	ld	r26, Z
+     a76:	b1 81       	ldd	r27, Z+1	; 0x01
+     a78:	24 81       	ldd	r18, Z+4	; 0x04
+     a7a:	35 81       	ldd	r19, Z+5	; 0x05
+     a7c:	42 81       	ldd	r20, Z+2	; 0x02
+     a7e:	53 81       	ldd	r21, Z+3	; 0x03
+     a80:	bd 01       	movw	r22, r26
+     a82:	12 96       	adiw	r26, 0x02	; 2
+     a84:	8d 91       	ld	r24, X+
+     a86:	9c 91       	ld	r25, X
+     a88:	0e 94 be 07 	call	0xf7c	; 0xf7c <osEE_alarm_set_rel>
+     a8c:	bf ef       	ldi	r27, 0xFF	; 255
+     a8e:	eb 1a       	sub	r14, r27
+     a90:	fb 0a       	sbc	r15, r27
+     a92:	c7 cf       	rjmp	.-114    	; 0xa22 <StartOS+0xa2>
+
+00000a94 <TerminateTask>:
+  CONSTP2CONST(OsEE_CCB, AUTOMATIC, OS_APPL_DATA)
+#else
+  CONSTP2VAR(OsEE_CCB, AUTOMATIC, OS_APPL_DATA)
+#endif /* !OSEE_HAS_ORTI && !OSEE_HAS_ERRORHOOK &&
+          OSEE_HAS_SERVICE_PROTECTION */
+    p_ccb       = p_cdb->p_ccb;
+     a94:	e0 91 3a 01 	lds	r30, 0x013A	; 0x80013a <osEE_cdb_var>
+     a98:	f0 91 3b 01 	lds	r31, 0x013B	; 0x80013b <osEE_cdb_var+0x1>
+  CONSTP2VAR(OsEE_TDB, AUTOMATIC, OS_APPL_DATA)
+    p_curr      = p_ccb->p_curr;
+     a9c:	a0 81       	ld	r26, Z
+     a9e:	b1 81       	ldd	r27, Z+1	; 0x01
+#endif /* OSEE_HAS_CHECKS elif (OSEE_HAS_ORTI || OSEE_HAS_STACK_MONITORING) */
+  {
+    VAR(OsEE_reg, AUTOMATIC) flags;
+#if (!defined(OSEE_HAS_SERVICE_PROTECTION))
+      /* Silently reset ISR counters if service protection is not configured */
+      if (p_ccb->s_isr_all_cnt > 0U) {
+     aa0:	87 85       	ldd	r24, Z+15	; 0x0f
+     aa2:	88 23       	and	r24, r24
+     aa4:	19 f0       	breq	.+6      	; 0xaac <TerminateTask+0x18>
+        p_ccb->s_isr_all_cnt = 0U;
+     aa6:	17 86       	std	Z+15, r1	; 0x0f
+        osEE_hal_resumeIRQ(p_ccb->prev_s_isr_all_status);
+     aa8:	85 85       	ldd	r24, Z+13	; 0x0d
+     aaa:	8f bf       	out	0x3f, r24	; 63
+      }
+      if (p_ccb->d_isr_all_cnt > 0U) {
+     aac:	81 89       	ldd	r24, Z+17	; 0x11
+     aae:	88 23       	and	r24, r24
+     ab0:	11 f0       	breq	.+4      	; 0xab6 <TerminateTask+0x22>
+        p_ccb->d_isr_all_cnt = 0U;
+     ab2:	11 8a       	std	Z+17, r1	; 0x11
+  cli();
+}
+
+OSEE_STATIC_INLINE void osEE_hal_enableIRQ( void )
+{
+  sei();
+     ab4:	78 94       	sei
+}
+
+/* Suspend/Resume Interrupts */
+OSEE_STATIC_INLINE OsEE_reg osEE_hal_suspendIRQ ( void )
+{
+  register OsEE_reg sr = SREG;
+     ab6:	8f b7       	in	r24, 0x3f	; 63
+ =============================================================================*/
+
+/* Disable/Enable Interrupts */
+OSEE_STATIC_INLINE void osEE_hal_disableIRQ( void )
+{
+  cli();
+     ab8:	f8 94       	cli
+(
+  P2VAR(OsEE_HDB, AUTOMATIC, OS_APPL_DATA)  p_to_term,
+  VAR(OsEE_kernel_cb, AUTOMATIC)            kernel_cb
+)
+{
+  osEE_hal_terminate_ctx(p_to_term->p_scb, kernel_cb);
+     aba:	69 e3       	ldi	r22, 0x39	; 57
+     abc:	78 e0       	ldi	r23, 0x08	; 8
+     abe:	12 96       	adiw	r26, 0x02	; 2
+     ac0:	8d 91       	ld	r24, X+
+     ac2:	9c 91       	ld	r25, X
+     ac4:	0e 94 f0 00 	call	0x1e0	; 0x1e0 <osEE_hal_terminate_ctx>
+
+00000ac8 <osEE_scheduler_task_wrapper_restore>:
+  }
+
+#endif /* OSEE_HAS_ORTI */
+
+  /* Set the TASK status to RUNNING. Before calling PreTaskHook */
+  p_tdb_to->p_tcb->status = OSEE_TASK_RUNNING;
+     ac8:	dc 01       	movw	r26, r24
+     aca:	14 96       	adiw	r26, 0x04	; 4
+     acc:	ed 91       	ld	r30, X+
+     ace:	fc 91       	ld	r31, X
+     ad0:	84 e0       	ldi	r24, 0x04	; 4
+     ad2:	90 e0       	ldi	r25, 0x00	; 0
+     ad4:	93 83       	std	Z+3, r25	; 0x03
+     ad6:	82 83       	std	Z+2, r24	; 0x02
+    }
+  }
+#endif /* OSEE_SCHEDULER_GLOBAL */
+
+  return;
+}
+     ad8:	08 95       	ret
+
+00000ada <osEE_scheduler_task_wrapper_run>:
+FUNC(void, OS_CODE)
+  osEE_scheduler_task_wrapper_run
+(
+  P2VAR(OsEE_TDB, AUTOMATIC, OS_APPL_DATA)  p_tdb_to
+)
+{
+     ada:	ec 01       	movw	r28, r24
+  CONST(TaskPrio, AUTOMATIC) task_priority = p_tdb_to->p_tcb->current_prio;
+     adc:	ec 81       	ldd	r30, Y+4	; 0x04
+     ade:	fd 81       	ldd	r31, Y+5	; 0x05
+     ae0:	81 81       	ldd	r24, Z+1	; 0x01
+  }
+
+#endif /* OSEE_HAS_ORTI */
+
+  /* Set the TASK status to RUNNING. Before calling PreTaskHook */
+  p_tdb_to->p_tcb->status = OSEE_TASK_RUNNING;
+     ae2:	24 e0       	ldi	r18, 0x04	; 4
+     ae4:	30 e0       	ldi	r19, 0x00	; 0
+     ae6:	33 83       	std	Z+3, r19	; 0x03
+     ae8:	22 83       	std	Z+2, r18	; 0x02
+)
+{
+  CONST(TaskPrio, AUTOMATIC) task_priority = p_tdb_to->p_tcb->current_prio;
+  osEE_scheduler_task_wrapper_restore(p_tdb_to);
+
+  if (task_priority < OSEE_ISR_ALL_PRIO) {
+     aea:	8f 3f       	cpi	r24, 0xFF	; 255
+     aec:	09 f0       	breq	.+2      	; 0xaf0 <osEE_scheduler_task_wrapper_run+0x16>
+}
+
+OSEE_STATIC_INLINE void osEE_hal_enableIRQ( void )
+{
+  sei();
+     aee:	78 94       	sei
+    /* Set-up IPL at current TASK level in addition to enable IRQ */
+    osEE_hal_set_ipl(task_priority);
+    osEE_hal_enableIRQ();
+  }
+  p_tdb_to->task_func();
+     af0:	e9 85       	ldd	r30, Y+9	; 0x09
+     af2:	fa 85       	ldd	r31, Y+10	; 0x0a
+     af4:	09 95       	icall
+)
+{
+  CONSTP2VAR(OsEE_CDB, AUTOMATIC, OS_APPL_CONST)
+    p_cdb = osEE_get_curr_core();
+  CONSTP2VAR(OsEE_CCB, AUTOMATIC, OS_APPL_DATA)
+    p_ccb = p_cdb->p_ccb;
+     af6:	e0 91 3a 01 	lds	r30, 0x013A	; 0x80013a <osEE_cdb_var>
+     afa:	f0 91 3b 01 	lds	r31, 0x013B	; 0x80013b <osEE_cdb_var+0x1>
+
+  /* Reset ISR Counters */
+/* [SWS_Os_00239] If a task returns from the entry function without making a
+    TerminateTask() or ChainTask() call and interrupts are still disabled,
+    the Operating System module shall enable them. */
+  p_ccb->s_isr_os_cnt  = 0U;
+     afe:	10 8a       	std	Z+16, r1	; 0x10
+  /* I won't re-enable OS Interrupts since I'm going to enter rescheduling
+     critical section */
+  if (p_ccb->s_isr_all_cnt > 0U) {
+     b00:	87 85       	ldd	r24, Z+15	; 0x0f
+     b02:	88 23       	and	r24, r24
+     b04:	19 f0       	breq	.+6      	; 0xb0c <osEE_scheduler_task_wrapper_run+0x32>
+    p_ccb->s_isr_all_cnt = 0U;
+     b06:	17 86       	std	Z+15, r1	; 0x0f
+    osEE_hal_resumeIRQ(p_ccb->prev_s_isr_all_status);
+     b08:	85 85       	ldd	r24, Z+13	; 0x0d
+}
+
+OSEE_STATIC_INLINE void osEE_hal_resumeIRQ ( OsEE_reg flags )
+{
+  OSEE_BARRIER();
+  SREG = flags;
+     b0a:	8f bf       	out	0x3f, r24	; 63
+  }
+  if (p_ccb->d_isr_all_cnt > 0U) {
+     b0c:	81 89       	ldd	r24, Z+17	; 0x11
+     b0e:	88 23       	and	r24, r24
+     b10:	11 f0       	breq	.+4      	; 0xb16 <osEE_scheduler_task_wrapper_run+0x3c>
+    p_ccb->d_isr_all_cnt = 0U;
+     b12:	11 8a       	std	Z+17, r1	; 0x11
+  cli();
+}
+
+OSEE_STATIC_INLINE void osEE_hal_enableIRQ( void )
+{
+  sei();
+     b14:	78 94       	sei
+}
+
+/* Suspend/Resume Interrupts */
+OSEE_STATIC_INLINE OsEE_reg osEE_hal_suspendIRQ ( void )
+{
+  register OsEE_reg sr = SREG;
+     b16:	8f b7       	in	r24, 0x3f	; 63
+ =============================================================================*/
+
+/* Disable/Enable Interrupts */
+OSEE_STATIC_INLINE void osEE_hal_disableIRQ( void )
+{
+  cli();
+     b18:	f8 94       	cli
+     b1a:	69 e3       	ldi	r22, 0x39	; 57
+     b1c:	78 e0       	ldi	r23, 0x08	; 8
+     b1e:	8a 81       	ldd	r24, Y+2	; 0x02
+     b20:	9b 81       	ldd	r25, Y+3	; 0x03
+     b22:	0e 94 f0 00 	call	0x1e0	; 0x1e0 <osEE_hal_terminate_ctx>
+
+00000b26 <osEE_idle_hook_wrapper>:
+FUNC(void, OS_CODE)
+  osEE_idle_hook_wrapper
+(
+  void
+)
+{
+     b26:	0f 93       	push	r16
+     b28:	1f 93       	push	r17
+     b2a:	cf 93       	push	r28
+     b2c:	df 93       	push	r29
+  /* Schedule Here: Autostart TASKs */
+  CONST(OsEE_reg, AUTOMATIC) flags = osEE_begin_primitive();
+  (void)osEE_scheduler_task_preemption_point(osEE_get_kernel());
+  osEE_end_primitive(flags);
+#endif /* !OSEE_STARTOS_RETURN && !OSEE_API_DYNAMIC && !OSEE_HAS_AUTOSTART_TASK */
+  while (p_cdb->p_ccb->os_status == OSEE_KERNEL_STARTED) {
+     b2e:	00 91 3a 01 	lds	r16, 0x013A	; 0x80013a <osEE_cdb_var>
+     b32:	10 91 3b 01 	lds	r17, 0x013B	; 0x80013b <osEE_cdb_var+0x1>
+#if (defined(OSEE_HAS_IDLEHOOK)) || (defined(OSEE_API_DYNAMIC))
+    CONST(TaskFunc, AUTOMATIC) p_idle_hook = p_cdb->p_idle_hook;
+     b36:	c0 91 3c 01 	lds	r28, 0x013C	; 0x80013c <osEE_cdb_var+0x2>
+     b3a:	d0 91 3d 01 	lds	r29, 0x013D	; 0x80013d <osEE_cdb_var+0x3>
+  /* Schedule Here: Autostart TASKs */
+  CONST(OsEE_reg, AUTOMATIC) flags = osEE_begin_primitive();
+  (void)osEE_scheduler_task_preemption_point(osEE_get_kernel());
+  osEE_end_primitive(flags);
+#endif /* !OSEE_STARTOS_RETURN && !OSEE_API_DYNAMIC && !OSEE_HAS_AUTOSTART_TASK */
+  while (p_cdb->p_ccb->os_status == OSEE_KERNEL_STARTED) {
+     b3e:	f8 01       	movw	r30, r16
+     b40:	80 85       	ldd	r24, Z+8	; 0x08
+     b42:	91 85       	ldd	r25, Z+9	; 0x09
+     b44:	02 97       	sbiw	r24, 0x02	; 2
+     b46:	51 f0       	breq	.+20     	; 0xb5c <osEE_idle_hook_wrapper+0x36>
+    }
+#else
+    ; /* Empty Endless Loop */
+#endif /* OSEE_HAS_IDLEHOOK || OSEE_API_DYNAMIC */
+  }
+  osEE_idle_task_terminate(p_cdb->p_idle_task);
+     b48:	80 91 3e 01 	lds	r24, 0x013E	; 0x80013e <osEE_cdb_var+0x4>
+     b4c:	90 91 3f 01 	lds	r25, 0x013F	; 0x80013f <osEE_cdb_var+0x5>
+}
+     b50:	df 91       	pop	r29
+     b52:	cf 91       	pop	r28
+     b54:	1f 91       	pop	r17
+     b56:	0f 91       	pop	r16
+    }
+#else
+    ; /* Empty Endless Loop */
+#endif /* OSEE_HAS_IDLEHOOK || OSEE_API_DYNAMIC */
+  }
+  osEE_idle_task_terminate(p_cdb->p_idle_task);
+     b58:	0c 94 1e 08 	jmp	0x103c	; 0x103c <osEE_idle_task_terminate>
+  osEE_end_primitive(flags);
+#endif /* !OSEE_STARTOS_RETURN && !OSEE_API_DYNAMIC && !OSEE_HAS_AUTOSTART_TASK */
+  while (p_cdb->p_ccb->os_status == OSEE_KERNEL_STARTED) {
+#if (defined(OSEE_HAS_IDLEHOOK)) || (defined(OSEE_API_DYNAMIC))
+    CONST(TaskFunc, AUTOMATIC) p_idle_hook = p_cdb->p_idle_hook;
+    if (p_idle_hook != NULL) {
+     b5c:	20 97       	sbiw	r28, 0x00	; 0
+     b5e:	79 f3       	breq	.-34     	; 0xb3e <osEE_idle_hook_wrapper+0x18>
+      p_idle_hook();
+     b60:	fe 01       	movw	r30, r28
+     b62:	09 95       	icall
+     b64:	ec cf       	rjmp	.-40     	; 0xb3e <osEE_idle_hook_wrapper+0x18>
+
+00000b66 <osEE_task_activated>:
+
+FUNC(StatusType, OS_CODE) osEE_task_activated
+(
+  P2VAR(OsEE_TDB, AUTOMATIC, OS_APPL_DATA)  p_tdb_act
+)
+{
+     b66:	dc 01       	movw	r26, r24
+  VAR(StatusType, AUTOMATIC)                    ev;
+  CONSTP2VAR(OsEE_TCB, AUTOMATIC, OS_APPL_DATA) p_tcb_act = p_tdb_act->p_tcb;
+     b68:	14 96       	adiw	r26, 0x04	; 4
+     b6a:	ed 91       	ld	r30, X+
+     b6c:	fc 91       	ld	r31, X
+     b6e:	15 97       	sbiw	r26, 0x05	; 5
+#else
+  osEE_lock_kernel();
+#endif /* !OSEE_SCHEDULER_GLOBAL */
+#endif /* !OSEE_SINGLECORE */
+
+  if (p_tcb_act->current_num_of_act < p_tdb_act->max_num_of_act) {
+     b70:	90 81       	ld	r25, Z
+     b72:	1d 96       	adiw	r26, 0x0d	; 13
+     b74:	8c 91       	ld	r24, X
+     b76:	98 17       	cp	r25, r24
+     b78:	28 f4       	brcc	.+10     	; 0xb84 <osEE_task_activated+0x1e>
+    ++p_tcb_act->current_num_of_act;
+     b7a:	9f 5f       	subi	r25, 0xFF	; 255
+     b7c:	90 83       	st	Z, r25
+    ev = E_OK;
+     b7e:	90 e0       	ldi	r25, 0x00	; 0
+     b80:	80 e0       	ldi	r24, 0x00	; 0
+     b82:	08 95       	ret
+  } else {
+    ev = E_OS_LIMIT;
+     b84:	84 e0       	ldi	r24, 0x04	; 4
+     b86:	90 e0       	ldi	r25, 0x00	; 0
+  osEE_lock_kernel();
+#endif /* !OSEE_SCHEDULER_GLOBAL */
+#endif /* !OSEE_SINGLECORE */
+
+  return ev;
+}
+     b88:	08 95       	ret
+
+00000b8a <osEE_task_end>:
+(
+  CONSTP2VAR(OsEE_TDB, AUTOMATIC, OS_APPL_DATA) p_tdb
+)
+{
+  /* It has to be called already in Multi-Core critical section */
+  CONSTP2VAR(OsEE_TCB, AUTOMATIC, OS_APPL_DATA) p_tcb = p_tdb->p_tcb;
+     b8a:	dc 01       	movw	r26, r24
+     b8c:	14 96       	adiw	r26, 0x04	; 4
+     b8e:	ed 91       	ld	r30, X+
+     b90:	fc 91       	ld	r31, X
+     b92:	15 97       	sbiw	r26, 0x05	; 5
+
+  p_tcb->current_prio = p_tdb->ready_prio;
+     b94:	1b 96       	adiw	r26, 0x0b	; 11
+     b96:	8c 91       	ld	r24, X
+     b98:	81 83       	std	Z+1, r24	; 0x01
+
+  --p_tcb->current_num_of_act;
+     b9a:	80 81       	ld	r24, Z
+     b9c:	81 50       	subi	r24, 0x01	; 1
+     b9e:	80 83       	st	Z, r24
+
+  if (p_tcb->current_num_of_act == 0U) {
+     ba0:	81 11       	cpse	r24, r1
+     ba2:	03 c0       	rjmp	.+6      	; 0xbaa <osEE_task_end+0x20>
+    p_tcb->status = OSEE_TASK_SUSPENDED;
+     ba4:	13 82       	std	Z+3, r1	; 0x03
+     ba6:	12 82       	std	Z+2, r1	; 0x02
+     ba8:	08 95       	ret
+  } else {
+    p_tcb->status = OSEE_TASK_READY;
+     baa:	81 e0       	ldi	r24, 0x01	; 1
+     bac:	90 e0       	ldi	r25, 0x00	; 0
+     bae:	93 83       	std	Z+3, r25	; 0x03
+     bb0:	82 83       	std	Z+2, r24	; 0x02
+  }
+}
+     bb2:	08 95       	ret
+
+00000bb4 <osEE_activate_isr2>:
+  osEE_stack_monitoring(osEE_get_curr_core());
+#endif /* OSEE_HAS_STACK_MONITORING */
+  {
+    CONSTP2VAR(OsEE_KDB, AUTOMATIC, OS_APPL_DATA) p_kdb = osEE_get_kernel();
+    CONSTP2VAR(OsEE_TDB, AUTOMATIC, OS_APPL_DATA)
+      p_act_tdb = (*p_kdb->p_tdb_ptr_array)[isr2_id];
+     bb4:	e0 91 2e 01 	lds	r30, 0x012E	; 0x80012e <osEE_kdb_var+0x2>
+     bb8:	f0 91 2f 01 	lds	r31, 0x012F	; 0x80012f <osEE_kdb_var+0x3>
+     bbc:	90 e0       	ldi	r25, 0x00	; 0
+     bbe:	88 0f       	add	r24, r24
+     bc0:	99 1f       	adc	r25, r25
+     bc2:	e8 0f       	add	r30, r24
+     bc4:	f9 1f       	adc	r31, r25
+     bc6:	60 81       	ld	r22, Z
+     bc8:	71 81       	ldd	r23, Z+1	; 0x01
+
+    /* Mark the TASK as Activated (I don't need to protect this increment
+       since ISRs cannot be activated by another core (exception done for
+       IPI, that have to be handled in a special way in any case). */
+    ++p_act_tdb->p_tcb->current_num_of_act;
+     bca:	db 01       	movw	r26, r22
+     bcc:	14 96       	adiw	r26, 0x04	; 4
+     bce:	ed 91       	ld	r30, X+
+     bd0:	fc 91       	ld	r31, X
+     bd2:	80 81       	ld	r24, Z
+     bd4:	8f 5f       	subi	r24, 0xFF	; 255
+     bd6:	80 83       	st	Z, r24
+
+    osEE_scheduler_task_set_running(p_kdb, p_act_tdb, NULL);
+     bd8:	50 e0       	ldi	r21, 0x00	; 0
+     bda:	40 e0       	ldi	r20, 0x00	; 0
+     bdc:	8c e2       	ldi	r24, 0x2C	; 44
+     bde:	91 e0       	ldi	r25, 0x01	; 1
+     be0:	0c 94 7c 06 	jmp	0xcf8	; 0xcf8 <osEE_scheduler_task_set_running>
+
+00000be4 <osEE_scheduler_task_insert>:
+    is_preemption = OSEE_TRUE;
+  } else {
+    is_preemption = OSEE_FALSE;
+  }
+
+  return is_preemption;
+     be4:	ab 01       	movw	r20, r22
+     be6:	fb 01       	movw	r30, r22
+     be8:	a4 81       	ldd	r26, Z+4	; 0x04
+     bea:	b5 81       	ldd	r27, Z+5	; 0x05
+     bec:	e0 91 3a 01 	lds	r30, 0x013A	; 0x80013a <osEE_cdb_var>
+     bf0:	f0 91 3b 01 	lds	r31, 0x013B	; 0x80013b <osEE_cdb_var+0x1>
+     bf4:	12 96       	adiw	r26, 0x02	; 2
+     bf6:	8d 91       	ld	r24, X+
+     bf8:	9c 91       	ld	r25, X
+     bfa:	13 97       	sbiw	r26, 0x03	; 3
+     bfc:	89 2b       	or	r24, r25
+     bfe:	31 f4       	brne	.+12     	; 0xc0c <osEE_scheduler_task_insert+0x28>
+     c00:	81 e0       	ldi	r24, 0x01	; 1
+     c02:	90 e0       	ldi	r25, 0x00	; 0
+     c04:	13 96       	adiw	r26, 0x03	; 3
+     c06:	9c 93       	st	X, r25
+     c08:	8e 93       	st	-X, r24
+     c0a:	12 97       	sbiw	r26, 0x02	; 2
+     c0c:	a4 81       	ldd	r26, Z+4	; 0x04
+     c0e:	b5 81       	ldd	r27, Z+5	; 0x05
+     c10:	8d 91       	ld	r24, X+
+     c12:	9c 91       	ld	r25, X
+     c14:	11 97       	sbiw	r26, 0x01	; 1
+     c16:	95 83       	std	Z+5, r25	; 0x05
+     c18:	84 83       	std	Z+4, r24	; 0x04
+     c1a:	11 96       	adiw	r26, 0x01	; 1
+     c1c:	1c 92       	st	X, r1
+     c1e:	1e 92       	st	-X, r1
+     c20:	bd 01       	movw	r22, r26
+     c22:	cf 01       	movw	r24, r30
+     c24:	02 96       	adiw	r24, 0x02	; 2
+     c26:	0c 94 6a 09 	jmp	0x12d4	; 0x12d4 <osEE_scheduler_rq_insert>
+
+00000c2a <osEE_scheduler_task_terminated>:
+     c2a:	af 92       	push	r10
+     c2c:	bf 92       	push	r11
+     c2e:	cf 92       	push	r12
+     c30:	df 92       	push	r13
+     c32:	ef 92       	push	r14
+     c34:	ff 92       	push	r15
+     c36:	0f 93       	push	r16
+     c38:	1f 93       	push	r17
+     c3a:	cf 93       	push	r28
+     c3c:	df 93       	push	r29
+     c3e:	c0 91 3a 01 	lds	r28, 0x013A	; 0x80013a <osEE_cdb_var>
+     c42:	d0 91 3b 01 	lds	r29, 0x013B	; 0x80013b <osEE_cdb_var+0x1>
+     c46:	fe 01       	movw	r30, r28
+     c48:	01 91       	ld	r16, Z+
+     c4a:	11 91       	ld	r17, Z+
+     c4c:	7f 01       	movw	r14, r30
+     c4e:	f8 01       	movw	r30, r16
+     c50:	c4 80       	ldd	r12, Z+4	; 0x04
+     c52:	d5 80       	ldd	r13, Z+5	; 0x05
+     c54:	fb 01       	movw	r30, r22
+     c56:	11 83       	std	Z+1, r17	; 0x01
+     c58:	00 83       	st	Z, r16
+     c5a:	f6 01       	movw	r30, r12
+     c5c:	82 81       	ldd	r24, Z+2	; 0x02
+     c5e:	93 81       	ldd	r25, Z+3	; 0x03
+     c60:	04 97       	sbiw	r24, 0x04	; 4
+     c62:	31 f5       	brne	.+76     	; 0xcb0 <osEE_scheduler_task_terminated+0x86>
+     c64:	b7 01       	movw	r22, r14
+     c66:	8a e3       	ldi	r24, 0x3A	; 58
+     c68:	91 e0       	ldi	r25, 0x01	; 1
+     c6a:	0e 94 71 09 	call	0x12e2	; 0x12e2 <osEE_scheduler_core_pop_running>
+     c6e:	5c 01       	movw	r10, r24
+     c70:	e8 80       	ld	r14, Y
+     c72:	f9 80       	ldd	r15, Y+1	; 0x01
+     c74:	0e 15       	cp	r16, r14
+     c76:	1f 05       	cpc	r17, r15
+     c78:	b1 f0       	breq	.+44     	; 0xca6 <osEE_scheduler_task_terminated+0x7c>
+     c7a:	c8 01       	movw	r24, r16
+     c7c:	0e 94 c5 05 	call	0xb8a	; 0xb8a <osEE_task_end>
+     c80:	8c 81       	ldd	r24, Y+4	; 0x04
+     c82:	9d 81       	ldd	r25, Y+5	; 0x05
+     c84:	f5 01       	movw	r30, r10
+     c86:	91 83       	std	Z+1, r25	; 0x01
+     c88:	80 83       	st	Z, r24
+     c8a:	bd 82       	std	Y+5, r11	; 0x05
+     c8c:	ac 82       	std	Y+4, r10	; 0x04
+     c8e:	c7 01       	movw	r24, r14
+     c90:	df 91       	pop	r29
+     c92:	cf 91       	pop	r28
+     c94:	1f 91       	pop	r17
+     c96:	0f 91       	pop	r16
+     c98:	ff 90       	pop	r15
+     c9a:	ef 90       	pop	r14
+     c9c:	df 90       	pop	r13
+     c9e:	cf 90       	pop	r12
+     ca0:	bf 90       	pop	r11
+     ca2:	af 90       	pop	r10
+     ca4:	08 95       	ret
+     ca6:	f6 01       	movw	r30, r12
+     ca8:	80 81       	ld	r24, Z
+     caa:	81 50       	subi	r24, 0x01	; 1
+     cac:	80 83       	st	Z, r24
+     cae:	e8 cf       	rjmp	.-48     	; 0xc80 <osEE_scheduler_task_terminated+0x56>
+     cb0:	6e 81       	ldd	r22, Y+6	; 0x06
+     cb2:	7f 81       	ldd	r23, Y+7	; 0x07
+     cb4:	fb 01       	movw	r30, r22
+     cb6:	80 81       	ld	r24, Z
+     cb8:	91 81       	ldd	r25, Z+1	; 0x01
+     cba:	9f 83       	std	Y+7, r25	; 0x07
+     cbc:	8e 83       	std	Y+6, r24	; 0x06
+     cbe:	f8 01       	movw	r30, r16
+     cc0:	83 85       	ldd	r24, Z+11	; 0x0b
+     cc2:	f6 01       	movw	r30, r12
+     cc4:	81 83       	std	Z+1, r24	; 0x01
+     cc6:	81 e0       	ldi	r24, 0x01	; 1
+     cc8:	90 e0       	ldi	r25, 0x00	; 0
+     cca:	93 83       	std	Z+3, r25	; 0x03
+     ccc:	82 83       	std	Z+2, r24	; 0x02
+     cce:	a8 01       	movw	r20, r16
+     cd0:	c7 01       	movw	r24, r14
+     cd2:	0e 94 6a 09 	call	0x12d4	; 0x12d4 <osEE_scheduler_rq_insert>
+     cd6:	b7 01       	movw	r22, r14
+     cd8:	8a e3       	ldi	r24, 0x3A	; 58
+     cda:	91 e0       	ldi	r25, 0x01	; 1
+     cdc:	0e 94 d9 08 	call	0x11b2	; 0x11b2 <osEE_scheduler_core_rq_preempt_stk>
+     ce0:	89 2b       	or	r24, r25
+     ce2:	39 f4       	brne	.+14     	; 0xcf2 <osEE_scheduler_task_terminated+0xc8>
+     ce4:	ee 81       	ldd	r30, Y+6	; 0x06
+     ce6:	ff 81       	ldd	r31, Y+7	; 0x07
+     ce8:	e2 80       	ldd	r14, Z+2	; 0x02
+     cea:	f3 80       	ldd	r15, Z+3	; 0x03
+     cec:	f9 82       	std	Y+1, r15	; 0x01
+     cee:	e8 82       	st	Y, r14
+     cf0:	ce cf       	rjmp	.-100    	; 0xc8e <osEE_scheduler_task_terminated+0x64>
+     cf2:	e8 80       	ld	r14, Y
+     cf4:	f9 80       	ldd	r15, Y+1	; 0x01
+     cf6:	cb cf       	rjmp	.-106    	; 0xc8e <osEE_scheduler_task_terminated+0x64>
+
+00000cf8 <osEE_scheduler_task_set_running>:
+(
+  P2VAR(OsEE_KDB, AUTOMATIC, OS_APPL_DATA)  p_kdb,
+  P2VAR(OsEE_TDB, AUTOMATIC, OS_APPL_DATA)  p_tdb,
+  P2VAR(OsEE_SN,  AUTOMATIC, OS_APPL_DATA)  p_sn
+)
+{
+     cf8:	cf 93       	push	r28
+     cfa:	df 93       	push	r29
+  CONSTP2VAR(OsEE_CDB, AUTOMATIC, OS_APPL_DATA) p_cdb = osEE_get_curr_core();
+  CONSTP2VAR(OsEE_CCB, AUTOMATIC, OS_APPL_DATA) p_ccb = p_cdb->p_ccb;
+     cfc:	e0 91 3a 01 	lds	r30, 0x013A	; 0x80013a <osEE_cdb_var>
+     d00:	f0 91 3b 01 	lds	r31, 0x013B	; 0x80013b <osEE_cdb_var+0x1>
+  CONSTP2VAR(OsEE_TDB, AUTOMATIC, OS_APPL_DATA) p_preempted = p_ccb->p_curr;
+     d04:	80 81       	ld	r24, Z
+     d06:	91 81       	ldd	r25, Z+1	; 0x01
+  CONSTP2VAR(OsEE_SN, AUTOMATIC, OS_APPL_DATA)
+    p_preempted_sn = p_ccb->p_stk_sn;
+     d08:	26 81       	ldd	r18, Z+6	; 0x06
+     d0a:	37 81       	ldd	r19, Z+7	; 0x07
+
+  /* Set previous TASK as stacked only if the activation has been completed */
+  if (p_preempted->p_tcb->status == OSEE_TASK_RUNNING) {
+     d0c:	ec 01       	movw	r28, r24
+     d0e:	ac 81       	ldd	r26, Y+4	; 0x04
+     d10:	bd 81       	ldd	r27, Y+5	; 0x05
+     d12:	12 96       	adiw	r26, 0x02	; 2
+     d14:	cd 91       	ld	r28, X+
+     d16:	dc 91       	ld	r29, X
+     d18:	13 97       	sbiw	r26, 0x03	; 3
+     d1a:	24 97       	sbiw	r28, 0x04	; 4
+     d1c:	31 f4       	brne	.+12     	; 0xd2a <osEE_scheduler_task_set_running+0x32>
+    p_preempted->p_tcb->status  = OSEE_TASK_READY_STACKED;
+     d1e:	c2 e0       	ldi	r28, 0x02	; 2
+     d20:	d0 e0       	ldi	r29, 0x00	; 0
+     d22:	13 96       	adiw	r26, 0x03	; 3
+     d24:	dc 93       	st	X, r29
+     d26:	ce 93       	st	-X, r28
+     d28:	12 97       	sbiw	r26, 0x02	; 2
+  }
+  p_ccb->p_curr                 = p_tdb;
+     d2a:	71 83       	std	Z+1, r23	; 0x01
+     d2c:	60 83       	st	Z, r22
+
+  /* Touch unused parameters */
+  (void)p_kdb;
+  if (p_sn == NULL) {
+     d2e:	41 15       	cp	r20, r1
+     d30:	51 05       	cpc	r21, r1
+     d32:	b9 f4       	brne	.+46     	; 0xd62 <osEE_scheduler_task_set_running+0x6a>
+  P2VAR(OsEE_SN *, AUTOMATIC, OS_APPL_DATA) pp_first
+)
+{
+  P2VAR(OsEE_SN, AUTOMATIC, OS_APPL_DATA) p_sn_allocated;
+
+  p_sn_allocated          = (*pp_first);
+     d34:	a4 81       	ldd	r26, Z+4	; 0x04
+     d36:	b5 81       	ldd	r27, Z+5	; 0x05
+  (*pp_first)              = p_sn_allocated->p_next;
+     d38:	4d 91       	ld	r20, X+
+     d3a:	5c 91       	ld	r21, X
+     d3c:	11 97       	sbiw	r26, 0x01	; 1
+     d3e:	55 83       	std	Z+5, r21	; 0x05
+     d40:	44 83       	std	Z+4, r20	; 0x04
+  p_sn_allocated->p_next  = NULL;
+     d42:	11 96       	adiw	r26, 0x01	; 1
+     d44:	1c 92       	st	X, r1
+     d46:	1e 92       	st	-X, r1
+    osEE_lock_core(p_cdb);
+    /* Alloc the SN for the new Running TASK */
+    p_ccb->p_stk_sn             = osEE_sn_alloc(&p_ccb->p_free_sn);
+     d48:	b7 83       	std	Z+7, r27	; 0x07
+     d4a:	a6 83       	std	Z+6, r26	; 0x06
+  } else {
+    p_ccb->p_stk_sn             = p_sn;
+  }
+
+  /* In Scheduler partitioned the TASK are stacked */
+  p_ccb->p_stk_sn->p_tdb        = p_tdb;
+     d4c:	06 80       	ldd	r0, Z+6	; 0x06
+     d4e:	f7 81       	ldd	r31, Z+7	; 0x07
+     d50:	e0 2d       	mov	r30, r0
+     d52:	73 83       	std	Z+3, r23	; 0x03
+     d54:	62 83       	std	Z+2, r22	; 0x02
+  p_ccb->p_stk_sn->p_next       = p_preempted_sn;
+     d56:	31 83       	std	Z+1, r19	; 0x01
+     d58:	20 83       	st	Z, r18
+
+  osEE_change_context_from_running(p_preempted, p_tdb);
+}
+     d5a:	df 91       	pop	r29
+     d5c:	cf 91       	pop	r28
+
+  /* In Scheduler partitioned the TASK are stacked */
+  p_ccb->p_stk_sn->p_tdb        = p_tdb;
+  p_ccb->p_stk_sn->p_next       = p_preempted_sn;
+
+  osEE_change_context_from_running(p_preempted, p_tdb);
+     d5e:	0c 94 f8 07 	jmp	0xff0	; 0xff0 <osEE_change_context_from_running>
+    osEE_lock_core(p_cdb);
+    /* Alloc the SN for the new Running TASK */
+    p_ccb->p_stk_sn             = osEE_sn_alloc(&p_ccb->p_free_sn);
+    osEE_unlock_core(p_cdb);
+  } else {
+    p_ccb->p_stk_sn             = p_sn;
+     d62:	57 83       	std	Z+7, r21	; 0x07
+     d64:	46 83       	std	Z+6, r20	; 0x06
+     d66:	f2 cf       	rjmp	.-28     	; 0xd4c <osEE_scheduler_task_set_running+0x54>
+
+00000d68 <osEE_counter_insert_abs_trigger>:
+    if (p_current != NULL) {
+      /* Remove p_trigger_db from the list */
+      p_previous->p_trigger_cb->p_next = p_trigger_cb->p_next;
+    }
+  }
+}
+     d68:	af 92       	push	r10
+     d6a:	bf 92       	push	r11
+     d6c:	cf 92       	push	r12
+     d6e:	df 92       	push	r13
+     d70:	ef 92       	push	r14
+     d72:	ff 92       	push	r15
+     d74:	0f 93       	push	r16
+     d76:	1f 93       	push	r17
+     d78:	cf 93       	push	r28
+     d7a:	df 93       	push	r29
+     d7c:	dc 01       	movw	r26, r24
+     d7e:	ad 90       	ld	r10, X+
+     d80:	bc 90       	ld	r11, X
+     d82:	e5 01       	movw	r28, r10
+     d84:	e8 81       	ld	r30, Y
+     d86:	f9 81       	ldd	r31, Y+1	; 0x01
+     d88:	2a 81       	ldd	r18, Y+2	; 0x02
+     d8a:	3b 81       	ldd	r19, Y+3	; 0x03
+     d8c:	db 01       	movw	r26, r22
+     d8e:	cd 90       	ld	r12, X+
+     d90:	dc 90       	ld	r13, X
+     d92:	e6 01       	movw	r28, r12
+     d94:	5b 83       	std	Y+3, r21	; 0x03
+     d96:	4a 83       	std	Y+2, r20	; 0x02
+     d98:	81 e0       	ldi	r24, 0x01	; 1
+     d9a:	90 e0       	ldi	r25, 0x00	; 0
+     d9c:	b0 e0       	ldi	r27, 0x00	; 0
+     d9e:	a0 e0       	ldi	r26, 0x00	; 0
+     da0:	30 97       	sbiw	r30, 0x00	; 0
+     da2:	11 f0       	breq	.+4      	; 0xda8 <osEE_counter_insert_abs_trigger+0x40>
+     da4:	00 97       	sbiw	r24, 0x00	; 0
+     da6:	a9 f4       	brne	.+42     	; 0xdd2 <osEE_counter_insert_abs_trigger+0x6a>
+     da8:	10 97       	sbiw	r26, 0x00	; 0
+     daa:	79 f1       	breq	.+94     	; 0xe0a <osEE_counter_insert_abs_trigger+0xa2>
+     dac:	0d 90       	ld	r0, X+
+     dae:	bc 91       	ld	r27, X
+     db0:	a0 2d       	mov	r26, r0
+     db2:	6d 93       	st	X+, r22
+     db4:	7c 93       	st	X, r23
+     db6:	e6 01       	movw	r28, r12
+     db8:	f9 83       	std	Y+1, r31	; 0x01
+     dba:	e8 83       	st	Y, r30
+     dbc:	df 91       	pop	r29
+     dbe:	cf 91       	pop	r28
+     dc0:	1f 91       	pop	r17
+     dc2:	0f 91       	pop	r16
+     dc4:	ff 90       	pop	r15
+     dc6:	ef 90       	pop	r14
+     dc8:	df 90       	pop	r13
+     dca:	cf 90       	pop	r12
+     dcc:	bf 90       	pop	r11
+     dce:	af 90       	pop	r10
+     dd0:	08 95       	ret
+     dd2:	00 81       	ld	r16, Z
+     dd4:	11 81       	ldd	r17, Z+1	; 0x01
+     dd6:	e8 01       	movw	r28, r16
+     dd8:	ea 80       	ldd	r14, Y+2	; 0x02
+     dda:	fb 80       	ldd	r15, Y+3	; 0x03
+     ddc:	2e 15       	cp	r18, r14
+     dde:	3f 05       	cpc	r19, r15
+     de0:	58 f4       	brcc	.+22     	; 0xdf8 <osEE_counter_insert_abs_trigger+0x90>
+     de2:	4e 15       	cp	r20, r14
+     de4:	5f 05       	cpc	r21, r15
+     de6:	18 f4       	brcc	.+6      	; 0xdee <osEE_counter_insert_abs_trigger+0x86>
+     de8:	24 17       	cp	r18, r20
+     dea:	35 07       	cpc	r19, r21
+     dec:	58 f0       	brcs	.+22     	; 0xe04 <osEE_counter_insert_abs_trigger+0x9c>
+     dee:	df 01       	movw	r26, r30
+     df0:	e8 01       	movw	r28, r16
+     df2:	e8 81       	ld	r30, Y
+     df4:	f9 81       	ldd	r31, Y+1	; 0x01
+     df6:	d4 cf       	rjmp	.-88     	; 0xda0 <osEE_counter_insert_abs_trigger+0x38>
+     df8:	24 17       	cp	r18, r20
+     dfa:	35 07       	cpc	r19, r21
+     dfc:	18 f0       	brcs	.+6      	; 0xe04 <osEE_counter_insert_abs_trigger+0x9c>
+     dfe:	4e 15       	cp	r20, r14
+     e00:	5f 05       	cpc	r21, r15
+     e02:	a8 f7       	brcc	.-22     	; 0xdee <osEE_counter_insert_abs_trigger+0x86>
+     e04:	90 e0       	ldi	r25, 0x00	; 0
+     e06:	80 e0       	ldi	r24, 0x00	; 0
+     e08:	cb cf       	rjmp	.-106    	; 0xda0 <osEE_counter_insert_abs_trigger+0x38>
+     e0a:	d5 01       	movw	r26, r10
+     e0c:	d2 cf       	rjmp	.-92     	; 0xdb2 <osEE_counter_insert_abs_trigger+0x4a>
+
+00000e0e <osEE_counter_insert_rel_trigger>:
+     e0e:	cf 93       	push	r28
+     e10:	df 93       	push	r29
+     e12:	dc 01       	movw	r26, r24
+     e14:	12 96       	adiw	r26, 0x02	; 2
+     e16:	ed 91       	ld	r30, X+
+     e18:	fc 91       	ld	r31, X
+     e1a:	13 97       	sbiw	r26, 0x03	; 3
+     e1c:	0d 90       	ld	r0, X+
+     e1e:	bc 91       	ld	r27, X
+     e20:	a0 2d       	mov	r26, r0
+     e22:	12 96       	adiw	r26, 0x02	; 2
+     e24:	2d 91       	ld	r18, X+
+     e26:	3c 91       	ld	r19, X
+     e28:	df 01       	movw	r26, r30
+     e2a:	a4 1b       	sub	r26, r20
+     e2c:	b5 0b       	sbc	r27, r21
+     e2e:	a2 17       	cp	r26, r18
+     e30:	b3 07       	cpc	r27, r19
+     e32:	30 f0       	brcs	.+12     	; 0xe40 <osEE_counter_insert_rel_trigger+0x32>
+     e34:	42 0f       	add	r20, r18
+     e36:	53 1f       	adc	r21, r19
+     e38:	df 91       	pop	r29
+     e3a:	cf 91       	pop	r28
+     e3c:	0c 94 b4 06 	jmp	0xd68	; 0xd68 <osEE_counter_insert_abs_trigger>
+     e40:	41 50       	subi	r20, 0x01	; 1
+     e42:	51 09       	sbc	r21, r1
+     e44:	42 0f       	add	r20, r18
+     e46:	53 1f       	adc	r21, r19
+     e48:	4e 1b       	sub	r20, r30
+     e4a:	5f 0b       	sbc	r21, r31
+     e4c:	f5 cf       	rjmp	.-22     	; 0xe38 <osEE_counter_insert_rel_trigger+0x2a>
+
+00000e4e <osEE_counter_increment>:
+FUNC(void, OS_CODE)
+  osEE_counter_increment
+(
+  P2VAR(OsEE_CounterDB, AUTOMATIC, OS_APPL_DATA) p_counter_db
+)
+{
+     e4e:	af 92       	push	r10
+     e50:	bf 92       	push	r11
+     e52:	cf 92       	push	r12
+     e54:	df 92       	push	r13
+     e56:	ef 92       	push	r14
+     e58:	ff 92       	push	r15
+     e5a:	0f 93       	push	r16
+     e5c:	1f 93       	push	r17
+     e5e:	cf 93       	push	r28
+     e60:	df 93       	push	r29
+  CONSTP2VAR(OsEE_CounterCB, AUTOMATIC, OS_APPL_DATA)
+    p_counter_cb = p_counter_db->p_counter_cb;
+     e62:	dc 01       	movw	r26, r24
+     e64:	ed 90       	ld	r14, X+
+     e66:	fc 90       	ld	r15, X
+     e68:	11 97       	sbiw	r26, 0x01	; 1
+    CONSTP2VAR(OsEE_CDB, AUTOMATIC, OS_APPL_CONST)
+      p_cdb = osEE_get_curr_core();
+
+    /* Counter Increment can be done outside lock critical section, since only
+       a core is allowed to do that */
+    if (p_counter_cb->value >= p_counter_db->info.maxallowedvalue) {
+     e6a:	f7 01       	movw	r30, r14
+     e6c:	22 81       	ldd	r18, Z+2	; 0x02
+     e6e:	33 81       	ldd	r19, Z+3	; 0x03
+     e70:	12 96       	adiw	r26, 0x02	; 2
+     e72:	4d 91       	ld	r20, X+
+     e74:	5c 91       	ld	r21, X
+     e76:	24 17       	cp	r18, r20
+     e78:	35 07       	cpc	r19, r21
+     e7a:	08 f4       	brcc	.+2      	; 0xe7e <osEE_counter_increment+0x30>
+     e7c:	6e c0       	rjmp	.+220    	; 0xf5a <osEE_counter_increment+0x10c>
+      counter_value       = 0U;
+      p_counter_cb->value = 0U;
+     e7e:	13 82       	std	Z+3, r1	; 0x03
+     e80:	12 82       	std	Z+2, r1	; 0x02
+      p_cdb = osEE_get_curr_core();
+
+    /* Counter Increment can be done outside lock critical section, since only
+       a core is allowed to do that */
+    if (p_counter_cb->value >= p_counter_db->info.maxallowedvalue) {
+      counter_value       = 0U;
+     e82:	30 e0       	ldi	r19, 0x00	; 0
+     e84:	20 e0       	ldi	r18, 0x00	; 0
+            to not have nested critical sections.
+            To handle possible races due to cycling triggers a state
+            protocol have been implemented. */
+    osEE_lock_core(p_cdb);
+
+    p_triggered_db = p_counter_cb->trigger_queue;
+     e86:	f7 01       	movw	r30, r14
+     e88:	c0 81       	ld	r28, Z
+     e8a:	d1 81       	ldd	r29, Z+1	; 0x01
+
+    if (p_triggered_db != NULL) {
+     e8c:	20 97       	sbiw	r28, 0x00	; 0
+     e8e:	09 f4       	brne	.+2      	; 0xe92 <osEE_counter_increment+0x44>
+     e90:	59 c0       	rjmp	.+178    	; 0xf44 <osEE_counter_increment+0xf6>
+      P2CONST(OsEE_TriggerCB, AUTOMATIC, OS_APPL_DATA)
+        p_triggered_cb = p_triggered_db->p_trigger_cb;
+
+      if (p_triggered_cb->when == counter_value) {
+     e92:	a8 81       	ld	r26, Y
+     e94:	b9 81       	ldd	r27, Y+1	; 0x01
+     e96:	12 96       	adiw	r26, 0x02	; 2
+     e98:	4d 91       	ld	r20, X+
+     e9a:	5c 91       	ld	r21, X
+     e9c:	42 17       	cp	r20, r18
+     e9e:	53 07       	cpc	r21, r19
+     ea0:	09 f0       	breq	.+2      	; 0xea4 <osEE_counter_increment+0x56>
+     ea2:	50 c0       	rjmp	.+160    	; 0xf44 <osEE_counter_increment+0xf6>
+     ea4:	de 01       	movw	r26, r28
+          /* Now I will use previous to hold the previous checked alarm */
+          CONSTP2VAR(OsEE_TriggerCB, AUTOMATIC, OS_APPL_DATA)
+            p_current_cb = p_current->p_trigger_cb;
+          p_previous = p_current;
+          /* Set this Trigger as Expired */
+          p_current_cb->status = OSEE_TRIGGER_EXPIRED;
+     ea6:	03 e0       	ldi	r16, 0x03	; 3
+     ea8:	10 e0       	ldi	r17, 0x00	; 0
+          p_previous;
+
+        do {
+          /* Now I will use previous to hold the previous checked alarm */
+          CONSTP2VAR(OsEE_TriggerCB, AUTOMATIC, OS_APPL_DATA)
+            p_current_cb = p_current->p_trigger_cb;
+     eaa:	2d 91       	ld	r18, X+
+     eac:	3c 91       	ld	r19, X
+          p_previous = p_current;
+          /* Set this Trigger as Expired */
+          p_current_cb->status = OSEE_TRIGGER_EXPIRED;
+     eae:	d9 01       	movw	r26, r18
+     eb0:	15 96       	adiw	r26, 0x05	; 5
+     eb2:	1c 93       	st	X, r17
+     eb4:	0e 93       	st	-X, r16
+     eb6:	14 97       	sbiw	r26, 0x04	; 4
+          p_current = p_current_cb->p_next;
+     eb8:	0d 90       	ld	r0, X+
+     eba:	bc 91       	ld	r27, X
+     ebc:	a0 2d       	mov	r26, r0
+        } while ((p_current != NULL) &&
+          (p_current->p_trigger_cb->when == counter_value));
+     ebe:	10 97       	sbiw	r26, 0x00	; 0
+     ec0:	49 f0       	breq	.+18     	; 0xed4 <osEE_counter_increment+0x86>
+     ec2:	6d 91       	ld	r22, X+
+     ec4:	7c 91       	ld	r23, X
+     ec6:	11 97       	sbiw	r26, 0x01	; 1
+            p_current_cb = p_current->p_trigger_cb;
+          p_previous = p_current;
+          /* Set this Trigger as Expired */
+          p_current_cb->status = OSEE_TRIGGER_EXPIRED;
+          p_current = p_current_cb->p_next;
+        } while ((p_current != NULL) &&
+     ec8:	fb 01       	movw	r30, r22
+     eca:	62 81       	ldd	r22, Z+2	; 0x02
+     ecc:	73 81       	ldd	r23, Z+3	; 0x03
+     ece:	46 17       	cp	r20, r22
+     ed0:	57 07       	cpc	r21, r23
+     ed2:	59 f3       	breq	.-42     	; 0xeaa <osEE_counter_increment+0x5c>
+     ed4:	8c 01       	movw	r16, r24
+          (p_current->p_trigger_cb->when == counter_value));
+
+        /* I set the end of handled queue */
+        p_previous->p_trigger_cb->p_next = NULL;
+     ed6:	f9 01       	movw	r30, r18
+     ed8:	11 82       	std	Z+1, r1	; 0x01
+     eda:	10 82       	st	Z, r1
+        /* I set the head of the trigger queue to the current value
+           (maybe NULL) */
+        p_counter_cb->trigger_queue = p_current;
+     edc:	f7 01       	movw	r30, r14
+     ede:	b1 83       	std	Z+1, r27	; 0x01
+     ee0:	a0 83       	st	Z, r26
+        osEE_trigger_get_alarm_db(p_trigger_to_be_handled_db)
+      )->cycle;
+    if (cycle > 0U) {
+      /* Reinsert the trigger in timer wheel as relative with delta equal to
+         cycle */
+      p_trigger_to_be_handled_cb->status = OSEE_TRIGGER_ACTIVE;
+     ee2:	82 e0       	ldi	r24, 0x02	; 2
+     ee4:	e8 2e       	mov	r14, r24
+     ee6:	f1 2c       	mov	r15, r1
+#endif /* OSEE_HAS_ALARMS || OSEE_HAS_SCHEDULE_TABLES */
+
+          /* Prepare next trigger to be handled here, before actually handle
+           * the current one, otherwise cycling triggers will mess with the
+           * list of triggers that have to be handled now */
+          p_triggered_db = p_triggered_db->p_trigger_cb->p_next;
+     ee8:	e8 81       	ld	r30, Y
+     eea:	f9 81       	ldd	r31, Y+1	; 0x01
+     eec:	a0 80       	ld	r10, Z
+     eee:	b1 80       	ldd	r11, Z+1	; 0x01
+(
+  P2VAR(OsEE_action, AUTOMATIC, OS_APPL_CONST) p_action
+)
+{
+  VAR(StatusType, AUTOMATIC) ev = E_OK;
+  switch (p_action->type) {
+     ef0:	8a 85       	ldd	r24, Y+10	; 0x0a
+     ef2:	9b 85       	ldd	r25, Y+11	; 0x0b
+     ef4:	82 30       	cpi	r24, 0x02	; 2
+     ef6:	91 05       	cpc	r25, r1
+     ef8:	a9 f1       	breq	.+106    	; 0xf64 <osEE_counter_increment+0x116>
+     efa:	83 30       	cpi	r24, 0x03	; 3
+     efc:	91 05       	cpc	r25, r1
+     efe:	b9 f1       	breq	.+110    	; 0xf6e <osEE_counter_increment+0x120>
+     f00:	89 2b       	or	r24, r25
+     f02:	61 f4       	brne	.+24     	; 0xf1c <osEE_counter_increment+0xce>
+    case OSEE_ACTION_TASK:
+    {
+      CONSTP2VAR(OsEE_TDB, AUTOMATIC, OS_APPL_DATA)
+        p_tdb     = p_action->param.p_tdb;
+     f04:	ce 80       	ldd	r12, Y+6	; 0x06
+     f06:	df 80       	ldd	r13, Y+7	; 0x07
+
+      ev = osEE_task_activated(p_tdb);
+     f08:	c6 01       	movw	r24, r12
+     f0a:	0e 94 b3 05 	call	0xb66	; 0xb66 <osEE_task_activated>
+      if (ev == E_OK) {
+     f0e:	89 2b       	or	r24, r25
+     f10:	29 f4       	brne	.+10     	; 0xf1c <osEE_counter_increment+0xce>
+        (void)osEE_scheduler_task_insert(osEE_get_kernel(), p_tdb);
+     f12:	b6 01       	movw	r22, r12
+     f14:	8c e2       	ldi	r24, 0x2C	; 44
+     f16:	91 e0       	ldi	r25, 0x01	; 1
+     f18:	0e 94 f2 05 	call	0xbe4	; 0xbe4 <osEE_scheduler_task_insert>
+  );
+
+  /* Re-enter in critical section to reinsert alarm-trigger if needed */
+  p_cdb = osEE_lock_and_get_curr_core();
+
+  p_trigger_to_be_handled_cb = p_trigger_to_be_handled_db->p_trigger_cb;
+     f1c:	e8 81       	ld	r30, Y
+     f1e:	f9 81       	ldd	r31, Y+1	; 0x01
+
+  if (p_trigger_to_be_handled_cb->status == OSEE_TRIGGER_EXPIRED) {
+     f20:	84 81       	ldd	r24, Z+4	; 0x04
+     f22:	95 81       	ldd	r25, Z+5	; 0x05
+     f24:	03 97       	sbiw	r24, 0x03	; 3
+     f26:	59 f4       	brne	.+22     	; 0xf3e <osEE_counter_increment+0xf0>
+    CONST(TickType, AUTOMATIC) cycle = osEE_alarm_get_cb(
+     f28:	46 81       	ldd	r20, Z+6	; 0x06
+     f2a:	57 81       	ldd	r21, Z+7	; 0x07
+        osEE_trigger_get_alarm_db(p_trigger_to_be_handled_db)
+      )->cycle;
+    if (cycle > 0U) {
+     f2c:	41 15       	cp	r20, r1
+     f2e:	51 05       	cpc	r21, r1
+     f30:	11 f1       	breq	.+68     	; 0xf76 <osEE_counter_increment+0x128>
+      /* Reinsert the trigger in timer wheel as relative with delta equal to
+         cycle */
+      p_trigger_to_be_handled_cb->status = OSEE_TRIGGER_ACTIVE;
+     f32:	f5 82       	std	Z+5, r15	; 0x05
+     f34:	e4 82       	std	Z+4, r14	; 0x04
+      osEE_counter_insert_rel_trigger(p_counter_db,
+     f36:	be 01       	movw	r22, r28
+     f38:	c8 01       	movw	r24, r16
+     f3a:	0e 94 07 07 	call	0xe0e	; 0xe0e <osEE_counter_insert_rel_trigger>
+     f3e:	e5 01       	movw	r28, r10
+#elif (defined(OSEE_HAS_SCHEDULE_TABLES))
+          osEE_counter_handle_st_expiry_point(p_counter_db,
+            p_trigger_to_be_handled_db);
+#endif /* OSEE_COUNTER_TRIGGER_TYPES elif OSEE_HAS_ALARMS elif
+          OSEE_HAS_SCHEDULE_TABLES */
+        } while (p_triggered_db != NULL);
+     f40:	20 97       	sbiw	r28, 0x00	; 0
+     f42:	91 f6       	brne	.-92     	; 0xee8 <osEE_counter_increment+0x9a>
+      }
+    } else {
+      osEE_unlock_core(p_cdb);
+    }
+  }
+}
+     f44:	df 91       	pop	r29
+     f46:	cf 91       	pop	r28
+     f48:	1f 91       	pop	r17
+     f4a:	0f 91       	pop	r16
+     f4c:	ff 90       	pop	r15
+     f4e:	ef 90       	pop	r14
+     f50:	df 90       	pop	r13
+     f52:	cf 90       	pop	r12
+     f54:	bf 90       	pop	r11
+     f56:	af 90       	pop	r10
+     f58:	08 95       	ret
+       a core is allowed to do that */
+    if (p_counter_cb->value >= p_counter_db->info.maxallowedvalue) {
+      counter_value       = 0U;
+      p_counter_cb->value = 0U;
+    } else {
+      ++p_counter_cb->value;
+     f5a:	2f 5f       	subi	r18, 0xFF	; 255
+     f5c:	3f 4f       	sbci	r19, 0xFF	; 255
+     f5e:	33 83       	std	Z+3, r19	; 0x03
+     f60:	22 83       	std	Z+2, r18	; 0x02
+     f62:	91 cf       	rjmp	.-222    	; 0xe86 <osEE_counter_increment+0x38>
+      }
+    }
+    break;
+#endif /* OSEE_HAS_EVENTS */
+    case OSEE_ACTION_COUNTER:
+      osEE_counter_increment(p_action->param.p_counter_db);
+     f64:	88 85       	ldd	r24, Y+8	; 0x08
+     f66:	99 85       	ldd	r25, Y+9	; 0x09
+     f68:	0e 94 27 07 	call	0xe4e	; 0xe4e <osEE_counter_increment>
+     f6c:	d7 cf       	rjmp	.-82     	; 0xf1c <osEE_counter_increment+0xce>
+      CONST(OsEE_os_context, AUTOMATIC)
+        prev_os_context = p_ccb->os_context;
+
+      p_ccb->os_context = OSEE_ALARMCALLBACK_CTX;
+#endif /* OSEE_HAS_CONTEXT */
+      p_action->param.f();
+     f6e:	ec 81       	ldd	r30, Y+4	; 0x04
+     f70:	fd 81       	ldd	r31, Y+5	; 0x05
+     f72:	09 95       	icall
+     f74:	d3 cf       	rjmp	.-90     	; 0xf1c <osEE_counter_increment+0xce>
+         cycle */
+      p_trigger_to_be_handled_cb->status = OSEE_TRIGGER_ACTIVE;
+      osEE_counter_insert_rel_trigger(p_counter_db,
+        p_trigger_to_be_handled_db, cycle);
+    } else {
+      p_trigger_to_be_handled_cb->status = OSEE_TRIGGER_INACTIVE;
+     f76:	15 82       	std	Z+5, r1	; 0x05
+     f78:	14 82       	std	Z+4, r1	; 0x04
+     f7a:	e1 cf       	rjmp	.-62     	; 0xf3e <osEE_counter_increment+0xf0>
+
+00000f7c <osEE_alarm_set_rel>:
+  P2VAR(OsEE_CounterDB, AUTOMATIC, OS_APPL_DATA)  p_counter_db,
+  P2VAR(OsEE_AlarmDB, AUTOMATIC, OS_APPL_DATA)    p_alarm_db,
+  VAR(TickType,   AUTOMATIC)                      increment,
+  VAR(TickType,   AUTOMATIC)                      cycle
+)
+{
+     f7c:	cf 93       	push	r28
+     f7e:	df 93       	push	r29
+     f80:	db 01       	movw	r26, r22
+     f82:	ed 91       	ld	r30, X+
+     f84:	fc 91       	ld	r31, X
+    counter_core_id = p_counter_db->core_id;
+  /* Lock the Core Lock witch the counter is tied */
+  osEE_lock_core_id(counter_core_id);
+#endif /* OSEE_SINGLECORE */
+
+  if (p_trigger_cb->status > OSEE_TRIGGER_CANCELED) {
+     f86:	a4 81       	ldd	r26, Z+4	; 0x04
+     f88:	b5 81       	ldd	r27, Z+5	; 0x05
+     f8a:	a2 30       	cpi	r26, 0x02	; 2
+     f8c:	b1 05       	cpc	r27, r1
+     f8e:	68 f5       	brcc	.+90     	; 0xfea <osEE_alarm_set_rel+0x6e>
+    ev = E_OS_STATE;
+  } else if (p_trigger_cb->status == OSEE_TRIGGER_CANCELED) {
+    p_alarm_cb->cycle = cycle;
+     f90:	37 83       	std	Z+7, r19	; 0x07
+     f92:	26 83       	std	Z+6, r18	; 0x06
+  osEE_lock_core_id(counter_core_id);
+#endif /* OSEE_SINGLECORE */
+
+  if (p_trigger_cb->status > OSEE_TRIGGER_CANCELED) {
+    ev = E_OS_STATE;
+  } else if (p_trigger_cb->status == OSEE_TRIGGER_CANCELED) {
+     f94:	11 97       	sbiw	r26, 0x01	; 1
+     f96:	11 f5       	brne	.+68     	; 0xfdc <osEE_alarm_set_rel+0x60>
+{
+  VAR(TickType, AUTOMATIC) when;
+  CONSTP2CONST(OsEE_CounterCB, AUTOMATIC, OS_APPL_DATA)
+    p_counter_cb    = p_counter_db->p_counter_cb;
+  CONST(TickType, AUTOMATIC)
+    maxallowedvalue = p_counter_db->info.maxallowedvalue;
+     f98:	ec 01       	movw	r28, r24
+     f9a:	2a 81       	ldd	r18, Y+2	; 0x02
+     f9c:	3b 81       	ldd	r19, Y+3	; 0x03
+  CONST(TickType, AUTOMATIC)
+    value           = p_counter_cb->value;
+     f9e:	a8 81       	ld	r26, Y
+     fa0:	b9 81       	ldd	r27, Y+1	; 0x01
+     fa2:	12 96       	adiw	r26, 0x02	; 2
+     fa4:	8d 91       	ld	r24, X+
+     fa6:	9c 91       	ld	r25, X
+
+  if ((maxallowedvalue - delta) >= value) {
+     fa8:	b9 01       	movw	r22, r18
+     faa:	64 1b       	sub	r22, r20
+     fac:	75 0b       	sbc	r23, r21
+     fae:	68 17       	cp	r22, r24
+     fb0:	79 07       	cpc	r23, r25
+     fb2:	68 f0       	brcs	.+26     	; 0xfce <osEE_alarm_set_rel+0x52>
+    when = value + delta;
+     fb4:	48 0f       	add	r20, r24
+     fb6:	59 1f       	adc	r21, r25
+    p_alarm_cb->cycle = cycle;
+    /* Re-turn on the trigger, that is in handling, since is handling I'll set
+       'here' when based on increment */
+    p_trigger_cb->when   = osEE_counter_eval_when(p_counter_db, increment);
+     fb8:	53 83       	std	Z+3, r21	; 0x03
+     fba:	42 83       	std	Z+2, r20	; 0x02
+    p_trigger_cb->status = OSEE_TRIGGER_REENABLED;
+     fbc:	84 e0       	ldi	r24, 0x04	; 4
+     fbe:	90 e0       	ldi	r25, 0x00	; 0
+     fc0:	95 83       	std	Z+5, r25	; 0x05
+     fc2:	84 83       	std	Z+4, r24	; 0x04
+ 
+    osEE_counter_insert_rel_trigger(
+      p_counter_db, p_trigger_db, increment
+    );
+ 
+    ev = E_OK;
+     fc4:	90 e0       	ldi	r25, 0x00	; 0
+     fc6:	80 e0       	ldi	r24, 0x00	; 0
+  }
+#if (!defined(OSEE_SINGLECORE))
+  osEE_unlock_core_id(counter_core_id);
+#endif /* OSEE_SINGLECORE */
+  return ev;
+}
+     fc8:	df 91       	pop	r29
+     fca:	cf 91       	pop	r28
+     fcc:	08 95       	ret
+  } else {
+    when = delta - (maxallowedvalue - value) - 1U;
+     fce:	41 50       	subi	r20, 0x01	; 1
+     fd0:	51 09       	sbc	r21, r1
+     fd2:	48 0f       	add	r20, r24
+     fd4:	59 1f       	adc	r21, r25
+     fd6:	42 1b       	sub	r20, r18
+     fd8:	53 0b       	sbc	r21, r19
+     fda:	ee cf       	rjmp	.-36     	; 0xfb8 <osEE_alarm_set_rel+0x3c>
+
+    ev = E_OK;
+  } else {
+    p_alarm_cb->cycle = cycle;
+    /* Turn On the Trigger */
+    p_trigger_cb->status = OSEE_TRIGGER_ACTIVE;
+     fdc:	22 e0       	ldi	r18, 0x02	; 2
+     fde:	30 e0       	ldi	r19, 0x00	; 0
+     fe0:	35 83       	std	Z+5, r19	; 0x05
+     fe2:	24 83       	std	Z+4, r18	; 0x04
+ 
+    osEE_counter_insert_rel_trigger(
+     fe4:	0e 94 07 07 	call	0xe0e	; 0xe0e <osEE_counter_insert_rel_trigger>
+     fe8:	ed cf       	rjmp	.-38     	; 0xfc4 <osEE_alarm_set_rel+0x48>
+  /* Lock the Core Lock witch the counter is tied */
+  osEE_lock_core_id(counter_core_id);
+#endif /* OSEE_SINGLECORE */
+
+  if (p_trigger_cb->status > OSEE_TRIGGER_CANCELED) {
+    ev = E_OS_STATE;
+     fea:	87 e0       	ldi	r24, 0x07	; 7
+     fec:	90 e0       	ldi	r25, 0x00	; 0
+    ev = E_OK;
+  }
+#if (!defined(OSEE_SINGLECORE))
+  osEE_unlock_core_id(counter_core_id);
+#endif /* OSEE_SINGLECORE */
+  return ev;
+     fee:	ec cf       	rjmp	.-40     	; 0xfc8 <osEE_alarm_set_rel+0x4c>
+
+00000ff0 <osEE_change_context_from_running>:
+  osEE_change_context_from_running
+(
+  P2VAR(OsEE_TDB, AUTOMATIC, OS_APPL_CONST) p_from,
+  P2VAR(OsEE_TDB, AUTOMATIC, OS_APPL_CONST) p_to
+)
+{
+     ff0:	fb 01       	movw	r30, r22
+     ff2:	dc 01       	movw	r26, r24
+     ff4:	12 96       	adiw	r26, 0x02	; 2
+     ff6:	4d 91       	ld	r20, X+
+     ff8:	5c 91       	ld	r21, X
+     ffa:	62 81       	ldd	r22, Z+2	; 0x02
+     ffc:	73 81       	ldd	r23, Z+3	; 0x03
+  CONSTP2CONST(OsEE_TCB, AUTOMATIC, OS_APPL_DATA) p_to_tcb  = p_to->p_tcb;
+
+  if (p_to_tcb->status == OSEE_TASK_READY_STACKED) {
+     ffe:	a4 81       	ldd	r26, Z+4	; 0x04
+    1000:	b5 81       	ldd	r27, Z+5	; 0x05
+    1002:	12 96       	adiw	r26, 0x02	; 2
+    1004:	8d 91       	ld	r24, X+
+    1006:	9c 91       	ld	r25, X
+    1008:	02 97       	sbiw	r24, 0x02	; 2
+    100a:	19 f4       	brne	.+6      	; 0x1012 <osEE_change_context_from_running+0x22>
+    osEE_hal_save_ctx_and_restore_ctx(p_to, p_to->hdb.p_scb,
+    100c:	cf 01       	movw	r24, r30
+    100e:	0c 94 88 00 	jmp	0x110	; 0x110 <osEE_hal_save_ctx_and_restore_ctx>
+      p_from->hdb.p_scb);
+  } else {
+    osEE_hal_save_ctx_and_ready2stacked(p_to, p_to->hdb.p_scb,
+    1012:	cf 01       	movw	r24, r30
+    1014:	0c 94 d0 00 	jmp	0x1a0	; 0x1a0 <osEE_hal_save_ctx_and_ready2stacked>
+
+00001018 <osEE_change_context_from_task_end>:
+  osEE_change_context_from_task_end
+(
+  P2VAR(OsEE_TDB, AUTOMATIC, OS_APPL_CONST) p_from,
+  P2VAR(OsEE_TDB, AUTOMATIC, OS_APPL_CONST) p_to
+)
+{
+    1018:	cb 01       	movw	r24, r22
+    101a:	db 01       	movw	r26, r22
+    101c:	12 96       	adiw	r26, 0x02	; 2
+    101e:	6d 91       	ld	r22, X+
+    1020:	7c 91       	ld	r23, X
+    1022:	13 97       	sbiw	r26, 0x03	; 3
+  CONSTP2CONST(OsEE_TCB, AUTOMATIC, OS_APPL_DATA) p_to_tcb  = p_to->p_tcb;
+
+  if (p_to_tcb->status == OSEE_TASK_READY_STACKED) {
+    1024:	14 96       	adiw	r26, 0x04	; 4
+    1026:	ed 91       	ld	r30, X+
+    1028:	fc 91       	ld	r31, X
+    102a:	22 81       	ldd	r18, Z+2	; 0x02
+    102c:	33 81       	ldd	r19, Z+3	; 0x03
+    102e:	22 30       	cpi	r18, 0x02	; 2
+    1030:	31 05       	cpc	r19, r1
+    1032:	11 f4       	brne	.+4      	; 0x1038 <osEE_change_context_from_task_end+0x20>
+    osEE_hal_restore_ctx(p_to, p_to->hdb.p_scb);
+    1034:	0c 94 a8 00 	jmp	0x150	; 0x150 <osEE_hal_restore_ctx>
+  } else {
+    osEE_hal_ready2stacked(p_to, p_to->hdb.p_scb);
+    1038:	0c 94 c8 00 	jmp	0x190	; 0x190 <osEE_hal_ready2stacked>
+
+0000103c <osEE_idle_task_terminate>:
+{
+  P2VAR(OsEE_CTX, AUTOMATIC, OS_APPL_DATA)      p_ctx;
+
+  CONSTP2VAR(OsEE_HDB, AUTOMATIC, OS_APPL_DATA) p_idle_hdb  = &p_idle_tdb->hdb;
+  CONSTP2VAR(OsEE_SDB, AUTOMATIC, OS_APPL_DATA) p_sdb       = p_idle_hdb->p_sdb;
+  CONSTP2VAR(OsEE_SCB, AUTOMATIC, OS_APPL_DATA) p_scb       = p_idle_hdb->p_scb;
+    103c:	dc 01       	movw	r26, r24
+    103e:	12 96       	adiw	r26, 0x02	; 2
+    1040:	6d 91       	ld	r22, X+
+    1042:	7c 91       	ld	r23, X
+    1044:	13 97       	sbiw	r26, 0x03	; 3
+  CONSTP2CONST(OsEE_CTX, AUTOMATIC, OS_APPL_DATA) p_bos     = p_sdb->p_bos;
+    1046:	ed 91       	ld	r30, X+
+    1048:	fc 91       	ld	r31, X
+    104a:	40 81       	ld	r20, Z
+    104c:	51 81       	ldd	r21, Z+1	; 0x01
+  P2VAR(OsEE_CTX, AUTOMATIC, OS_APPL_DATA)      p_tos       = p_scb->p_tos;
+    104e:	db 01       	movw	r26, r22
+    1050:	ed 91       	ld	r30, X+
+    1052:	fc 91       	ld	r31, X
+
+  do {
+    p_ctx = p_tos;
+    p_tos = p_tos->p_ctx;
+    1054:	22 89       	ldd	r18, Z+18	; 0x12
+    1056:	33 89       	ldd	r19, Z+19	; 0x13
+  } while ((p_tos != NULL) && (p_tos != p_bos));
+    1058:	21 15       	cp	r18, r1
+    105a:	31 05       	cpc	r19, r1
+    105c:	19 f0       	breq	.+6      	; 0x1064 <osEE_idle_task_terminate+0x28>
+    105e:	42 17       	cp	r20, r18
+    1060:	53 07       	cpc	r21, r19
+    1062:	29 f4       	brne	.+10     	; 0x106e <osEE_idle_task_terminate+0x32>
+
+  /* Unwind the stack until the last context*/
+  p_scb->p_tos = p_ctx;
+    1064:	db 01       	movw	r26, r22
+    1066:	ed 93       	st	X+, r30
+    1068:	fc 93       	st	X, r31
+
+  osEE_hal_restore_ctx(p_idle_tdb, p_scb);
+    106a:	0c 94 a8 00 	jmp	0x150	; 0x150 <osEE_hal_restore_ctx>
+    106e:	f9 01       	movw	r30, r18
+    1070:	f1 cf       	rjmp	.-30     	; 0x1054 <osEE_idle_task_terminate+0x18>
+
+00001072 <osEE_scheduler_task_end>:
+FUNC(void, OS_CODE)
+  osEE_scheduler_task_end
+(
+  void
+)
+{
+    1072:	cf 93       	push	r28
+    1074:	df 93       	push	r29
+    1076:	00 d0       	rcall	.+0      	; 0x1078 <osEE_scheduler_task_end+0x6>
+    1078:	cd b7       	in	r28, 0x3d	; 61
+    107a:	de b7       	in	r29, 0x3e	; 62
+  P2VAR(OsEE_TDB, AUTOMATIC, OS_APPL_DATA)  p_to;
+  P2VAR(OsEE_TDB, AUTOMATIC, OS_APPL_DATA)  p_from;
+
+  p_to = osEE_scheduler_task_terminated(osEE_get_kernel(), &p_from);
+    107c:	be 01       	movw	r22, r28
+    107e:	6f 5f       	subi	r22, 0xFF	; 255
+    1080:	7f 4f       	sbci	r23, 0xFF	; 255
+    1082:	8c e2       	ldi	r24, 0x2C	; 44
+    1084:	91 e0       	ldi	r25, 0x01	; 1
+    1086:	0e 94 15 06 	call	0xc2a	; 0xc2a <osEE_scheduler_task_terminated>
+(
+  P2VAR(OsEE_TDB, AUTOMATIC, OS_APPL_CONST) p_from,
+  P2VAR(OsEE_TDB, AUTOMATIC, OS_APPL_CONST) p_to
+)
+{
+  osEE_change_context_from_task_end(p_from, p_to);
+    108a:	bc 01       	movw	r22, r24
+    108c:	89 81       	ldd	r24, Y+1	; 0x01
+    108e:	9a 81       	ldd	r25, Y+2	; 0x02
+    1090:	0e 94 0c 08 	call	0x1018	; 0x1018 <osEE_change_context_from_task_end>
+  if (p_from->task_type != OSEE_TASK_TYPE_ISR2) {
+    osEE_change_context_from_task_end(p_from, p_to);
+  } else {
+    osEE_change_context_from_isr2_end(p_from, p_to);
+  }
+}
+    1094:	0f 90       	pop	r0
+    1096:	0f 90       	pop	r0
+    1098:	df 91       	pop	r29
+    109a:	cf 91       	pop	r28
+    109c:	08 95       	ret
+
+0000109e <__vector_default>:
+#include "ee_avr8_irqstub.h"
+
+/* Erika Interrupt Vector Definition */
+
+/* DUMMY interrupt vector */
+OSEE_AVR8_ISR_NOT_DEFINED(BADISR_vect)
+    109e:	f8 94       	cli
+    10a0:	ff cf       	rjmp	.-2      	; 0x10a0 <__vector_default+0x2>
+
+000010a2 <osEE_atmega_intvect>:
+
+/* Interrupt Vector Table Recall. */
+void osEE_atmega_intvect(void) {
+  OSEE_AVR8_REQUEST_IRQ_ENTRY(BADISR_vect);
+    10a2:	ee e9       	ldi	r30, 0x9E	; 158
+}
+    10a4:	08 95       	ret
+
+000010a6 <__vector_11>:
+OSEE_AVR8_ISR_NOT_DEFINED(TIMER1_CAPT_vect)
+#endif /* OSEE_AVR8_TIMER1_CAPT_ISR */
+
+/* TIMER1_COMPA interrupt vector */
+#if (defined(OSEE_AVR8_TIMER1_COMPA_ISR_TID)) && (OSEE_AVR8_TIMER1_COMPA_ISR_CAT == 2)
+OSEE_AVR8_ISR2_DEFINITION(TIMER1_COMPA_vect, OSEE_AVR8_TIMER1_COMPA_ISR_TID)
+    10a6:	8f 93       	push	r24
+    10a8:	9f 93       	push	r25
+    10aa:	80 e0       	ldi	r24, 0x00	; 0
+    10ac:	0e 94 5b 08 	call	0x10b6	; 0x10b6 <osEE_avr8_isr2_stub>
+    10b0:	9f 91       	pop	r25
+    10b2:	8f 91       	pop	r24
+    10b4:	18 95       	reti
+
+000010b6 <osEE_avr8_isr2_stub>:
+ * ISR Type 2 stub.
+ */
+void OSEE_COMPILER_KEEP OSEE_NAKED osEE_avr8_isr2_stub(TaskType t)
+{
+
+  OSEE_AVR8_ISR_PREINSTUB();
+    10b6:	1f 92       	push	r1
+    10b8:	0f 92       	push	r0
+    10ba:	0f b6       	in	r0, 0x3f	; 63
+    10bc:	0f 92       	push	r0
+    10be:	11 24       	eor	r1, r1
+    10c0:	2f 93       	push	r18
+    10c2:	3f 93       	push	r19
+    10c4:	4f 93       	push	r20
+    10c6:	5f 93       	push	r21
+    10c8:	6f 93       	push	r22
+    10ca:	7f 93       	push	r23
+    10cc:	af 93       	push	r26
+    10ce:	bf 93       	push	r27
+    10d0:	ef 93       	push	r30
+    10d2:	ff 93       	push	r31
+  /* Disable IRQ */
+  OSEE_hal_disableIRQ();
+#endif /* __ATXMEGA__ */
+
+  /* Activate ISR2 */
+  osEE_activate_isr2(t);
+    10d4:	0e 94 da 05 	call	0xbb4	; 0xbb4 <osEE_activate_isr2>
+
+  OSEE_AVR8_ISR_POSTINSTUB();
+    10d8:	ff 91       	pop	r31
+    10da:	ef 91       	pop	r30
+    10dc:	bf 91       	pop	r27
+    10de:	af 91       	pop	r26
+    10e0:	7f 91       	pop	r23
+    10e2:	6f 91       	pop	r22
+    10e4:	5f 91       	pop	r21
+    10e6:	4f 91       	pop	r20
+    10e8:	3f 91       	pop	r19
+    10ea:	2f 91       	pop	r18
+    10ec:	0f 90       	pop	r0
+    10ee:	0f be       	out	0x3f, r0	; 63
+    10f0:	0f 90       	pop	r0
+    10f2:	1f 90       	pop	r1
+
+  OSEE_RETURN();
+    10f4:	08 95       	ret
+
+000010f6 <OsEE_atmega_startTimer1>:
+ * - x < TIMER_1_PRESCALER_1024_MAX_TICKS = 4194304:	64     us
+ */
+void OsEE_atmega_startTimer1(uint32_t microsecondsInterval) {
+  uint8_t	timer1Prescaler;
+  uint16_t	timer1CompareValue;
+  TCCR1B = 0;	/* Pause Timer. */
+    10f6:	10 92 81 00 	sts	0x0081, r1	; 0x800081 <__DATA_REGION_ORIGIN__+0x21>
+  TCCR1A = 0;
+    10fa:	10 92 80 00 	sts	0x0080, r1	; 0x800080 <__DATA_REGION_ORIGIN__+0x20>
+  TCCR1C = 0;
+    10fe:	10 92 82 00 	sts	0x0082, r1	; 0x800082 <__DATA_REGION_ORIGIN__+0x22>
+  TCNT1  = 0;
+    1102:	10 92 85 00 	sts	0x0085, r1	; 0x800085 <__DATA_REGION_ORIGIN__+0x25>
+    1106:	10 92 84 00 	sts	0x0084, r1	; 0x800084 <__DATA_REGION_ORIGIN__+0x24>
+   * 0 1 1 clkIO/64 (From prescaler)
+   * 1 0 0 clkIO/256 (From prescaler)
+   * 1 0 1 clkIO/1024 (From prescaler)
+   */
+#if (F_CPU == 16000000L)
+  if ( microsecondsInterval < TIMER_1_NO_PRESCALER_MAX_TICKS ) {
+    110a:	61 15       	cp	r22, r1
+    110c:	20 e1       	ldi	r18, 0x10	; 16
+    110e:	72 07       	cpc	r23, r18
+    1110:	81 05       	cpc	r24, r1
+    1112:	91 05       	cpc	r25, r1
+    1114:	a0 f4       	brcc	.+40     	; 0x113e <OsEE_atmega_startTimer1+0x48>
+    timer1Prescaler = (1 << CS10);
+    timer1CompareValue = ((uint16_t)(microsecondsInterval << 4) - 1);
+    1116:	e4 e0       	ldi	r30, 0x04	; 4
+    1118:	66 0f       	add	r22, r22
+    111a:	77 1f       	adc	r23, r23
+    111c:	ea 95       	dec	r30
+    111e:	e1 f7       	brne	.-8      	; 0x1118 <OsEE_atmega_startTimer1+0x22>
+    1120:	61 50       	subi	r22, 0x01	; 1
+    1122:	71 09       	sbc	r23, r1
+   * 1 0 0 clkIO/256 (From prescaler)
+   * 1 0 1 clkIO/1024 (From prescaler)
+   */
+#if (F_CPU == 16000000L)
+  if ( microsecondsInterval < TIMER_1_NO_PRESCALER_MAX_TICKS ) {
+    timer1Prescaler = (1 << CS10);
+    1124:	81 e0       	ldi	r24, 0x01	; 1
+    timer1CompareValue = ((uint16_t)(microsecondsInterval >> 6) - 1);
+  }
+#else
+  #error("Unsupported CPU frequency")
+#endif
+  TIFR1  = (1 << OCIE1A);	/* Clear Output Compare A Match Flag. */
+    1126:	92 e0       	ldi	r25, 0x02	; 2
+    1128:	96 bb       	out	0x16, r25	; 22
+  TIMSK1 = (1 << OCIE1A);	/* Output Compare A Match Interrupt Enable */
+    112a:	90 93 6f 00 	sts	0x006F, r25	; 0x80006f <__DATA_REGION_ORIGIN__+0xf>
+  OCR1A  = timer1CompareValue;	/* Set Compare A Match Value */
+    112e:	70 93 89 00 	sts	0x0089, r23	; 0x800089 <__DATA_REGION_ORIGIN__+0x29>
+    1132:	60 93 88 00 	sts	0x0088, r22	; 0x800088 <__DATA_REGION_ORIGIN__+0x28>
+  TCCR1B = (1 << WGM12) | timer1Prescaler;	/* Set CTC Mode and Prescaler. */
+    1136:	88 60       	ori	r24, 0x08	; 8
+    1138:	80 93 81 00 	sts	0x0081, r24	; 0x800081 <__DATA_REGION_ORIGIN__+0x21>
+}	/* startTimer1() */
+    113c:	08 95       	ret
+#if (F_CPU == 16000000L)
+  if ( microsecondsInterval < TIMER_1_NO_PRESCALER_MAX_TICKS ) {
+    timer1Prescaler = (1 << CS10);
+    timer1CompareValue = ((uint16_t)(microsecondsInterval << 4) - 1);
+  }
+  else if ( microsecondsInterval < TIMER_1_PRESCALER_8_MAX_TICKS ) {
+    113e:	61 15       	cp	r22, r1
+    1140:	20 e8       	ldi	r18, 0x80	; 128
+    1142:	72 07       	cpc	r23, r18
+    1144:	81 05       	cpc	r24, r1
+    1146:	91 05       	cpc	r25, r1
+    1148:	30 f4       	brcc	.+12     	; 0x1156 <OsEE_atmega_startTimer1+0x60>
+    timer1Prescaler = (1 << CS11);
+    timer1CompareValue = ((uint16_t)(microsecondsInterval << 1) - 1);
+    114a:	66 0f       	add	r22, r22
+    114c:	77 1f       	adc	r23, r23
+    114e:	61 50       	subi	r22, 0x01	; 1
+    1150:	71 09       	sbc	r23, r1
+  if ( microsecondsInterval < TIMER_1_NO_PRESCALER_MAX_TICKS ) {
+    timer1Prescaler = (1 << CS10);
+    timer1CompareValue = ((uint16_t)(microsecondsInterval << 4) - 1);
+  }
+  else if ( microsecondsInterval < TIMER_1_PRESCALER_8_MAX_TICKS ) {
+    timer1Prescaler = (1 << CS11);
+    1152:	82 e0       	ldi	r24, 0x02	; 2
+    1154:	e8 cf       	rjmp	.-48     	; 0x1126 <OsEE_atmega_startTimer1+0x30>
+    timer1CompareValue = ((uint16_t)(microsecondsInterval << 1) - 1);
+  }
+  else if ( microsecondsInterval < TIMER_1_PRESCALER_64_MAX_TICKS ) {
+    1156:	6c 3f       	cpi	r22, 0xFC	; 252
+    1158:	2f ef       	ldi	r18, 0xFF	; 255
+    115a:	72 07       	cpc	r23, r18
+    115c:	23 e0       	ldi	r18, 0x03	; 3
+    115e:	82 07       	cpc	r24, r18
+    1160:	91 05       	cpc	r25, r1
+    1162:	58 f4       	brcc	.+22     	; 0x117a <OsEE_atmega_startTimer1+0x84>
+    timer1Prescaler = (1 << CS11) | (1 << CS10);
+    timer1CompareValue = ((uint16_t)(microsecondsInterval >> 2) - 1);
+    1164:	42 e0       	ldi	r20, 0x02	; 2
+    1166:	96 95       	lsr	r25
+    1168:	87 95       	ror	r24
+    116a:	77 95       	ror	r23
+    116c:	67 95       	ror	r22
+    116e:	4a 95       	dec	r20
+    1170:	d1 f7       	brne	.-12     	; 0x1166 <OsEE_atmega_startTimer1+0x70>
+    1172:	61 50       	subi	r22, 0x01	; 1
+    1174:	71 09       	sbc	r23, r1
+  else if ( microsecondsInterval < TIMER_1_PRESCALER_8_MAX_TICKS ) {
+    timer1Prescaler = (1 << CS11);
+    timer1CompareValue = ((uint16_t)(microsecondsInterval << 1) - 1);
+  }
+  else if ( microsecondsInterval < TIMER_1_PRESCALER_64_MAX_TICKS ) {
+    timer1Prescaler = (1 << CS11) | (1 << CS10);
+    1176:	83 e0       	ldi	r24, 0x03	; 3
+    1178:	d6 cf       	rjmp	.-84     	; 0x1126 <OsEE_atmega_startTimer1+0x30>
+    timer1CompareValue = ((uint16_t)(microsecondsInterval >> 2) - 1);
+  }
+  else if ( microsecondsInterval < TIMER_1_PRESCALER_256_MAX_TICKS ) {
+    117a:	61 15       	cp	r22, r1
+    117c:	71 05       	cpc	r23, r1
+    117e:	20 e1       	ldi	r18, 0x10	; 16
+    1180:	82 07       	cpc	r24, r18
+    1182:	91 05       	cpc	r25, r1
+    1184:	58 f4       	brcc	.+22     	; 0x119c <OsEE_atmega_startTimer1+0xa6>
+    timer1Prescaler = (1 << CS12);
+    timer1CompareValue = ((uint16_t)(microsecondsInterval >> 4) - 1);
+    1186:	34 e0       	ldi	r19, 0x04	; 4
+    1188:	96 95       	lsr	r25
+    118a:	87 95       	ror	r24
+    118c:	77 95       	ror	r23
+    118e:	67 95       	ror	r22
+    1190:	3a 95       	dec	r19
+    1192:	d1 f7       	brne	.-12     	; 0x1188 <OsEE_atmega_startTimer1+0x92>
+    1194:	61 50       	subi	r22, 0x01	; 1
+    1196:	71 09       	sbc	r23, r1
+  else if ( microsecondsInterval < TIMER_1_PRESCALER_64_MAX_TICKS ) {
+    timer1Prescaler = (1 << CS11) | (1 << CS10);
+    timer1CompareValue = ((uint16_t)(microsecondsInterval >> 2) - 1);
+  }
+  else if ( microsecondsInterval < TIMER_1_PRESCALER_256_MAX_TICKS ) {
+    timer1Prescaler = (1 << CS12);
+    1198:	84 e0       	ldi	r24, 0x04	; 4
+    119a:	c5 cf       	rjmp	.-118    	; 0x1126 <OsEE_atmega_startTimer1+0x30>
+    timer1CompareValue = ((uint16_t)(microsecondsInterval >> 4) - 1);
+  }
+  else {	/*  microsecondsInterval < TIMER_1_PRESCALER_1024_MAX_TICKS */
+    timer1Prescaler = (1 << CS12) | (1 << CS10);
+    timer1CompareValue = ((uint16_t)(microsecondsInterval >> 6) - 1);
+    119c:	26 e0       	ldi	r18, 0x06	; 6
+    119e:	96 95       	lsr	r25
+    11a0:	87 95       	ror	r24
+    11a2:	77 95       	ror	r23
+    11a4:	67 95       	ror	r22
+    11a6:	2a 95       	dec	r18
+    11a8:	d1 f7       	brne	.-12     	; 0x119e <OsEE_atmega_startTimer1+0xa8>
+    11aa:	61 50       	subi	r22, 0x01	; 1
+    11ac:	71 09       	sbc	r23, r1
+  else if ( microsecondsInterval < TIMER_1_PRESCALER_256_MAX_TICKS ) {
+    timer1Prescaler = (1 << CS12);
+    timer1CompareValue = ((uint16_t)(microsecondsInterval >> 4) - 1);
+  }
+  else {	/*  microsecondsInterval < TIMER_1_PRESCALER_1024_MAX_TICKS */
+    timer1Prescaler = (1 << CS12) | (1 << CS10);
+    11ae:	85 e0       	ldi	r24, 0x05	; 5
+    11b0:	ba cf       	rjmp	.-140    	; 0x1126 <OsEE_atmega_startTimer1+0x30>
+
+000011b2 <osEE_scheduler_core_rq_preempt_stk>:
+  osEE_scheduler_core_rq_preempt_stk
+(
+  P2VAR(OsEE_CDB, AUTOMATIC, OS_APPL_DATA)  p_cdb,
+  P2VAR(OsEE_RQ,  AUTOMATIC, OS_APPL_DATA)  p_rq
+)
+{
+    11b2:	0f 93       	push	r16
+    11b4:	1f 93       	push	r17
+    11b6:	cf 93       	push	r28
+    11b8:	df 93       	push	r29
+  CONSTP2VAR(OsEE_CCB, AUTOMATIC, OS_APPL_DATA) p_ccb = p_cdb->p_ccb;
+    11ba:	ec 01       	movw	r28, r24
+    11bc:	a8 81       	ld	r26, Y
+    11be:	b9 81       	ldd	r27, Y+1	; 0x01
+  CONSTP2VAR(OsEE_SN, AUTOMATIC, OS_APPL_DATA)  p_rq_sn  = (*p_rq);
+    11c0:	eb 01       	movw	r28, r22
+    11c2:	e8 81       	ld	r30, Y
+    11c4:	f9 81       	ldd	r31, Y+1	; 0x01
+  P2CONST(OsEE_SN, AUTOMATIC, OS_APPL_DATA)     p_ret_sn = p_ccb->p_stk_sn;
+    11c6:	16 96       	adiw	r26, 0x06	; 6
+    11c8:	cd 91       	ld	r28, X+
+    11ca:	dc 91       	ld	r29, X
+    11cc:	17 97       	sbiw	r26, 0x07	; 7
+
+  VAR(OsEE_bool, AUTOMATIC)                     is_rq_preemption = OSEE_FALSE;
+  P2VAR(OsEE_TDB, AUTOMATIC, OS_APPL_DATA)      p_ret_tdb;
+
+  if (p_ret_sn != NULL) {
+    11ce:	20 97       	sbiw	r28, 0x00	; 0
+    11d0:	c1 f1       	breq	.+112    	; 0x1242 <osEE_scheduler_core_rq_preempt_stk+0x90>
+    p_ret_tdb = p_ret_sn->p_tdb;
+    11d2:	8a 81       	ldd	r24, Y+2	; 0x02
+    11d4:	9b 81       	ldd	r25, Y+3	; 0x03
+    if (p_rq_sn != NULL) {
+    11d6:	30 97       	sbiw	r30, 0x00	; 0
+    11d8:	09 f4       	brne	.+2      	; 0x11dc <osEE_scheduler_core_rq_preempt_stk+0x2a>
+    11da:	3f c0       	rjmp	.+126    	; 0x125a <osEE_scheduler_core_rq_preempt_stk+0xa8>
+      CONSTP2VAR(OsEE_TCB, AUTOMATIC, OS_APPL_DATA)
+        p_ret_tcb = p_ret_tdb->p_tcb;
+    11dc:	ec 01       	movw	r28, r24
+    11de:	0c 81       	ldd	r16, Y+4	; 0x04
+    11e0:	1d 81       	ldd	r17, Y+5	; 0x05
+      if (p_ret_tcb->current_prio <
+        p_rq_sn->p_tdb->p_tcb->current_prio)
+    11e2:	22 81       	ldd	r18, Z+2	; 0x02
+    11e4:	33 81       	ldd	r19, Z+3	; 0x03
+    11e6:	e9 01       	movw	r28, r18
+    11e8:	4c 81       	ldd	r20, Y+4	; 0x04
+    11ea:	5d 81       	ldd	r21, Y+5	; 0x05
+  if (p_ret_sn != NULL) {
+    p_ret_tdb = p_ret_sn->p_tdb;
+    if (p_rq_sn != NULL) {
+      CONSTP2VAR(OsEE_TCB, AUTOMATIC, OS_APPL_DATA)
+        p_ret_tcb = p_ret_tdb->p_tcb;
+      if (p_ret_tcb->current_prio <
+    11ec:	e8 01       	movw	r28, r16
+    11ee:	39 81       	ldd	r19, Y+1	; 0x01
+    11f0:	ea 01       	movw	r28, r20
+    11f2:	29 81       	ldd	r18, Y+1	; 0x01
+    11f4:	32 17       	cp	r19, r18
+    11f6:	88 f5       	brcc	.+98     	; 0x125a <osEE_scheduler_core_rq_preempt_stk+0xa8>
+      {
+        /* RQ preempt STK */
+        /* Call PostTaskHook before switching active TASK */
+        osEE_call_post_task_hook(p_ccb);
+
+        p_ret_tcb->status = OSEE_TASK_READY_STACKED;
+    11f8:	22 e0       	ldi	r18, 0x02	; 2
+    11fa:	30 e0       	ldi	r19, 0x00	; 0
+    11fc:	e8 01       	movw	r28, r16
+    /* Only Idle TASK stacked -> RQ preempt STK. */
+    /* Don't use p_ccb->p_curr, is not reliable here,
+     * It points to the terminated TASK, we are still evaluating
+     * the next one. */
+    p_ret_tdb                 = p_cdb->p_idle_task;
+    p_ret_tdb->p_tcb->status  = OSEE_TASK_READY_STACKED;
+    11fe:	3b 83       	std	Y+3, r19	; 0x03
+    1200:	2a 83       	std	Y+2, r18	; 0x02
+    p_ret_tdb = NULL;
+  }
+
+  if (is_rq_preemption) {
+    /* Extract from ready queue */
+    (*p_rq)       = p_rq_sn->p_next;
+    1202:	20 81       	ld	r18, Z
+    1204:	31 81       	ldd	r19, Z+1	; 0x01
+    1206:	eb 01       	movw	r28, r22
+    1208:	39 83       	std	Y+1, r19	; 0x01
+    120a:	28 83       	st	Y, r18
+(
+  P2VAR(OsEE_CCB, AUTOMATIC, OS_APPL_DATA) p_ccb,
+  P2VAR(OsEE_SN, AUTOMATIC, OS_APPL_DATA)  p_rq_sn
+)
+{
+  CONSTP2VAR(OsEE_TDB, AUTOMATIC, OS_APPL_DATA) p_tdb = p_rq_sn->p_tdb;
+    120c:	c2 81       	ldd	r28, Z+2	; 0x02
+    120e:	d3 81       	ldd	r29, Z+3	; 0x03
+  CONSTP2VAR(OsEE_TCB, AUTOMATIC, OS_APPL_DATA) p_tcb = p_tdb->p_tcb;
+    1210:	2c 81       	ldd	r18, Y+4	; 0x04
+    1212:	3d 81       	ldd	r19, Y+5	; 0x05
+  /* N.B. The Handling of the preempted SN as Stacked or re-inserted in RQ
+   * is done by the calling function */
+  p_rq_sn->p_next               = NULL;
+  p_tcb->current_core_id        = osEE_get_curr_core_id();
+#else
+  p_rq_sn->p_next               = p_ccb->p_stk_sn;
+    1214:	16 96       	adiw	r26, 0x06	; 6
+    1216:	4d 91       	ld	r20, X+
+    1218:	5c 91       	ld	r21, X
+    121a:	17 97       	sbiw	r26, 0x07	; 7
+    121c:	51 83       	std	Z+1, r21	; 0x01
+    121e:	40 83       	st	Z, r20
+#endif /* OSEE_ALLOW_TASK_MIGRATION */
+  p_ccb->p_stk_sn               = p_rq_sn;
+    1220:	17 96       	adiw	r26, 0x07	; 7
+    1222:	fc 93       	st	X, r31
+    1224:	ee 93       	st	-X, r30
+    1226:	16 97       	sbiw	r26, 0x06	; 6
+  p_ccb->p_curr                 = p_tdb;
+    1228:	cd 93       	st	X+, r28
+    122a:	dc 93       	st	X, r29
+
+  /* Adjust actual priority with dispatch priority: if needed */
+  {
+    CONST(TaskPrio, AUTOMATIC)
+      dispatch_prio = p_tdb->dispatch_prio;
+    122c:	4c 85       	ldd	r20, Y+12	; 0x0c
+    if (p_tcb->current_prio < dispatch_prio) {
+    122e:	f9 01       	movw	r30, r18
+    1230:	51 81       	ldd	r21, Z+1	; 0x01
+    1232:	54 17       	cp	r21, r20
+    1234:	08 f4       	brcc	.+2      	; 0x1238 <osEE_scheduler_core_rq_preempt_stk+0x86>
+      p_tcb->current_prio = dispatch_prio;
+    1236:	41 83       	std	Z+1, r20	; 0x01
+#if (defined(OSEE_ALLOW_TASK_MIGRATION))
+  return p_ret_sn;
+#else
+  return p_ret_tdb;
+#endif /* OSEE_ALLOW_TASK_MIGRATION */
+}
+    1238:	df 91       	pop	r29
+    123a:	cf 91       	pop	r28
+    123c:	1f 91       	pop	r17
+    123e:	0f 91       	pop	r16
+    1240:	08 95       	ret
+
+        p_ret_tcb->status = OSEE_TASK_READY_STACKED;
+        is_rq_preemption  = OSEE_TRUE;
+      }
+    }
+  } else if (p_rq_sn != NULL) {
+    1242:	30 97       	sbiw	r30, 0x00	; 0
+    1244:	51 f0       	breq	.+20     	; 0x125a <osEE_scheduler_core_rq_preempt_stk+0xa8>
+    /* Only Idle TASK stacked -> RQ preempt STK. */
+    /* Don't use p_ccb->p_curr, is not reliable here,
+     * It points to the terminated TASK, we are still evaluating
+     * the next one. */
+    p_ret_tdb                 = p_cdb->p_idle_task;
+    1246:	ec 01       	movw	r28, r24
+    1248:	8c 81       	ldd	r24, Y+4	; 0x04
+    124a:	9d 81       	ldd	r25, Y+5	; 0x05
+    p_ret_tdb->p_tcb->status  = OSEE_TASK_READY_STACKED;
+    124c:	ec 01       	movw	r28, r24
+    124e:	4c 81       	ldd	r20, Y+4	; 0x04
+    1250:	5d 81       	ldd	r21, Y+5	; 0x05
+    1252:	22 e0       	ldi	r18, 0x02	; 2
+    1254:	30 e0       	ldi	r19, 0x00	; 0
+    1256:	ea 01       	movw	r28, r20
+    1258:	d2 cf       	rjmp	.-92     	; 0x11fe <osEE_scheduler_core_rq_preempt_stk+0x4c>
+    osEE_scheduler_stk_next(p_ccb, p_rq_sn);
+  } else {
+#if (defined(OSEE_ALLOW_TASK_MIGRATION))
+    p_ret_sn  = NULL;
+#else
+    p_ret_tdb = NULL;
+    125a:	90 e0       	ldi	r25, 0x00	; 0
+    125c:	80 e0       	ldi	r24, 0x00	; 0
+#endif /* OSEE_ALLOW_TASK_MIGRATION */
+  }
+#if (defined(OSEE_ALLOW_TASK_MIGRATION))
+  return p_ret_sn;
+#else
+  return p_ret_tdb;
+    125e:	ec cf       	rjmp	.-40     	; 0x1238 <osEE_scheduler_core_rq_preempt_stk+0x86>
+
+00001260 <osEE_sn_priority_insert>:
+(
+  P2VAR(OsEE_SN *, AUTOMATIC, OS_APPL_DATA)     pp_first,
+  P2VAR(OsEE_SN  , AUTOMATIC, OS_APPL_DATA)     p_sn_new,
+  CONST(OsEE_bool, AUTOMATIC)                   as_ready
+)
+{
+    1260:	cf 93       	push	r28
+    1262:	df 93       	push	r29
+  CONSTP2VAR(OsEE_TDB, AUTOMATIC, OS_APPL_CONST)  p_tdb_new = p_sn_new->p_tdb;
+    1264:	db 01       	movw	r26, r22
+    1266:	12 96       	adiw	r26, 0x02	; 2
+    1268:	ed 91       	ld	r30, X+
+    126a:	fc 91       	ld	r31, X
+  CONSTP2CONST(OsEE_TCB, AUTOMATIC, OS_APPL_DATA) p_tcb_new = p_tdb_new->p_tcb;
+  CONST(TaskPrio, AUTOMATIC)                  new_task_prio =
+    126c:	41 15       	cp	r20, r1
+    126e:	51 05       	cpc	r21, r1
+    1270:	a1 f0       	breq	.+40     	; 0x129a <osEE_sn_priority_insert+0x3a>
+    1272:	23 85       	ldd	r18, Z+11	; 0x0b
+    (as_ready)?
+      p_tdb_new->ready_prio:
+      p_tcb_new->current_prio;
+  P2VAR(OsEE_SN, AUTOMATIC, OS_APPL_DATA) p_prev          = NULL;
+  P2VAR(OsEE_SN, AUTOMATIC, OS_APPL_DATA) p_curr          = (*pp_first);
+    1274:	dc 01       	movw	r26, r24
+    1276:	ed 91       	ld	r30, X+
+    1278:	fc 91       	ld	r31, X
+  CONSTP2CONST(OsEE_TCB, AUTOMATIC, OS_APPL_DATA) p_tcb_new = p_tdb_new->p_tcb;
+  CONST(TaskPrio, AUTOMATIC)                  new_task_prio =
+    (as_ready)?
+      p_tdb_new->ready_prio:
+      p_tcb_new->current_prio;
+  P2VAR(OsEE_SN, AUTOMATIC, OS_APPL_DATA) p_prev          = NULL;
+    127a:	b0 e0       	ldi	r27, 0x00	; 0
+    127c:	a0 e0       	ldi	r26, 0x00	; 0
+  P2VAR(OsEE_SN, AUTOMATIC, OS_APPL_DATA) p_curr          = (*pp_first);
+  VAR(OsEE_bool, AUTOMATIC)               head_changed    = OSEE_FALSE;
+
+  /* Traverse the queue until needed */
+  while (p_curr != NULL) {
+    127e:	30 97       	sbiw	r30, 0x00	; 0
+    1280:	89 f4       	brne	.+34     	; 0x12a4 <osEE_sn_priority_insert+0x44>
+    } else {
+      break;
+    }
+  }
+
+  if (p_prev != NULL) {
+    1282:	10 97       	sbiw	r26, 0x00	; 0
+    1284:	09 f1       	breq	.+66     	; 0x12c8 <osEE_sn_priority_insert+0x68>
+    p_prev->p_next = p_sn_new;
+    1286:	6d 93       	st	X+, r22
+    1288:	7c 93       	st	X, r23
+    (as_ready)?
+      p_tdb_new->ready_prio:
+      p_tcb_new->current_prio;
+  P2VAR(OsEE_SN, AUTOMATIC, OS_APPL_DATA) p_prev          = NULL;
+  P2VAR(OsEE_SN, AUTOMATIC, OS_APPL_DATA) p_curr          = (*pp_first);
+  VAR(OsEE_bool, AUTOMATIC)               head_changed    = OSEE_FALSE;
+    128a:	90 e0       	ldi	r25, 0x00	; 0
+    128c:	80 e0       	ldi	r24, 0x00	; 0
+  } else {
+    (*pp_first)   = p_sn_new;
+    head_changed  = OSEE_TRUE;
+  }
+
+  p_sn_new->p_next = p_curr;
+    128e:	db 01       	movw	r26, r22
+    1290:	ed 93       	st	X+, r30
+    1292:	fc 93       	st	X, r31
+
+  return head_changed;
+}
+    1294:	df 91       	pop	r29
+    1296:	cf 91       	pop	r28
+    1298:	08 95       	ret
+  CONST(OsEE_bool, AUTOMATIC)                   as_ready
+)
+{
+  CONSTP2VAR(OsEE_TDB, AUTOMATIC, OS_APPL_CONST)  p_tdb_new = p_sn_new->p_tdb;
+  CONSTP2CONST(OsEE_TCB, AUTOMATIC, OS_APPL_DATA) p_tcb_new = p_tdb_new->p_tcb;
+  CONST(TaskPrio, AUTOMATIC)                  new_task_prio =
+    129a:	04 80       	ldd	r0, Z+4	; 0x04
+    129c:	f5 81       	ldd	r31, Z+5	; 0x05
+    129e:	e0 2d       	mov	r30, r0
+    12a0:	21 81       	ldd	r18, Z+1	; 0x01
+    12a2:	e8 cf       	rjmp	.-48     	; 0x1274 <osEE_sn_priority_insert+0x14>
+  VAR(OsEE_bool, AUTOMATIC)               head_changed    = OSEE_FALSE;
+
+  /* Traverse the queue until needed */
+  while (p_curr != NULL) {
+    VAR(TaskPrio, AUTOMATIC)                      prio_to_check;
+    CONSTP2VAR(OsEE_TDB, AUTOMATIC, OS_APPL_DATA) p_cur_tdb = p_curr->p_tdb;
+    12a4:	c2 81       	ldd	r28, Z+2	; 0x02
+    12a6:	d3 81       	ldd	r29, Z+3	; 0x03
+    CONSTP2CONST(OsEE_TCB, AUTOMATIC, OS_APPL_DATA) p_cur_tcb = p_cur_tdb->p_tcb;
+
+    if (as_ready) {
+    12a8:	41 15       	cp	r20, r1
+    12aa:	51 05       	cpc	r21, r1
+    12ac:	41 f0       	breq	.+16     	; 0x12be <osEE_sn_priority_insert+0x5e>
+      prio_to_check = p_cur_tdb->ready_prio;
+    12ae:	3b 85       	ldd	r19, Y+11	; 0x0b
+    } else {
+      prio_to_check = p_cur_tcb->current_prio;
+    }
+
+    if (new_task_prio <= prio_to_check)
+    12b0:	32 17       	cp	r19, r18
+    12b2:	38 f3       	brcs	.-50     	; 0x1282 <osEE_sn_priority_insert+0x22>
+    {
+      p_prev = p_curr;
+      p_curr = p_curr->p_next;
+    12b4:	df 01       	movw	r26, r30
+    12b6:	01 90       	ld	r0, Z+
+    12b8:	f0 81       	ld	r31, Z
+    12ba:	e0 2d       	mov	r30, r0
+    12bc:	e0 cf       	rjmp	.-64     	; 0x127e <osEE_sn_priority_insert+0x1e>
+    CONSTP2CONST(OsEE_TCB, AUTOMATIC, OS_APPL_DATA) p_cur_tcb = p_cur_tdb->p_tcb;
+
+    if (as_ready) {
+      prio_to_check = p_cur_tdb->ready_prio;
+    } else {
+      prio_to_check = p_cur_tcb->current_prio;
+    12be:	0c 80       	ldd	r0, Y+4	; 0x04
+    12c0:	dd 81       	ldd	r29, Y+5	; 0x05
+    12c2:	c0 2d       	mov	r28, r0
+    12c4:	39 81       	ldd	r19, Y+1	; 0x01
+    12c6:	f4 cf       	rjmp	.-24     	; 0x12b0 <osEE_sn_priority_insert+0x50>
+  }
+
+  if (p_prev != NULL) {
+    p_prev->p_next = p_sn_new;
+  } else {
+    (*pp_first)   = p_sn_new;
+    12c8:	dc 01       	movw	r26, r24
+    12ca:	6d 93       	st	X+, r22
+    12cc:	7c 93       	st	X, r23
+    head_changed  = OSEE_TRUE;
+    12ce:	81 e0       	ldi	r24, 0x01	; 1
+    12d0:	90 e0       	ldi	r25, 0x00	; 0
+    12d2:	dd cf       	rjmp	.-70     	; 0x128e <osEE_sn_priority_insert+0x2e>
+
+000012d4 <osEE_scheduler_rq_insert>:
+  P2VAR(OsEE_RQ, AUTOMATIC, OS_APPL_DATA)       p_rq,
+  P2VAR(OsEE_SN, AUTOMATIC, OS_APPL_DATA)       p_sn_new,
+  CONSTP2VAR(OsEE_TDB, AUTOMATIC, OS_APPL_DATA) p_tdb_new
+)
+{
+  p_sn_new->p_tdb = p_tdb_new;
+    12d4:	fb 01       	movw	r30, r22
+    12d6:	53 83       	std	Z+3, r21	; 0x03
+    12d8:	42 83       	std	Z+2, r20	; 0x02
+
+#if (!defined(OSEE_SCHEDULER_GLOBAL))
+  return osEE_sn_priority_insert(p_rq, p_sn_new, OSEE_TRUE);
+    12da:	41 e0       	ldi	r20, 0x01	; 1
+    12dc:	50 e0       	ldi	r21, 0x00	; 0
+    12de:	0c 94 30 09 	jmp	0x1260	; 0x1260 <osEE_sn_priority_insert>
+
+000012e2 <osEE_scheduler_core_pop_running>:
+  osEE_scheduler_core_pop_running
+(
+  P2VAR(OsEE_CDB, AUTOMATIC, OS_APPL_DATA)  p_cdb,
+  P2VAR(OsEE_RQ,  AUTOMATIC, OS_APPL_DATA)  p_rq
+)
+{
+    12e2:	ef 92       	push	r14
+    12e4:	ff 92       	push	r15
+    12e6:	0f 93       	push	r16
+    12e8:	1f 93       	push	r17
+    12ea:	cf 93       	push	r28
+    12ec:	df 93       	push	r29
+    12ee:	8c 01       	movw	r16, r24
+  CONSTP2VAR(OsEE_CCB, AUTOMATIC, OS_APPL_DATA) p_ccb         = p_cdb->p_ccb;
+    12f0:	fc 01       	movw	r30, r24
+    12f2:	c0 81       	ld	r28, Z
+    12f4:	d1 81       	ldd	r29, Z+1	; 0x01
+  CONSTP2VAR(OsEE_SN, AUTOMATIC, OS_APPL_DATA)  p_prev_stk_sn = p_ccb->p_stk_sn;
+    12f6:	ee 80       	ldd	r14, Y+6	; 0x06
+    12f8:	ff 80       	ldd	r15, Y+7	; 0x07
+  CONSTP2VAR(OsEE_SN, AUTOMATIC, OS_APPL_DATA)
+    p_next_stk_sn = p_prev_stk_sn->p_next;
+
+  /* Pop the current STK SN, if not IDLE TASK. This function MUST not be
+   * called inside IDLE TASK. */
+  p_ccb->p_stk_sn = p_next_stk_sn;
+    12fa:	f7 01       	movw	r30, r14
+    12fc:	80 81       	ld	r24, Z
+    12fe:	91 81       	ldd	r25, Z+1	; 0x01
+    1300:	9f 83       	std	Y+7, r25	; 0x07
+    1302:	8e 83       	std	Y+6, r24	; 0x06
+   * */
+
+  {
+    /* Handle if RQ preempt STK (It manipulate the core data structures) */
+    CONSTP2VAR(OsEE_preempt, AUTOMATIC, OS_APPL_DATA)
+      p_preempt = osEE_scheduler_core_rq_preempt_stk(p_cdb, p_rq);
+    1304:	c8 01       	movw	r24, r16
+    1306:	0e 94 d9 08 	call	0x11b2	; 0x11b2 <osEE_scheduler_core_rq_preempt_stk>
+    CONSTP2CONST(OsEE_SN, AUTOMATIC, OS_APPL_DATA)
+      p_curr_stk_sn = p_ccb->p_stk_sn;
+
+    /* If not, resume current STK first */
+    if (p_preempt == NULL) {
+    130a:	89 2b       	or	r24, r25
+    130c:	41 f4       	brne	.+16     	; 0x131e <osEE_scheduler_core_pop_running+0x3c>
+  {
+    /* Handle if RQ preempt STK (It manipulate the core data structures) */
+    CONSTP2VAR(OsEE_preempt, AUTOMATIC, OS_APPL_DATA)
+      p_preempt = osEE_scheduler_core_rq_preempt_stk(p_cdb, p_rq);
+    CONSTP2CONST(OsEE_SN, AUTOMATIC, OS_APPL_DATA)
+      p_curr_stk_sn = p_ccb->p_stk_sn;
+    130e:	ee 81       	ldd	r30, Y+6	; 0x06
+    1310:	ff 81       	ldd	r31, Y+7	; 0x07
+      if (p_ccb->p_curr->task_type <= OSEE_TASK_TYPE_EXTENDED) {
+        osEE_call_post_task_hook(p_ccb);
+      }
+#endif /* OSEE_HAS_POSTTASKHOOK */
+
+      if (p_curr_stk_sn != NULL) {
+    1312:	30 97       	sbiw	r30, 0x00	; 0
+    1314:	61 f0       	breq	.+24     	; 0x132e <osEE_scheduler_core_pop_running+0x4c>
+        /* Resume STK TASK */
+        p_tdb_stk = p_curr_stk_sn->p_tdb;
+    1316:	82 81       	ldd	r24, Z+2	; 0x02
+    1318:	93 81       	ldd	r25, Z+3	; 0x03
+      } else {
+        /* Resume IDLE TASK */
+        p_tdb_stk = p_cdb->p_idle_task;
+      }
+
+      p_ccb->p_curr            = p_tdb_stk;
+    131a:	99 83       	std	Y+1, r25	; 0x01
+    131c:	88 83       	st	Y, r24
+    }
+#endif /* OSEE_ALLOW_TASK_MIGRATION */
+  }
+
+  return p_prev_stk_sn;
+}
+    131e:	c7 01       	movw	r24, r14
+    1320:	df 91       	pop	r29
+    1322:	cf 91       	pop	r28
+    1324:	1f 91       	pop	r17
+    1326:	0f 91       	pop	r16
+    1328:	ff 90       	pop	r15
+    132a:	ef 90       	pop	r14
+    132c:	08 95       	ret
+      if (p_curr_stk_sn != NULL) {
+        /* Resume STK TASK */
+        p_tdb_stk = p_curr_stk_sn->p_tdb;
+      } else {
+        /* Resume IDLE TASK */
+        p_tdb_stk = p_cdb->p_idle_task;
+    132e:	f8 01       	movw	r30, r16
+    1330:	84 81       	ldd	r24, Z+4	; 0x04
+    1332:	95 81       	ldd	r25, Z+5	; 0x05
+    1334:	f2 cf       	rjmp	.-28     	; 0x131a <osEE_scheduler_core_pop_running+0x38>
+
+00001336 <__udivmodsi4>:
+    1336:	a1 e2       	ldi	r26, 0x21	; 33
+    1338:	1a 2e       	mov	r1, r26
+    133a:	aa 1b       	sub	r26, r26
+    133c:	bb 1b       	sub	r27, r27
+    133e:	fd 01       	movw	r30, r26
+    1340:	0d c0       	rjmp	.+26     	; 0x135c <__udivmodsi4_ep>
+
+00001342 <__udivmodsi4_loop>:
+    1342:	aa 1f       	adc	r26, r26
+    1344:	bb 1f       	adc	r27, r27
+    1346:	ee 1f       	adc	r30, r30
+    1348:	ff 1f       	adc	r31, r31
+    134a:	a2 17       	cp	r26, r18
+    134c:	b3 07       	cpc	r27, r19
+    134e:	e4 07       	cpc	r30, r20
+    1350:	f5 07       	cpc	r31, r21
+    1352:	20 f0       	brcs	.+8      	; 0x135c <__udivmodsi4_ep>
+    1354:	a2 1b       	sub	r26, r18
+    1356:	b3 0b       	sbc	r27, r19
+    1358:	e4 0b       	sbc	r30, r20
+    135a:	f5 0b       	sbc	r31, r21
+
+0000135c <__udivmodsi4_ep>:
+    135c:	66 1f       	adc	r22, r22
+    135e:	77 1f       	adc	r23, r23
+    1360:	88 1f       	adc	r24, r24
+    1362:	99 1f       	adc	r25, r25
+    1364:	1a 94       	dec	r1
+    1366:	69 f7       	brne	.-38     	; 0x1342 <__udivmodsi4_loop>
+    1368:	60 95       	com	r22
+    136a:	70 95       	com	r23
+    136c:	80 95       	com	r24
+    136e:	90 95       	com	r25
+    1370:	9b 01       	movw	r18, r22
+    1372:	ac 01       	movw	r20, r24
+    1374:	bd 01       	movw	r22, r26
+    1376:	cf 01       	movw	r24, r30
+    1378:	08 95       	ret
+
+0000137a <__tablejump2__>:
+    137a:	ee 0f       	add	r30, r30
+    137c:	ff 1f       	adc	r31, r31
+    137e:	05 90       	lpm	r0, Z+
+    1380:	f4 91       	lpm	r31, Z
+    1382:	e0 2d       	mov	r30, r0
+    1384:	09 94       	ijmp
+
+00001386 <_exit>:
+    1386:	f8 94       	cli
+
+00001388 <__stop_program>:
+    1388:	ff cf       	rjmp	.-2      	; 0x1388 <__stop_program>

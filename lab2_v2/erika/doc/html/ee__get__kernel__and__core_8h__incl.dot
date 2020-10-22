@@ -1,0 +1,50 @@
+digraph "inc/ee_get_kernel_and_core.h"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="inc/ee_get_kernel_and\l_core.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="HAL internal."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="ee_platform_types.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ee__platform__types_8h.html",tooltip="Platform Types."];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="ee_cfg.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ee__cfg_8h.html",tooltip="Common Configuration Collector."];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="ee_applcfg.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="ee_arch_override.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ee__arch__override_8h.html",tooltip="Override default settings used in the architecture."];
+  Node2 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="ee_compiler.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ee__compiler_8h.html",tooltip="Compilers Abstraction File."];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="ee_compiler_cfg.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ee__compiler__cfg_8h.html",tooltip="Compilers Cfg Collector."];
+  Node7 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="limits.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node2 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="stddef.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node2 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="stdint.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node2 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="ee_avr8_compiler.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ee__avr8__compiler_8h.html",tooltip="AVR8 GCC Compiler Definitions."];
+  Node11 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="avr/interrupt.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node2 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="avr/io.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node1 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="ee_kernel_types.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ee__kernel__types_8h.html",tooltip="OSEK Kernel Internal Types."];
+  Node14 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 -> Node15 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="ee_api_types.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ee__api__types_8h.html",tooltip="OSEK Kernel API Types."];
+  Node15 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 -> Node16 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="ee_oo_api_extension.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ee__oo__api__extension_8h.html",tooltip="OSEK Kernel Extended APIs."];
+  Node16 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 -> Node15 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 -> Node17 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="ee_scheduler_types.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ee__scheduler__types_8h.html",tooltip="Contains the types for different scheduler data structures."];
+  Node17 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 -> Node15 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

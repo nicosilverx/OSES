@@ -1,0 +1,35 @@
+\hypertarget{structOsEE__AlarmDB__tag}{}\doxysection{Os\+E\+E\+\_\+\+Alarm\+D\+B\+\_\+tag Struct Reference}
+\label{structOsEE__AlarmDB__tag}\index{OsEE\_AlarmDB\_tag@{OsEE\_AlarmDB\_tag}}
+
+
+Alarm descriptor block.  
+
+
+
+
+{\ttfamily \#include $<$ee\+\_\+kernel\+\_\+types.\+h$>$}
+
+
+
+Collaboration diagram for Os\+E\+E\+\_\+\+Alarm\+D\+B\+\_\+tag\+:
+% FIG 0
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structOsEE__AlarmDB__tag_a85b1b8c21385f787e167ca1215e5094d}\label{structOsEE__AlarmDB__tag_a85b1b8c21385f787e167ca1215e5094d}} 
+\mbox{\hyperlink{ee__kernel__types_8h_a67a3b1015e569eeedc463b307d7eb24c}{Os\+E\+E\+\_\+\+Alarm\+CB}} $\ast$ \mbox{\hyperlink{structOsEE__AlarmDB__tag_a85b1b8c21385f787e167ca1215e5094d}{p\+\_\+alarm\+\_\+cb}}
+\begin{DoxyCompactList}\small\item\em pointer to the alarm control block \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structOsEE__AlarmDB__tag_aeefd1d93c6cf2615d2c0372be6ce9272}\label{structOsEE__AlarmDB__tag_aeefd1d93c6cf2615d2c0372be6ce9272}} 
+struct \mbox{\hyperlink{structOsEE__TriggerDB__tag}{Os\+E\+E\+\_\+\+Trigger\+D\+B\+\_\+tag}} const  $\ast$ \mbox{\hyperlink{structOsEE__AlarmDB__tag_aeefd1d93c6cf2615d2c0372be6ce9272}{p\+\_\+trigger\+\_\+db}}
+\begin{DoxyCompactList}\small\item\em pointer to the trigger descriptor \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structOsEE__AlarmDB__tag_ad9d8960021ddf09fb5fa8a44b88d5a2d}\label{structOsEE__AlarmDB__tag_ad9d8960021ddf09fb5fa8a44b88d5a2d}} 
+\mbox{\hyperlink{structOsEE__action}{Os\+E\+E\+\_\+action}} \mbox{\hyperlink{structOsEE__AlarmDB__tag_ad9d8960021ddf09fb5fa8a44b88d5a2d}{action}}
+\begin{DoxyCompactList}\small\item\em notification action to be implemented once the alarm fires \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+It stores the Flash information about an alarm. This data structure is present only if both Alarms and Schedule Tables are present in the application. Otherwise, the content of this data structure is integrated inside the trigger. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+inc/\mbox{\hyperlink{ee__kernel__types_8h}{ee\+\_\+kernel\+\_\+types.\+h}}\end{DoxyCompactItemize}

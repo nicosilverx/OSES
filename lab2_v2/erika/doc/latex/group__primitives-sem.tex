@@ -1,0 +1,97 @@
+\hypertarget{group__primitives-sem}{}\doxysection{Counting Semaphores}
+\label{group__primitives-sem}\index{Counting Semaphores@{Counting Semaphores}}
+
+
+This section describes in detail the primitives provided by E\+R\+I\+K\+A3 to support counting semaphores as a way to implement mutual exclusion and synchronization between tasks.  
+
+
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__primitives-sem_ga1574c4988376d4da5d86cc2a497c8554}\label{group__primitives-sem_ga1574c4988376d4da5d86cc2a497c8554}} 
+typedef struct \mbox{\hyperlink{structOsEE__sem__tag}{Os\+E\+E\+\_\+sem\+\_\+tag}} $\ast$ \mbox{\hyperlink{group__primitives-sem_ga1574c4988376d4da5d86cc2a497c8554}{Sem\+Ref\+Type}}
+\begin{DoxyCompactList}\small\item\em Pointer to a Semaphore data structure. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__primitives-sem_ga9eb6a71d96d32f3abce772439cdb1553}\label{group__primitives-sem_ga9eb6a71d96d32f3abce772439cdb1553}} 
+typedef \mbox{\hyperlink{ee__oo__api__extension_8h_ac8460cb6d056c32024f4c220cc68f1a1}{O\+S\+E\+E\+\_\+\+C\+O\+U\+N\+T\+\_\+\+T\+Y\+PE}} \mbox{\hyperlink{group__primitives-sem_ga9eb6a71d96d32f3abce772439cdb1553}{Count\+Type}}
+\begin{DoxyCompactList}\small\item\em Type for the semaphore counter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{ee__api__types_8h_a79bf54a17078edb124b553c51129396a}{Status\+Type}} \mbox{\hyperlink{group__primitives-sem_ga5bb3b8183f625a50136af41b26dadc61}{Wait\+Sem}} (\mbox{\hyperlink{group__primitives-sem_ga1574c4988376d4da5d86cc2a497c8554}{Sem\+Ref\+Type}} Sem)
+\begin{DoxyCompactList}\small\item\em Semaphore blocking wait. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ee__api__types_8h_a79bf54a17078edb124b553c51129396a}{Status\+Type}} \mbox{\hyperlink{group__primitives-sem_gaf7a0e230d519a6b2564f6280b7288df4}{Post\+Sem}} (\mbox{\hyperlink{group__primitives-sem_ga1574c4988376d4da5d86cc2a497c8554}{Sem\+Ref\+Type}} Sem)
+\begin{DoxyCompactList}\small\item\em Post on a semaphore. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Counting semaphores are an R\+T\+OS abstractions of an integer counter coupled with a blocking queue. Basically two main operations are possible on a semaphore, which are {\itshape waiting} on a semaphore, which results in decrementing the counter if the counter has a value greater than 0, or blocking the running task if the counter is 0, and {\itshape posting} on a semaphore, which results in a counter increment if there are no task blocked, or in the unblock of a blocked task otherwise.
+
+E\+R\+I\+K\+A3 counting semaphores exports a simple interface which covers the basic functionalities of a semaphore, like\+:
+\begin{DoxyItemize}
+\item Initializing a semaphore ( Init\+Sem() );
+\item Waiting on a semaphore in a blocking ( \mbox{\hyperlink{group__primitives-sem_ga5bb3b8183f625a50136af41b26dadc61}{Wait\+Sem()}} ) or non-\/blocking way ( Try\+Wait\+Sem() );
+\item Posting on a semaphore ( \mbox{\hyperlink{group__primitives-sem_gaf7a0e230d519a6b2564f6280b7288df4}{Post\+Sem()}} );
+\item Getting the value of a semaphore ( Get\+Value\+Sem() ).
+\end{DoxyItemize}
+
+Since waiting on a semaphore may result in blocking the running task, the \mbox{\hyperlink{group__primitives-sem_ga5bb3b8183f625a50136af41b26dadc61}{Wait\+Sem()}} primitive should be called only if the calling task has a separate stack allocated to it. For this reason, the \mbox{\hyperlink{group__primitives-sem_ga5bb3b8183f625a50136af41b26dadc61}{Wait\+Sem()}} primitive can only be called by extended tasks in conformance classes E\+C\+C1 and E\+C\+C2. Semaphores are available as non blocking in conformance classes B\+C\+C1 and B\+C\+C2.
+
+Semaphores can be allocated statically as a global variable, which allow to bypass the call to Init\+Sem() .
+
+Semaphores definition are not listed in the O\+IL file; semaphore primitives receive as a parameter a pointer to the semaphore descriptor.
+
+The current semaphore implementation does {\itshape not} support multicore systems. That is, semaphores must be defined and used locally to the same C\+PU.
+
+Counting semaphores {\itshape do not} avoid Priority Inversion problems. Please use Resources instead.
+
+Counting semaphores are not part of the O\+S\+E\+K/\+V\+DX / A\+U\+T\+O\+S\+AR standards. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__primitives-sem_gaf7a0e230d519a6b2564f6280b7288df4}\label{group__primitives-sem_gaf7a0e230d519a6b2564f6280b7288df4}} 
+\index{Counting Semaphores@{Counting Semaphores}!PostSem@{PostSem}}
+\index{PostSem@{PostSem}!Counting Semaphores@{Counting Semaphores}}
+\doxysubsubsection{\texorpdfstring{PostSem()}{PostSem()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ee__api__types_8h_a79bf54a17078edb124b553c51129396a}{Status\+Type}} Post\+Sem (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__primitives-sem_ga1574c4988376d4da5d86cc2a497c8554}{Sem\+Ref\+Type}}}]{Sem }\end{DoxyParamCaption})}
+
+This primitive unblocks a task eventually blocked on the semaphore. If there are no tasks blocked on the semaphore, then the semaphore counter is incremented by one.
+
+Conformance Classes\+: E\+C\+C1, E\+C\+C2
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Sem} & The semaphore used by the primitive. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The function returns a Status\+Type.
+\begin{DoxyItemize}
+\item E\+\_\+\+OK No error.
+\item E\+\_\+\+O\+S\+\_\+\+V\+A\+L\+UE The semaphore has not been incremented because its counter was equal to the semaphore maximum value E\+E\+\_\+\+M\+A\+X\+\_\+\+S\+E\+M\+\_\+\+C\+O\+U\+N\+T\+ER. 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__primitives-sem_ga5bb3b8183f625a50136af41b26dadc61}\label{group__primitives-sem_ga5bb3b8183f625a50136af41b26dadc61}} 
+\index{Counting Semaphores@{Counting Semaphores}!WaitSem@{WaitSem}}
+\index{WaitSem@{WaitSem}!Counting Semaphores@{Counting Semaphores}}
+\doxysubsubsection{\texorpdfstring{WaitSem()}{WaitSem()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ee__api__types_8h_a79bf54a17078edb124b553c51129396a}{Status\+Type}} Wait\+Sem (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__primitives-sem_ga1574c4988376d4da5d86cc2a497c8554}{Sem\+Ref\+Type}}}]{Sem }\end{DoxyParamCaption})}
+
+If the semaphore counter is greater than 0, then the counter is decremented by one. If the counter has a value of 0, then the calling (running) task blocks.
+
+This function can only be called by extended tasks in conformance classes E\+C\+C1 and E\+C\+C2.
+
+Conformance Classes\+: E\+C\+C1, E\+C\+C2
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Sem} & The semaphore used by the primitive. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The function returns a Status\+Type.
+\begin{DoxyItemize}
+\item E\+\_\+\+OK No error.
+\item E\+\_\+\+O\+S\+\_\+\+C\+A\+L\+L\+E\+V\+EL (Extended) The primitive was called at interrupt level.
+\item E\+\_\+\+O\+S\+\_\+\+R\+E\+S\+O\+U\+R\+CE (Extended) The calling task occupies resources.
+\item E\+\_\+\+O\+S\+\_\+\+A\+C\+C\+E\+SS (Extended) The calling task is not an extended task. 
+\end{DoxyItemize}
+\end{DoxyReturn}

@@ -1,0 +1,139 @@
+\hypertarget{apireference_api-intro}{}\doxysection{Introduction}\label{apireference_api-intro}
+This section contains a description of the various A\+P\+Is provided by E\+R\+I\+K\+A3. In the description of those A\+P\+Is, please note that E\+R\+I\+K\+A3 can be configured to allow a normal (named Standard Status) or extended (named Extended Status) error recognition.
+
+Extended status is mainly used to check as many errors as possible during the Debug phase. Once the application has been debugged, some error checking can be disabled, saving execution time and code footprint. Standard and Extended status are enabled in the O\+IL configuration file. When describing E\+R\+I\+K\+A3 primitive return values, an \+\_\+(\+Extended)\+\_\+ token near the error description means that the error is raised only when the system runs with extended status.\hypertarget{apireference_api-cc}{}\doxysection{Conformance and Scalability Classes}\label{apireference_api-cc}
+The O\+S\+E\+K/\+V\+DX standard traditionally provided a set of configurations, named {\itshape Conformance Classes} aimed to identify subsets of the OS A\+PI. The main idea behind these subsets is to reduce the OS footprint by removing functionalities not needed in a specific application configuration. The idea of Conformance Classes has been later on expanded by the A\+U\+T\+O\+S\+AR OS, which provided four {\itshape Scalability Classes} meant to selectively expand the O\+S\+E\+K/\+V\+DX A\+PI with functionality such as Memory and timing protection.
+
+In order to support this kind of configurability, the E\+R\+I\+K\+A3 Kernel provides the following features\+:
+\begin{DoxyItemize}
+\item The O\+S\+E\+K/\+V\+DX Conformance Classes can be directly specified using the {\itshape K\+E\+R\+N\+EL} attribute in the {\itshape OS} part of the O\+IL File.
+\item The A\+U\+T\+O\+S\+AR OS Scalability Classes are not directly specifiable as a configuration option because the various A\+U\+T\+O\+S\+AR OS Extensions to O\+S\+E\+K/\+V\+DX can be selected one by one directly in the O\+IL file (or in the A\+U\+T\+O\+S\+AR X\+ML File).
+\end{DoxyItemize}
+
+About the Conformance Classes, there are four Conformance Classes, named B\+C\+C1, B\+C\+C2, E\+C\+C1, E\+C\+C2.
+
+Conformance classes starting with the letter {\itshape B} (that is, B\+C\+C1 and B\+C\+C2) only support Basic Tasks. Conformance classes starting with the letter {\itshape E} (that is, E\+C\+C1 and E\+C\+C2) support both Basic Tasks and Extended Tasks.
+
+B\+C\+C1 and B\+C\+C2 conformance classes are designed to be as small as possible, and in particular these conformance classes are the most suited to implement small concurrent systems with little R\+AM footprint, thanks to the stack sharing that can be obtained between basic tasks.
+
+E\+C\+C1 and E\+C\+C2 conformance classes are designed to support synchronization primitives that implies the usage of separate stacks.
+
+Conformance classes ending with the number 1 (that is, B\+C\+C1 and E\+C\+C1) does not store pending activations. Conformance classes ending with the number 2 (that is, B\+C\+C2 and E\+C\+C2) allow Basic Tasks to have one or more pending activations (the exact number is specified in the {\itshape A\+C\+T\+I\+V\+A\+C\+T\+I\+ON} parameter of the {\itshape T\+A\+SK} object in the O\+IL file.
+
+More than one task with the same priority can coexist at the same time for all the four conformance classes.
+
+The ready queue implementation used in the actual configuration can be specified with the {\itshape RQ} attribute. Possible values are\+:
+
+
+\begin{DoxyItemize}
+\item {\itshape LL}, which stands for {\itshape Linked List}, which is a linear queue with {\itshape O(n)} access time where n is the number of tasks in the ready queue (using a linear queue allow the minimization of the overall OS R\+AM footprint).
+\item {\itshape MQ}, which stands for {\itshape Multiple Queues}, which is a bitfield implementation that exposes an {\itshape O(1)} complexity that is independent on the number of tasks in the system. The system maps each separate priority in a bitfield, and the data type storing the task priority is statically defined to be the smallest type (8, 16, 31, or 64 bit) able to store all the system priorities.
+\end{DoxyItemize}
+
+The following is an example of configuration of the conformance class inside the O\+IL file\+: \begin{DoxyVerb}KERNEL_TYPE = OSEK {
+  CLASS = ECC1;
+  RQ = MQ;
+};
+\end{DoxyVerb}
+
+
+Tasks, Resources, Alarms, and Application modes are codified as integers, so there can be up to {\itshape 2$^\wedge$n-\/1} different entities, where {\itshape n} is the number of bits of the C\+PU register width (e.\+g., 32 for a 32 bit C\+PU). Please note that for multicores these I\+Ds are assigned incrementally across the system (and not locally to each core as it happened with E\+R\+I\+K\+A2).
+
+The following Table shows the current limits with respect to the number of OS objects allowed in the system. {\itshape nbits} means the number of bits stored in a microcontroller register (16 on a 16 bit machine, 32 on a 32 bit machine, with a minimum value of 16).
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Feature }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ B\+C\+C1 }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ B\+C\+C2 }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ E\+C\+C1 }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ E\+C\+C2  }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Feature }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ B\+C\+C1 }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ B\+C\+C2 }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ E\+C\+C1 }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ E\+C\+C2  }\\\cline{1-5}
+\endhead
+Multiple requesting of task activation &no &yes &no &BT\+: yes; ET\+: no  \\\cline{1-5}
+Number of tasks which are not in the {\itshape suspended} state &memory only limit &memory only limit &memory only limit (any combination of B\+T/\+ET) &memory only limit (any combination of B\+T/\+ET)  \\\cline{1-5}
+More than one task per priority &yes &yes &yes &yes  \\\cline{1-5}
+Number of events per task &-\/ &-\/ &nbits &nbits  \\\cline{1-5}
+Number of task priorities &max 127 &max 127 &max 127 &max 127  \\\cline{1-5}
+Resources &{\itshape 2$^\wedge$nbits-\/1} (including R\+E\+S\+\_\+\+S\+C\+H\+E\+D\+U\+L\+ER) &{\itshape 2$^\wedge$nbits-\/1} (including R\+E\+S\+\_\+\+S\+C\+H\+E\+D\+U\+L\+ER) &{\itshape 2$^\wedge$nbits-\/1} (including R\+E\+S\+\_\+\+S\+C\+H\+E\+D\+U\+L\+ER) &{\itshape 2$^\wedge$nbits-\/1} (including R\+E\+S\+\_\+\+S\+C\+H\+E\+D\+U\+L\+ER)  \\\cline{1-5}
+Internal Resources &no limit &no limit &no limit &no limit  \\\cline{1-5}
+Alarms &{\itshape 2$^\wedge$\{nbits\}-\/1} &{\itshape 2$^\wedge$\{nbits\}-\/1} &{\itshape 2$^\wedge$\{nbits\}-\/1} &{\itshape 2$^\wedge$\{nbits\}-\/1}  \\\cline{1-5}
+Application modes &{\itshape 2$^\wedge$\{nbits\}-\/1} &{\itshape 2$^\wedge$\{nbits\}-\/1} &{\itshape 2$^\wedge$\{nbits\}-\/1} &{\itshape 2$^\wedge$\{nbits\}-\/1}  \\\cline{1-5}
+\end{longtabu}
+\hypertarget{apireference_api-primitives}{}\doxysection{Available primitives}\label{apireference_api-primitives}
+E\+R\+I\+K\+A3 provides a set of primitives that can be called in different situations. The complete list of primitives is listed in the Table below, together with the locations where it is legal to call these functions. {\itshape X($\ast$)} means that the feature is an additional feature of E\+R\+I\+K\+A3 that is not part of the O\+S\+EK Standard. {\itshape X($^\wedge$)} means that the function cannot be called with \char`\"{}himself\char`\"{} as parameter. {\itshape C} indicates that validity is only Checked in Extended status by E\+\_\+\+O\+S\+\_\+\+C\+A\+L\+L\+E\+V\+EL
+
+The first table is related to the usage in Tasks, I\+SR, Alarm Callback
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{12}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Service }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Idle Hook }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Task }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ I\+S\+R1 }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ I\+S\+R2 }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Error Hook }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Pre\+Task Hook }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Post\+Task Hook }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Startup Hook }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Shutdown Hook }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Alarm Callback }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Protection Hook  }\\\cline{1-12}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Service }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Idle Hook }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Task }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ I\+S\+R1 }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ I\+S\+R2 }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Error Hook }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Pre\+Task Hook }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Post\+Task Hook }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Startup Hook }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Shutdown Hook }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Alarm Callback }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Protection Hook  }\\\cline{1-12}
+\endhead
+\mbox{\hyperlink{group__primitives-task_ga9d7cac8cf0b035942325538ba01ba7c6}{Activate\+Task()}} &X($\ast$) &X &&X &&&&&&&\\\cline{1-12}
+\mbox{\hyperlink{group__primitives-task_ga83c21cbaa47c5ac5cd56b7ba6490b8ca}{Terminate\+Task()}} &&X &&C &&&&&&&\\\cline{1-12}
+\mbox{\hyperlink{group__primitives-task_ga89ce30708e79048336a17c62bb47e1c7}{Chain\+Task()}} &&X &&C &&&&&&&\\\cline{1-12}
+\mbox{\hyperlink{group__primitives-task_gab4c3463247a1aa258800f903b0a52a9d}{Schedule()}} &&X &&C &&&&&&&\\\cline{1-12}
+\mbox{\hyperlink{group__primitives-task_ga6b5f9ab90c9fc8697f14e5741167ef4f}{Get\+Task\+I\+D()}} &&X &&X &X &X &X &&&&X  \\\cline{1-12}
+\mbox{\hyperlink{group__primitives-task_ga885470501db458f64bb820f1a82593bb}{Get\+Task\+State()}} &X($\ast$$^\wedge$) &X &&X($^\wedge$) &X &X &X &&&&\\\cline{1-12}
+\mbox{\hyperlink{group__primitives-interrupt_ga071764bd533d349d7b74c1f0eba27e2d}{Disable\+All\+Interrupts()}} &X($\ast$) &X &X &X &&&&&&&\\\cline{1-12}
+\mbox{\hyperlink{group__primitives-interrupt_gae85134ff704512cc311c33c0b45cef5f}{Enable\+All\+Interrupts()}} &X($\ast$) &X &X &X &&&&&&&\\\cline{1-12}
+\mbox{\hyperlink{group__primitives-interrupt_ga2de84d7e2cb952f13a22752454283db5}{Suspend\+All\+Interrupts()}} &X($\ast$) &X &X &X &X &X &X &&&X &\\\cline{1-12}
+\mbox{\hyperlink{group__primitives-interrupt_ga5e78cef9a3dbbdbaa85bb2e228051c93}{Resume\+All\+Interrupts()}} &X($\ast$) &X &X &X &X &X &X &&&X &\\\cline{1-12}
+\mbox{\hyperlink{group__primitives-interrupt_ga04bd5d41274b9695cf55e0341092ba66}{Suspend\+O\+S\+Interrupts()}} &X($\ast$) &X &X &X &&&&&&&\\\cline{1-12}
+\mbox{\hyperlink{group__primitives-interrupt_ga7c49cf33445ba4b9efe4507f98ce7ae5}{Resume\+O\+S\+Interrupts()}} &X($\ast$) &X &X &X &&&&&&&\\\cline{1-12}
+\mbox{\hyperlink{group__primitives-resource_ga46ad16cac20fafd01dedd9d5ff8adc8c}{Get\+Resource()}} &X($\ast$) &X &&X &&&&&&&\\\cline{1-12}
+\mbox{\hyperlink{group__primitives-resource_gaa64c380bffc916eb1ba070524cd92584}{Release\+Resource()}} &X($\ast$) &X &&X &&&&&&&\\\cline{1-12}
+\mbox{\hyperlink{group__primitives-event_gaac434a0543f07263c453d1519a0205ac}{Set\+Event()}} &X($\ast$) &X &&X &&&&&&&\\\cline{1-12}
+\mbox{\hyperlink{group__primitives-event_ga73dc06d8917f98bdd86f3a4276dd7390}{Clear\+Event()}} &&X &&C &&&&&&&\\\cline{1-12}
+\mbox{\hyperlink{group__primitives-event_ga35db1fc60a40d92bd5b9c7d2b710cd83}{Get\+Event()}} &X($\ast$$^\wedge$) &X &&X($^\wedge$) &X &X &X &&&&\\\cline{1-12}
+\mbox{\hyperlink{group__primitives-event_gaefbe4d95d1e197c7bbecdb12dab07097}{Wait\+Event()}} &&X &&C &&&&&&&\\\cline{1-12}
+\mbox{\hyperlink{group__primitives-alarm_gac2896b1e98a206eaa45d3d76f2a184a9}{Get\+Alarm\+Base()}} &X($\ast$) &X &&X &X &X &X &&&&\\\cline{1-12}
+\mbox{\hyperlink{group__primitives-alarm_gaf4ec030009919c1e52a1fb6f654e744e}{Get\+Alarm()}} &X($\ast$) &X &&X &X &X &X &&&&\\\cline{1-12}
+\mbox{\hyperlink{group__primitives-alarm_ga53c97ea958364f5d99684f871a462aad}{Set\+Rel\+Alarm()}} &X($\ast$) &X &&X &&&&&&&\\\cline{1-12}
+\mbox{\hyperlink{group__primitives-alarm_gaa8dae0adc5647efdfb479e7c82f89754}{Set\+Abs\+Alarm()}} &X($\ast$) &X &&X &&&&&&&\\\cline{1-12}
+\mbox{\hyperlink{group__primitives-alarm_ga7bfac685beaa3a62872ed44161e07e09}{Cancel\+Alarm()}} &X($\ast$) &X &&X &&&&&&&\\\cline{1-12}
+\mbox{\hyperlink{group__primitives-startup_gabc0f6f367be3f334998dcd73da2a2dbb}{Get\+Active\+Application\+Mode()}} &X($\ast$) &X &&X &X &X &X &X &X &&\\\cline{1-12}
+\mbox{\hyperlink{group__primitives-startup_ga5fb8a3c5837da7854c4da9972cefda96}{Start\+O\+S()}} &&&&&&&&&&&\\\cline{1-12}
+\mbox{\hyperlink{group__primitives-startup_ga6df6f7c4e5965c72bd089c9f381f6ef2}{Shutdown\+O\+S()}} &&X &&X &X &&&X &&&\\\cline{1-12}
+Get\+Application\+I\+D() &&X &&X &X &X &X &X &X &&X  \\\cline{1-12}
+\mbox{\hyperlink{group__primitives-interrupt_gaeebfcef1ad755a97d473a40e8d6d8c03}{Get\+I\+S\+R\+I\+D()}} &&X &&X &X &&&&&&X  \\\cline{1-12}
+Call\+Trusted\+Function() &X($\ast$) &X &&X &&&&&&&\\\cline{1-12}
+Check\+I\+S\+R\+Memory\+Access() &X($\ast$$^\wedge$) &X &&X &X &&&&&&X  \\\cline{1-12}
+Check\+Task\+Memory\+Access() &X($\ast$$^\wedge$) &X &&X &X &&&&&&X  \\\cline{1-12}
+Check\+Object\+Access() &X($\ast$) &X &&X &X &&&&&&X  \\\cline{1-12}
+Check\+Object\+Ownership() &X($\ast$$^\wedge$) &X &&X &X &&&&&&X  \\\cline{1-12}
+\mbox{\hyperlink{group__primitives-schtable_gaa384e9107ba444f5645b55d9356d9fd7}{Start\+Schedule\+Table\+Rel()}} &X($\ast$) &X &&X &&&&&&&\\\cline{1-12}
+\mbox{\hyperlink{group__primitives-schtable_ga81ccfeb43304c2ceba45ed8876f6aedf}{Start\+Schedule\+Table\+Abs()}} &X($\ast$) &X &&X &&&&&&&\\\cline{1-12}
+\mbox{\hyperlink{group__primitives-schtable_gad3d659c08b2702e817d42ed171b7dfd5}{Stop\+Schedule\+Table()}} &X($\ast$) &X &&X &&&&&&&\\\cline{1-12}
+\mbox{\hyperlink{group__primitives-schtable_ga1c4632ef4745f8b848cd3ea33ea4dc55}{Next\+Schedule\+Table()}} &X($\ast$) &X &&X &&&&&&&\\\cline{1-12}
+Start\+Schedule\+Table\+Synchron() &X($\ast$) &X &&X &&&&&&&\\\cline{1-12}
+\mbox{\hyperlink{group__primitives-schtable_gafcca9960de4197f10ea1636eda6dfc40}{Sync\+Schedule\+Table()}} &X($\ast$) &X &&X &&&&&&&\\\cline{1-12}
+\mbox{\hyperlink{group__primitives-schtable_ga58377ce88b4aa0ea04e15d806a662131}{Get\+Schedule\+Table\+Status()}} &X($\ast$) &X &&X &&&&&&&\\\cline{1-12}
+Set\+Schedule\+Table\+Async() &X($\ast$) &X &&X &&&&&&&\\\cline{1-12}
+\mbox{\hyperlink{group__primitives-alarm_gabce1bd0e22433552b5c67aba978e4890}{Increment\+Counter()}} &X($\ast$) &X &&X &&&&&&&\\\cline{1-12}
+\mbox{\hyperlink{group__primitives-alarm_gaa0cf5297acb15cf35903879e19cac5b4}{Get\+Counter\+Value()}} &X($\ast$) &X &&X &&&&&&&\\\cline{1-12}
+\mbox{\hyperlink{group__primitives-alarm_gac831b2f7b67e61a5b6ff94200f3a8d81}{Get\+Elapsed\+Value()}} &X($\ast$) &X &&X &&&&&&&\\\cline{1-12}
+Terminate\+Application() &X($\ast$$^\wedge$) &X &&X &X &&&&&&\\\cline{1-12}
+Allow\+Access() &&X &&X &&&&&&&\\\cline{1-12}
+Get\+Application\+State() &X($\ast$) &X &&X &X &X &X &X &X &&X  \\\cline{1-12}
+Control\+Idle() &X($\ast$) &X &&X &&&&&&&\\\cline{1-12}
+Get\+Current\+Application\+I\+D() &&X &&X &X &X &X &X &X &&X  \\\cline{1-12}
+Read\+Peripheral8() &X($\ast$) &X &&X &&&&&&&\\\cline{1-12}
+Read\+Peripheral16() &X($\ast$) &X &&X &&&&&&&\\\cline{1-12}
+Read\+Peripheral32() &X($\ast$) &X &&X &&&&&&&\\\cline{1-12}
+Write\+Peripheral8() &X($\ast$) &X &&X &&&&&&&\\\cline{1-12}
+Write\+Peripheral32() &X($\ast$) &X &&X &&&&&&&\\\cline{1-12}
+Modify\+Peripheral8() &X($\ast$) &X &&X &&&&&&&\\\cline{1-12}
+Modify\+Peripheral16() &X($\ast$) &X &&X &&&&&&&\\\cline{1-12}
+Modify\+Peripheral32() &X($\ast$) &X &&X &&&&&&&\\\cline{1-12}
+Disable\+Interrupt\+Source() &X($\ast$) &X &&X &&&&&&&\\\cline{1-12}
+Enable\+Interrupt\+Source() &X($\ast$) &X &&X &&&&&&&\\\cline{1-12}
+Clear\+Pending\+Interrupt() &X($\ast$) &X &&X &&&&&&&\\\cline{1-12}
+\end{longtabu}

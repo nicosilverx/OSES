@@ -1,0 +1,285 @@
+\hypertarget{ee__compiler_8h}{}\doxysection{inc/ee\+\_\+compiler.h File Reference}
+\label{ee__compiler_8h}\index{inc/ee\_compiler.h@{inc/ee\_compiler.h}}
+
+
+Compilers Abstraction File.  
+
+
+{\ttfamily \#include \char`\"{}ee\+\_\+compiler\+\_\+cfg.\+h\char`\"{}}\newline
+Include dependency graph for ee\+\_\+compiler.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{ee__compiler_8h_a3851a1a8ddec9eacd2e30a8a19bb8cc8}\label{ee__compiler_8h_a3851a1a8ddec9eacd2e30a8a19bb8cc8}} 
+\#define \mbox{\hyperlink{ee__compiler_8h_a3851a1a8ddec9eacd2e30a8a19bb8cc8}{A\+U\+T\+O\+M\+A\+T\+IC}}
+\begin{DoxyCompactList}\small\item\em Used for the declaration of stack allocated variables \mbox{[}S\+W\+S\+\_\+\+C\+O\+M\+P\+I\+L\+E\+R\+\_\+00046\mbox{]}. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{ee__compiler_8h_a11a4114a8973be51c022ce946b643033}{T\+Y\+P\+E\+D\+EF}}
+\begin{DoxyCompactList}\small\item\em Shall be used within type definitions, where no memory qualifier can be specified. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ee__compiler_8h_a530f11a96e508d171d28564c8dc20942}\label{ee__compiler_8h_a530f11a96e508d171d28564c8dc20942}} 
+\#define \mbox{\hyperlink{ee__compiler_8h_a530f11a96e508d171d28564c8dc20942}{N\+U\+L\+L\+\_\+\+P\+TR}}~((void $\ast$)0)
+\begin{DoxyCompactList}\small\item\em Null void pointer \mbox{[}S\+W\+S\+\_\+\+C\+O\+M\+P\+I\+L\+E\+R\+\_\+00051\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ee__compiler_8h_a2eb6f9e0395b47b8d5e3eeae4fe0c116}\label{ee__compiler_8h_a2eb6f9e0395b47b8d5e3eeae4fe0c116}} 
+\#define \mbox{\hyperlink{ee__compiler_8h_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE}}~\mbox{\hyperlink{ee__compiler__gcc_8h_a9a5fa0a3ded870083af075b0fa88f086}{O\+S\+E\+E\+\_\+\+I\+N\+L\+I\+NE}}
+\begin{DoxyCompactList}\small\item\em Define compiler abstraction for keyword (c99) inline \mbox{[}S\+W\+S\+\_\+\+C\+O\+M\+P\+I\+L\+E\+R\+\_\+00057\mbox{]}. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{ee__compiler_8h_a4c744b37ed25289d025c28df65653b24}{L\+O\+C\+A\+L\+\_\+\+I\+N\+L\+I\+NE}}~\mbox{\hyperlink{ee__compiler__gcc_8h_abb9563920c344956cef4718c142139da}{O\+S\+E\+E\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}}
+\begin{DoxyCompactList}\small\item\em define for abstraction of the keyword inline in functions with \char`\"{}static\char`\"{} scope. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{ee__compiler_8h_a44fc42ed93abd1afe9c2268543bc8faf}{V\+AR}}(vartype,  memclass)~vartype memclass
+\begin{DoxyCompactList}\small\item\em Macro for the declaration and definition of variables. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{ee__compiler_8h_a976d68445c3d7763a2d3c4ece1d0af05}{C\+O\+N\+ST}}(consttype,  memclass)~consttype const memclass
+\begin{DoxyCompactList}\small\item\em Macro for the declaration and definition of constants \mbox{[}S\+W\+S\+\_\+\+C\+O\+M\+P\+I\+L\+E\+R\+\_\+00023\mbox{]}. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{ee__compiler_8h_a5c6ccc28154ea2a7874ba567a352e009}{P2\+V\+AR}}(ptrtype,  memclass,  ptrclass)~ptrtype memclass $\ast$ ptrclass
+\begin{DoxyCompactList}\small\item\em Macro for the declaration and definition of pointers in R\+AM, pointing to variables. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{ee__compiler_8h_a1cbecab281ec270e3ae1f0fb71d02b16}{P2\+C\+O\+N\+ST}}(ptrtype,  memclass,  ptrclass)~ptrtype const memclass $\ast$ ptrclass
+\begin{DoxyCompactList}\small\item\em Macro for the declaration and definition of pointers in R\+AM pointing to constants. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{ee__compiler_8h_a632192fa760d1d8fc0b052323a66df34}{C\+O\+N\+S\+T\+P2\+V\+AR}}(ptrtype,  memclass,  ptrclass)~ptrtype memclass $\ast$ const ptrclass
+\begin{DoxyCompactList}\small\item\em Macro for the declaration and definition of constant pointers accessing variables. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{ee__compiler_8h_a277ecadc9df94309929afc1864df1240}{C\+O\+N\+S\+T\+P2\+C\+O\+N\+ST}}(ptrtype,  memclass,  ptrclass)~ptrtype const memclass $\ast$  const ptrclass
+\begin{DoxyCompactList}\small\item\em Macro for the declaration and definition of constant pointers accessing constants. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{ee__compiler_8h_a78354f9ebe2afb569ba72e559c525a1d}{P2\+F\+U\+NC}}(rettype,  ptrclass,  fctname)~rettype ($\ast$ ptrclass fctname)
+\begin{DoxyCompactList}\small\item\em Macro for the type definition of pointers to functions \mbox{[}S\+W\+S\+\_\+\+C\+O\+M\+P\+I\+L\+E\+R\+\_\+00039\mbox{]}. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{ee__compiler_8h_aa8f07207960a32e918e08a0faf697977}{F\+U\+NC}}(rettype,  memclass)~rettype memclass
+\begin{DoxyCompactList}\small\item\em Macro for the declaration and definition of functions that ensures correct syntax of function declarations as required by a specific compiler. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{ee__compiler_8h_ab151aa6280c41c0e856fa17586846511}{F\+U\+N\+C\+\_\+\+P2\+V\+AR}}(rettype,  ptrclass,  memclass)~rettype $\ast$ ptrclass memclass
+\begin{DoxyCompactList}\small\item\em Macro for the declaration and definition of functions returning a pointer to a variable, that ensures correct syntax of function declarations. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{ee__compiler_8h_a1dea65089d027d86a82cfa297787967a}{F\+U\+N\+C\+\_\+\+P2\+C\+O\+N\+ST}}(rettype,  ptrclass,  memclass)~rettype const $\ast$ ptrclass memclass
+\begin{DoxyCompactList}\small\item\em Macro for the declaration and definition of functions returning a pointer to a constant. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{ee__compiler_8h_a3e4d3488417477d8a5b44f3d3997878b}{P2\+S\+Y\+M\+\_\+\+V\+AR}}(type,  ptrclass,  ptrname)~type ($\ast$ ptrclass ptrname)
+\begin{DoxyCompactList}\small\item\em Macro for the type definition of pointers to symbols (array or function) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{ee__compiler_8h_a83c1b39ec76d74066321b9f3c87c0429}{P2\+S\+Y\+M\+\_\+\+P2\+V\+AR}}(type,  ptrclass,  ptrname)~type $\ast$ ($\ast$ ptrclass ptrname)
+\begin{DoxyCompactList}\small\item\em Macro for the type definition of pointers to symbols (array or function) with pointer (return) type. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{ee__compiler_8h_a7e6d464011c2ead439a6fadf4fd1233b}{P2\+S\+Y\+M\+\_\+\+C\+O\+N\+S\+T\+P2\+V\+AR}}(type,  ptrclass,  ptrname)~type $\ast$ const ($\ast$ ptrclass ptrname)
+\begin{DoxyCompactList}\small\item\em Macro for the type definition of pointers to symbols (array or function) with const pointer (return) type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Common Utilities.
+
+This files is a collector between all supported compilers in Erika Enterprise.
+
+\begin{DoxyAuthor}{Author}
+Errico Guidieri 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2016
+\end{DoxyDate}
+This files contains all common utilities available in Erika Enterprise.
+
+\begin{DoxyNote}{Note}
+Those utilities must be abstracted in order to become platform and compiler independend. ~\newline
+ 
+
+TO BE D\+O\+C\+U\+M\+E\+N\+T\+E\+D!!!
+\end{DoxyNote}
+\begin{DoxyAuthor}{Author}
+Errico Guidieri 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2016 
+\end{DoxyDate}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{ee__compiler_8h_a976d68445c3d7763a2d3c4ece1d0af05}\label{ee__compiler_8h_a976d68445c3d7763a2d3c4ece1d0af05}} 
+\index{ee\_compiler.h@{ee\_compiler.h}!CONST@{CONST}}
+\index{CONST@{CONST}!ee\_compiler.h@{ee\_compiler.h}}
+\doxysubsubsection{\texorpdfstring{CONST}{CONST}}
+{\footnotesize\ttfamily \#define C\+O\+N\+ST(\begin{DoxyParamCaption}\item[{}]{consttype,  }\item[{}]{memclass }\end{DoxyParamCaption})~consttype const memclass}
+
+
+\begin{DoxyParams}{Parameters}
+{\em consttype} & type of the constant \\
+\hline
+{\em memclass} & classification of the constant itself \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ee__compiler_8h_a277ecadc9df94309929afc1864df1240}\label{ee__compiler_8h_a277ecadc9df94309929afc1864df1240}} 
+\index{ee\_compiler.h@{ee\_compiler.h}!CONSTP2CONST@{CONSTP2CONST}}
+\index{CONSTP2CONST@{CONSTP2CONST}!ee\_compiler.h@{ee\_compiler.h}}
+\doxysubsubsection{\texorpdfstring{CONSTP2CONST}{CONSTP2CONST}}
+{\footnotesize\ttfamily \#define C\+O\+N\+S\+T\+P2\+C\+O\+N\+ST(\begin{DoxyParamCaption}\item[{}]{ptrtype,  }\item[{}]{memclass,  }\item[{}]{ptrclass }\end{DoxyParamCaption})~ptrtype const memclass $\ast$  const ptrclass}
+
+\mbox{[}S\+W\+S\+\_\+\+C\+O\+M\+P\+I\+L\+E\+R\+\_\+00032\mbox{]} 
+\begin{DoxyParams}{Parameters}
+{\em ptrtype} & type of the referenced data \\
+\hline
+{\em memclass} & classification of the pointer\textquotesingle{}s variable itself \\
+\hline
+{\em ptrclass} & defines the classification of the pointer\textquotesingle{}s distance \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ee__compiler_8h_a632192fa760d1d8fc0b052323a66df34}\label{ee__compiler_8h_a632192fa760d1d8fc0b052323a66df34}} 
+\index{ee\_compiler.h@{ee\_compiler.h}!CONSTP2VAR@{CONSTP2VAR}}
+\index{CONSTP2VAR@{CONSTP2VAR}!ee\_compiler.h@{ee\_compiler.h}}
+\doxysubsubsection{\texorpdfstring{CONSTP2VAR}{CONSTP2VAR}}
+{\footnotesize\ttfamily \#define C\+O\+N\+S\+T\+P2\+V\+AR(\begin{DoxyParamCaption}\item[{}]{ptrtype,  }\item[{}]{memclass,  }\item[{}]{ptrclass }\end{DoxyParamCaption})~ptrtype memclass $\ast$ const ptrclass}
+
+\mbox{[}S\+W\+S\+\_\+\+C\+O\+M\+P\+I\+L\+E\+R\+\_\+00031\mbox{]} 
+\begin{DoxyParams}{Parameters}
+{\em ptrtype} & type of the referenced data \\
+\hline
+{\em memclass} & classification of the pointer\textquotesingle{}s variable itself \\
+\hline
+{\em ptrclass} & defines the classification of the pointer\textquotesingle{}s distance \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ee__compiler_8h_aa8f07207960a32e918e08a0faf697977}\label{ee__compiler_8h_aa8f07207960a32e918e08a0faf697977}} 
+\index{ee\_compiler.h@{ee\_compiler.h}!FUNC@{FUNC}}
+\index{FUNC@{FUNC}!ee\_compiler.h@{ee\_compiler.h}}
+\doxysubsubsection{\texorpdfstring{FUNC}{FUNC}}
+{\footnotesize\ttfamily \#define F\+U\+NC(\begin{DoxyParamCaption}\item[{}]{rettype,  }\item[{}]{memclass }\end{DoxyParamCaption})~rettype memclass}
+
+\mbox{[}S\+W\+S\+\_\+\+C\+O\+M\+P\+I\+L\+E\+R\+\_\+00001\mbox{]} 
+\begin{DoxyParams}{Parameters}
+{\em rettype} & return type of the function \\
+\hline
+{\em memclass} & classification of the function itself \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ee__compiler_8h_a1dea65089d027d86a82cfa297787967a}\label{ee__compiler_8h_a1dea65089d027d86a82cfa297787967a}} 
+\index{ee\_compiler.h@{ee\_compiler.h}!FUNC\_P2CONST@{FUNC\_P2CONST}}
+\index{FUNC\_P2CONST@{FUNC\_P2CONST}!ee\_compiler.h@{ee\_compiler.h}}
+\doxysubsubsection{\texorpdfstring{FUNC\_P2CONST}{FUNC\_P2CONST}}
+{\footnotesize\ttfamily \#define F\+U\+N\+C\+\_\+\+P2\+C\+O\+N\+ST(\begin{DoxyParamCaption}\item[{}]{rettype,  }\item[{}]{ptrclass,  }\item[{}]{memclass }\end{DoxyParamCaption})~rettype const $\ast$ ptrclass memclass}
+
+This shall ensure the correct syntax of function declarations as required by a specific compiler \mbox{[}S\+W\+S\+\_\+\+C\+O\+M\+P\+I\+L\+E\+R\+\_\+00061\mbox{]}. 
+\begin{DoxyParams}{Parameters}
+{\em rettype} & return type of the function \\
+\hline
+{\em ptrclass} & defines the classification of the pointer\textquotesingle{}s distance \\
+\hline
+{\em memclass} & classification of the function itself \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ee__compiler_8h_ab151aa6280c41c0e856fa17586846511}\label{ee__compiler_8h_ab151aa6280c41c0e856fa17586846511}} 
+\index{ee\_compiler.h@{ee\_compiler.h}!FUNC\_P2VAR@{FUNC\_P2VAR}}
+\index{FUNC\_P2VAR@{FUNC\_P2VAR}!ee\_compiler.h@{ee\_compiler.h}}
+\doxysubsubsection{\texorpdfstring{FUNC\_P2VAR}{FUNC\_P2VAR}}
+{\footnotesize\ttfamily \#define F\+U\+N\+C\+\_\+\+P2\+V\+AR(\begin{DoxyParamCaption}\item[{}]{rettype,  }\item[{}]{ptrclass,  }\item[{}]{memclass }\end{DoxyParamCaption})~rettype $\ast$ ptrclass memclass}
+
+\mbox{[}S\+W\+S\+\_\+\+C\+O\+M\+P\+I\+L\+E\+R\+\_\+00063\mbox{]} 
+\begin{DoxyParams}{Parameters}
+{\em rettype} & return type of the function \\
+\hline
+{\em ptrclass} & defines the classification of the pointe\textquotesingle{} distance \\
+\hline
+{\em memclass} & classification of the function itself \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ee__compiler_8h_a4c744b37ed25289d025c28df65653b24}\label{ee__compiler_8h_a4c744b37ed25289d025c28df65653b24}} 
+\index{ee\_compiler.h@{ee\_compiler.h}!LOCAL\_INLINE@{LOCAL\_INLINE}}
+\index{LOCAL\_INLINE@{LOCAL\_INLINE}!ee\_compiler.h@{ee\_compiler.h}}
+\doxysubsubsection{\texorpdfstring{LOCAL\_INLINE}{LOCAL\_INLINE}}
+{\footnotesize\ttfamily \#define L\+O\+C\+A\+L\+\_\+\+I\+N\+L\+I\+NE~\mbox{\hyperlink{ee__compiler__gcc_8h_abb9563920c344956cef4718c142139da}{O\+S\+E\+E\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}}}
+
+\mbox{[}S\+W\+S\+\_\+\+C\+O\+M\+P\+I\+L\+E\+R\+\_\+00060\mbox{]} \mbox{\Hypertarget{ee__compiler_8h_a1cbecab281ec270e3ae1f0fb71d02b16}\label{ee__compiler_8h_a1cbecab281ec270e3ae1f0fb71d02b16}} 
+\index{ee\_compiler.h@{ee\_compiler.h}!P2CONST@{P2CONST}}
+\index{P2CONST@{P2CONST}!ee\_compiler.h@{ee\_compiler.h}}
+\doxysubsubsection{\texorpdfstring{P2CONST}{P2CONST}}
+{\footnotesize\ttfamily \#define P2\+C\+O\+N\+ST(\begin{DoxyParamCaption}\item[{}]{ptrtype,  }\item[{}]{memclass,  }\item[{}]{ptrclass }\end{DoxyParamCaption})~ptrtype const memclass $\ast$ ptrclass}
+
+\mbox{[}S\+W\+S\+\_\+\+C\+O\+M\+P\+I\+L\+E\+R\+\_\+00013\mbox{]} 
+\begin{DoxyParams}{Parameters}
+{\em ptrtype} & type of the referenced data \\
+\hline
+{\em memclass} & classification of the pointer\textquotesingle{}s variable itself \\
+\hline
+{\em ptrclass} & defines the classification of the pointer\textquotesingle{}s distance \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ee__compiler_8h_a78354f9ebe2afb569ba72e559c525a1d}\label{ee__compiler_8h_a78354f9ebe2afb569ba72e559c525a1d}} 
+\index{ee\_compiler.h@{ee\_compiler.h}!P2FUNC@{P2FUNC}}
+\index{P2FUNC@{P2FUNC}!ee\_compiler.h@{ee\_compiler.h}}
+\doxysubsubsection{\texorpdfstring{P2FUNC}{P2FUNC}}
+{\footnotesize\ttfamily \#define P2\+F\+U\+NC(\begin{DoxyParamCaption}\item[{}]{rettype,  }\item[{}]{ptrclass,  }\item[{}]{fctname }\end{DoxyParamCaption})~rettype ($\ast$ ptrclass fctname)}
+
+
+\begin{DoxyParams}{Parameters}
+{\em rettype} & return type of the function \\
+\hline
+{\em ptrclass} & defines the classification of the pointer\textquotesingle{}s distance \\
+\hline
+{\em fctname} & function name respectivly name of the defined type \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ee__compiler_8h_a7e6d464011c2ead439a6fadf4fd1233b}\label{ee__compiler_8h_a7e6d464011c2ead439a6fadf4fd1233b}} 
+\index{ee\_compiler.h@{ee\_compiler.h}!P2SYM\_CONSTP2VAR@{P2SYM\_CONSTP2VAR}}
+\index{P2SYM\_CONSTP2VAR@{P2SYM\_CONSTP2VAR}!ee\_compiler.h@{ee\_compiler.h}}
+\doxysubsubsection{\texorpdfstring{P2SYM\_CONSTP2VAR}{P2SYM\_CONSTP2VAR}}
+{\footnotesize\ttfamily \#define P2\+S\+Y\+M\+\_\+\+C\+O\+N\+S\+T\+P2\+V\+AR(\begin{DoxyParamCaption}\item[{}]{type,  }\item[{}]{ptrclass,  }\item[{}]{ptrname }\end{DoxyParamCaption})~type $\ast$ const ($\ast$ ptrclass ptrname)}
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & type of the function return or type for the array \\
+\hline
+{\em ptrclass} & defines the classification of the pointer\textquotesingle{}s distance \\
+\hline
+{\em ptrname} & function or array pointer name respectivly name of the defined type \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ee__compiler_8h_a83c1b39ec76d74066321b9f3c87c0429}\label{ee__compiler_8h_a83c1b39ec76d74066321b9f3c87c0429}} 
+\index{ee\_compiler.h@{ee\_compiler.h}!P2SYM\_P2VAR@{P2SYM\_P2VAR}}
+\index{P2SYM\_P2VAR@{P2SYM\_P2VAR}!ee\_compiler.h@{ee\_compiler.h}}
+\doxysubsubsection{\texorpdfstring{P2SYM\_P2VAR}{P2SYM\_P2VAR}}
+{\footnotesize\ttfamily \#define P2\+S\+Y\+M\+\_\+\+P2\+V\+AR(\begin{DoxyParamCaption}\item[{}]{type,  }\item[{}]{ptrclass,  }\item[{}]{ptrname }\end{DoxyParamCaption})~type $\ast$ ($\ast$ ptrclass ptrname)}
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & type of the function return or type for the array \\
+\hline
+{\em ptrclass} & defines the classification of the pointer\textquotesingle{}s distance \\
+\hline
+{\em ptrname} & function or array pointer name respectivly name of the defined type \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ee__compiler_8h_a3e4d3488417477d8a5b44f3d3997878b}\label{ee__compiler_8h_a3e4d3488417477d8a5b44f3d3997878b}} 
+\index{ee\_compiler.h@{ee\_compiler.h}!P2SYM\_VAR@{P2SYM\_VAR}}
+\index{P2SYM\_VAR@{P2SYM\_VAR}!ee\_compiler.h@{ee\_compiler.h}}
+\doxysubsubsection{\texorpdfstring{P2SYM\_VAR}{P2SYM\_VAR}}
+{\footnotesize\ttfamily \#define P2\+S\+Y\+M\+\_\+\+V\+AR(\begin{DoxyParamCaption}\item[{}]{type,  }\item[{}]{ptrclass,  }\item[{}]{ptrname }\end{DoxyParamCaption})~type ($\ast$ ptrclass ptrname)}
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & type of the function return or type for the array \\
+\hline
+{\em ptrclass} & defines the classification of the pointer\textquotesingle{}s distance \\
+\hline
+{\em ptrname} & function or array pointer name respectivly name of the defined type \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ee__compiler_8h_a5c6ccc28154ea2a7874ba567a352e009}\label{ee__compiler_8h_a5c6ccc28154ea2a7874ba567a352e009}} 
+\index{ee\_compiler.h@{ee\_compiler.h}!P2VAR@{P2VAR}}
+\index{P2VAR@{P2VAR}!ee\_compiler.h@{ee\_compiler.h}}
+\doxysubsubsection{\texorpdfstring{P2VAR}{P2VAR}}
+{\footnotesize\ttfamily \#define P2\+V\+AR(\begin{DoxyParamCaption}\item[{}]{ptrtype,  }\item[{}]{memclass,  }\item[{}]{ptrclass }\end{DoxyParamCaption})~ptrtype memclass $\ast$ ptrclass}
+
+\mbox{[}S\+W\+S\+\_\+\+C\+O\+M\+P\+I\+L\+E\+R\+\_\+00006\mbox{]} 
+\begin{DoxyParams}{Parameters}
+{\em ptrtype} & type of the referenced variable memclass \\
+\hline
+{\em memclass} & classification of the pointer\textquotesingle{}s variable itself \\
+\hline
+{\em ptrclass} & defines the classification of the pointer\textquotesingle{}s distance \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ee__compiler_8h_a11a4114a8973be51c022ce946b643033}\label{ee__compiler_8h_a11a4114a8973be51c022ce946b643033}} 
+\index{ee\_compiler.h@{ee\_compiler.h}!TYPEDEF@{TYPEDEF}}
+\index{TYPEDEF@{TYPEDEF}!ee\_compiler.h@{ee\_compiler.h}}
+\doxysubsubsection{\texorpdfstring{TYPEDEF}{TYPEDEF}}
+{\footnotesize\ttfamily \#define T\+Y\+P\+E\+D\+EF}
+
+This can be necessary for defining pointer types, with e.\+g. P2\+V\+AR, where the macros require two parameters. First parameter can be specified in the type definition (distance to the memory location referenced by the pointer), but the second one (memory allocation of the pointer itself) cannot be defined at this time. Hence, memory class T\+Y\+P\+E\+D\+EF shall be applied. \mbox{[}S\+W\+S\+\_\+\+C\+O\+M\+P\+I\+L\+E\+R\+\_\+00059\mbox{]} \mbox{\Hypertarget{ee__compiler_8h_a44fc42ed93abd1afe9c2268543bc8faf}\label{ee__compiler_8h_a44fc42ed93abd1afe9c2268543bc8faf}} 
+\index{ee\_compiler.h@{ee\_compiler.h}!VAR@{VAR}}
+\index{VAR@{VAR}!ee\_compiler.h@{ee\_compiler.h}}
+\doxysubsubsection{\texorpdfstring{VAR}{VAR}}
+{\footnotesize\ttfamily \#define V\+AR(\begin{DoxyParamCaption}\item[{}]{vartype,  }\item[{}]{memclass }\end{DoxyParamCaption})~vartype memclass}
+
+
+\begin{DoxyParams}{Parameters}
+{\em vartype} & type of the variable \\
+\hline
+{\em memclass} & classification of the variable itself \\
+\hline
+\end{DoxyParams}

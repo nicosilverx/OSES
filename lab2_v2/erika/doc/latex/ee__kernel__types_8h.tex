@@ -1,0 +1,364 @@
+\hypertarget{ee__kernel__types_8h}{}\doxysection{inc/ee\+\_\+kernel\+\_\+types.h File Reference}
+\label{ee__kernel__types_8h}\index{inc/ee\_kernel\_types.h@{inc/ee\_kernel\_types.h}}
+
+
+O\+S\+EK Kernel Internal Types.  
+
+
+{\ttfamily \#include \char`\"{}ee\+\_\+cfg.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ee\+\_\+api\+\_\+types.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ee\+\_\+oo\+\_\+api\+\_\+extension.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ee\+\_\+hal\+\_\+internal\+\_\+types.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ee\+\_\+scheduler\+\_\+types.\+h\char`\"{}}\newline
+Include dependency graph for ee\+\_\+kernel\+\_\+types.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structOsEE__MCB}{Os\+E\+E\+\_\+\+M\+CB}}
+\begin{DoxyCompactList}\small\item\em Mutual exclusion control block. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structOsEE__MDB__tag}{Os\+E\+E\+\_\+\+M\+D\+B\+\_\+tag}}
+\begin{DoxyCompactList}\small\item\em Mutual exclusion descriptor block. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structOsEE__TCB}{Os\+E\+E\+\_\+\+T\+CB}}
+\begin{DoxyCompactList}\small\item\em The Task Control Block. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structOsEE__TDB__tag}{Os\+E\+E\+\_\+\+T\+D\+B\+\_\+tag}}
+\begin{DoxyCompactList}\small\item\em The Task Descriptor Block. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structOsEE__TW}{Os\+E\+E\+\_\+\+TW}}
+\begin{DoxyCompactList}\small\item\em This is the generic definition of a task wrapper. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structOsEE__CounterCB}{Os\+E\+E\+\_\+\+Counter\+CB}}
+\begin{DoxyCompactList}\small\item\em Counter Control Block. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structOsEE__CounterDB}{Os\+E\+E\+\_\+\+Counter\+DB}}
+\begin{DoxyCompactList}\small\item\em Counter descriptor block. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structOsEE__action__param}{Os\+E\+E\+\_\+action\+\_\+param}}
+\begin{DoxyCompactList}\small\item\em Parameters of an Alarm/\+Schedule Table expiration (function callback, task, event mask, and counter) \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structOsEE__action}{Os\+E\+E\+\_\+action}}
+\begin{DoxyCompactList}\small\item\em Notification data structure for Alarms and Schedule Tables. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structOsEE__st__exipiry__point__tag}{Os\+E\+E\+\_\+st\+\_\+exipiry\+\_\+point\+\_\+tag}}
+\begin{DoxyCompactList}\small\item\em Structures that hold the information related to an expiry point. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structOsEE__AlarmCB__tag}{Os\+E\+E\+\_\+\+Alarm\+C\+B\+\_\+tag}}
+\begin{DoxyCompactList}\small\item\em Alarm Control Block. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structOsEE__AlarmDB__tag}{Os\+E\+E\+\_\+\+Alarm\+D\+B\+\_\+tag}}
+\begin{DoxyCompactList}\small\item\em Alarm descriptor block. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structOsEE__SchedTabCB__tag}{Os\+E\+E\+\_\+\+Sched\+Tab\+C\+B\+\_\+tag}}
+\begin{DoxyCompactList}\small\item\em Data structure to store R\+AM informations needed by schedule tables. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structOsEE__SchedTabDB__tag}{Os\+E\+E\+\_\+\+Sched\+Tab\+D\+B\+\_\+tag}}
+\begin{DoxyCompactList}\small\item\em This is the data structure used to describe the constant part of a schedule table. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structOsEE__TriggerCB}{Os\+E\+E\+\_\+\+Trigger\+CB}}
+\begin{DoxyCompactList}\small\item\em The Trigger Countrol Block is the element in the trigger queue that records when the next trigger is going to expire, and what is its status (see Os\+E\+E\+\_\+trigger\+\_\+status). \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structOsEE__TriggerDB__tag}{Os\+E\+E\+\_\+\+Trigger\+D\+B\+\_\+tag}}
+\begin{DoxyCompactList}\small\item\em Trigger Descriptor Block is the elemnt containing the information of Alarms and Schedule Tables. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structOsEE__CCB}{Os\+E\+E\+\_\+\+C\+CB}}
+\begin{DoxyCompactList}\small\item\em This is the Core Control Block. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structOsEE__CDB}{Os\+E\+E\+\_\+\+C\+DB}}
+\begin{DoxyCompactList}\small\item\em This is the Core Descriptor Block. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structOsEE__KCB}{Os\+E\+E\+\_\+\+K\+CB}}
+\begin{DoxyCompactList}\small\item\em This is the Kernel Control Block. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structOsEE__KDB}{Os\+E\+E\+\_\+\+K\+DB}}
+\begin{DoxyCompactList}\small\item\em This is the Kernel descriptor Block. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{ee__kernel__types_8h_a90a10d011784e6aad45f8fb68e42fa5e}\label{ee__kernel__types_8h_a90a10d011784e6aad45f8fb68e42fa5e}} 
+\#define \mbox{\hyperlink{ee__kernel__types_8h_a90a10d011784e6aad45f8fb68e42fa5e}{O\+S\+E\+E\+\_\+\+H\+A\+S\+\_\+\+C\+O\+N\+T\+E\+XT}}
+\begin{DoxyCompactList}\small\item\em This architecture requires the saving of a context in the C\+CB (Core Control Block) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{ee__kernel__types_8h_adbd069cc0873979538014485ab882b98}{O\+S\+E\+E\+\_\+\+M\+A\+X\+\_\+\+B\+Y\+TE}}~((\mbox{\hyperlink{ee__kernel__types_8h_aa579f765f85a971ba83d4c8281257948}{Os\+E\+E\+\_\+byte}})-\/1)
+\begin{DoxyCompactList}\small\item\em Byte\+: the maximum value for a byte. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{ee__kernel__types_8h_a0b3e32196ea3fdc62c076873eb0c070e}{O\+S\+E\+E\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+T\+R\+I\+G\+G\+E\+R\+\_\+\+T\+Y\+P\+ES}}
+\begin{DoxyCompactList}\small\item\em If the application contains both Alarms and Schedule Tables, then the Trigger queue Os\+E\+E\+\_\+\+TriggerQ will distinguis among the two types of objects. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{ee__kernel__types_8h_a7f8e3c217da7e1f36c1563ad35fa6a96}{O\+S\+E\+E\+\_\+\+K\+E\+R\+N\+E\+L\+\_\+\+T\+E\+R\+M\+I\+N\+A\+T\+E\+\_\+\+A\+C\+T\+I\+V\+A\+T\+I\+O\+N\+\_\+\+CB}}~\&os\+E\+E\+\_\+scheduler\+\_\+task\+\_\+end
+\begin{DoxyCompactList}\small\item\em Terminate callback definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{ee__kernel__types_8h_a7ab9255f8a657d6bb4e0121c8cc80860}\label{ee__kernel__types_8h_a7ab9255f8a657d6bb4e0121c8cc80860}} 
+typedef void($\ast$ \mbox{\hyperlink{ee__kernel__types_8h_a7ab9255f8a657d6bb4e0121c8cc80860}{Os\+E\+E\+\_\+kernel\+\_\+cb}}) (void)
+\begin{DoxyCompactList}\small\item\em Kernel Callback. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ee__kernel__types_8h_aa579f765f85a971ba83d4c8281257948}\label{ee__kernel__types_8h_aa579f765f85a971ba83d4c8281257948}} 
+typedef uint8\+\_\+t \mbox{\hyperlink{ee__kernel__types_8h_aa579f765f85a971ba83d4c8281257948}{Os\+E\+E\+\_\+byte}}
+\begin{DoxyCompactList}\small\item\em Byte\+: the smallest type instantiable. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structOsEE__MDB__tag}{Os\+E\+E\+\_\+\+M\+D\+B\+\_\+tag}} \mbox{\hyperlink{ee__kernel__types_8h_a321e2d8dbc073e68cb9cda8583d28b52}{Os\+E\+E\+\_\+\+M\+DB}}
+\begin{DoxyCompactList}\small\item\em Mutual exclusion descriptor block. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ee__kernel__types_8h_a4184155a702490e0e17bc1e11522d62b}\label{ee__kernel__types_8h_a4184155a702490e0e17bc1e11522d62b}} 
+typedef \mbox{\hyperlink{structOsEE__MCB}{Os\+E\+E\+\_\+\+M\+CB}} \mbox{\hyperlink{ee__kernel__types_8h_a4184155a702490e0e17bc1e11522d62b}{Os\+E\+E\+\_\+\+Resource\+CB}}
+\begin{DoxyCompactList}\small\item\em The Resource Control Block. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ee__kernel__types_8h_a2704166d69bff287ac8985ac2fb6dffe}\label{ee__kernel__types_8h_a2704166d69bff287ac8985ac2fb6dffe}} 
+typedef \mbox{\hyperlink{ee__kernel__types_8h_a321e2d8dbc073e68cb9cda8583d28b52}{Os\+E\+E\+\_\+\+M\+DB}} \mbox{\hyperlink{ee__kernel__types_8h_a2704166d69bff287ac8985ac2fb6dffe}{Os\+E\+E\+\_\+\+Resource\+DB}}
+\begin{DoxyCompactList}\small\item\em The Resource Descriptor Block. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ee__kernel__types_8h_ac86c38f6c591d3130a1215974f57b33a}\label{ee__kernel__types_8h_ac86c38f6c591d3130a1215974f57b33a}} 
+typedef \mbox{\hyperlink{structOsEE__MCB}{Os\+E\+E\+\_\+\+M\+CB}} \mbox{\hyperlink{ee__kernel__types_8h_ac86c38f6c591d3130a1215974f57b33a}{Os\+E\+E\+\_\+\+Spinlock\+CB}}
+\begin{DoxyCompactList}\small\item\em The Spin Lock Control Block. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ee__kernel__types_8h_ae3fb67399e5ea88a12887839910ebb2f}\label{ee__kernel__types_8h_ae3fb67399e5ea88a12887839910ebb2f}} 
+typedef \mbox{\hyperlink{ee__kernel__types_8h_a321e2d8dbc073e68cb9cda8583d28b52}{Os\+E\+E\+\_\+\+M\+DB}} \mbox{\hyperlink{ee__kernel__types_8h_ae3fb67399e5ea88a12887839910ebb2f}{Os\+E\+E\+\_\+\+Spinlock\+DB}}
+\begin{DoxyCompactList}\small\item\em The Spin Lock Descriptor Block. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structOsEE__TDB__tag}{Os\+E\+E\+\_\+\+T\+D\+B\+\_\+tag}} \mbox{\hyperlink{ee__kernel__types_8h_a09fa6316ce540908359bbc26e7571795}{Os\+E\+E\+\_\+\+T\+DB}}
+\begin{DoxyCompactList}\small\item\em The Task Descriptor Block. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structOsEE__TriggerDB__tag}{Os\+E\+E\+\_\+\+Trigger\+D\+B\+\_\+tag}} const  $\ast$ \mbox{\hyperlink{ee__kernel__types_8h_a879d22c7db009745ebd69330171fb3aa}{Os\+E\+E\+\_\+\+TriggerQ}}
+\begin{DoxyCompactList}\small\item\em This is the type used for the trigger queue. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ee__kernel__types_8h_af76d81cc40c06f96ac3585baf13140b0}\label{ee__kernel__types_8h_af76d81cc40c06f96ac3585baf13140b0}} 
+typedef \mbox{\hyperlink{ee__kernel__types_8h_ac063e723cbbae500e624f46a0f30fee8}{Os\+E\+E\+\_\+st\+\_\+synch\+\_\+strategy}} \mbox{\hyperlink{ee__kernel__types_8h_af76d81cc40c06f96ac3585baf13140b0}{Synch\+Strategy\+Type}}
+\begin{DoxyCompactList}\small\item\em to have a more harmonized type name with other O\+S\+EK type names. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ee__kernel__types_8h_a53b671df0a76ae4bf0d1bd5bba91a9cf}\label{ee__kernel__types_8h_a53b671df0a76ae4bf0d1bd5bba91a9cf}} 
+typedef struct \mbox{\hyperlink{structOsEE__st__exipiry__point__tag}{Os\+E\+E\+\_\+st\+\_\+exipiry\+\_\+point\+\_\+tag}} \mbox{\hyperlink{ee__kernel__types_8h_a53b671df0a76ae4bf0d1bd5bba91a9cf}{Os\+E\+E\+\_\+st\+\_\+exipiry\+\_\+point}}
+\begin{DoxyCompactList}\small\item\em Structures that hold the information related to an expiry point. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structOsEE__AlarmCB__tag}{Os\+E\+E\+\_\+\+Alarm\+C\+B\+\_\+tag}} \mbox{\hyperlink{ee__kernel__types_8h_a67a3b1015e569eeedc463b307d7eb24c}{Os\+E\+E\+\_\+\+Alarm\+CB}}
+\begin{DoxyCompactList}\small\item\em Alarm Control Block. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structOsEE__AlarmDB__tag}{Os\+E\+E\+\_\+\+Alarm\+D\+B\+\_\+tag}} \mbox{\hyperlink{ee__kernel__types_8h_a6be9e7c8f0cc0117a849a81703b1843f}{Os\+E\+E\+\_\+\+Alarm\+DB}}
+\begin{DoxyCompactList}\small\item\em Alarm descriptor block. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ee__kernel__types_8h_a6e1e9b0256b349b1795f1ff4b2e3f16e}\label{ee__kernel__types_8h_a6e1e9b0256b349b1795f1ff4b2e3f16e}} 
+typedef struct \mbox{\hyperlink{structOsEE__SchedTabCB__tag}{Os\+E\+E\+\_\+\+Sched\+Tab\+C\+B\+\_\+tag}} \mbox{\hyperlink{ee__kernel__types_8h_a6e1e9b0256b349b1795f1ff4b2e3f16e}{Os\+E\+E\+\_\+\+Sched\+Tab\+CB}}
+\begin{DoxyCompactList}\small\item\em Data structure to store R\+AM informations needed by schedule tables. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ee__kernel__types_8h_ad1dab5a737ce30e71471bcfa8f2aeb8f}\label{ee__kernel__types_8h_ad1dab5a737ce30e71471bcfa8f2aeb8f}} 
+typedef struct \mbox{\hyperlink{structOsEE__SchedTabDB__tag}{Os\+E\+E\+\_\+\+Sched\+Tab\+D\+B\+\_\+tag}} \mbox{\hyperlink{ee__kernel__types_8h_ad1dab5a737ce30e71471bcfa8f2aeb8f}{Os\+E\+E\+\_\+\+Sched\+Tab\+DB}}
+\begin{DoxyCompactList}\small\item\em This is the data structure used to describe the constant part of a schedule table. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structOsEE__TriggerDB__tag}{Os\+E\+E\+\_\+\+Trigger\+D\+B\+\_\+tag}} \mbox{\hyperlink{ee__kernel__types_8h_afc1f17d5c14b865b4294b2b1b1c6a683}{Os\+E\+E\+\_\+\+Trigger\+DB}}
+\begin{DoxyCompactList}\small\item\em Trigger Descriptor Block is the elemnt containing the information of Alarms and Schedule Tables. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{ee__kernel__types_8h_a8d1bb526049b7816cc00b41d69cca2db}{Os\+E\+E\+\_\+os\+\_\+context}} \{ \newline
+{\bfseries O\+S\+E\+E\+\_\+\+K\+E\+R\+N\+E\+L\+\_\+\+C\+TX}, 
+{\bfseries O\+S\+E\+E\+\_\+\+I\+D\+L\+E\+\_\+\+C\+TX}, 
+{\bfseries O\+S\+E\+E\+\_\+\+T\+A\+S\+K\+\_\+\+C\+TX}, 
+{\bfseries O\+S\+E\+E\+\_\+\+T\+A\+S\+K\+\_\+\+I\+S\+R2\+\_\+\+C\+TX}, 
+\newline
+{\bfseries O\+S\+E\+E\+\_\+\+E\+R\+R\+O\+R\+H\+O\+O\+K\+\_\+\+C\+TX}, 
+{\bfseries O\+S\+E\+E\+\_\+\+P\+R\+O\+T\+E\+C\+T\+I\+O\+N\+H\+O\+O\+K\+\_\+\+C\+TX}, 
+{\bfseries O\+S\+E\+E\+\_\+\+P\+R\+E\+T\+A\+S\+K\+H\+O\+O\+K\+\_\+\+C\+TX}, 
+{\bfseries O\+S\+E\+E\+\_\+\+P\+O\+S\+T\+T\+A\+S\+K\+H\+O\+O\+K\+\_\+\+C\+TX}, 
+\newline
+{\bfseries O\+S\+E\+E\+\_\+\+S\+T\+A\+R\+T\+U\+P\+H\+O\+O\+K\+\_\+\+C\+TX}, 
+{\bfseries O\+S\+E\+E\+\_\+\+S\+H\+U\+T\+D\+O\+W\+N\+H\+O\+O\+K\+\_\+\+C\+TX}, 
+{\bfseries O\+S\+E\+E\+\_\+\+A\+L\+A\+R\+M\+C\+A\+L\+L\+B\+A\+C\+K\+\_\+\+C\+TX}
+ \}
+\begin{DoxyCompactList}\small\item\em O\+S-\/\+Application contexts enum used to implement Autosar OS O\+S\+\_\+\+S\+W\+S\+\_\+088 requirement. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{ee__kernel__types_8h_a94f0722a0bf2577ff937847aaa4d8b80}{Os\+E\+E\+\_\+kernel\+\_\+status}} \{ \mbox{\hyperlink{ee__kernel__types_8h_a94f0722a0bf2577ff937847aaa4d8b80a587bc2af1e02a42c57be36382e34f1ff}{O\+S\+E\+E\+\_\+\+K\+E\+R\+N\+E\+L\+\_\+\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+ED}}, 
+\mbox{\hyperlink{ee__kernel__types_8h_a94f0722a0bf2577ff937847aaa4d8b80a854a1b760a4d83d002dd4ee1f9682e93}{O\+S\+E\+E\+\_\+\+K\+E\+R\+N\+E\+L\+\_\+\+S\+T\+A\+R\+T\+I\+NG}}, 
+\mbox{\hyperlink{ee__kernel__types_8h_a94f0722a0bf2577ff937847aaa4d8b80ab99d099ebf69e8ebf7e4716357b2ab91}{O\+S\+E\+E\+\_\+\+K\+E\+R\+N\+E\+L\+\_\+\+S\+T\+A\+R\+T\+ED}}, 
+\mbox{\hyperlink{ee__kernel__types_8h_a94f0722a0bf2577ff937847aaa4d8b80a48c011aed28eed91df39f4ebdcdd7e2c}{O\+S\+E\+E\+\_\+\+K\+E\+R\+N\+E\+L\+\_\+\+S\+H\+U\+T\+D\+O\+WN}}
+ \}
+\begin{DoxyCompactList}\small\item\em This enumerate controls the status of the kernel over the application execution. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{ee__kernel__types_8h_aac88ce5982bf0bc00cd6af0cccb98910}{Os\+E\+E\+\_\+m\+\_\+type}} \{ {\bfseries O\+S\+E\+E\+\_\+\+M\+\_\+\+R\+E\+S\+O\+U\+R\+CE}, 
+{\bfseries O\+S\+E\+E\+\_\+\+M\+\_\+\+S\+P\+I\+N\+L\+O\+CK}
+ \}
+\begin{DoxyCompactList}\small\item\em Mutual Exclusion type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ee__kernel__types_8h_a2b36a8d97d4448b1d109012c6bd87a79}\label{ee__kernel__types_8h_a2b36a8d97d4448b1d109012c6bd87a79}} 
+enum \mbox{\hyperlink{ee__kernel__types_8h_a2b36a8d97d4448b1d109012c6bd87a79}{Os\+E\+E\+\_\+action\+\_\+type}} \{ {\bfseries O\+S\+E\+E\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+T\+A\+SK}, 
+{\bfseries O\+S\+E\+E\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+E\+V\+E\+NT}, 
+{\bfseries O\+S\+E\+E\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+C\+O\+U\+N\+T\+ER}, 
+{\bfseries O\+S\+E\+E\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+C\+A\+L\+L\+B\+A\+CK}
+ \}
+\begin{DoxyCompactList}\small\item\em Possible types of notifications for Alarms and Schedule Tables. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{ee__kernel__types_8h_ac063e723cbbae500e624f46a0f30fee8}{Os\+E\+E\+\_\+st\+\_\+synch\+\_\+strategy}} \{ \mbox{\hyperlink{ee__kernel__types_8h_ac063e723cbbae500e624f46a0f30fee8ac3fc787e6728b828f8f8ab1c6d0e692b}{O\+S\+E\+E\+\_\+\+S\+C\+H\+E\+D\+T\+A\+B\+L\+E\+\_\+\+S\+Y\+N\+C\+\_\+\+N\+O\+NE}}, 
+\mbox{\hyperlink{ee__kernel__types_8h_ac063e723cbbae500e624f46a0f30fee8a056e9382c9994d67db12a003aa1dfc52}{O\+S\+E\+E\+\_\+\+S\+C\+H\+E\+D\+T\+A\+B\+L\+E\+\_\+\+S\+Y\+N\+C\+\_\+\+I\+M\+P\+L\+I\+C\+IT}}, 
+\mbox{\hyperlink{ee__kernel__types_8h_ac063e723cbbae500e624f46a0f30fee8a34dd9c148065eb8c05204497d6fc41c0}{O\+S\+E\+E\+\_\+\+S\+C\+H\+E\+D\+T\+A\+B\+L\+E\+\_\+\+S\+Y\+N\+C\+\_\+\+E\+X\+P\+L\+I\+C\+IT}}
+ \}
+\begin{DoxyCompactList}\small\item\em Schedule Table Synchronization strategies symbols. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{ee__kernel__types_8h_a01bbbafc04ff95345be928e1e39c3c68}{Os\+E\+E\+\_\+trigger\+\_\+status}} \{ \newline
+{\bfseries O\+S\+E\+E\+\_\+\+T\+R\+I\+G\+G\+E\+R\+\_\+\+I\+N\+A\+C\+T\+I\+VE}, 
+{\bfseries O\+S\+E\+E\+\_\+\+T\+R\+I\+G\+G\+E\+R\+\_\+\+C\+A\+N\+C\+E\+L\+ED}, 
+{\bfseries O\+S\+E\+E\+\_\+\+T\+R\+I\+G\+G\+E\+R\+\_\+\+A\+C\+T\+I\+VE}, 
+{\bfseries O\+S\+E\+E\+\_\+\+T\+R\+I\+G\+G\+E\+R\+\_\+\+E\+X\+P\+I\+R\+ED}, 
+\newline
+{\bfseries O\+S\+E\+E\+\_\+\+T\+R\+I\+G\+G\+E\+R\+\_\+\+R\+E\+E\+N\+A\+B\+L\+ED}
+ \}
+\begin{DoxyCompactList}\small\item\em This is the trigger status enumerate. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{ee__kernel__types_8h_a47a2172ad069306e0a8bed474330e3b6}{os\+E\+E\+\_\+change\+\_\+context\+\_\+from\+\_\+task\+\_\+end}} (\mbox{\hyperlink{ee__kernel__types_8h_a09fa6316ce540908359bbc26e7571795}{Os\+E\+E\+\_\+\+T\+DB}} $\ast$p\+\_\+from, \mbox{\hyperlink{ee__kernel__types_8h_a09fa6316ce540908359bbc26e7571795}{Os\+E\+E\+\_\+\+T\+DB}} $\ast$p\+\_\+to)
+\begin{DoxyCompactList}\small\item\em Handles the Task termination. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ee__kernel__types_8h_a37ec7caf7ebba130114f0333c0bc3b91}{os\+E\+E\+\_\+idle\+\_\+hook\+\_\+wrapper}} (void)
+\begin{DoxyCompactList}\small\item\em Task Body of the Idle Task. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This files contains all internal types and symbols for O\+S\+EK Kernel support in Erika Enterprise.
+
+\begin{DoxyAuthor}{Author}
+Errico Guidieri 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2016 
+\end{DoxyDate}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{ee__kernel__types_8h_a0b3e32196ea3fdc62c076873eb0c070e}\label{ee__kernel__types_8h_a0b3e32196ea3fdc62c076873eb0c070e}} 
+\index{ee\_kernel\_types.h@{ee\_kernel\_types.h}!OSEE\_COUNTER\_TRIGGER\_TYPES@{OSEE\_COUNTER\_TRIGGER\_TYPES}}
+\index{OSEE\_COUNTER\_TRIGGER\_TYPES@{OSEE\_COUNTER\_TRIGGER\_TYPES}!ee\_kernel\_types.h@{ee\_kernel\_types.h}}
+\doxysubsubsection{\texorpdfstring{OSEE\_COUNTER\_TRIGGER\_TYPES}{OSEE\_COUNTER\_TRIGGER\_TYPES}}
+{\footnotesize\ttfamily \#define O\+S\+E\+E\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+T\+R\+I\+G\+G\+E\+R\+\_\+\+T\+Y\+P\+ES}
+
+If there is only one kind of object, then we use an optimized implementation. \mbox{\Hypertarget{ee__kernel__types_8h_a7f8e3c217da7e1f36c1563ad35fa6a96}\label{ee__kernel__types_8h_a7f8e3c217da7e1f36c1563ad35fa6a96}} 
+\index{ee\_kernel\_types.h@{ee\_kernel\_types.h}!OSEE\_KERNEL\_TERMINATE\_ACTIVATION\_CB@{OSEE\_KERNEL\_TERMINATE\_ACTIVATION\_CB}}
+\index{OSEE\_KERNEL\_TERMINATE\_ACTIVATION\_CB@{OSEE\_KERNEL\_TERMINATE\_ACTIVATION\_CB}!ee\_kernel\_types.h@{ee\_kernel\_types.h}}
+\doxysubsubsection{\texorpdfstring{OSEE\_KERNEL\_TERMINATE\_ACTIVATION\_CB}{OSEE\_KERNEL\_TERMINATE\_ACTIVATION\_CB}}
+{\footnotesize\ttfamily \#define O\+S\+E\+E\+\_\+\+K\+E\+R\+N\+E\+L\+\_\+\+T\+E\+R\+M\+I\+N\+A\+T\+E\+\_\+\+A\+C\+T\+I\+V\+A\+T\+I\+O\+N\+\_\+\+CB~\&os\+E\+E\+\_\+scheduler\+\_\+task\+\_\+end}
+
+This is the definition of the callback used to terminate a single task activation at the end of the task (typically is the \mbox{\hyperlink{group__primitives-task_ga83c21cbaa47c5ac5cd56b7ba6490b8ca}{Terminate\+Task()}} or \mbox{\hyperlink{group__primitives-task_ga89ce30708e79048336a17c62bb47e1c7}{Chain\+Task()}} primitive).
+
+After the termination of the current activation, the task will go either in S\+U\+S\+P\+E\+N\+D\+ED state (if it has no more pending activations, or R\+E\+A\+DY in case it has pending activations.
+
+The function is mainly responsible for the stack unwinding at the end of the task (if needed), and after that the call to the scheduler.
+
+\textquotesingle{}\textquotesingle{}CB\textquotesingle{}\textquotesingle{} stands for Callback.
+
+Note\+: this include file is not the \char`\"{}best\char`\"{} place to place this function. ... but is a good point because it is visible to teh H\+AL implementation. Likely this declaration will move soon or later to another include file. \mbox{\Hypertarget{ee__kernel__types_8h_adbd069cc0873979538014485ab882b98}\label{ee__kernel__types_8h_adbd069cc0873979538014485ab882b98}} 
+\index{ee\_kernel\_types.h@{ee\_kernel\_types.h}!OSEE\_MAX\_BYTE@{OSEE\_MAX\_BYTE}}
+\index{OSEE\_MAX\_BYTE@{OSEE\_MAX\_BYTE}!ee\_kernel\_types.h@{ee\_kernel\_types.h}}
+\doxysubsubsection{\texorpdfstring{OSEE\_MAX\_BYTE}{OSEE\_MAX\_BYTE}}
+{\footnotesize\ttfamily \#define O\+S\+E\+E\+\_\+\+M\+A\+X\+\_\+\+B\+Y\+TE~((\mbox{\hyperlink{ee__kernel__types_8h_aa579f765f85a971ba83d4c8281257948}{Os\+E\+E\+\_\+byte}})-\/1)}
+
+Byte\+: the maximum value for a byte 
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{ee__kernel__types_8h_a67a3b1015e569eeedc463b307d7eb24c}\label{ee__kernel__types_8h_a67a3b1015e569eeedc463b307d7eb24c}} 
+\index{ee\_kernel\_types.h@{ee\_kernel\_types.h}!OsEE\_AlarmCB@{OsEE\_AlarmCB}}
+\index{OsEE\_AlarmCB@{OsEE\_AlarmCB}!ee\_kernel\_types.h@{ee\_kernel\_types.h}}
+\doxysubsubsection{\texorpdfstring{OsEE\_AlarmCB}{OsEE\_AlarmCB}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structOsEE__AlarmCB__tag}{Os\+E\+E\+\_\+\+Alarm\+C\+B\+\_\+tag}} \mbox{\hyperlink{ee__kernel__types_8h_a67a3b1015e569eeedc463b307d7eb24c}{Os\+E\+E\+\_\+\+Alarm\+CB}}}
+
+It stores the R\+AM information about the alarm. This data structure is present only if both Alarms and Schedule Tables are present in the application. Otherwise, the content of this data structure is integrated inside the trigger. \mbox{\Hypertarget{ee__kernel__types_8h_a6be9e7c8f0cc0117a849a81703b1843f}\label{ee__kernel__types_8h_a6be9e7c8f0cc0117a849a81703b1843f}} 
+\index{ee\_kernel\_types.h@{ee\_kernel\_types.h}!OsEE\_AlarmDB@{OsEE\_AlarmDB}}
+\index{OsEE\_AlarmDB@{OsEE\_AlarmDB}!ee\_kernel\_types.h@{ee\_kernel\_types.h}}
+\doxysubsubsection{\texorpdfstring{OsEE\_AlarmDB}{OsEE\_AlarmDB}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structOsEE__AlarmDB__tag}{Os\+E\+E\+\_\+\+Alarm\+D\+B\+\_\+tag}} \mbox{\hyperlink{ee__kernel__types_8h_a6be9e7c8f0cc0117a849a81703b1843f}{Os\+E\+E\+\_\+\+Alarm\+DB}}}
+
+It stores the Flash information about an alarm. This data structure is present only if both Alarms and Schedule Tables are present in the application. Otherwise, the content of this data structure is integrated inside the trigger. \mbox{\Hypertarget{ee__kernel__types_8h_a321e2d8dbc073e68cb9cda8583d28b52}\label{ee__kernel__types_8h_a321e2d8dbc073e68cb9cda8583d28b52}} 
+\index{ee\_kernel\_types.h@{ee\_kernel\_types.h}!OsEE\_MDB@{OsEE\_MDB}}
+\index{OsEE\_MDB@{OsEE\_MDB}!ee\_kernel\_types.h@{ee\_kernel\_types.h}}
+\doxysubsubsection{\texorpdfstring{OsEE\_MDB}{OsEE\_MDB}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structOsEE__MDB__tag}{Os\+E\+E\+\_\+\+M\+D\+B\+\_\+tag}} \mbox{\hyperlink{ee__kernel__types_8h_a321e2d8dbc073e68cb9cda8583d28b52}{Os\+E\+E\+\_\+\+M\+DB}}}
+
+The descriptor block tracks the specific mutual exclusion object, which can be either a Resource or a Spin Lock. They are handled together because they have to be released in L\+I\+FO order \mbox{[}S\+W\+S\+\_\+\+Os\+\_\+00801\mbox{]}. \mbox{\Hypertarget{ee__kernel__types_8h_a09fa6316ce540908359bbc26e7571795}\label{ee__kernel__types_8h_a09fa6316ce540908359bbc26e7571795}} 
+\index{ee\_kernel\_types.h@{ee\_kernel\_types.h}!OsEE\_TDB@{OsEE\_TDB}}
+\index{OsEE\_TDB@{OsEE\_TDB}!ee\_kernel\_types.h@{ee\_kernel\_types.h}}
+\doxysubsubsection{\texorpdfstring{OsEE\_TDB}{OsEE\_TDB}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structOsEE__TDB__tag}{Os\+E\+E\+\_\+\+T\+D\+B\+\_\+tag}} \mbox{\hyperlink{ee__kernel__types_8h_a09fa6316ce540908359bbc26e7571795}{Os\+E\+E\+\_\+\+T\+DB}}}
+
+It stores all the information related to the task that is configured statically, such as\+: priority, task type, task body pointer, maximum number of activations, core id, ... \mbox{\Hypertarget{ee__kernel__types_8h_afc1f17d5c14b865b4294b2b1b1c6a683}\label{ee__kernel__types_8h_afc1f17d5c14b865b4294b2b1b1c6a683}} 
+\index{ee\_kernel\_types.h@{ee\_kernel\_types.h}!OsEE\_TriggerDB@{OsEE\_TriggerDB}}
+\index{OsEE\_TriggerDB@{OsEE\_TriggerDB}!ee\_kernel\_types.h@{ee\_kernel\_types.h}}
+\doxysubsubsection{\texorpdfstring{OsEE\_TriggerDB}{OsEE\_TriggerDB}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structOsEE__TriggerDB__tag}{Os\+E\+E\+\_\+\+Trigger\+D\+B\+\_\+tag}} \mbox{\hyperlink{ee__kernel__types_8h_afc1f17d5c14b865b4294b2b1b1c6a683}{Os\+E\+E\+\_\+\+Trigger\+DB}}}
+
+If both Alarms and Schedule Tables are present in the Application, the struct has two pointers to the Alarm and to the Schedule Table Descriptor blocks. Only one of them is different from N\+U\+LL (this is implicitly the type of the trigger). If only Alarms or only Schedule Tables are present, the struct contains the fields of the descriptor block, saving one indirection. \mbox{\Hypertarget{ee__kernel__types_8h_a879d22c7db009745ebd69330171fb3aa}\label{ee__kernel__types_8h_a879d22c7db009745ebd69330171fb3aa}} 
+\index{ee\_kernel\_types.h@{ee\_kernel\_types.h}!OsEE\_TriggerQ@{OsEE\_TriggerQ}}
+\index{OsEE\_TriggerQ@{OsEE\_TriggerQ}!ee\_kernel\_types.h@{ee\_kernel\_types.h}}
+\doxysubsubsection{\texorpdfstring{OsEE\_TriggerQ}{OsEE\_TriggerQ}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structOsEE__TriggerDB__tag}{Os\+E\+E\+\_\+\+Trigger\+D\+B\+\_\+tag}} const$\ast$ \mbox{\hyperlink{ee__kernel__types_8h_a879d22c7db009745ebd69330171fb3aa}{Os\+E\+E\+\_\+\+TriggerQ}}}
+
+The trigger queue represents a queue of expiry points which could come either from Alarms or from Schedule Tables. If both (Alarms and Schedule Tables) are present inside an application, then the trigger queue has two pointers, one to the Alarm data, one to the Schedule Table data, and only one of them will be set, implicitly stating the type of object. If only one kind of object is present in the Application, then we avoid the indirection and the specific item data is put inside the \mbox{\hyperlink{structOsEE__TriggerCB}{Os\+E\+E\+\_\+\+Trigger\+CB}} and inside the Os\+E\+E\+\_\+\+Trigger\+DB.
+
+Also note that the Trigger Queue is a Linked List, but in theory we could implement any priority queue data structure (Heap for example) 
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{ee__kernel__types_8h_a94f0722a0bf2577ff937847aaa4d8b80}\label{ee__kernel__types_8h_a94f0722a0bf2577ff937847aaa4d8b80}} 
+\index{ee\_kernel\_types.h@{ee\_kernel\_types.h}!OsEE\_kernel\_status@{OsEE\_kernel\_status}}
+\index{OsEE\_kernel\_status@{OsEE\_kernel\_status}!ee\_kernel\_types.h@{ee\_kernel\_types.h}}
+\doxysubsubsection{\texorpdfstring{OsEE\_kernel\_status}{OsEE\_kernel\_status}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{ee__kernel__types_8h_a94f0722a0bf2577ff937847aaa4d8b80}{Os\+E\+E\+\_\+kernel\+\_\+status}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OSEE\_KERNEL\_INITIALIZED@{OSEE\_KERNEL\_INITIALIZED}!ee\_kernel\_types.h@{ee\_kernel\_types.h}}\index{ee\_kernel\_types.h@{ee\_kernel\_types.h}!OSEE\_KERNEL\_INITIALIZED@{OSEE\_KERNEL\_INITIALIZED}}}\mbox{\Hypertarget{ee__kernel__types_8h_a94f0722a0bf2577ff937847aaa4d8b80a587bc2af1e02a42c57be36382e34f1ff}\label{ee__kernel__types_8h_a94f0722a0bf2577ff937847aaa4d8b80a587bc2af1e02a42c57be36382e34f1ff}} 
+O\+S\+E\+E\+\_\+\+K\+E\+R\+N\+E\+L\+\_\+\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+ED&before OS initialization \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OSEE\_KERNEL\_STARTING@{OSEE\_KERNEL\_STARTING}!ee\_kernel\_types.h@{ee\_kernel\_types.h}}\index{ee\_kernel\_types.h@{ee\_kernel\_types.h}!OSEE\_KERNEL\_STARTING@{OSEE\_KERNEL\_STARTING}}}\mbox{\Hypertarget{ee__kernel__types_8h_a94f0722a0bf2577ff937847aaa4d8b80a854a1b760a4d83d002dd4ee1f9682e93}\label{ee__kernel__types_8h_a94f0722a0bf2577ff937847aaa4d8b80a854a1b760a4d83d002dd4ee1f9682e93}} 
+O\+S\+E\+E\+\_\+\+K\+E\+R\+N\+E\+L\+\_\+\+S\+T\+A\+R\+T\+I\+NG&before the call to \mbox{\hyperlink{group__primitives-hook_ga5cb66285b5a4c562ec9c47bd9f7eb2b6}{Startup\+Hook()}} and autostart \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OSEE\_KERNEL\_STARTED@{OSEE\_KERNEL\_STARTED}!ee\_kernel\_types.h@{ee\_kernel\_types.h}}\index{ee\_kernel\_types.h@{ee\_kernel\_types.h}!OSEE\_KERNEL\_STARTED@{OSEE\_KERNEL\_STARTED}}}\mbox{\Hypertarget{ee__kernel__types_8h_a94f0722a0bf2577ff937847aaa4d8b80ab99d099ebf69e8ebf7e4716357b2ab91}\label{ee__kernel__types_8h_a94f0722a0bf2577ff937847aaa4d8b80ab99d099ebf69e8ebf7e4716357b2ab91}} 
+O\+S\+E\+E\+\_\+\+K\+E\+R\+N\+E\+L\+\_\+\+S\+T\+A\+R\+T\+ED&after the call to \mbox{\hyperlink{group__primitives-hook_ga5cb66285b5a4c562ec9c47bd9f7eb2b6}{Startup\+Hook()}} and autostart \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OSEE\_KERNEL\_SHUTDOWN@{OSEE\_KERNEL\_SHUTDOWN}!ee\_kernel\_types.h@{ee\_kernel\_types.h}}\index{ee\_kernel\_types.h@{ee\_kernel\_types.h}!OSEE\_KERNEL\_SHUTDOWN@{OSEE\_KERNEL\_SHUTDOWN}}}\mbox{\Hypertarget{ee__kernel__types_8h_a94f0722a0bf2577ff937847aaa4d8b80a48c011aed28eed91df39f4ebdcdd7e2c}\label{ee__kernel__types_8h_a94f0722a0bf2577ff937847aaa4d8b80a48c011aed28eed91df39f4ebdcdd7e2c}} 
+O\+S\+E\+E\+\_\+\+K\+E\+R\+N\+E\+L\+\_\+\+S\+H\+U\+T\+D\+O\+WN&\mbox{\hyperlink{group__primitives-startup_ga6df6f7c4e5965c72bd089c9f381f6ef2}{Shutdown\+O\+S()}} called. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{ee__kernel__types_8h_aac88ce5982bf0bc00cd6af0cccb98910}\label{ee__kernel__types_8h_aac88ce5982bf0bc00cd6af0cccb98910}} 
+\index{ee\_kernel\_types.h@{ee\_kernel\_types.h}!OsEE\_m\_type@{OsEE\_m\_type}}
+\index{OsEE\_m\_type@{OsEE\_m\_type}!ee\_kernel\_types.h@{ee\_kernel\_types.h}}
+\doxysubsubsection{\texorpdfstring{OsEE\_m\_type}{OsEE\_m\_type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{ee__kernel__types_8h_aac88ce5982bf0bc00cd6af0cccb98910}{Os\+E\+E\+\_\+m\+\_\+type}}}
+
+The Mutual exclusion type is only present if the application uses both Resources and Spin locks, and is used to mark the type of the specific object (either a Resource or a Spin Lock). The idea is that when the application only has one type of these objects (either only Resources or only Spin Locks), the system is optimized reducing the overhead of the additional indirection. \mbox{\Hypertarget{ee__kernel__types_8h_a8d1bb526049b7816cc00b41d69cca2db}\label{ee__kernel__types_8h_a8d1bb526049b7816cc00b41d69cca2db}} 
+\index{ee\_kernel\_types.h@{ee\_kernel\_types.h}!OsEE\_os\_context@{OsEE\_os\_context}}
+\index{OsEE\_os\_context@{OsEE\_os\_context}!ee\_kernel\_types.h@{ee\_kernel\_types.h}}
+\doxysubsubsection{\texorpdfstring{OsEE\_os\_context}{OsEE\_os\_context}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{ee__kernel__types_8h_a8d1bb526049b7816cc00b41d69cca2db}{Os\+E\+E\+\_\+os\+\_\+context}}}
+
+Used in addition to handle not recursive calls at Error\+Hook \mbox{\Hypertarget{ee__kernel__types_8h_ac063e723cbbae500e624f46a0f30fee8}\label{ee__kernel__types_8h_ac063e723cbbae500e624f46a0f30fee8}} 
+\index{ee\_kernel\_types.h@{ee\_kernel\_types.h}!OsEE\_st\_synch\_strategy@{OsEE\_st\_synch\_strategy}}
+\index{OsEE\_st\_synch\_strategy@{OsEE\_st\_synch\_strategy}!ee\_kernel\_types.h@{ee\_kernel\_types.h}}
+\doxysubsubsection{\texorpdfstring{OsEE\_st\_synch\_strategy}{OsEE\_st\_synch\_strategy}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{ee__kernel__types_8h_ac063e723cbbae500e624f46a0f30fee8}{Os\+E\+E\+\_\+st\+\_\+synch\+\_\+strategy}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OSEE\_SCHEDTABLE\_SYNC\_NONE@{OSEE\_SCHEDTABLE\_SYNC\_NONE}!ee\_kernel\_types.h@{ee\_kernel\_types.h}}\index{ee\_kernel\_types.h@{ee\_kernel\_types.h}!OSEE\_SCHEDTABLE\_SYNC\_NONE@{OSEE\_SCHEDTABLE\_SYNC\_NONE}}}\mbox{\Hypertarget{ee__kernel__types_8h_ac063e723cbbae500e624f46a0f30fee8ac3fc787e6728b828f8f8ab1c6d0e692b}\label{ee__kernel__types_8h_ac063e723cbbae500e624f46a0f30fee8ac3fc787e6728b828f8f8ab1c6d0e692b}} 
+O\+S\+E\+E\+\_\+\+S\+C\+H\+E\+D\+T\+A\+B\+L\+E\+\_\+\+S\+Y\+N\+C\+\_\+\+N\+O\+NE&No support for synchronization. (default) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OSEE\_SCHEDTABLE\_SYNC\_IMPLICIT@{OSEE\_SCHEDTABLE\_SYNC\_IMPLICIT}!ee\_kernel\_types.h@{ee\_kernel\_types.h}}\index{ee\_kernel\_types.h@{ee\_kernel\_types.h}!OSEE\_SCHEDTABLE\_SYNC\_IMPLICIT@{OSEE\_SCHEDTABLE\_SYNC\_IMPLICIT}}}\mbox{\Hypertarget{ee__kernel__types_8h_ac063e723cbbae500e624f46a0f30fee8a056e9382c9994d67db12a003aa1dfc52}\label{ee__kernel__types_8h_ac063e723cbbae500e624f46a0f30fee8a056e9382c9994d67db12a003aa1dfc52}} 
+O\+S\+E\+E\+\_\+\+S\+C\+H\+E\+D\+T\+A\+B\+L\+E\+\_\+\+S\+Y\+N\+C\+\_\+\+I\+M\+P\+L\+I\+C\+IT&The counter driving the schedule table is the counter with which synchronization is required. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OSEE\_SCHEDTABLE\_SYNC\_EXPLICIT@{OSEE\_SCHEDTABLE\_SYNC\_EXPLICIT}!ee\_kernel\_types.h@{ee\_kernel\_types.h}}\index{ee\_kernel\_types.h@{ee\_kernel\_types.h}!OSEE\_SCHEDTABLE\_SYNC\_EXPLICIT@{OSEE\_SCHEDTABLE\_SYNC\_EXPLICIT}}}\mbox{\Hypertarget{ee__kernel__types_8h_ac063e723cbbae500e624f46a0f30fee8a34dd9c148065eb8c05204497d6fc41c0}\label{ee__kernel__types_8h_ac063e723cbbae500e624f46a0f30fee8a34dd9c148065eb8c05204497d6fc41c0}} 
+O\+S\+E\+E\+\_\+\+S\+C\+H\+E\+D\+T\+A\+B\+L\+E\+\_\+\+S\+Y\+N\+C\+\_\+\+E\+X\+P\+L\+I\+C\+IT&The schedule table is driven by an OS counter but processing needs to be synchronized with a different counter which is not an OS counter object. Specification of Operating System \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{ee__kernel__types_8h_a01bbbafc04ff95345be928e1e39c3c68}\label{ee__kernel__types_8h_a01bbbafc04ff95345be928e1e39c3c68}} 
+\index{ee\_kernel\_types.h@{ee\_kernel\_types.h}!OsEE\_trigger\_status@{OsEE\_trigger\_status}}
+\index{OsEE\_trigger\_status@{OsEE\_trigger\_status}!ee\_kernel\_types.h@{ee\_kernel\_types.h}}
+\doxysubsubsection{\texorpdfstring{OsEE\_trigger\_status}{OsEE\_trigger\_status}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{ee__kernel__types_8h_a01bbbafc04ff95345be928e1e39c3c68}{Os\+E\+E\+\_\+trigger\+\_\+status}}}
+
+The trigger statuses have been made to consistently handle race conditions on the update of Alarms and Schedule Tables.
+
+In particular, in the multicore case we have a potential race condition due to the following\+:
+\begin{DoxyItemize}
+\item the handling of the trigger data structure is done in mutual exclusion using a spin lock.
+\item the spinlock is released during the handling of the notifications. This is done because the time spent in handling notifications may be long (e.\+g., a Schedule Table activating a number of tasks at an expiry point.
+\item when a core is handling the notifications at an expiry point related to an Alarm (Schedule Table), with the spin lock unlocked, a \mbox{\hyperlink{group__primitives-alarm_ga7bfac685beaa3a62872ed44161e07e09}{Cancel\+Alarm()}} (\mbox{\hyperlink{group__primitives-schtable_gad3d659c08b2702e817d42ed171b7dfd5}{Stop\+Schedule\+Table()}}) could be issued by another core on the same Alarm (Schedule Table). Once canceled (stopped), the Alarm (Schedule Table) could be restarted again.
+\end{DoxyItemize}
+
+Therefore, the status transitions of a trigger will be the following\+:
+\begin{DoxyItemize}
+\item O\+S\+E\+E\+\_\+\+T\+R\+I\+G\+G\+E\+R\+\_\+\+I\+N\+A\+C\+T\+I\+VE\+: Initial status, trigger inactive
+\item O\+S\+E\+E\+\_\+\+T\+R\+I\+G\+G\+E\+R\+\_\+\+A\+C\+T\+I\+VE\+: Alarm or Schedule Table started
+\item O\+S\+E\+E\+\_\+\+T\+R\+I\+G\+G\+E\+R\+\_\+\+E\+X\+P\+I\+R\+ED\+: The trigger fired. The status is changed to expired before leaving the critical section.
+\item O\+S\+E\+E\+\_\+\+T\+R\+I\+G\+G\+E\+R\+\_\+\+C\+A\+N\+C\+E\+L\+ED\+: The status is set to canceled if while the trigger is expired and the spin lock released a \mbox{\hyperlink{group__primitives-alarm_ga7bfac685beaa3a62872ed44161e07e09}{Cancel\+Alarm()}} or \mbox{\hyperlink{group__primitives-schtable_gad3d659c08b2702e817d42ed171b7dfd5}{Stop\+Schedule\+Table()}} arrives from another core. At the end of the notification handling the status will be set back to O\+S\+E\+E\+\_\+\+T\+R\+I\+G\+G\+E\+R\+\_\+\+I\+N\+A\+C\+T\+I\+VE
+\item O\+S\+E\+E\+\_\+\+T\+R\+I\+G\+G\+E\+R\+\_\+\+R\+E\+E\+N\+A\+B\+L\+ED\+: The status is set to reenabled if a canceled Alarm or Schedule\+Table is reenabled while a core is still handling the actions. At the end of the notification handling the status will be set to O\+S\+E\+E\+\_\+\+T\+R\+I\+G\+G\+E\+R\+\_\+\+A\+C\+T\+I\+VE with the new start time. 
+\end{DoxyItemize}
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{ee__kernel__types_8h_a47a2172ad069306e0a8bed474330e3b6}\label{ee__kernel__types_8h_a47a2172ad069306e0a8bed474330e3b6}} 
+\index{ee\_kernel\_types.h@{ee\_kernel\_types.h}!osEE\_change\_context\_from\_task\_end@{osEE\_change\_context\_from\_task\_end}}
+\index{osEE\_change\_context\_from\_task\_end@{osEE\_change\_context\_from\_task\_end}!ee\_kernel\_types.h@{ee\_kernel\_types.h}}
+\doxysubsubsection{\texorpdfstring{osEE\_change\_context\_from\_task\_end()}{osEE\_change\_context\_from\_task\_end()}}
+{\footnotesize\ttfamily void os\+E\+E\+\_\+change\+\_\+context\+\_\+from\+\_\+task\+\_\+end (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ee__kernel__types_8h_a09fa6316ce540908359bbc26e7571795}{Os\+E\+E\+\_\+\+T\+DB}} $\ast$}]{p\+\_\+from,  }\item[{\mbox{\hyperlink{ee__kernel__types_8h_a09fa6316ce540908359bbc26e7571795}{Os\+E\+E\+\_\+\+T\+DB}} $\ast$}]{p\+\_\+to }\end{DoxyParamCaption})}
+
+This function handles the context change at Task termination.
+
+This is an internal function of the E\+R\+I\+K\+A3 Hardware Abstraction Layer, called by the Kernel, provided by each porting in an architecture dependent way.
+
+Note\+: this include file is not the \char`\"{}best\char`\"{} place to place this function. ... but is a good point because it is visible to teh H\+AL implementation. Likely this declaration will move soon or later to another include file.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+\_\+from} & Current I\+S\+R2 in execution \\
+\hline
+\mbox{\texttt{ in}}  & {\em p\+\_\+to} & New task to execute \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ee__kernel__types_8h_a37ec7caf7ebba130114f0333c0bc3b91}\label{ee__kernel__types_8h_a37ec7caf7ebba130114f0333c0bc3b91}} 
+\index{ee\_kernel\_types.h@{ee\_kernel\_types.h}!osEE\_idle\_hook\_wrapper@{osEE\_idle\_hook\_wrapper}}
+\index{osEE\_idle\_hook\_wrapper@{osEE\_idle\_hook\_wrapper}!ee\_kernel\_types.h@{ee\_kernel\_types.h}}
+\doxysubsubsection{\texorpdfstring{osEE\_idle\_hook\_wrapper()}{osEE\_idle\_hook\_wrapper()}}
+{\footnotesize\ttfamily void os\+E\+E\+\_\+idle\+\_\+hook\+\_\+wrapper (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+This is the Task Body of the Idle task. 

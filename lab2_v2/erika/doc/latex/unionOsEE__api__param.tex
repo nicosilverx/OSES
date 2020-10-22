@@ -1,0 +1,30 @@
+\hypertarget{unionOsEE__api__param}{}\doxysection{Os\+E\+E\+\_\+api\+\_\+param Union Reference}
+\label{unionOsEE__api__param}\index{OsEE\_api\_param@{OsEE\_api\_param}}
+
+
+We use a union to hold the a function parameter to be used in the Error\+Hook macros.  
+
+
+
+
+{\ttfamily \#include $<$ee\+\_\+api\+\_\+types.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{unionOsEE__api__param_a126225965e60a47ec0ae2a3384ef1f19}\label{unionOsEE__api__param_a126225965e60a47ec0ae2a3384ef1f19}} 
+\mbox{\hyperlink{ee__api__types_8h_a9cadacc7d025bfbcd03fed3f2aea822d}{Object\+I\+D\+Type}} \mbox{\hyperlink{unionOsEE__api__param_a126225965e60a47ec0ae2a3384ef1f19}{num\+\_\+param}}
+\begin{DoxyCompactList}\small\item\em numeric parameter \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{unionOsEE__api__param_a160771a6a63421faf0c27eef8e4ea791}\label{unionOsEE__api__param_a160771a6a63421faf0c27eef8e4ea791}} 
+Os\+E\+E\+\_\+addr \mbox{\hyperlink{unionOsEE__api__param_a160771a6a63421faf0c27eef8e4ea791}{p\+\_\+param}}
+\begin{DoxyCompactList}\small\item\em pointer parameter \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The union has both a scalar type and a pointer type to hold the parameter.
+
+The idea is that the system stores the primitive parameters inside a global structure before calling Error\+Hook. After that, depending on the type of parameter, the right union member is used to get the right value. 
+
+The documentation for this union was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+inc/\mbox{\hyperlink{ee__api__types_8h}{ee\+\_\+api\+\_\+types.\+h}}\end{DoxyCompactItemize}

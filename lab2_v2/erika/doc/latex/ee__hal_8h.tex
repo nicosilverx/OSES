@@ -1,0 +1,47 @@
+\hypertarget{ee__hal_8h}{}\doxysection{inc/ee\+\_\+hal.h File Reference}
+\label{ee__hal_8h}\index{inc/ee\_hal.h@{inc/ee\_hal.h}}
+
+
+H\+AL support visible to the application.  
+
+
+{\ttfamily \#include \char`\"{}ee\+\_\+cfg.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ee\+\_\+utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ee\+\_\+compiler.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ee\+\_\+platform\+\_\+types.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ee\+\_\+atmega\+\_\+timer1ctc.\+h\char`\"{}}\newline
+Include dependency graph for ee\+\_\+hal.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{ee__hal_8h_ace5a29cee2f870bbf23ce38cc4dce210}\label{ee__hal_8h_ace5a29cee2f870bbf23ce38cc4dce210}} 
+\#define {\bfseries O\+S\+E\+E\+\_\+\+F\+I\+L\+L\+\_\+\+P\+A\+T\+T\+E\+RN}~0x\+A5\+A5\+A5\+A5U
+\item 
+\mbox{\Hypertarget{ee__hal_8h_a0bb9a379cb363c1e2086eb2a1f9080b1}\label{ee__hal_8h_a0bb9a379cb363c1e2086eb2a1f9080b1}} 
+\#define {\bfseries O\+S\+E\+E\+\_\+\+F\+I\+L\+L\+\_\+\+A\+R\+R\+AY}(array)~= \{\mbox{[}0 ... (sizeof(array)/sizeof((array)\mbox{[}0U\mbox{]}) -\/ 1U)\mbox{]} = O\+S\+E\+E\+\_\+\+F\+I\+L\+L\+\_\+\+P\+A\+T\+T\+E\+RN\}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{ee__hal_8h_a49ba751fda3a754dd5ce48b0bd8398e7}\label{ee__hal_8h_a49ba751fda3a754dd5ce48b0bd8398e7}} 
+\mbox{\hyperlink{ee__compiler__gcc_8h_abb9563920c344956cef4718c142139da}{O\+S\+E\+E\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} Os\+E\+E\+\_\+addr {\bfseries os\+E\+E\+\_\+get\+\_\+\+SP} (void)
+\item 
+\mbox{\Hypertarget{ee__hal_8h_adb9d4d8d00fd50c13b23e56d01d63fdd}\label{ee__hal_8h_adb9d4d8d00fd50c13b23e56d01d63fdd}} 
+\mbox{\hyperlink{ee__compiler__gcc_8h_abb9563920c344956cef4718c142139da}{O\+S\+E\+E\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} Os\+E\+E\+\_\+core\+\_\+id {\bfseries os\+E\+E\+\_\+get\+\_\+curr\+\_\+core\+\_\+id} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This files contains all H\+AL for a specific Architecture in Erika Enterprise.
+
+\begin{DoxyAuthor}{Author}
+Errico Guidieri 
+
+Giuseppe Serano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2016 
+\end{DoxyDate}

@@ -1,0 +1,559 @@
+\hypertarget{ee__api__types_8h}{}\doxysection{inc/ee\+\_\+api\+\_\+types.h File Reference}
+\label{ee__api__types_8h}\index{inc/ee\_api\_types.h@{inc/ee\_api\_types.h}}
+
+
+O\+S\+EK Kernel A\+PI Types.  
+
+
+{\ttfamily \#include \char`\"{}ee\+\_\+platform\+\_\+types.\+h\char`\"{}}\newline
+Include dependency graph for ee\+\_\+api\+\_\+types.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structAlarmBaseType}{Alarm\+Base\+Type}}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{structAlarmBaseType}{Alarm\+Base\+Type}} stores information about a counter. \end{DoxyCompactList}\item 
+union \mbox{\hyperlink{unionOsEE__api__param}{Os\+E\+E\+\_\+api\+\_\+param}}
+\begin{DoxyCompactList}\small\item\em We use a union to hold the a function parameter to be used in the Error\+Hook macros. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{ee__api__types_8h_a9cfad4540e6c5c90f3957a4d989a0744}{O\+S\+E\+E\+\_\+\+A\+P\+P\+M\+O\+D\+E\+\_\+\+T\+Y\+PE}}~\mbox{\hyperlink{ee__compiler_8h_a44fc42ed93abd1afe9c2268543bc8faf}{V\+AR}}(uint8\+\_\+t, \mbox{\hyperlink{ee__compiler_8h_a11a4114a8973be51c022ce946b643033}{T\+Y\+P\+E\+D\+EF}})
+\begin{DoxyCompactList}\small\item\em Internal type used for Application Modes. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__primitives-startup_ga3868411e6ffc06ead1ed235231e3f349}{I\+N\+V\+A\+L\+I\+D\+\_\+\+A\+P\+P\+M\+O\+DE}}~((\mbox{\hyperlink{group__primitives-startup_gae3e1ae7b5a088e40194d7b5dc48db693}{App\+Mode\+Type}})-\/1)
+\begin{DoxyCompactList}\small\item\em Value for invalid application modes. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{ee__api__types_8h_a9e73ce321dc7375392297601f51e9c72}{O\+S\+E\+E\+\_\+\+T\+A\+S\+K\+\_\+\+I\+D\+\_\+\+T\+Y\+PE}}~\mbox{\hyperlink{ee__compiler_8h_a44fc42ed93abd1afe9c2268543bc8faf}{V\+AR}}(Os\+E\+E\+\_\+reg, \mbox{\hyperlink{ee__compiler_8h_a11a4114a8973be51c022ce946b643033}{T\+Y\+P\+E\+D\+EF}})
+\begin{DoxyCompactList}\small\item\em Internal type used for Task I\+Ds. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__primitives-task_ga4e7c7014b29fafc9f04982c4b97512c5}{I\+N\+V\+A\+L\+I\+D\+\_\+\+T\+A\+SK}}~((\mbox{\hyperlink{group__primitives-task_ga9733da8629f4d0984967785419b15d4a}{Task\+Type}})-\/1)
+\begin{DoxyCompactList}\small\item\em This is the invalid task value. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__primitives-interrupt_ga0dca407e1218b5ca71722c61c429469d}{I\+N\+V\+A\+L\+I\+D\+\_\+\+I\+SR}}~\mbox{\hyperlink{group__primitives-task_ga4e7c7014b29fafc9f04982c4b97512c5}{I\+N\+V\+A\+L\+I\+D\+\_\+\+T\+A\+SK}}
+\begin{DoxyCompactList}\small\item\em This is the invalid I\+S\+R2 value. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{ee__api__types_8h_aaaef40f9b276933d5afbfb578db8d124}{O\+S\+E\+E\+\_\+\+T\+A\+S\+K\+\_\+\+P\+R\+I\+O\+\_\+\+T\+Y\+PE}}~\mbox{\hyperlink{ee__compiler_8h_a44fc42ed93abd1afe9c2268543bc8faf}{V\+AR}}(uint8\+\_\+t, \mbox{\hyperlink{ee__compiler_8h_a11a4114a8973be51c022ce946b643033}{T\+Y\+P\+E\+D\+EF}})
+\begin{DoxyCompactList}\small\item\em Internal type storing task priorities. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__primitives-task_ga6ec57cab346cf26d69aa233e351607ef}{O\+S\+E\+E\+\_\+\+I\+S\+R2\+\_\+\+P\+R\+I\+O\+\_\+\+B\+IT}}~( (\mbox{\hyperlink{group__primitives-task_ga2fbf8607316afe2fe7d402a8f6e00008}{Task\+Prio}})1U $<$$<$ ( (sizeof(\mbox{\hyperlink{group__primitives-task_ga2fbf8607316afe2fe7d402a8f6e00008}{Task\+Prio}})$\ast$((size\+\_\+t)C\+H\+A\+R\+\_\+\+B\+IT)) -\/ ((size\+\_\+t)1U) ) )
+\begin{DoxyCompactList}\small\item\em Most significant bit of a priority. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__primitives-task_ga396a5877823a792dc34d5ab99a9d20a8}{O\+S\+E\+E\+\_\+\+I\+S\+R\+\_\+\+A\+L\+L\+\_\+\+P\+R\+IO}}~((\mbox{\hyperlink{group__primitives-task_ga2fbf8607316afe2fe7d402a8f6e00008}{Task\+Prio}})-\/1)
+\begin{DoxyCompactList}\small\item\em Bit mask for all priority bits. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{ee__api__types_8h_a0aaf577c4af78a7c996c913d25fab754}{O\+S\+E\+E\+\_\+\+T\+A\+S\+K\+\_\+\+A\+C\+T\+I\+V\+A\+T\+I\+O\+N\+\_\+\+T\+Y\+PE}}~\mbox{\hyperlink{ee__compiler_8h_a44fc42ed93abd1afe9c2268543bc8faf}{V\+AR}}(uint8\+\_\+t, \mbox{\hyperlink{ee__compiler_8h_a11a4114a8973be51c022ce946b643033}{T\+Y\+P\+E\+D\+EF}})
+\begin{DoxyCompactList}\small\item\em Internal type to store the number of pending activations. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__primitives-multicore_gaee597e8fa1f316e1615791fd05f082fe}{I\+N\+V\+A\+L\+I\+D\+\_\+\+C\+O\+R\+E\+\_\+\+ID}}~((\mbox{\hyperlink{group__primitives-multicore_gacfda647135a29312579df1884363464c}{Core\+Id\+Type}})-\/1)
+\begin{DoxyCompactList}\small\item\em Invalid core ID. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{ee__api__types_8h_ae12d942209914b8c5d2f33357c2ea867}{O\+S\+E\+E\+\_\+\+C\+O\+R\+E\+\_\+\+N\+U\+M\+\_\+\+T\+Y\+PE}}~\mbox{\hyperlink{ee__compiler_8h_a44fc42ed93abd1afe9c2268543bc8faf}{V\+AR}}(uint8\+\_\+t, \mbox{\hyperlink{ee__compiler_8h_a11a4114a8973be51c022ce946b643033}{T\+Y\+P\+E\+D\+EF}})
+\begin{DoxyCompactList}\small\item\em Internal type representing a logical core ID. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{ee__api__types_8h_a0459fb52b97f04dbd6db89b7fb7cb28e}{O\+S\+E\+E\+\_\+\+C\+O\+R\+E\+\_\+\+M\+A\+S\+K\+\_\+\+T\+Y\+PE}}~\mbox{\hyperlink{ee__compiler_8h_a44fc42ed93abd1afe9c2268543bc8faf}{V\+AR}}(Os\+E\+E\+\_\+reg, \mbox{\hyperlink{ee__compiler_8h_a11a4114a8973be51c022ce946b643033}{T\+Y\+P\+E\+D\+EF}})
+\begin{DoxyCompactList}\small\item\em Internal type representing a mask of cores. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{ee__api__types_8h_ac49bbff5aad217707ebed1771434ee1e}{O\+S\+E\+E\+\_\+\+T\+A\+S\+K\+\_\+\+F\+U\+N\+C\+\_\+\+T\+Y\+PE}}(task\+\_\+func\+\_\+type\+\_\+name)~\mbox{\hyperlink{ee__compiler_8h_a78354f9ebe2afb569ba72e559c525a1d}{P2\+F\+U\+NC}}(void, \mbox{\hyperlink{ee__compiler_8h_a11a4114a8973be51c022ce946b643033}{T\+Y\+P\+E\+D\+EF}}, task\+\_\+func\+\_\+type\+\_\+name)
+\begin{DoxyCompactList}\small\item\em A function pointer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ee__api__types_8h_aeb2de2a76ea6728368042cf7a3fcd60c}\label{ee__api__types_8h_aeb2de2a76ea6728368042cf7a3fcd60c}} 
+\#define \mbox{\hyperlink{ee__api__types_8h_aeb2de2a76ea6728368042cf7a3fcd60c}{S\+U\+S\+P\+E\+N\+D\+ED}}~\mbox{\hyperlink{ee__api__types_8h_a1abc43b358b88d0f5adcb1bc0b70f5dfa1277b5e114bfd40249d705e59284a2ba}{O\+S\+E\+E\+\_\+\+T\+A\+S\+K\+\_\+\+S\+U\+S\+P\+E\+N\+D\+ED}}
+\begin{DoxyCompactList}\small\item\em O\+S\+EK OS S\+U\+S\+P\+E\+N\+D\+ED task status. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ee__api__types_8h_ad1235d5ce36f7267285e82dccd428aa6}\label{ee__api__types_8h_ad1235d5ce36f7267285e82dccd428aa6}} 
+\#define \mbox{\hyperlink{ee__api__types_8h_ad1235d5ce36f7267285e82dccd428aa6}{R\+E\+A\+DY}}~\mbox{\hyperlink{ee__api__types_8h_a1abc43b358b88d0f5adcb1bc0b70f5dfa4fd02b5d79b2906eeb8bb40db5bcb7c5}{O\+S\+E\+E\+\_\+\+T\+A\+S\+K\+\_\+\+R\+E\+A\+DY}}
+\begin{DoxyCompactList}\small\item\em O\+S\+EK OS R\+E\+A\+DY task status. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ee__api__types_8h_a13ee57d95da6b6509d43bb1b3f67bb02}\label{ee__api__types_8h_a13ee57d95da6b6509d43bb1b3f67bb02}} 
+\#define \mbox{\hyperlink{ee__api__types_8h_a13ee57d95da6b6509d43bb1b3f67bb02}{W\+A\+I\+T\+I\+NG}}~\mbox{\hyperlink{ee__api__types_8h_a1abc43b358b88d0f5adcb1bc0b70f5dfaf2b9c7b5098f1fb58af21718013f3efa}{O\+S\+E\+E\+\_\+\+T\+A\+S\+K\+\_\+\+W\+A\+I\+T\+I\+NG}}
+\begin{DoxyCompactList}\small\item\em O\+S\+EK OS W\+A\+I\+T\+I\+NG task status. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ee__api__types_8h_a6fb7181d994ee98e735494be55809708}\label{ee__api__types_8h_a6fb7181d994ee98e735494be55809708}} 
+\#define \mbox{\hyperlink{ee__api__types_8h_a6fb7181d994ee98e735494be55809708}{R\+U\+N\+N\+I\+NG}}~\mbox{\hyperlink{ee__api__types_8h_a1abc43b358b88d0f5adcb1bc0b70f5dfa871b9bb38bce15b947a46d4366482472}{O\+S\+E\+E\+\_\+\+T\+A\+S\+K\+\_\+\+R\+U\+N\+N\+I\+NG}}
+\begin{DoxyCompactList}\small\item\em O\+S\+EK OS R\+U\+N\+N\+I\+NG task status. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{ee__api__types_8h_a5729e8f24953268ffe18e86b881c7f7f}{O\+S\+E\+E\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+T\+Y\+PE}}~\mbox{\hyperlink{ee__compiler_8h_a44fc42ed93abd1afe9c2268543bc8faf}{V\+AR}}(Os\+E\+E\+\_\+reg, \mbox{\hyperlink{ee__compiler_8h_a11a4114a8973be51c022ce946b643033}{T\+Y\+P\+E\+D\+EF}})
+\begin{DoxyCompactList}\small\item\em Internal type representing a counter. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{ee__api__types_8h_acb638228257ada1020a3caefd66f07ae}{O\+S\+E\+E\+\_\+\+T\+I\+C\+K\+\_\+\+D\+E\+L\+T\+A\+\_\+\+T\+Y\+PE}}~\mbox{\hyperlink{ee__compiler_8h_a44fc42ed93abd1afe9c2268543bc8faf}{V\+AR}}(Os\+E\+E\+\_\+sreg, \mbox{\hyperlink{ee__compiler_8h_a11a4114a8973be51c022ce946b643033}{T\+Y\+P\+E\+D\+EF}})
+\begin{DoxyCompactList}\small\item\em Type used to store tick deviations in Schedule Tables. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{ee__api__types_8h_ae634ad90564c1481bb02785b5498faf1}{O\+S\+E\+E\+\_\+\+A\+L\+A\+R\+M\+\_\+\+I\+D\+\_\+\+T\+Y\+PE}}~\mbox{\hyperlink{ee__compiler_8h_a44fc42ed93abd1afe9c2268543bc8faf}{V\+AR}}(Os\+E\+E\+\_\+reg, \mbox{\hyperlink{ee__compiler_8h_a11a4114a8973be51c022ce946b643033}{T\+Y\+P\+E\+D\+EF}})
+\begin{DoxyCompactList}\small\item\em Internal type for Alarm I\+Ds. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__primitives-alarm_gae38670593ce93e38380396e9f1f7b09f}{I\+N\+V\+A\+L\+I\+D\+\_\+\+A\+L\+A\+RM}}~((\mbox{\hyperlink{group__primitives-alarm_gac0db96397f5d9817124ffc05a9755b85}{Alarm\+Type}})-\/1)
+\begin{DoxyCompactList}\small\item\em Invalid alarm ID. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__primitives-alarm_ga63bf892b6ff4bd4e9841b053fc2e33ed}{Declare\+Alarm}}(Alarm)
+\begin{DoxyCompactList}\small\item\em Alarm Declaration. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__primitives-alarm_ga051669c3fa80c56260c8a02de803d20a}{A\+L\+A\+R\+M\+C\+A\+L\+L\+B\+A\+CK}}(cbk)~void cbk (void)
+\begin{DoxyCompactList}\small\item\em This macro is used both to declare and to define an alarm callback. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{ee__api__types_8h_a7b62a74d3f3436ea0f46d9f0906a5844}{O\+S\+E\+E\+\_\+\+R\+E\+S\+O\+U\+R\+C\+E\+\_\+\+I\+D\+\_\+\+T\+Y\+PE}}~\mbox{\hyperlink{ee__compiler_8h_a44fc42ed93abd1afe9c2268543bc8faf}{V\+AR}}(Os\+E\+E\+\_\+reg, \mbox{\hyperlink{ee__compiler_8h_a11a4114a8973be51c022ce946b643033}{T\+Y\+P\+E\+D\+EF}})
+\begin{DoxyCompactList}\small\item\em Internal type for Resource I\+Ds. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__primitives-resource_ga92783ef01a97745e1f4a6696cb889d86}{I\+N\+V\+A\+L\+I\+D\+\_\+\+R\+E\+S\+O\+U\+R\+CE}}~((\mbox{\hyperlink{group__primitives-resource_gaac3971a971a95d78051b389553842386}{Resource\+Type}})-\/1)
+\begin{DoxyCompactList}\small\item\em Invalid resource ID. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__primitives-resource_ga286e6fb0ad7ab110ca50a94305981769}{Declare\+Resource}}(Res)
+\begin{DoxyCompactList}\small\item\em Resource Declaration. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__primitives-event_ga0fb30e11008d070c248f62a75aed02c1}{Declare\+Event}}(Event)
+\begin{DoxyCompactList}\small\item\em Event Declaration. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{ee__api__types_8h_a7bfbe7391e1694cc2f73243016b92fbf}{O\+S\+E\+E\+\_\+\+S\+C\+H\+E\+D\+U\+L\+E\+T\+A\+B\+L\+E\+\_\+\+T\+Y\+PE}}~\mbox{\hyperlink{ee__compiler_8h_a44fc42ed93abd1afe9c2268543bc8faf}{V\+AR}}(Os\+E\+E\+\_\+reg, \mbox{\hyperlink{ee__compiler_8h_a11a4114a8973be51c022ce946b643033}{T\+Y\+P\+E\+D\+EF}})
+\begin{DoxyCompactList}\small\item\em Internal type for Schedule Tables. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ee__api__types_8h_af7f4cac797cff6e087448e753dca9552}\label{ee__api__types_8h_af7f4cac797cff6e087448e753dca9552}} 
+\#define \mbox{\hyperlink{ee__api__types_8h_af7f4cac797cff6e087448e753dca9552}{S\+C\+H\+E\+D\+U\+L\+E\+T\+A\+B\+L\+E\+\_\+\+S\+T\+O\+P\+P\+ED}}~(0x00U)
+\begin{DoxyCompactList}\small\item\em The schedule table has not started. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ee__api__types_8h_a7fccd9c75e361771c801da86e6288e88}\label{ee__api__types_8h_a7fccd9c75e361771c801da86e6288e88}} 
+\#define \mbox{\hyperlink{ee__api__types_8h_a7fccd9c75e361771c801da86e6288e88}{S\+C\+H\+E\+D\+U\+L\+E\+T\+A\+B\+L\+E\+\_\+\+N\+E\+XT}}~(0x01U)
+\begin{DoxyCompactList}\small\item\em The schedule table will be started after the end of currently running schedule table (schedule table was used in \mbox{\hyperlink{group__primitives-schtable_ga1c4632ef4745f8b848cd3ea33ea4dc55}{Next\+Schedule\+Table()}} service). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ee__api__types_8h_a4379c06f922ff52f244835ee02cabf62}\label{ee__api__types_8h_a4379c06f922ff52f244835ee02cabf62}} 
+\#define \mbox{\hyperlink{ee__api__types_8h_a4379c06f922ff52f244835ee02cabf62}{S\+C\+H\+E\+D\+U\+L\+E\+T\+A\+B\+L\+E\+\_\+\+W\+A\+I\+T\+I\+NG}}~(0x02U)
+\begin{DoxyCompactList}\small\item\em The schedule table uses explicit synchronization, has been started and is waiting for the global time. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ee__api__types_8h_a4e1cfc4449dcbc0619578166372c6ede}\label{ee__api__types_8h_a4e1cfc4449dcbc0619578166372c6ede}} 
+\#define \mbox{\hyperlink{ee__api__types_8h_a4e1cfc4449dcbc0619578166372c6ede}{S\+C\+H\+E\+D\+U\+L\+E\+T\+A\+B\+L\+E\+\_\+\+R\+U\+N\+N\+I\+NG}}~(0x03U)
+\begin{DoxyCompactList}\small\item\em The schedule table is running, but is currently not synchronous to a global time source. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ee__api__types_8h_a3e18596d61b465dceef7d290ff23eb96}\label{ee__api__types_8h_a3e18596d61b465dceef7d290ff23eb96}} 
+\#define \mbox{\hyperlink{ee__api__types_8h_a3e18596d61b465dceef7d290ff23eb96}{S\+C\+H\+E\+D\+U\+L\+E\+T\+A\+B\+L\+E\+\_\+\+S\+Y\+N\+C\+H\+R\+O\+N\+O\+US}}~(0x04U)
+\begin{DoxyCompactList}\small\item\em Used as bit-\/mask, flag if the schedule table is synchronized. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ee__api__types_8h_aad367969ebe71edbd545eed7e589b693}\label{ee__api__types_8h_aad367969ebe71edbd545eed7e589b693}} 
+\#define \mbox{\hyperlink{ee__api__types_8h_aad367969ebe71edbd545eed7e589b693}{S\+C\+H\+E\+D\+U\+L\+E\+T\+A\+B\+L\+E\+\_\+\+A\+S\+Y\+NC}}~(0x08U)
+\begin{DoxyCompactList}\small\item\em Used as bit-\/mask, flag if the schedule table shall be not synchronized. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ee__api__types_8h_a61d72d402379aabfc9270c81bddfa629}\label{ee__api__types_8h_a61d72d402379aabfc9270c81bddfa629}} 
+\#define \mbox{\hyperlink{ee__api__types_8h_a61d72d402379aabfc9270c81bddfa629}{S\+C\+H\+E\+D\+U\+L\+E\+T\+A\+B\+L\+E\+\_\+\+R\+U\+N\+N\+I\+N\+G\+\_\+\+A\+N\+D\+\_\+\+S\+Y\+N\+C\+H\+R\+O\+N\+O\+US}}~(\mbox{\hyperlink{ee__api__types_8h_a4e1cfc4449dcbc0619578166372c6ede}{S\+C\+H\+E\+D\+U\+L\+E\+T\+A\+B\+L\+E\+\_\+\+R\+U\+N\+N\+I\+NG}} $\vert$ \mbox{\hyperlink{ee__api__types_8h_a3e18596d61b465dceef7d290ff23eb96}{S\+C\+H\+E\+D\+U\+L\+E\+T\+A\+B\+L\+E\+\_\+\+S\+Y\+N\+C\+H\+R\+O\+N\+O\+US}})
+\begin{DoxyCompactList}\small\item\em The schedule table is running and is synchronous to a global time source (S\+C\+H\+E\+D\+U\+L\+E\+T\+A\+B\+L\+E\+\_\+\+R\+U\+N\+N\+I\+N\+G\+\_\+\+A\+N\+D\+\_\+\+S\+Y\+N\+C\+H\+R\+O\+N\+O\+US) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ee__api__types_8h_abc8cf449bafec20ad4638b0259f5ea34}\label{ee__api__types_8h_abc8cf449bafec20ad4638b0259f5ea34}} 
+\#define \mbox{\hyperlink{ee__api__types_8h_abc8cf449bafec20ad4638b0259f5ea34}{I\+N\+V\+A\+L\+I\+D\+\_\+\+O\+B\+J\+E\+C\+T\+\_\+\+ID}}~((\mbox{\hyperlink{ee__api__types_8h_a9cadacc7d025bfbcd03fed3f2aea822d}{Object\+I\+D\+Type}})-\/1)
+\begin{DoxyCompactList}\small\item\em Invalid value for a generic object used with \mbox{\hyperlink{group__primitives-hook_ga17050620b53ad1baf18088294604c919}{Error\+Hook()}} macros. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ee__api__types_8h_aa96cda3dc4327fc103977fd4483aefb2}\label{ee__api__types_8h_aa96cda3dc4327fc103977fd4483aefb2}} 
+\#define \mbox{\hyperlink{ee__api__types_8h_aa96cda3dc4327fc103977fd4483aefb2}{I\+N\+V\+A\+L\+I\+D\+\_\+\+I\+N\+D\+EX}}~((\mbox{\hyperlink{ee__api__types_8h_a6056fabe5f89ca108e1074b3432ef410}{Mem\+Size}})-\/1)
+\begin{DoxyCompactList}\small\item\em Invalid Mem\+Size value. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ee__api__types_8h_a4a3d55a11fac0772e14ea3a09c702fe5}\label{ee__api__types_8h_a4a3d55a11fac0772e14ea3a09c702fe5}} 
+\#define \mbox{\hyperlink{ee__api__types_8h_a4a3d55a11fac0772e14ea3a09c702fe5}{O\+S\+E\+E\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+S\+T\+A\+CK}}~((\mbox{\hyperlink{ee__api__types_8h_a6056fabe5f89ca108e1074b3432ef410}{Mem\+Size}})-\/1)
+\begin{DoxyCompactList}\small\item\em default ID for the system Stack. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ee__api__types_8h_adc710bf088dd6e6e41b1643d3152bb2c}\label{ee__api__types_8h_adc710bf088dd6e6e41b1643d3152bb2c}} 
+\#define \mbox{\hyperlink{ee__api__types_8h_adc710bf088dd6e6e41b1643d3152bb2c}{S\+T\+A\+T\+U\+S\+T\+Y\+P\+E\+D\+E\+F\+I\+N\+ED}}
+\begin{DoxyCompactList}\small\item\em O\+S\+EK compliance. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{ee__api__types_8h_ab1a5c99c565b10b54982a1b40fb861a9}{O\+S\+E\+E\+\_\+\+S\+P\+I\+N\+L\+O\+C\+K\+\_\+\+I\+D\+\_\+\+T\+Y\+PE}}~\mbox{\hyperlink{ee__compiler_8h_a44fc42ed93abd1afe9c2268543bc8faf}{V\+AR}}(Os\+E\+E\+\_\+reg, \mbox{\hyperlink{ee__compiler_8h_a11a4114a8973be51c022ce946b643033}{T\+Y\+P\+E\+D\+EF}})
+\begin{DoxyCompactList}\small\item\em Internal type used to identify a spinlock. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{ee__api__types_8h_ad61239bf9bb81ae2ce950055ef33217d}{T\+A\+S\+K\+\_\+\+F\+U\+NC}}(Task\+To\+Be\+Created)~Func\#\#Task\+To\+Be\+Created
+\begin{DoxyCompactList}\small\item\em macro used to pass a Task function to dynamic A\+P\+Is. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__primitives-task_ga14ccd8f4ce95fa715c864835bce984ad}{Declare\+Task}}(Task\+To\+Be\+Declared)~extern \mbox{\hyperlink{ee__compiler_8h_aa8f07207960a32e918e08a0faf697977}{F\+U\+NC}}(void, \mbox{\hyperlink{ee__compiler__cfg_8h_a919da7d9b61966c3af796ab42e618bef}{O\+S\+\_\+\+C\+O\+DE}}) Func\#\#Task\+To\+Be\+Declared ( void )
+\begin{DoxyCompactList}\small\item\em Task Declaration. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__primitives-task_gab6f61d38161c8ec10230950d7476f77c}{T\+A\+SK}}(Task\+To\+Be\+Defined)~\mbox{\hyperlink{ee__compiler_8h_aa8f07207960a32e918e08a0faf697977}{F\+U\+NC}}(void, \mbox{\hyperlink{ee__compiler__cfg_8h_a919da7d9b61966c3af796ab42e618bef}{O\+S\+\_\+\+C\+O\+DE}}) Func\#\#Task\+To\+Be\+Defined ( void )
+\begin{DoxyCompactList}\small\item\em Task Definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{ee__api__types_8h_a9cfad4540e6c5c90f3957a4d989a0744}{O\+S\+E\+E\+\_\+\+A\+P\+P\+M\+O\+D\+E\+\_\+\+T\+Y\+PE}} \mbox{\hyperlink{group__primitives-startup_gae3e1ae7b5a088e40194d7b5dc48db693}{App\+Mode\+Type}}
+\begin{DoxyCompactList}\small\item\em Type used for application modes. \end{DoxyCompactList}\item 
+typedef \mbox{\hyperlink{ee__api__types_8h_a9e73ce321dc7375392297601f51e9c72}{O\+S\+E\+E\+\_\+\+T\+A\+S\+K\+\_\+\+I\+D\+\_\+\+T\+Y\+PE}} \mbox{\hyperlink{group__primitives-task_ga9733da8629f4d0984967785419b15d4a}{Task\+Type}}
+\begin{DoxyCompactList}\small\item\em Type used for Task I\+Ds. \end{DoxyCompactList}\item 
+typedef \mbox{\hyperlink{ee__api__types_8h_a9e73ce321dc7375392297601f51e9c72}{O\+S\+E\+E\+\_\+\+T\+A\+S\+K\+\_\+\+I\+D\+\_\+\+T\+Y\+PE}} \mbox{\hyperlink{group__primitives-interrupt_ga426a99836bc9412bcfd66c351529f496}{I\+S\+R\+Type}}
+\begin{DoxyCompactList}\small\item\em Type used for interrupts type 2. \end{DoxyCompactList}\item 
+typedef \mbox{\hyperlink{group__primitives-task_ga9733da8629f4d0984967785419b15d4a}{Task\+Type}} $\ast$ \mbox{\hyperlink{group__primitives-task_ga01fe8c0087d9df2949a2a8a5617f72bf}{Task\+Ref\+Type}}
+\begin{DoxyCompactList}\small\item\em This is a pointer to a Task\+Type. \end{DoxyCompactList}\item 
+typedef \mbox{\hyperlink{ee__api__types_8h_aaaef40f9b276933d5afbfb578db8d124}{O\+S\+E\+E\+\_\+\+T\+A\+S\+K\+\_\+\+P\+R\+I\+O\+\_\+\+T\+Y\+PE}} \mbox{\hyperlink{group__primitives-task_ga2fbf8607316afe2fe7d402a8f6e00008}{Task\+Prio}}
+\begin{DoxyCompactList}\small\item\em Type storing task priorities. \end{DoxyCompactList}\item 
+typedef O\+S\+E\+E\+\_\+\+I\+S\+R\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+T\+Y\+PE \mbox{\hyperlink{group__primitives-interrupt_ga6f88d841d0dcc40ec9c2be6cd7acf761}{I\+S\+R\+Source}}
+\begin{DoxyCompactList}\small\item\em This type stores an interrupt source type. \end{DoxyCompactList}\item 
+typedef \mbox{\hyperlink{ee__api__types_8h_a0aaf577c4af78a7c996c913d25fab754}{O\+S\+E\+E\+\_\+\+T\+A\+S\+K\+\_\+\+A\+C\+T\+I\+V\+A\+T\+I\+O\+N\+\_\+\+T\+Y\+PE}} \mbox{\hyperlink{ee__api__types_8h_a2897bbe5eb94c947b95208f120a1529d}{Task\+Activation}}
+\begin{DoxyCompactList}\small\item\em This type stores a number of pending activations. \end{DoxyCompactList}\item 
+typedef O\+S\+E\+E\+\_\+\+C\+O\+R\+E\+\_\+\+I\+D\+\_\+\+T\+Y\+PE \mbox{\hyperlink{group__primitives-multicore_gacfda647135a29312579df1884363464c}{Core\+Id\+Type}}
+\begin{DoxyCompactList}\small\item\em Type representing a logical core ID. \end{DoxyCompactList}\item 
+typedef \mbox{\hyperlink{ee__api__types_8h_ae12d942209914b8c5d2f33357c2ea867}{O\+S\+E\+E\+\_\+\+C\+O\+R\+E\+\_\+\+N\+U\+M\+\_\+\+T\+Y\+PE}} \mbox{\hyperlink{group__primitives-multicore_gaf9e0425e029ca07b30f8b77b7ef5e76b}{Core\+Num\+Type}}
+\begin{DoxyCompactList}\small\item\em Type used to store the total number of cores. \end{DoxyCompactList}\item 
+typedef \mbox{\hyperlink{ee__api__types_8h_a0459fb52b97f04dbd6db89b7fb7cb28e}{O\+S\+E\+E\+\_\+\+C\+O\+R\+E\+\_\+\+M\+A\+S\+K\+\_\+\+T\+Y\+PE}} \mbox{\hyperlink{group__primitives-multicore_ga679c3963e5157e5ec5f771462ffe464c}{Core\+Mask\+Type}}
+\begin{DoxyCompactList}\small\item\em Type representing a mask of cores. \end{DoxyCompactList}\item 
+typedef void($\ast$ \mbox{\hyperlink{ee__api__types_8h_adf781183741ecdccf1e0296e96599792}{Task\+Func}}) (void)
+\begin{DoxyCompactList}\small\item\em Type representing a function pointer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ee__api__types_8h_a95b505f28842827a4cb8316a5f6b8761}\label{ee__api__types_8h_a95b505f28842827a4cb8316a5f6b8761}} 
+typedef \mbox{\hyperlink{ee__api__types_8h_ae0628876d5232961cf313a1512214d06}{Os\+E\+E\+\_\+task\+\_\+type}} \mbox{\hyperlink{ee__api__types_8h_a95b505f28842827a4cb8316a5f6b8761}{Task\+Execution\+Type}}
+\begin{DoxyCompactList}\small\item\em Synonym of Os\+E\+E\+\_\+task\+\_\+type, with an O\+S\+E\+K/\+V\+DX name structure, mostly used with dynamic A\+PI. \end{DoxyCompactList}\item 
+typedef \mbox{\hyperlink{ee__api__types_8h_a1abc43b358b88d0f5adcb1bc0b70f5df}{Os\+E\+E\+\_\+task\+\_\+status}} \mbox{\hyperlink{group__primitives-task_ga7d48c2f208a17a0fa4faed331e0586f0}{Task\+State\+Type}}
+\begin{DoxyCompactList}\small\item\em Task state type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ee__api__types_8h_a504a19a41eb8b773a6ec368906fe8bc7}\label{ee__api__types_8h_a504a19a41eb8b773a6ec368906fe8bc7}} 
+typedef \mbox{\hyperlink{ee__api__types_8h_a1abc43b358b88d0f5adcb1bc0b70f5df}{Task\+State\+Type}} $\ast$ \mbox{\hyperlink{ee__api__types_8h_a504a19a41eb8b773a6ec368906fe8bc7}{Task\+State\+Ref\+Type}}
+\begin{DoxyCompactList}\small\item\em Pointer to a Task\+Satte. \end{DoxyCompactList}\item 
+typedef \mbox{\hyperlink{ee__api__types_8h_a5729e8f24953268ffe18e86b881c7f7f}{O\+S\+E\+E\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+T\+Y\+PE}} \mbox{\hyperlink{group__primitives-alarm_ga871c90fa43c4c8b68846b89d036a753c}{Counter\+Type}}
+\begin{DoxyCompactList}\small\item\em Type representing a counter. \end{DoxyCompactList}\item 
+typedef O\+S\+E\+E\+\_\+\+T\+I\+C\+K\+\_\+\+T\+Y\+PE \mbox{\hyperlink{group__primitives-alarm_ga169b940dbe47167e06113454538d3484}{Tick\+Type}}
+\begin{DoxyCompactList}\small\item\em Type representing the value of ticks a counter can store. \end{DoxyCompactList}\item 
+typedef \mbox{\hyperlink{group__primitives-alarm_ga169b940dbe47167e06113454538d3484}{Tick\+Type}} $\ast$ \mbox{\hyperlink{group__primitives-alarm_gaf7915c4762698a00e6a4d4d60eb9f998}{Tick\+Ref\+Type}}
+\begin{DoxyCompactList}\small\item\em This is a pointer to a Tick\+Type. \end{DoxyCompactList}\item 
+typedef \mbox{\hyperlink{ee__api__types_8h_acb638228257ada1020a3caefd66f07ae}{O\+S\+E\+E\+\_\+\+T\+I\+C\+K\+\_\+\+D\+E\+L\+T\+A\+\_\+\+T\+Y\+PE}} \mbox{\hyperlink{ee__api__types_8h_a440f077c08275033af26b205870d87ed}{Tick\+Delta\+Type}}
+\begin{DoxyCompactList}\small\item\em This is used to store a tick deviation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ee__api__types_8h_a2ccea1c01502210d149699869ac513f3}\label{ee__api__types_8h_a2ccea1c01502210d149699869ac513f3}} 
+typedef \mbox{\hyperlink{structAlarmBaseType}{Alarm\+Base\+Type}} $\ast$ \mbox{\hyperlink{ee__api__types_8h_a2ccea1c01502210d149699869ac513f3}{Alarm\+Base\+Ref\+Type}}
+\begin{DoxyCompactList}\small\item\em Pointer to an Alarm\+Base, used as \mbox{[}out\mbox{]} parameter in \mbox{\hyperlink{group__primitives-alarm_gac2896b1e98a206eaa45d3d76f2a184a9}{Get\+Alarm\+Base()}} \end{DoxyCompactList}\item 
+typedef \mbox{\hyperlink{ee__api__types_8h_ae634ad90564c1481bb02785b5498faf1}{O\+S\+E\+E\+\_\+\+A\+L\+A\+R\+M\+\_\+\+I\+D\+\_\+\+T\+Y\+PE}} \mbox{\hyperlink{group__primitives-alarm_gac0db96397f5d9817124ffc05a9755b85}{Alarm\+Type}}
+\begin{DoxyCompactList}\small\item\em Type for Alarm I\+Ds. \end{DoxyCompactList}\item 
+typedef \mbox{\hyperlink{ee__api__types_8h_a7b62a74d3f3436ea0f46d9f0906a5844}{O\+S\+E\+E\+\_\+\+R\+E\+S\+O\+U\+R\+C\+E\+\_\+\+I\+D\+\_\+\+T\+Y\+PE}} \mbox{\hyperlink{group__primitives-resource_gaac3971a971a95d78051b389553842386}{Resource\+Type}}
+\begin{DoxyCompactList}\small\item\em Type for Resource I\+Ds. \end{DoxyCompactList}\item 
+typedef O\+S\+E\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+M\+A\+S\+K\+\_\+\+T\+Y\+PE \mbox{\hyperlink{group__primitives-event_ga5fb177d72d23ba4ccbd1821ca9e4498f}{Event\+Mask\+Type}}
+\begin{DoxyCompactList}\small\item\em Type representing the value of an event mask. \end{DoxyCompactList}\item 
+typedef \mbox{\hyperlink{group__primitives-event_ga5fb177d72d23ba4ccbd1821ca9e4498f}{Event\+Mask\+Type}} $\ast$ \mbox{\hyperlink{group__primitives-event_ga3d9d9acc3ec5aeb8c54d25d92aa1bdfe}{Event\+Mask\+Ref\+Type}}
+\begin{DoxyCompactList}\small\item\em Pointer to an event mask. \end{DoxyCompactList}\item 
+typedef \mbox{\hyperlink{ee__api__types_8h_a7bfbe7391e1694cc2f73243016b92fbf}{O\+S\+E\+E\+\_\+\+S\+C\+H\+E\+D\+U\+L\+E\+T\+A\+B\+L\+E\+\_\+\+T\+Y\+PE}} \mbox{\hyperlink{group__primitives-resource_gaece92730f23a01b1dc858668f7d3b18b}{Schedule\+Table\+Type}}
+\begin{DoxyCompactList}\small\item\em Type for Schedule Tables. \end{DoxyCompactList}\item 
+typedef Os\+E\+E\+\_\+reg \mbox{\hyperlink{ee__api__types_8h_abb72be265e492d43e67bcee50cc77dd1}{Schedule\+Table\+Status\+Type}}
+\begin{DoxyCompactList}\small\item\em This type describes the status of a schedule. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ee__api__types_8h_a573d0bf9d584dcd702f705e72cc343ca}\label{ee__api__types_8h_a573d0bf9d584dcd702f705e72cc343ca}} 
+typedef \mbox{\hyperlink{ee__api__types_8h_abb72be265e492d43e67bcee50cc77dd1}{Schedule\+Table\+Status\+Type}} $\ast$ \mbox{\hyperlink{ee__api__types_8h_a573d0bf9d584dcd702f705e72cc343ca}{Schedule\+Table\+Status\+Ref\+Type}}
+\begin{DoxyCompactList}\small\item\em This type is a pointer to a Schedule\+Table\+Status\+Type. \end{DoxyCompactList}\item 
+typedef O\+S\+E\+E\+\_\+\+O\+B\+J\+E\+C\+T\+\_\+\+I\+D\+\_\+\+T\+Y\+PE \mbox{\hyperlink{ee__api__types_8h_a9cadacc7d025bfbcd03fed3f2aea822d}{Object\+I\+D\+Type}}
+\begin{DoxyCompactList}\small\item\em Generic Object type used for Error\+Hook macros. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ee__api__types_8h_a6056fabe5f89ca108e1074b3432ef410}\label{ee__api__types_8h_a6056fabe5f89ca108e1074b3432ef410}} 
+typedef O\+S\+E\+E\+\_\+\+M\+E\+M\+\_\+\+S\+I\+Z\+E\+\_\+\+T\+Y\+PE \mbox{\hyperlink{ee__api__types_8h_a6056fabe5f89ca108e1074b3432ef410}{Mem\+Size}}
+\begin{DoxyCompactList}\small\item\em Type able to store memory sizes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ee__api__types_8h_a6def7470ef6da58026579b4be4ff5d68}\label{ee__api__types_8h_a6def7470ef6da58026579b4be4ff5d68}} 
+typedef \mbox{\hyperlink{ee__api__types_8h_a79bf54a17078edb124b553c51129396a}{Os\+E\+E\+\_\+status\+\_\+type}} \mbox{\hyperlink{ee__api__types_8h_a6def7470ef6da58026579b4be4ff5d68}{Status\+Type}}
+\begin{DoxyCompactList}\small\item\em This type stores possible status return values. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ee__api__types_8h_a7672f231df860caa50cc938a161c7852}\label{ee__api__types_8h_a7672f231df860caa50cc938a161c7852}} 
+typedef \mbox{\hyperlink{ee__api__types_8h_a2d19e4dc23703453ff28c03f3be56d74}{Os\+E\+E\+\_\+service\+\_\+id\+\_\+type}} \mbox{\hyperlink{ee__api__types_8h_a7672f231df860caa50cc938a161c7852}{O\+S\+Service\+Id\+Type}}
+\begin{DoxyCompactList}\small\item\em This data type represents the identification of system services. \end{DoxyCompactList}\item 
+typedef \mbox{\hyperlink{ee__api__types_8h_ab1a5c99c565b10b54982a1b40fb861a9}{O\+S\+E\+E\+\_\+\+S\+P\+I\+N\+L\+O\+C\+K\+\_\+\+I\+D\+\_\+\+T\+Y\+PE}} \mbox{\hyperlink{ee__api__types_8h_a211e253ccb43528137c4d778204eba72}{Spinlock\+Id\+Type}}
+\begin{DoxyCompactList}\small\item\em Type used to identify a spinlock. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{ee__api__types_8h_ae0628876d5232961cf313a1512214d06}{Os\+E\+E\+\_\+task\+\_\+type}} \{ \mbox{\hyperlink{ee__api__types_8h_ae0628876d5232961cf313a1512214d06aedda31bc868e3c877bcacd96b974adcd}{O\+S\+E\+E\+\_\+\+T\+A\+S\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+A\+S\+IC}}, 
+\mbox{\hyperlink{ee__api__types_8h_ae0628876d5232961cf313a1512214d06a8dca4d8f883aa9713f59ba1e80a886e8}{O\+S\+E\+E\+\_\+\+T\+A\+S\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+E\+X\+T\+E\+N\+D\+ED}}, 
+\mbox{\hyperlink{ee__api__types_8h_ae0628876d5232961cf313a1512214d06aabc681229f07a1dc13c62c8c55371183}{O\+S\+E\+E\+\_\+\+T\+A\+S\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+S\+R2}}, 
+\mbox{\hyperlink{ee__api__types_8h_ae0628876d5232961cf313a1512214d06a0522680ff399fbf337a8e5c5952fa84b}{O\+S\+E\+E\+\_\+\+T\+A\+S\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+D\+LE}}
+ \}
+\begin{DoxyCompactList}\small\item\em Type of the task. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{ee__api__types_8h_a1abc43b358b88d0f5adcb1bc0b70f5df}{Os\+E\+E\+\_\+task\+\_\+status}} \{ \newline
+\mbox{\hyperlink{ee__api__types_8h_a1abc43b358b88d0f5adcb1bc0b70f5dfa1277b5e114bfd40249d705e59284a2ba}{O\+S\+E\+E\+\_\+\+T\+A\+S\+K\+\_\+\+S\+U\+S\+P\+E\+N\+D\+ED}}, 
+\mbox{\hyperlink{ee__api__types_8h_a1abc43b358b88d0f5adcb1bc0b70f5dfa4fd02b5d79b2906eeb8bb40db5bcb7c5}{O\+S\+E\+E\+\_\+\+T\+A\+S\+K\+\_\+\+R\+E\+A\+DY}}, 
+\mbox{\hyperlink{ee__api__types_8h_a1abc43b358b88d0f5adcb1bc0b70f5dfa2a49e506f6b8b2ea9f836e624714c91b}{O\+S\+E\+E\+\_\+\+T\+A\+S\+K\+\_\+\+R\+E\+A\+D\+Y\+\_\+\+S\+T\+A\+C\+K\+ED}}, 
+\mbox{\hyperlink{ee__api__types_8h_a1abc43b358b88d0f5adcb1bc0b70f5dfaf2b9c7b5098f1fb58af21718013f3efa}{O\+S\+E\+E\+\_\+\+T\+A\+S\+K\+\_\+\+W\+A\+I\+T\+I\+NG}}, 
+\newline
+\mbox{\hyperlink{ee__api__types_8h_a1abc43b358b88d0f5adcb1bc0b70f5dfa871b9bb38bce15b947a46d4366482472}{O\+S\+E\+E\+\_\+\+T\+A\+S\+K\+\_\+\+R\+U\+N\+N\+I\+NG}}, 
+\mbox{\hyperlink{ee__api__types_8h_a1abc43b358b88d0f5adcb1bc0b70f5dfa046b39d299ea35705e796a979cd9e435}{O\+S\+E\+E\+\_\+\+T\+A\+S\+K\+\_\+\+C\+H\+A\+I\+N\+ED}}
+ \}
+\begin{DoxyCompactList}\small\item\em These are the task/\+I\+S\+R2 statuses that a task can have during its lifetime. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{ee__api__types_8h_a79bf54a17078edb124b553c51129396a}{Os\+E\+E\+\_\+status\+\_\+type}} \{ \newline
+{\bfseries E\+\_\+\+OK}, 
+{\bfseries E\+\_\+\+O\+S\+\_\+\+A\+C\+C\+E\+SS}, 
+{\bfseries E\+\_\+\+O\+S\+\_\+\+C\+A\+L\+L\+E\+V\+EL}, 
+{\bfseries E\+\_\+\+O\+S\+\_\+\+ID}, 
+\newline
+{\bfseries E\+\_\+\+O\+S\+\_\+\+L\+I\+M\+IT}, 
+{\bfseries E\+\_\+\+O\+S\+\_\+\+N\+O\+F\+U\+NC}, 
+{\bfseries E\+\_\+\+O\+S\+\_\+\+R\+E\+S\+O\+U\+R\+CE}, 
+{\bfseries E\+\_\+\+O\+S\+\_\+\+S\+T\+A\+TE}, 
+\newline
+{\bfseries E\+\_\+\+O\+S\+\_\+\+V\+A\+L\+UE}, 
+{\bfseries E\+\_\+\+O\+S\+\_\+\+S\+E\+R\+V\+I\+C\+E\+ID}, 
+{\bfseries E\+\_\+\+O\+S\+\_\+\+I\+L\+L\+E\+G\+A\+L\+\_\+\+A\+D\+D\+R\+E\+SS}, 
+{\bfseries E\+\_\+\+O\+S\+\_\+\+M\+I\+S\+S\+I\+N\+G\+E\+ND}, 
+\newline
+{\bfseries E\+\_\+\+O\+S\+\_\+\+D\+I\+S\+A\+B\+L\+E\+D\+I\+NT}, 
+{\bfseries E\+\_\+\+O\+S\+\_\+\+S\+T\+A\+C\+K\+F\+A\+U\+LT}, 
+{\bfseries E\+\_\+\+O\+S\+\_\+\+P\+A\+R\+A\+M\+\_\+\+P\+O\+I\+N\+T\+ER}, 
+{\bfseries E\+\_\+\+O\+S\+\_\+\+P\+R\+O\+T\+E\+C\+T\+I\+O\+N\+\_\+\+M\+E\+M\+O\+RY}, 
+\newline
+{\bfseries E\+\_\+\+O\+S\+\_\+\+P\+R\+O\+T\+E\+C\+T\+I\+O\+N\+\_\+\+T\+I\+ME}, 
+{\bfseries E\+\_\+\+O\+S\+\_\+\+P\+R\+O\+T\+E\+C\+T\+I\+O\+N\+\_\+\+A\+R\+R\+I\+V\+AL}, 
+{\bfseries E\+\_\+\+O\+S\+\_\+\+P\+R\+O\+T\+E\+C\+T\+I\+O\+N\+\_\+\+L\+O\+C\+K\+ED}, 
+{\bfseries E\+\_\+\+O\+S\+\_\+\+P\+R\+O\+T\+E\+C\+T\+I\+O\+N\+\_\+\+E\+X\+C\+E\+P\+T\+I\+ON}, 
+\newline
+{\bfseries E\+\_\+\+O\+S\+\_\+\+S\+P\+I\+N\+L\+O\+CK}, 
+{\bfseries E\+\_\+\+O\+S\+\_\+\+I\+N\+T\+E\+R\+F\+E\+R\+E\+N\+C\+E\+\_\+\+D\+E\+A\+D\+L\+O\+CK}, 
+{\bfseries E\+\_\+\+O\+S\+\_\+\+N\+E\+S\+T\+I\+N\+G\+\_\+\+D\+E\+A\+D\+L\+O\+CK}, 
+{\bfseries E\+\_\+\+O\+S\+\_\+\+C\+O\+RE}, 
+\newline
+{\bfseries E\+\_\+\+O\+S\+\_\+\+S\+Y\+S\+\_\+\+I\+N\+IT}, 
+{\bfseries E\+\_\+\+O\+S\+\_\+\+S\+Y\+S\+\_\+\+S\+U\+S\+P\+E\+N\+D\+\_\+\+N\+E\+S\+T\+I\+N\+G\+\_\+\+L\+I\+M\+IT}, 
+{\bfseries E\+\_\+\+O\+S\+\_\+\+S\+Y\+S\+\_\+\+T\+A\+SK}, 
+{\bfseries E\+\_\+\+O\+S\+\_\+\+S\+Y\+S\+\_\+\+S\+T\+A\+CK}, 
+\newline
+{\bfseries E\+\_\+\+O\+S\+\_\+\+S\+Y\+S\+\_\+\+A\+CT}
+ \}
+\begin{DoxyCompactList}\small\item\em Status\+Type values. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{ee__api__types_8h_a2d19e4dc23703453ff28c03f3be56d74}{Os\+E\+E\+\_\+service\+\_\+id\+\_\+type}} \{ \newline
+{\bfseries O\+S\+Service\+Id\+\_\+\+Activate\+Task} = (0), 
+{\bfseries O\+S\+Service\+Id\+\_\+\+Terminate\+Task} = (2), 
+{\bfseries O\+S\+Service\+Id\+\_\+\+Chain\+Task} = (4), 
+{\bfseries O\+S\+Service\+Id\+\_\+\+Schedule} = (6), 
+\newline
+{\bfseries O\+S\+Service\+Id\+\_\+\+Get\+Task\+ID} = (8), 
+{\bfseries O\+S\+Service\+Id\+\_\+\+Get\+Task\+State} = (10), 
+{\bfseries O\+S\+Service\+Id\+\_\+\+Disable\+All\+Interrupts} = (12), 
+{\bfseries O\+S\+Service\+Id\+\_\+\+Enable\+All\+Interrupts} = (14), 
+\newline
+{\bfseries O\+S\+Service\+Id\+\_\+\+Suspend\+All\+Interrupts} = (16), 
+{\bfseries O\+S\+Service\+Id\+\_\+\+Resume\+All\+Interrupts} = (18), 
+{\bfseries O\+S\+Service\+Id\+\_\+\+Suspend\+O\+S\+Interrupts} = (20), 
+{\bfseries O\+S\+Service\+Id\+\_\+\+Resume\+O\+S\+Interrupts} = (22), 
+\newline
+{\bfseries O\+S\+Service\+Id\+\_\+\+Get\+Resource} = (24), 
+{\bfseries O\+S\+Service\+Id\+\_\+\+Release\+Resource} = (26), 
+{\bfseries O\+S\+Service\+Id\+\_\+\+Set\+Event} = (28), 
+{\bfseries O\+S\+Service\+Id\+\_\+\+Clear\+Event} = (30), 
+\newline
+{\bfseries O\+S\+Service\+Id\+\_\+\+Get\+Event} = (32), 
+{\bfseries O\+S\+Service\+Id\+\_\+\+Wait\+Event} = (34), 
+{\bfseries O\+S\+Service\+Id\+\_\+\+Get\+Alarm\+Base} = (36), 
+{\bfseries O\+S\+Service\+Id\+\_\+\+Get\+Alarm} = (38), 
+\newline
+{\bfseries O\+S\+Service\+Id\+\_\+\+Set\+Rel\+Alarm} = (40), 
+{\bfseries O\+S\+Service\+Id\+\_\+\+Set\+Abs\+Alarm} = (42), 
+{\bfseries O\+S\+Service\+Id\+\_\+\+Cancel\+Alarm} = (44), 
+{\bfseries O\+S\+Service\+Id\+\_\+\+Increment\+Counter} = (46), 
+\newline
+{\bfseries O\+S\+Service\+Id\+\_\+\+Get\+Counter\+Value} = (48), 
+{\bfseries O\+S\+Service\+Id\+\_\+\+Get\+Elapsed\+Value} = (50), 
+{\bfseries O\+S\+Service\+Id\+\_\+\+Start\+Schedule\+Table\+Rel} = (52), 
+{\bfseries O\+S\+Service\+Id\+\_\+\+Start\+Schedule\+Table\+Abs} = (54), 
+\newline
+{\bfseries O\+S\+Service\+Id\+\_\+\+Stop\+Schedule\+Table} = (56), 
+{\bfseries O\+S\+Service\+Id\+\_\+\+Get\+Schedule\+Table\+Status} = (58), 
+{\bfseries O\+S\+Service\+Id\+\_\+\+Next\+Schedule\+Table} = (60), 
+{\bfseries O\+S\+Service\+Id\+\_\+\+Sync\+Schedule\+Table} = (62), 
+\newline
+{\bfseries O\+S\+Service\+Id\+\_\+\+Get\+Spinlock} = (64), 
+{\bfseries O\+S\+Service\+Id\+\_\+\+Release\+Spinlock} = (66), 
+{\bfseries O\+S\+Service\+Id\+\_\+\+Try\+To\+Get\+Spinlock} = (68), 
+{\bfseries O\+S\+Service\+Id\+\_\+\+Get\+Active\+Application\+Mode} = (70), 
+\newline
+{\bfseries O\+S\+Service\+Id\+\_\+\+Shutdown\+OS} = (72), 
+{\bfseries O\+S\+Service\+Id\+\_\+\+Start\+OS} = (74), 
+{\bfseries O\+S\+Service\+Id\+\_\+\+Shutdown\+All\+Cores} = (76), 
+\mbox{\hyperlink{ee__api__types_8h_a2d19e4dc23703453ff28c03f3be56d74a84f6d361a167aaa98f94a44ffa9a383a}{O\+S\+Id\+\_\+\+Task\+Body}} = (78), 
+\newline
+{\bfseries O\+S\+Id\+\_\+\+I\+S\+R2\+Body} = (80), 
+{\bfseries O\+S\+Id\+\_\+\+Action} = (82), 
+{\bfseries O\+S\+Id\+\_\+\+Kernel} = (84), 
+{\bfseries Os\+Id\+\_\+\+Invalid} = (86)
+ \}
+\begin{DoxyCompactList}\small\item\em System Service unique identifiers. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__primitives-multicore_gaa20221ee148806fb25f1408b57e518c2}{Try\+To\+Get\+Spinlock\+Type}} \{ {\bfseries T\+R\+Y\+T\+O\+G\+E\+T\+S\+P\+I\+N\+L\+O\+C\+K\+\_\+\+N\+O\+S\+U\+C\+C\+E\+SS} = 0x0, 
+{\bfseries T\+R\+Y\+T\+O\+G\+E\+T\+S\+P\+I\+N\+L\+O\+C\+K\+\_\+\+S\+U\+C\+C\+E\+SS}
+ \}
+\begin{DoxyCompactList}\small\item\em Type used to indicate if a spinlock has been occupied or not. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This files contains all types and symbols needed by O\+S\+EK Kernel A\+P\+Is in Erika Enterprise.\hypertarget{ee__api__types_8h_autotoc_md0}{}\doxysubsection{About Type redefinition}\label{ee__api__types_8h_autotoc_md0}
+E\+R\+I\+K\+A3 supports the same type naming as specified in the A\+U\+T\+O\+S\+AR OS.
+
+Each type is defined with a default size, that sometimes depends on the microcontroller word.
+
+Moreover, it is possible to redefine the type size by using appropriate defines, like in the example below\+: \begin{DoxyVerb}#if (!defined(OSEE_APPMODE_TYPE))
+#define OSEE_APPMODE_TYPE                       VAR(uint8_t, TYPEDEF)
+#endif
+typedef OSEE_APPMODE_TYPE                       AppModeType;
+\end{DoxyVerb}
+
+
+In this example, the default type for App\+Mode\+Type is uint8\+\_\+t. It can be redefined by defining O\+S\+E\+E\+\_\+\+A\+P\+P\+M\+O\+D\+E\+\_\+\+T\+Y\+PE prior the inclusion of \mbox{\hyperlink{ee__api__types_8h}{ee\+\_\+api\+\_\+types.\+h}} .
+
+This allows flexibility in the definition of the size of the various data types.
+
+\begin{DoxyAuthor}{Author}
+Errico Guidieri 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2016 
+\end{DoxyDate}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{ee__api__types_8h_ae634ad90564c1481bb02785b5498faf1}\label{ee__api__types_8h_ae634ad90564c1481bb02785b5498faf1}} 
+\index{ee\_api\_types.h@{ee\_api\_types.h}!OSEE\_ALARM\_ID\_TYPE@{OSEE\_ALARM\_ID\_TYPE}}
+\index{OSEE\_ALARM\_ID\_TYPE@{OSEE\_ALARM\_ID\_TYPE}!ee\_api\_types.h@{ee\_api\_types.h}}
+\doxysubsubsection{\texorpdfstring{OSEE\_ALARM\_ID\_TYPE}{OSEE\_ALARM\_ID\_TYPE}}
+{\footnotesize\ttfamily \#define O\+S\+E\+E\+\_\+\+A\+L\+A\+R\+M\+\_\+\+I\+D\+\_\+\+T\+Y\+PE~\mbox{\hyperlink{ee__compiler_8h_a44fc42ed93abd1afe9c2268543bc8faf}{V\+AR}}(Os\+E\+E\+\_\+reg, \mbox{\hyperlink{ee__compiler_8h_a11a4114a8973be51c022ce946b643033}{T\+Y\+P\+E\+D\+EF}})}
+
+Internal type used to store an Alarm ID. \mbox{\Hypertarget{ee__api__types_8h_a9cfad4540e6c5c90f3957a4d989a0744}\label{ee__api__types_8h_a9cfad4540e6c5c90f3957a4d989a0744}} 
+\index{ee\_api\_types.h@{ee\_api\_types.h}!OSEE\_APPMODE\_TYPE@{OSEE\_APPMODE\_TYPE}}
+\index{OSEE\_APPMODE\_TYPE@{OSEE\_APPMODE\_TYPE}!ee\_api\_types.h@{ee\_api\_types.h}}
+\doxysubsubsection{\texorpdfstring{OSEE\_APPMODE\_TYPE}{OSEE\_APPMODE\_TYPE}}
+{\footnotesize\ttfamily \#define O\+S\+E\+E\+\_\+\+A\+P\+P\+M\+O\+D\+E\+\_\+\+T\+Y\+PE~\mbox{\hyperlink{ee__compiler_8h_a44fc42ed93abd1afe9c2268543bc8faf}{V\+AR}}(uint8\+\_\+t, \mbox{\hyperlink{ee__compiler_8h_a11a4114a8973be51c022ce946b643033}{T\+Y\+P\+E\+D\+EF}})}
+
+This is the internal type used for Application Modes. \mbox{\Hypertarget{ee__api__types_8h_a0459fb52b97f04dbd6db89b7fb7cb28e}\label{ee__api__types_8h_a0459fb52b97f04dbd6db89b7fb7cb28e}} 
+\index{ee\_api\_types.h@{ee\_api\_types.h}!OSEE\_CORE\_MASK\_TYPE@{OSEE\_CORE\_MASK\_TYPE}}
+\index{OSEE\_CORE\_MASK\_TYPE@{OSEE\_CORE\_MASK\_TYPE}!ee\_api\_types.h@{ee\_api\_types.h}}
+\doxysubsubsection{\texorpdfstring{OSEE\_CORE\_MASK\_TYPE}{OSEE\_CORE\_MASK\_TYPE}}
+{\footnotesize\ttfamily \#define O\+S\+E\+E\+\_\+\+C\+O\+R\+E\+\_\+\+M\+A\+S\+K\+\_\+\+T\+Y\+PE~\mbox{\hyperlink{ee__compiler_8h_a44fc42ed93abd1afe9c2268543bc8faf}{V\+AR}}(Os\+E\+E\+\_\+reg, \mbox{\hyperlink{ee__compiler_8h_a11a4114a8973be51c022ce946b643033}{T\+Y\+P\+E\+D\+EF}})}
+
+Internal type representing a mask of cores. It should be big enough to store one bit for each core of a specific architecture. \mbox{\Hypertarget{ee__api__types_8h_ae12d942209914b8c5d2f33357c2ea867}\label{ee__api__types_8h_ae12d942209914b8c5d2f33357c2ea867}} 
+\index{ee\_api\_types.h@{ee\_api\_types.h}!OSEE\_CORE\_NUM\_TYPE@{OSEE\_CORE\_NUM\_TYPE}}
+\index{OSEE\_CORE\_NUM\_TYPE@{OSEE\_CORE\_NUM\_TYPE}!ee\_api\_types.h@{ee\_api\_types.h}}
+\doxysubsubsection{\texorpdfstring{OSEE\_CORE\_NUM\_TYPE}{OSEE\_CORE\_NUM\_TYPE}}
+{\footnotesize\ttfamily \#define O\+S\+E\+E\+\_\+\+C\+O\+R\+E\+\_\+\+N\+U\+M\+\_\+\+T\+Y\+PE~\mbox{\hyperlink{ee__compiler_8h_a44fc42ed93abd1afe9c2268543bc8faf}{V\+AR}}(uint8\+\_\+t, \mbox{\hyperlink{ee__compiler_8h_a11a4114a8973be51c022ce946b643033}{T\+Y\+P\+E\+D\+EF}})}
+
+Internal type representing a logical core ID. \mbox{\Hypertarget{ee__api__types_8h_a5729e8f24953268ffe18e86b881c7f7f}\label{ee__api__types_8h_a5729e8f24953268ffe18e86b881c7f7f}} 
+\index{ee\_api\_types.h@{ee\_api\_types.h}!OSEE\_COUNTER\_TYPE@{OSEE\_COUNTER\_TYPE}}
+\index{OSEE\_COUNTER\_TYPE@{OSEE\_COUNTER\_TYPE}!ee\_api\_types.h@{ee\_api\_types.h}}
+\doxysubsubsection{\texorpdfstring{OSEE\_COUNTER\_TYPE}{OSEE\_COUNTER\_TYPE}}
+{\footnotesize\ttfamily \#define O\+S\+E\+E\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+T\+Y\+PE~\mbox{\hyperlink{ee__compiler_8h_a44fc42ed93abd1afe9c2268543bc8faf}{V\+AR}}(Os\+E\+E\+\_\+reg, \mbox{\hyperlink{ee__compiler_8h_a11a4114a8973be51c022ce946b643033}{T\+Y\+P\+E\+D\+EF}})}
+
+Internal type representing a counter. \mbox{\Hypertarget{ee__api__types_8h_a7b62a74d3f3436ea0f46d9f0906a5844}\label{ee__api__types_8h_a7b62a74d3f3436ea0f46d9f0906a5844}} 
+\index{ee\_api\_types.h@{ee\_api\_types.h}!OSEE\_RESOURCE\_ID\_TYPE@{OSEE\_RESOURCE\_ID\_TYPE}}
+\index{OSEE\_RESOURCE\_ID\_TYPE@{OSEE\_RESOURCE\_ID\_TYPE}!ee\_api\_types.h@{ee\_api\_types.h}}
+\doxysubsubsection{\texorpdfstring{OSEE\_RESOURCE\_ID\_TYPE}{OSEE\_RESOURCE\_ID\_TYPE}}
+{\footnotesize\ttfamily \#define O\+S\+E\+E\+\_\+\+R\+E\+S\+O\+U\+R\+C\+E\+\_\+\+I\+D\+\_\+\+T\+Y\+PE~\mbox{\hyperlink{ee__compiler_8h_a44fc42ed93abd1afe9c2268543bc8faf}{V\+AR}}(Os\+E\+E\+\_\+reg, \mbox{\hyperlink{ee__compiler_8h_a11a4114a8973be51c022ce946b643033}{T\+Y\+P\+E\+D\+EF}})}
+
+Internal type used to store a Resource ID. \mbox{\Hypertarget{ee__api__types_8h_a7bfbe7391e1694cc2f73243016b92fbf}\label{ee__api__types_8h_a7bfbe7391e1694cc2f73243016b92fbf}} 
+\index{ee\_api\_types.h@{ee\_api\_types.h}!OSEE\_SCHEDULETABLE\_TYPE@{OSEE\_SCHEDULETABLE\_TYPE}}
+\index{OSEE\_SCHEDULETABLE\_TYPE@{OSEE\_SCHEDULETABLE\_TYPE}!ee\_api\_types.h@{ee\_api\_types.h}}
+\doxysubsubsection{\texorpdfstring{OSEE\_SCHEDULETABLE\_TYPE}{OSEE\_SCHEDULETABLE\_TYPE}}
+{\footnotesize\ttfamily \#define O\+S\+E\+E\+\_\+\+S\+C\+H\+E\+D\+U\+L\+E\+T\+A\+B\+L\+E\+\_\+\+T\+Y\+PE~\mbox{\hyperlink{ee__compiler_8h_a44fc42ed93abd1afe9c2268543bc8faf}{V\+AR}}(Os\+E\+E\+\_\+reg, \mbox{\hyperlink{ee__compiler_8h_a11a4114a8973be51c022ce946b643033}{T\+Y\+P\+E\+D\+EF}})}
+
+Internal type used to store a Schedule Table. \mbox{\Hypertarget{ee__api__types_8h_ab1a5c99c565b10b54982a1b40fb861a9}\label{ee__api__types_8h_ab1a5c99c565b10b54982a1b40fb861a9}} 
+\index{ee\_api\_types.h@{ee\_api\_types.h}!OSEE\_SPINLOCK\_ID\_TYPE@{OSEE\_SPINLOCK\_ID\_TYPE}}
+\index{OSEE\_SPINLOCK\_ID\_TYPE@{OSEE\_SPINLOCK\_ID\_TYPE}!ee\_api\_types.h@{ee\_api\_types.h}}
+\doxysubsubsection{\texorpdfstring{OSEE\_SPINLOCK\_ID\_TYPE}{OSEE\_SPINLOCK\_ID\_TYPE}}
+{\footnotesize\ttfamily \#define O\+S\+E\+E\+\_\+\+S\+P\+I\+N\+L\+O\+C\+K\+\_\+\+I\+D\+\_\+\+T\+Y\+PE~\mbox{\hyperlink{ee__compiler_8h_a44fc42ed93abd1afe9c2268543bc8faf}{V\+AR}}(Os\+E\+E\+\_\+reg, \mbox{\hyperlink{ee__compiler_8h_a11a4114a8973be51c022ce946b643033}{T\+Y\+P\+E\+D\+EF}})}
+
+Internal type identifying a spinlock. \mbox{\Hypertarget{ee__api__types_8h_a0aaf577c4af78a7c996c913d25fab754}\label{ee__api__types_8h_a0aaf577c4af78a7c996c913d25fab754}} 
+\index{ee\_api\_types.h@{ee\_api\_types.h}!OSEE\_TASK\_ACTIVATION\_TYPE@{OSEE\_TASK\_ACTIVATION\_TYPE}}
+\index{OSEE\_TASK\_ACTIVATION\_TYPE@{OSEE\_TASK\_ACTIVATION\_TYPE}!ee\_api\_types.h@{ee\_api\_types.h}}
+\doxysubsubsection{\texorpdfstring{OSEE\_TASK\_ACTIVATION\_TYPE}{OSEE\_TASK\_ACTIVATION\_TYPE}}
+{\footnotesize\ttfamily \#define O\+S\+E\+E\+\_\+\+T\+A\+S\+K\+\_\+\+A\+C\+T\+I\+V\+A\+T\+I\+O\+N\+\_\+\+T\+Y\+PE~\mbox{\hyperlink{ee__compiler_8h_a44fc42ed93abd1afe9c2268543bc8faf}{V\+AR}}(uint8\+\_\+t, \mbox{\hyperlink{ee__compiler_8h_a11a4114a8973be51c022ce946b643033}{T\+Y\+P\+E\+D\+EF}})}
+
+Type that stores the number of pending activations. \mbox{\Hypertarget{ee__api__types_8h_ac49bbff5aad217707ebed1771434ee1e}\label{ee__api__types_8h_ac49bbff5aad217707ebed1771434ee1e}} 
+\index{ee\_api\_types.h@{ee\_api\_types.h}!OSEE\_TASK\_FUNC\_TYPE@{OSEE\_TASK\_FUNC\_TYPE}}
+\index{OSEE\_TASK\_FUNC\_TYPE@{OSEE\_TASK\_FUNC\_TYPE}!ee\_api\_types.h@{ee\_api\_types.h}}
+\doxysubsubsection{\texorpdfstring{OSEE\_TASK\_FUNC\_TYPE}{OSEE\_TASK\_FUNC\_TYPE}}
+{\footnotesize\ttfamily \#define O\+S\+E\+E\+\_\+\+T\+A\+S\+K\+\_\+\+F\+U\+N\+C\+\_\+\+T\+Y\+PE(\begin{DoxyParamCaption}\item[{}]{task\+\_\+func\+\_\+type\+\_\+name }\end{DoxyParamCaption})~\mbox{\hyperlink{ee__compiler_8h_a78354f9ebe2afb569ba72e559c525a1d}{P2\+F\+U\+NC}}(void, \mbox{\hyperlink{ee__compiler_8h_a11a4114a8973be51c022ce946b643033}{T\+Y\+P\+E\+D\+EF}}, task\+\_\+func\+\_\+type\+\_\+name)}
+
+Internal type representing a function pointer used for callbacks or task bodies. \mbox{\Hypertarget{ee__api__types_8h_a9e73ce321dc7375392297601f51e9c72}\label{ee__api__types_8h_a9e73ce321dc7375392297601f51e9c72}} 
+\index{ee\_api\_types.h@{ee\_api\_types.h}!OSEE\_TASK\_ID\_TYPE@{OSEE\_TASK\_ID\_TYPE}}
+\index{OSEE\_TASK\_ID\_TYPE@{OSEE\_TASK\_ID\_TYPE}!ee\_api\_types.h@{ee\_api\_types.h}}
+\doxysubsubsection{\texorpdfstring{OSEE\_TASK\_ID\_TYPE}{OSEE\_TASK\_ID\_TYPE}}
+{\footnotesize\ttfamily \#define O\+S\+E\+E\+\_\+\+T\+A\+S\+K\+\_\+\+I\+D\+\_\+\+T\+Y\+PE~\mbox{\hyperlink{ee__compiler_8h_a44fc42ed93abd1afe9c2268543bc8faf}{V\+AR}}(Os\+E\+E\+\_\+reg, \mbox{\hyperlink{ee__compiler_8h_a11a4114a8973be51c022ce946b643033}{T\+Y\+P\+E\+D\+EF}})}
+
+This is the internal type used for Task I\+Ds. \mbox{\Hypertarget{ee__api__types_8h_aaaef40f9b276933d5afbfb578db8d124}\label{ee__api__types_8h_aaaef40f9b276933d5afbfb578db8d124}} 
+\index{ee\_api\_types.h@{ee\_api\_types.h}!OSEE\_TASK\_PRIO\_TYPE@{OSEE\_TASK\_PRIO\_TYPE}}
+\index{OSEE\_TASK\_PRIO\_TYPE@{OSEE\_TASK\_PRIO\_TYPE}!ee\_api\_types.h@{ee\_api\_types.h}}
+\doxysubsubsection{\texorpdfstring{OSEE\_TASK\_PRIO\_TYPE}{OSEE\_TASK\_PRIO\_TYPE}}
+{\footnotesize\ttfamily \#define O\+S\+E\+E\+\_\+\+T\+A\+S\+K\+\_\+\+P\+R\+I\+O\+\_\+\+T\+Y\+PE~\mbox{\hyperlink{ee__compiler_8h_a44fc42ed93abd1afe9c2268543bc8faf}{V\+AR}}(uint8\+\_\+t, \mbox{\hyperlink{ee__compiler_8h_a11a4114a8973be51c022ce946b643033}{T\+Y\+P\+E\+D\+EF}})}
+
+This is the internal type storing task priorities. \mbox{\Hypertarget{ee__api__types_8h_acb638228257ada1020a3caefd66f07ae}\label{ee__api__types_8h_acb638228257ada1020a3caefd66f07ae}} 
+\index{ee\_api\_types.h@{ee\_api\_types.h}!OSEE\_TICK\_DELTA\_TYPE@{OSEE\_TICK\_DELTA\_TYPE}}
+\index{OSEE\_TICK\_DELTA\_TYPE@{OSEE\_TICK\_DELTA\_TYPE}!ee\_api\_types.h@{ee\_api\_types.h}}
+\doxysubsubsection{\texorpdfstring{OSEE\_TICK\_DELTA\_TYPE}{OSEE\_TICK\_DELTA\_TYPE}}
+{\footnotesize\ttfamily \#define O\+S\+E\+E\+\_\+\+T\+I\+C\+K\+\_\+\+D\+E\+L\+T\+A\+\_\+\+T\+Y\+PE~\mbox{\hyperlink{ee__compiler_8h_a44fc42ed93abd1afe9c2268543bc8faf}{V\+AR}}(Os\+E\+E\+\_\+sreg, \mbox{\hyperlink{ee__compiler_8h_a11a4114a8973be51c022ce946b643033}{T\+Y\+P\+E\+D\+EF}})}
+
+This type represents the tick deviations in Schedule Tables. \mbox{\Hypertarget{ee__api__types_8h_ad61239bf9bb81ae2ce950055ef33217d}\label{ee__api__types_8h_ad61239bf9bb81ae2ce950055ef33217d}} 
+\index{ee\_api\_types.h@{ee\_api\_types.h}!TASK\_FUNC@{TASK\_FUNC}}
+\index{TASK\_FUNC@{TASK\_FUNC}!ee\_api\_types.h@{ee\_api\_types.h}}
+\doxysubsubsection{\texorpdfstring{TASK\_FUNC}{TASK\_FUNC}}
+{\footnotesize\ttfamily \#define T\+A\+S\+K\+\_\+\+F\+U\+NC(\begin{DoxyParamCaption}\item[{}]{Task\+To\+Be\+Created }\end{DoxyParamCaption})~Func\#\#Task\+To\+Be\+Created}
+
+This macro is used when using the Dynamic A\+P\+Is in order to pass a Task function as parameter (in this way the parameter of the macro is the Task function name). 
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{ee__api__types_8h_a9cadacc7d025bfbcd03fed3f2aea822d}\label{ee__api__types_8h_a9cadacc7d025bfbcd03fed3f2aea822d}} 
+\index{ee\_api\_types.h@{ee\_api\_types.h}!ObjectIDType@{ObjectIDType}}
+\index{ObjectIDType@{ObjectIDType}!ee\_api\_types.h@{ee\_api\_types.h}}
+\doxysubsubsection{\texorpdfstring{ObjectIDType}{ObjectIDType}}
+{\footnotesize\ttfamily typedef O\+S\+E\+E\+\_\+\+O\+B\+J\+E\+C\+T\+\_\+\+I\+D\+\_\+\+T\+Y\+PE \mbox{\hyperlink{ee__api__types_8h_a9cadacc7d025bfbcd03fed3f2aea822d}{Object\+I\+D\+Type}}}
+
+Generic Object type used for Error\+Hook macros. \mbox{\Hypertarget{ee__api__types_8h_abb72be265e492d43e67bcee50cc77dd1}\label{ee__api__types_8h_abb72be265e492d43e67bcee50cc77dd1}} 
+\index{ee\_api\_types.h@{ee\_api\_types.h}!ScheduleTableStatusType@{ScheduleTableStatusType}}
+\index{ScheduleTableStatusType@{ScheduleTableStatusType}!ee\_api\_types.h@{ee\_api\_types.h}}
+\doxysubsubsection{\texorpdfstring{ScheduleTableStatusType}{ScheduleTableStatusType}}
+{\footnotesize\ttfamily typedef Os\+E\+E\+\_\+reg \mbox{\hyperlink{ee__api__types_8h_abb72be265e492d43e67bcee50cc77dd1}{Schedule\+Table\+Status\+Type}}}
+
+The status can be one of the following\+:
+\begin{DoxyItemize}
+\item S\+C\+H\+E\+D\+U\+L\+E\+T\+A\+B\+L\+E\+\_\+\+S\+T\+O\+P\+P\+ED
+\item S\+C\+H\+E\+D\+U\+L\+E\+T\+A\+B\+L\+E\+\_\+\+N\+E\+XT
+\item S\+C\+H\+E\+D\+U\+L\+E\+T\+A\+B\+L\+E\+\_\+\+W\+A\+I\+T\+I\+NG
+\item S\+C\+H\+E\+D\+U\+L\+E\+T\+A\+B\+L\+E\+\_\+\+R\+U\+N\+N\+I\+NG
+\item S\+C\+H\+E\+D\+U\+L\+E\+T\+A\+B\+L\+E\+\_\+\+R\+U\+N\+N\+I\+N\+G\+\_\+\+A\+N\+D\+\_\+\+S\+Y\+N\+C\+H\+R\+O\+N\+O\+US 
+\end{DoxyItemize}\mbox{\Hypertarget{ee__api__types_8h_a211e253ccb43528137c4d778204eba72}\label{ee__api__types_8h_a211e253ccb43528137c4d778204eba72}} 
+\index{ee\_api\_types.h@{ee\_api\_types.h}!SpinlockIdType@{SpinlockIdType}}
+\index{SpinlockIdType@{SpinlockIdType}!ee\_api\_types.h@{ee\_api\_types.h}}
+\doxysubsubsection{\texorpdfstring{SpinlockIdType}{SpinlockIdType}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{ee__api__types_8h_ab1a5c99c565b10b54982a1b40fb861a9}{O\+S\+E\+E\+\_\+\+S\+P\+I\+N\+L\+O\+C\+K\+\_\+\+I\+D\+\_\+\+T\+Y\+PE}} \mbox{\hyperlink{ee__api__types_8h_a211e253ccb43528137c4d778204eba72}{Spinlock\+Id\+Type}}}
+
+Type identifying a spinlock. \mbox{\Hypertarget{ee__api__types_8h_a2897bbe5eb94c947b95208f120a1529d}\label{ee__api__types_8h_a2897bbe5eb94c947b95208f120a1529d}} 
+\index{ee\_api\_types.h@{ee\_api\_types.h}!TaskActivation@{TaskActivation}}
+\index{TaskActivation@{TaskActivation}!ee\_api\_types.h@{ee\_api\_types.h}}
+\doxysubsubsection{\texorpdfstring{TaskActivation}{TaskActivation}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{ee__api__types_8h_a0aaf577c4af78a7c996c913d25fab754}{O\+S\+E\+E\+\_\+\+T\+A\+S\+K\+\_\+\+A\+C\+T\+I\+V\+A\+T\+I\+O\+N\+\_\+\+T\+Y\+PE}} \mbox{\hyperlink{ee__api__types_8h_a2897bbe5eb94c947b95208f120a1529d}{Task\+Activation}}}
+
+This type stores a number of pending activations. \mbox{\Hypertarget{ee__api__types_8h_adf781183741ecdccf1e0296e96599792}\label{ee__api__types_8h_adf781183741ecdccf1e0296e96599792}} 
+\index{ee\_api\_types.h@{ee\_api\_types.h}!TaskFunc@{TaskFunc}}
+\index{TaskFunc@{TaskFunc}!ee\_api\_types.h@{ee\_api\_types.h}}
+\doxysubsubsection{\texorpdfstring{TaskFunc}{TaskFunc}}
+{\footnotesize\ttfamily typedef void($\ast$ Task\+Func) (void)}
+
+This type represents a function pointer, and it is used to store callbacks entry points and task bodies in data structures and in the dynamic A\+PI. \mbox{\Hypertarget{ee__api__types_8h_a440f077c08275033af26b205870d87ed}\label{ee__api__types_8h_a440f077c08275033af26b205870d87ed}} 
+\index{ee\_api\_types.h@{ee\_api\_types.h}!TickDeltaType@{TickDeltaType}}
+\index{TickDeltaType@{TickDeltaType}!ee\_api\_types.h@{ee\_api\_types.h}}
+\doxysubsubsection{\texorpdfstring{TickDeltaType}{TickDeltaType}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{ee__api__types_8h_acb638228257ada1020a3caefd66f07ae}{O\+S\+E\+E\+\_\+\+T\+I\+C\+K\+\_\+\+D\+E\+L\+T\+A\+\_\+\+T\+Y\+PE}} \mbox{\hyperlink{ee__api__types_8h_a440f077c08275033af26b205870d87ed}{Tick\+Delta\+Type}}}
+
+This type is used to store tick deviations in Schedule Tables. 
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{ee__api__types_8h_a2d19e4dc23703453ff28c03f3be56d74}\label{ee__api__types_8h_a2d19e4dc23703453ff28c03f3be56d74}} 
+\index{ee\_api\_types.h@{ee\_api\_types.h}!OsEE\_service\_id\_type@{OsEE\_service\_id\_type}}
+\index{OsEE\_service\_id\_type@{OsEE\_service\_id\_type}!ee\_api\_types.h@{ee\_api\_types.h}}
+\doxysubsubsection{\texorpdfstring{OsEE\_service\_id\_type}{OsEE\_service\_id\_type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{ee__api__types_8h_a2d19e4dc23703453ff28c03f3be56d74}{Os\+E\+E\+\_\+service\+\_\+id\+\_\+type}}}
+
+System Service unique identifiers. These identifiers and the service id values are specified using the O\+R\+TI conventions\+:
+\begin{DoxyItemize}
+\item Even identifiers are used for the service I\+Ds
+\item Odd identifiers are used to track the entering inside the service. 
+\end{DoxyItemize}\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OSId\_TaskBody@{OSId\_TaskBody}!ee\_api\_types.h@{ee\_api\_types.h}}\index{ee\_api\_types.h@{ee\_api\_types.h}!OSId\_TaskBody@{OSId\_TaskBody}}}\mbox{\Hypertarget{ee__api__types_8h_a2d19e4dc23703453ff28c03f3be56d74a84f6d361a167aaa98f94a44ffa9a383a}\label{ee__api__types_8h_a2d19e4dc23703453ff28c03f3be56d74a84f6d361a167aaa98f94a44ffa9a383a}} 
+O\+S\+Id\+\_\+\+Task\+Body&Special value to flag an error happened in the Task body needed for AR requirement \mbox{[}S\+W\+S\+\_\+\+Os\+\_\+00069\mbox{]}. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{ee__api__types_8h_a79bf54a17078edb124b553c51129396a}\label{ee__api__types_8h_a79bf54a17078edb124b553c51129396a}} 
+\index{ee\_api\_types.h@{ee\_api\_types.h}!OsEE\_status\_type@{OsEE\_status\_type}}
+\index{OsEE\_status\_type@{OsEE\_status\_type}!ee\_api\_types.h@{ee\_api\_types.h}}
+\doxysubsubsection{\texorpdfstring{OsEE\_status\_type}{OsEE\_status\_type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{ee__api__types_8h_a79bf54a17078edb124b553c51129396a}{Os\+E\+E\+\_\+status\+\_\+type}}}
+
+These are all possible Status\+Type values used in the code. \mbox{\Hypertarget{ee__api__types_8h_a1abc43b358b88d0f5adcb1bc0b70f5df}\label{ee__api__types_8h_a1abc43b358b88d0f5adcb1bc0b70f5df}} 
+\index{ee\_api\_types.h@{ee\_api\_types.h}!OsEE\_task\_status@{OsEE\_task\_status}}
+\index{OsEE\_task\_status@{OsEE\_task\_status}!ee\_api\_types.h@{ee\_api\_types.h}}
+\doxysubsubsection{\texorpdfstring{OsEE\_task\_status}{OsEE\_task\_status}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{ee__api__types_8h_a1abc43b358b88d0f5adcb1bc0b70f5df}{Os\+E\+E\+\_\+task\+\_\+status}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OSEE\_TASK\_SUSPENDED@{OSEE\_TASK\_SUSPENDED}!ee\_api\_types.h@{ee\_api\_types.h}}\index{ee\_api\_types.h@{ee\_api\_types.h}!OSEE\_TASK\_SUSPENDED@{OSEE\_TASK\_SUSPENDED}}}\mbox{\Hypertarget{ee__api__types_8h_a1abc43b358b88d0f5adcb1bc0b70f5dfa1277b5e114bfd40249d705e59284a2ba}\label{ee__api__types_8h_a1abc43b358b88d0f5adcb1bc0b70f5dfa1277b5e114bfd40249d705e59284a2ba}} 
+O\+S\+E\+E\+\_\+\+T\+A\+S\+K\+\_\+\+S\+U\+S\+P\+E\+N\+D\+ED&Status of a T\+A\+SK that\textquotesingle{}s is not activated yet. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OSEE\_TASK\_READY@{OSEE\_TASK\_READY}!ee\_api\_types.h@{ee\_api\_types.h}}\index{ee\_api\_types.h@{ee\_api\_types.h}!OSEE\_TASK\_READY@{OSEE\_TASK\_READY}}}\mbox{\Hypertarget{ee__api__types_8h_a1abc43b358b88d0f5adcb1bc0b70f5dfa4fd02b5d79b2906eeb8bb40db5bcb7c5}\label{ee__api__types_8h_a1abc43b358b88d0f5adcb1bc0b70f5dfa4fd02b5d79b2906eeb8bb40db5bcb7c5}} 
+O\+S\+E\+E\+\_\+\+T\+A\+S\+K\+\_\+\+R\+E\+A\+DY&Task activated and present in raeady, but the current activation has not executed yet (never set at O\+S\+E\+E\+\_\+\+T\+A\+S\+K\+\_\+\+R\+U\+N\+N\+I\+NG) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OSEE\_TASK\_READY\_STACKED@{OSEE\_TASK\_READY\_STACKED}!ee\_api\_types.h@{ee\_api\_types.h}}\index{ee\_api\_types.h@{ee\_api\_types.h}!OSEE\_TASK\_READY\_STACKED@{OSEE\_TASK\_READY\_STACKED}}}\mbox{\Hypertarget{ee__api__types_8h_a1abc43b358b88d0f5adcb1bc0b70f5dfa2a49e506f6b8b2ea9f836e624714c91b}\label{ee__api__types_8h_a1abc43b358b88d0f5adcb1bc0b70f5dfa2a49e506f6b8b2ea9f836e624714c91b}} 
+O\+S\+E\+E\+\_\+\+T\+A\+S\+K\+\_\+\+R\+E\+A\+D\+Y\+\_\+\+S\+T\+A\+C\+K\+ED&Task activated and present in ready queue, but the current activation has already executed for a while. Special value to handle Preemption and Unblocking \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OSEE\_TASK\_WAITING@{OSEE\_TASK\_WAITING}!ee\_api\_types.h@{ee\_api\_types.h}}\index{ee\_api\_types.h@{ee\_api\_types.h}!OSEE\_TASK\_WAITING@{OSEE\_TASK\_WAITING}}}\mbox{\Hypertarget{ee__api__types_8h_a1abc43b358b88d0f5adcb1bc0b70f5dfaf2b9c7b5098f1fb58af21718013f3efa}\label{ee__api__types_8h_a1abc43b358b88d0f5adcb1bc0b70f5dfaf2b9c7b5098f1fb58af21718013f3efa}} 
+O\+S\+E\+E\+\_\+\+T\+A\+S\+K\+\_\+\+W\+A\+I\+T\+I\+NG&Task blocked in the middle of execution waiting for events. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OSEE\_TASK\_RUNNING@{OSEE\_TASK\_RUNNING}!ee\_api\_types.h@{ee\_api\_types.h}}\index{ee\_api\_types.h@{ee\_api\_types.h}!OSEE\_TASK\_RUNNING@{OSEE\_TASK\_RUNNING}}}\mbox{\Hypertarget{ee__api__types_8h_a1abc43b358b88d0f5adcb1bc0b70f5dfa871b9bb38bce15b947a46d4366482472}\label{ee__api__types_8h_a1abc43b358b88d0f5adcb1bc0b70f5dfa871b9bb38bce15b947a46d4366482472}} 
+O\+S\+E\+E\+\_\+\+T\+A\+S\+K\+\_\+\+R\+U\+N\+N\+I\+NG&Task currently in execution. At most only one task for each core can be in this status \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OSEE\_TASK\_CHAINED@{OSEE\_TASK\_CHAINED}!ee\_api\_types.h@{ee\_api\_types.h}}\index{ee\_api\_types.h@{ee\_api\_types.h}!OSEE\_TASK\_CHAINED@{OSEE\_TASK\_CHAINED}}}\mbox{\Hypertarget{ee__api__types_8h_a1abc43b358b88d0f5adcb1bc0b70f5dfa046b39d299ea35705e796a979cd9e435}\label{ee__api__types_8h_a1abc43b358b88d0f5adcb1bc0b70f5dfa046b39d299ea35705e796a979cd9e435}} 
+O\+S\+E\+E\+\_\+\+T\+A\+S\+K\+\_\+\+C\+H\+A\+I\+N\+ED&Transient status to handle Chain\+Task service on the same Task. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{ee__api__types_8h_ae0628876d5232961cf313a1512214d06}\label{ee__api__types_8h_ae0628876d5232961cf313a1512214d06}} 
+\index{ee\_api\_types.h@{ee\_api\_types.h}!OsEE\_task\_type@{OsEE\_task\_type}}
+\index{OsEE\_task\_type@{OsEE\_task\_type}!ee\_api\_types.h@{ee\_api\_types.h}}
+\doxysubsubsection{\texorpdfstring{OsEE\_task\_type}{OsEE\_task\_type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{ee__api__types_8h_ae0628876d5232961cf313a1512214d06}{Os\+E\+E\+\_\+task\+\_\+type}}}
+
+This variable contains the type of tasks in the system, which can be\+:
+\begin{DoxyItemize}
+\item Basic. This is a O\+S\+E\+K/\+V\+DX Basic Task.
+\item Extended. This is a O\+S\+E\+K/\+V\+DX Extended Task.
+\item I\+S\+R2. In E\+R\+I\+K\+A3, I\+S\+R2 are handled like special tasks.
+\item I\+D\+LE. The background task executed inside the \mbox{\hyperlink{group__primitives-startup_ga5fb8a3c5837da7854c4da9972cefda96}{Start\+O\+S()}}. This includes the call to the idle hook. 
+\end{DoxyItemize}\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OSEE\_TASK\_TYPE\_BASIC@{OSEE\_TASK\_TYPE\_BASIC}!ee\_api\_types.h@{ee\_api\_types.h}}\index{ee\_api\_types.h@{ee\_api\_types.h}!OSEE\_TASK\_TYPE\_BASIC@{OSEE\_TASK\_TYPE\_BASIC}}}\mbox{\Hypertarget{ee__api__types_8h_ae0628876d5232961cf313a1512214d06aedda31bc868e3c877bcacd96b974adcd}\label{ee__api__types_8h_ae0628876d5232961cf313a1512214d06aedda31bc868e3c877bcacd96b974adcd}} 
+O\+S\+E\+E\+\_\+\+T\+A\+S\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+A\+S\+IC&Basic Task Type, also known as Run-\/\+To-\/\+Completion (R\+TC) T\+A\+S\+Ks, these T\+A\+S\+Ks cannot call blocking services. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OSEE\_TASK\_TYPE\_EXTENDED@{OSEE\_TASK\_TYPE\_EXTENDED}!ee\_api\_types.h@{ee\_api\_types.h}}\index{ee\_api\_types.h@{ee\_api\_types.h}!OSEE\_TASK\_TYPE\_EXTENDED@{OSEE\_TASK\_TYPE\_EXTENDED}}}\mbox{\Hypertarget{ee__api__types_8h_ae0628876d5232961cf313a1512214d06a8dca4d8f883aa9713f59ba1e80a886e8}\label{ee__api__types_8h_ae0628876d5232961cf313a1512214d06a8dca4d8f883aa9713f59ba1e80a886e8}} 
+O\+S\+E\+E\+\_\+\+T\+A\+S\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+E\+X\+T\+E\+N\+D\+ED&Extended Task Type, also known as threads. These T\+A\+S\+Ks own a private stack so they can call blocking primitives. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OSEE\_TASK\_TYPE\_ISR2@{OSEE\_TASK\_TYPE\_ISR2}!ee\_api\_types.h@{ee\_api\_types.h}}\index{ee\_api\_types.h@{ee\_api\_types.h}!OSEE\_TASK\_TYPE\_ISR2@{OSEE\_TASK\_TYPE\_ISR2}}}\mbox{\Hypertarget{ee__api__types_8h_ae0628876d5232961cf313a1512214d06aabc681229f07a1dc13c62c8c55371183}\label{ee__api__types_8h_ae0628876d5232961cf313a1512214d06aabc681229f07a1dc13c62c8c55371183}} 
+O\+S\+E\+E\+\_\+\+T\+A\+S\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+S\+R2&I\+S\+R2 are handled as special kind of T\+A\+S\+Ks. This allow us to share a lot of core for termination and protection with other T\+A\+S\+Ks. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OSEE\_TASK\_TYPE\_IDLE@{OSEE\_TASK\_TYPE\_IDLE}!ee\_api\_types.h@{ee\_api\_types.h}}\index{ee\_api\_types.h@{ee\_api\_types.h}!OSEE\_TASK\_TYPE\_IDLE@{OSEE\_TASK\_TYPE\_IDLE}}}\mbox{\Hypertarget{ee__api__types_8h_ae0628876d5232961cf313a1512214d06a0522680ff399fbf337a8e5c5952fa84b}\label{ee__api__types_8h_ae0628876d5232961cf313a1512214d06a0522680ff399fbf337a8e5c5952fa84b}} 
+O\+S\+E\+E\+\_\+\+T\+A\+S\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+D\+LE&Idle Task is a special kind of T\+A\+SK for Idle Time. There\textquotesingle{}s exactly one Idle Task for each core. \\
+\hline
+
+\end{DoxyEnumFields}

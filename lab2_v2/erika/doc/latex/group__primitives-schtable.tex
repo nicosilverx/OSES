@@ -1,0 +1,211 @@
+\hypertarget{group__primitives-schtable}{}\doxysection{Schedule Tables}
+\label{group__primitives-schtable}\index{Schedule Tables@{Schedule Tables}}
+
+
+Schedule Tables are an extension of the Alarm concept, allowing the definition of periodic tables with multiple expiry points.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{ee__api__types_8h_a79bf54a17078edb124b553c51129396a}{Status\+Type}} \mbox{\hyperlink{group__primitives-schtable_gaa384e9107ba444f5645b55d9356d9fd7}{Start\+Schedule\+Table\+Rel}} (\mbox{\hyperlink{group__primitives-resource_gaece92730f23a01b1dc858668f7d3b18b}{Schedule\+Table\+Type}} Schedule\+Table\+ID, \mbox{\hyperlink{group__primitives-alarm_ga169b940dbe47167e06113454538d3484}{Tick\+Type}} Offset)
+\begin{DoxyCompactList}\small\item\em Starts a Schedule Table with a relative offset. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ee__api__types_8h_a79bf54a17078edb124b553c51129396a}{Status\+Type}} \mbox{\hyperlink{group__primitives-schtable_ga81ccfeb43304c2ceba45ed8876f6aedf}{Start\+Schedule\+Table\+Abs}} (\mbox{\hyperlink{group__primitives-resource_gaece92730f23a01b1dc858668f7d3b18b}{Schedule\+Table\+Type}} Schedule\+Table\+ID, \mbox{\hyperlink{group__primitives-alarm_ga169b940dbe47167e06113454538d3484}{Tick\+Type}} Start)
+\begin{DoxyCompactList}\small\item\em Starts a Schedule Table at an absolute counter value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ee__api__types_8h_a79bf54a17078edb124b553c51129396a}{Status\+Type}} \mbox{\hyperlink{group__primitives-schtable_gad3d659c08b2702e817d42ed171b7dfd5}{Stop\+Schedule\+Table}} (\mbox{\hyperlink{group__primitives-resource_gaece92730f23a01b1dc858668f7d3b18b}{Schedule\+Table\+Type}} Schedule\+Table\+ID)
+\begin{DoxyCompactList}\small\item\em Stops a Schedule Table. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ee__api__types_8h_a79bf54a17078edb124b553c51129396a}{Status\+Type}} \mbox{\hyperlink{group__primitives-schtable_ga58377ce88b4aa0ea04e15d806a662131}{Get\+Schedule\+Table\+Status}} (\mbox{\hyperlink{group__primitives-resource_gaece92730f23a01b1dc858668f7d3b18b}{Schedule\+Table\+Type}} Schedule\+Table\+ID, \mbox{\hyperlink{ee__api__types_8h_a573d0bf9d584dcd702f705e72cc343ca}{Schedule\+Table\+Status\+Ref\+Type}} Schedule\+Status)
+\begin{DoxyCompactList}\small\item\em Queries the state of a schedule table. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ee__api__types_8h_a79bf54a17078edb124b553c51129396a}{Status\+Type}} \mbox{\hyperlink{group__primitives-schtable_ga1c4632ef4745f8b848cd3ea33ea4dc55}{Next\+Schedule\+Table}} (\mbox{\hyperlink{group__primitives-resource_gaece92730f23a01b1dc858668f7d3b18b}{Schedule\+Table\+Type}} Schedule\+Table\+I\+D\+\_\+\+From, \mbox{\hyperlink{group__primitives-resource_gaece92730f23a01b1dc858668f7d3b18b}{Schedule\+Table\+Type}} Schedule\+Table\+I\+D\+\_\+\+To)
+\begin{DoxyCompactList}\small\item\em Switches to another Schedule table. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ee__api__types_8h_a79bf54a17078edb124b553c51129396a}{Status\+Type}} \mbox{\hyperlink{group__primitives-schtable_gafcca9960de4197f10ea1636eda6dfc40}{Sync\+Schedule\+Table}} (\mbox{\hyperlink{group__primitives-resource_gaece92730f23a01b1dc858668f7d3b18b}{Schedule\+Table\+Type}} Schedule\+Table\+ID, \mbox{\hyperlink{group__primitives-alarm_ga169b940dbe47167e06113454538d3484}{Tick\+Type}} Value)
+\begin{DoxyCompactList}\small\item\em Starts synchronization of a Schedule Table. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+E\+R\+I\+K\+A3 supports Schedule Tables as specified by the A\+U\+T\+O\+S\+AR OS Specification.
+
+Schedule Tables provide an operating system object that encapsulates a set of \char`\"{}expiry points\char`\"{} organized in the form of a table. The table can be set to be repeated periodically.
+
+The Schedule Tables can be seen as an extension of the alarm concept, in the sense that a Schedule Table includes inside its configuration multiple notifications that otherwise needed a separate alarm each.
+
+The Schedule Table also solves the need of atomically changing the set of expiry points, by providing the possibility to change, with a single primitive, the current running Schedule Table.
+
+The Schedule Table provides the possibility of synchronization with an external time source. This feature has not been implemented yet in E\+R\+I\+K\+A3. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__primitives-schtable_ga58377ce88b4aa0ea04e15d806a662131}\label{group__primitives-schtable_ga58377ce88b4aa0ea04e15d806a662131}} 
+\index{Schedule Tables@{Schedule Tables}!GetScheduleTableStatus@{GetScheduleTableStatus}}
+\index{GetScheduleTableStatus@{GetScheduleTableStatus}!Schedule Tables@{Schedule Tables}}
+\doxysubsubsection{\texorpdfstring{GetScheduleTableStatus()}{GetScheduleTableStatus()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ee__api__types_8h_a79bf54a17078edb124b553c51129396a}{Status\+Type}} Get\+Schedule\+Table\+Status (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__primitives-resource_gaece92730f23a01b1dc858668f7d3b18b}{Schedule\+Table\+Type}}}]{Schedule\+Table\+ID,  }\item[{\mbox{\hyperlink{ee__api__types_8h_a573d0bf9d584dcd702f705e72cc343ca}{Schedule\+Table\+Status\+Ref\+Type}}}]{Schedule\+Status }\end{DoxyParamCaption})}
+
+This service queries the state of a schedule table (also with respect to synchronization).
+
+Sync/\+Async\+: Synchronous
+
+Reentrancy\+: Reentrant
+
+Reference\+: A\+U\+T\+O\+S\+AR OS 8.\+4.\+16 Get\+Schedule\+Table\+Status \mbox{[}S\+W\+S\+\_\+\+Os\+\_\+00227\mbox{]} (S\+R\+S\+\_\+\+Os\+\_\+11002)
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Schedule\+Table\+ID} & Schedule table for which status is requested. \\
+\hline
+\mbox{\texttt{ out}}  & {\em Schedule\+Status} & Reference to Schedule\+Table\+Status\+Type.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The function returns a Status\+Type.
+\begin{DoxyItemize}
+\item E\+\_\+\+OK No Error
+\item E\+\_\+\+O\+S\+\_\+\+ID (Extended) Invalid Schedule\+Table\+ID 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__primitives-schtable_ga1c4632ef4745f8b848cd3ea33ea4dc55}\label{group__primitives-schtable_ga1c4632ef4745f8b848cd3ea33ea4dc55}} 
+\index{Schedule Tables@{Schedule Tables}!NextScheduleTable@{NextScheduleTable}}
+\index{NextScheduleTable@{NextScheduleTable}!Schedule Tables@{Schedule Tables}}
+\doxysubsubsection{\texorpdfstring{NextScheduleTable()}{NextScheduleTable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ee__api__types_8h_a79bf54a17078edb124b553c51129396a}{Status\+Type}} Next\+Schedule\+Table (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__primitives-resource_gaece92730f23a01b1dc858668f7d3b18b}{Schedule\+Table\+Type}}}]{Schedule\+Table\+I\+D\+\_\+\+From,  }\item[{\mbox{\hyperlink{group__primitives-resource_gaece92730f23a01b1dc858668f7d3b18b}{Schedule\+Table\+Type}}}]{Schedule\+Table\+I\+D\+\_\+\+To }\end{DoxyParamCaption})}
+
+This service switches the processing from one schedule table to another schedule table
+
+Sync/\+Async\+: Synchronous
+
+Reentrancy\+: Reentrant
+
+Reference\+: A\+U\+T\+O\+S\+AR OS 8.\+4.\+12 Next\+Schedule\+Table \mbox{[}S\+W\+S\+\_\+\+Os\+\_\+00191\mbox{]} (S\+R\+S\+\_\+\+Os\+\_\+00099)
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Schedule\+Table\+I\+D\+\_\+\+From} & Currently processed schedule table \\
+\hline
+\mbox{\texttt{ in}}  & {\em Schedule\+Table\+I\+D\+\_\+\+To} & Schedule table that provides its series of expiry points\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The function returns a Status\+Type.
+\begin{DoxyItemize}
+\item E\+\_\+\+OK No error
+\item E\+\_\+\+O\+S\+\_\+\+ID (Extended) Schedule\+Table\+I\+D\+\_\+\+From or Schedule\+Table\+I\+D\+\_\+\+To not valid.
+\item E\+\_\+\+O\+S\+\_\+\+N\+O\+F\+U\+NC Schedule\+Table\+I\+D\+\_\+\+From not started
+\item E\+\_\+\+O\+S\+\_\+\+S\+T\+A\+TE Schedule\+Table\+I\+D\+\_\+\+To is started or next 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__primitives-schtable_ga81ccfeb43304c2ceba45ed8876f6aedf}\label{group__primitives-schtable_ga81ccfeb43304c2ceba45ed8876f6aedf}} 
+\index{Schedule Tables@{Schedule Tables}!StartScheduleTableAbs@{StartScheduleTableAbs}}
+\index{StartScheduleTableAbs@{StartScheduleTableAbs}!Schedule Tables@{Schedule Tables}}
+\doxysubsubsection{\texorpdfstring{StartScheduleTableAbs()}{StartScheduleTableAbs()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ee__api__types_8h_a79bf54a17078edb124b553c51129396a}{Status\+Type}} Start\+Schedule\+Table\+Abs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__primitives-resource_gaece92730f23a01b1dc858668f7d3b18b}{Schedule\+Table\+Type}}}]{Schedule\+Table\+ID,  }\item[{\mbox{\hyperlink{group__primitives-alarm_ga169b940dbe47167e06113454538d3484}{Tick\+Type}}}]{Start }\end{DoxyParamCaption})}
+
+This service starts the processing of a schedule table at an absolute value \char`\"{}\+Start\char`\"{} on the underlying counter.
+
+Sync/\+Async\+: Synchronous
+
+Reentrancy\+: Reentrant
+
+Reference\+: A\+U\+T\+O\+S\+AR OS 8.\+4.\+10 Start\+Schedule\+Table\+Abs \mbox{[}S\+W\+S\+\_\+\+Os\+\_\+00358\mbox{]}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Schedule\+Table\+ID} & Schedule table to be started \\
+\hline
+\mbox{\texttt{ in}}  & {\em Start} & Absolute counter tick value at which the schedule table is started\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The function returns a Status\+Type.
+\begin{DoxyItemize}
+\item E\+\_\+\+OK No Error.
+\item E\+\_\+\+O\+S\+\_\+\+ID (Extended) Schedule\+Table\+ID not valid.
+\item E\+\_\+\+O\+S\+\_\+\+V\+A\+L\+UE (Extended) \char`\"{}\+Start\char`\"{} is greater than Os\+Counter\+Max\+Allowed\+Value.
+\item E\+\_\+\+O\+S\+\_\+\+S\+T\+A\+TE Schedule table was already started. 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__primitives-schtable_gaa384e9107ba444f5645b55d9356d9fd7}\label{group__primitives-schtable_gaa384e9107ba444f5645b55d9356d9fd7}} 
+\index{Schedule Tables@{Schedule Tables}!StartScheduleTableRel@{StartScheduleTableRel}}
+\index{StartScheduleTableRel@{StartScheduleTableRel}!Schedule Tables@{Schedule Tables}}
+\doxysubsubsection{\texorpdfstring{StartScheduleTableRel()}{StartScheduleTableRel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ee__api__types_8h_a79bf54a17078edb124b553c51129396a}{Status\+Type}} Start\+Schedule\+Table\+Rel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__primitives-resource_gaece92730f23a01b1dc858668f7d3b18b}{Schedule\+Table\+Type}}}]{Schedule\+Table\+ID,  }\item[{\mbox{\hyperlink{group__primitives-alarm_ga169b940dbe47167e06113454538d3484}{Tick\+Type}}}]{Offset }\end{DoxyParamCaption})}
+
+This service starts the processing of a schedule table at \char`\"{}\+Offset\char`\"{} relative to the \char`\"{}\+Now\char`\"{} value on the underlying counter.
+
+Sync/\+Async\+: Synchronous
+
+Reentrancy\+: Reentrant
+
+Reference\+: A\+U\+T\+O\+S\+AR OS 8.\+4.\+9 Start\+Schedule\+Table\+Rel \mbox{[}S\+W\+S\+\_\+\+Os\+\_\+00347\mbox{]}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Schedule\+Table\+ID} & Schedule table to be started. \\
+\hline
+\mbox{\texttt{ in}}  & {\em Offset} & Number of ticks on the counter before the the schedule table processing is started\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The function returns a Status\+Type.
+\begin{DoxyItemize}
+\item E\+\_\+\+OK No Error.
+\item E\+\_\+\+O\+S\+\_\+\+ID (Extended) Schedule\+Table\+ID not valid.
+\item E\+\_\+\+O\+S\+\_\+\+V\+A\+L\+UE (Extended) Offset is greater than (Os\+Counter\+Max\+Allowed\+Value -\/ Initial\+Offset) or is equal to 0.
+\item E\+\_\+\+O\+S\+\_\+\+S\+T\+A\+TE Schedule table was already started. 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__primitives-schtable_gad3d659c08b2702e817d42ed171b7dfd5}\label{group__primitives-schtable_gad3d659c08b2702e817d42ed171b7dfd5}} 
+\index{Schedule Tables@{Schedule Tables}!StopScheduleTable@{StopScheduleTable}}
+\index{StopScheduleTable@{StopScheduleTable}!Schedule Tables@{Schedule Tables}}
+\doxysubsubsection{\texorpdfstring{StopScheduleTable()}{StopScheduleTable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ee__api__types_8h_a79bf54a17078edb124b553c51129396a}{Status\+Type}} Stop\+Schedule\+Table (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__primitives-resource_gaece92730f23a01b1dc858668f7d3b18b}{Schedule\+Table\+Type}}}]{Schedule\+Table\+ID }\end{DoxyParamCaption})}
+
+This service cancels the processing of a schedule table immediately at any point while the schedule table is running.
+
+Sync/\+Async\+: Synchronous
+
+Reentrancy\+: Reentrant
+
+Reference\+: A\+U\+T\+O\+S\+AR OS 8.\+4.\+11 Stop\+Schedule\+Table \mbox{[}S\+W\+S\+\_\+\+Os\+\_\+00006\mbox{]}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Schedule\+Table\+ID} & Schedule table to be stopped\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The function returns a Status\+Type.
+\begin{DoxyItemize}
+\item E\+\_\+\+OK No Error
+\item E\+\_\+\+O\+S\+\_\+\+ID (Extended) Schedule\+Table\+ID not valid.
+\item E\+\_\+\+O\+S\+\_\+\+N\+O\+F\+U\+NC Schedule table was already stopped. 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__primitives-schtable_gafcca9960de4197f10ea1636eda6dfc40}\label{group__primitives-schtable_gafcca9960de4197f10ea1636eda6dfc40}} 
+\index{Schedule Tables@{Schedule Tables}!SyncScheduleTable@{SyncScheduleTable}}
+\index{SyncScheduleTable@{SyncScheduleTable}!Schedule Tables@{Schedule Tables}}
+\doxysubsubsection{\texorpdfstring{SyncScheduleTable()}{SyncScheduleTable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ee__api__types_8h_a79bf54a17078edb124b553c51129396a}{Status\+Type}} Sync\+Schedule\+Table (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__primitives-resource_gaece92730f23a01b1dc858668f7d3b18b}{Schedule\+Table\+Type}}}]{Schedule\+Table\+ID,  }\item[{\mbox{\hyperlink{group__primitives-alarm_ga169b940dbe47167e06113454538d3484}{Tick\+Type}}}]{Value }\end{DoxyParamCaption})}
+
+This service provides the schedule table with a synchronization count and start synchronization.
+
+Sync/\+Async\+: Synchronous
+
+Reentrancy\+: Reentrant
+
+Reference\+: A\+U\+T\+O\+S\+AR OS 8.\+4.\+14 Sync\+Schedule\+Table \mbox{[}S\+W\+S\+\_\+\+Os\+\_\+00199\mbox{]} (S\+R\+S\+\_\+\+Os\+\_\+11002)
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Schedule\+Table\+ID} & Schedule table to be synchronized \\
+\hline
+\mbox{\texttt{ in}}  & {\em Value} & The current value of the synchronization counter\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The function returns a Status\+Type.
+\begin{DoxyItemize}
+\item E\+\_\+\+OK No errors
+\item E\+\_\+\+O\+S\+\_\+\+ID (Extended) The Schedule\+Table\+ID was not valid or schedule table can not be synchronized (Os\+Schedule\+Tbl\+Sync\+Strategy not set or Os\+Schedule\+Tbl\+Sync\+Strategy = I\+M\+P\+L\+I\+C\+IT)
+\item E\+\_\+\+O\+S\+\_\+\+V\+A\+L\+UE (Extended) The \textquotesingle{}\textquotesingle{}Value\textquotesingle{}\textquotesingle{} is out of range.
+\item E\+\_\+\+O\+S\+\_\+\+S\+T\+A\+TE The state of schedule table \textquotesingle{}\textquotesingle{}Schedule\+Table\+ID\textquotesingle{}\textquotesingle{} is equal to S\+C\+H\+E\+D\+U\+L\+E\+T\+A\+B\+L\+E\+\_\+\+S\+T\+O\+P\+P\+ED 
+\end{DoxyItemize}
+\end{DoxyReturn}

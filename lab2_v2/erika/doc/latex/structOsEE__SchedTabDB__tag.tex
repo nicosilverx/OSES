@@ -1,0 +1,47 @@
+\hypertarget{structOsEE__SchedTabDB__tag}{}\doxysection{Os\+E\+E\+\_\+\+Sched\+Tab\+D\+B\+\_\+tag Struct Reference}
+\label{structOsEE__SchedTabDB__tag}\index{OsEE\_SchedTabDB\_tag@{OsEE\_SchedTabDB\_tag}}
+
+
+This is the data structure used to describe the constant part of a schedule table.  
+
+
+
+
+{\ttfamily \#include $<$ee\+\_\+kernel\+\_\+types.\+h$>$}
+
+
+
+Collaboration diagram for Os\+E\+E\+\_\+\+Sched\+Tab\+D\+B\+\_\+tag\+:
+% FIG 0
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structOsEE__SchedTabDB__tag_a7a69a3e3a7026fd15a03d0b5b4217178}\label{structOsEE__SchedTabDB__tag_a7a69a3e3a7026fd15a03d0b5b4217178}} 
+\mbox{\hyperlink{ee__kernel__types_8h_a6e1e9b0256b349b1795f1ff4b2e3f16e}{Os\+E\+E\+\_\+\+Sched\+Tab\+CB}} $\ast$ \mbox{\hyperlink{structOsEE__SchedTabDB__tag_a7a69a3e3a7026fd15a03d0b5b4217178}{p\+\_\+st\+\_\+cb}}
+\begin{DoxyCompactList}\small\item\em Pointer to corresponding Control Block. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structOsEE__SchedTabDB__tag_a98669973bac290c3a47bff23223b5311}\label{structOsEE__SchedTabDB__tag_a98669973bac290c3a47bff23223b5311}} 
+struct \mbox{\hyperlink{structOsEE__TriggerDB__tag}{Os\+E\+E\+\_\+\+Trigger\+D\+B\+\_\+tag}} const  $\ast$ \mbox{\hyperlink{structOsEE__SchedTabDB__tag_a98669973bac290c3a47bff23223b5311}{p\+\_\+trigger\+\_\+db}}
+\begin{DoxyCompactList}\small\item\em Pointer to corresponding Schedule Table Trigger. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structOsEE__SchedTabDB__tag_a55a6d368f9333753d7e77d160c06bdf4}\label{structOsEE__SchedTabDB__tag_a55a6d368f9333753d7e77d160c06bdf4}} 
+\mbox{\hyperlink{ee__kernel__types_8h_a53b671df0a76ae4bf0d1bd5bba91a9cf}{Os\+E\+E\+\_\+st\+\_\+exipiry\+\_\+point}}($\ast$ \mbox{\hyperlink{structOsEE__SchedTabDB__tag_a55a6d368f9333753d7e77d160c06bdf4}{p\+\_\+expiry\+\_\+point\+\_\+array}} )\mbox{[}$\,$\mbox{]}
+\begin{DoxyCompactList}\small\item\em Array of the schedule table\textquotesingle{}s expiry points. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structOsEE__SchedTabDB__tag_ab9fd5627d1713a7bc321015f24404fcd}\label{structOsEE__SchedTabDB__tag_ab9fd5627d1713a7bc321015f24404fcd}} 
+\mbox{\hyperlink{ee__api__types_8h_a6056fabe5f89ca108e1074b3432ef410}{Mem\+Size}} \mbox{\hyperlink{structOsEE__SchedTabDB__tag_ab9fd5627d1713a7bc321015f24404fcd}{expiry\+\_\+point\+\_\+array\+\_\+size}}
+\begin{DoxyCompactList}\small\item\em Size of array of the schedule table\textquotesingle{}s expiry point. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structOsEE__SchedTabDB__tag_a5072c44a1886bc5aab3247a359515119}\label{structOsEE__SchedTabDB__tag_a5072c44a1886bc5aab3247a359515119}} 
+\mbox{\hyperlink{ee__kernel__types_8h_ac063e723cbbae500e624f46a0f30fee8}{Synch\+Strategy\+Type}} \mbox{\hyperlink{structOsEE__SchedTabDB__tag_a5072c44a1886bc5aab3247a359515119}{sync\+\_\+strategy}}
+\begin{DoxyCompactList}\small\item\em Schedule table synchronization strategy. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structOsEE__SchedTabDB__tag_a6c304b276d84399d34c7ce0ce14f4f85}\label{structOsEE__SchedTabDB__tag_a6c304b276d84399d34c7ce0ce14f4f85}} 
+\mbox{\hyperlink{group__primitives-alarm_ga169b940dbe47167e06113454538d3484}{Tick\+Type}} \mbox{\hyperlink{structOsEE__SchedTabDB__tag_a6c304b276d84399d34c7ce0ce14f4f85}{duration}}
+\begin{DoxyCompactList}\small\item\em The length of the schedule table in ticks. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structOsEE__SchedTabDB__tag_ab4ddc2a875ca4ff2710dbee07cb702f6}\label{structOsEE__SchedTabDB__tag_ab4ddc2a875ca4ff2710dbee07cb702f6}} 
+\mbox{\hyperlink{ee__api__types_8h_a440f077c08275033af26b205870d87ed}{Tick\+Delta\+Type}} \mbox{\hyperlink{structOsEE__SchedTabDB__tag_ab4ddc2a875ca4ff2710dbee07cb702f6}{precision}}
+\begin{DoxyCompactList}\small\item\em Minimum deviation from synchronization source to be synchronized. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structOsEE__SchedTabDB__tag_af8cb877fac6e2c22c4852768b556e804}\label{structOsEE__SchedTabDB__tag_af8cb877fac6e2c22c4852768b556e804}} 
+Os\+E\+E\+\_\+bool \mbox{\hyperlink{structOsEE__SchedTabDB__tag_af8cb877fac6e2c22c4852768b556e804}{repeated}}
+\begin{DoxyCompactList}\small\item\em O\+S\+T\+R\+UE if the schedule table shall be repeated after the last expiry point, F\+A\+L\+SE if the schedule table is single-\/shot. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+inc/\mbox{\hyperlink{ee__kernel__types_8h}{ee\+\_\+kernel\+\_\+types.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,41 @@
+digraph "inc/ee_platform_types.h"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="inc/ee_platform_types.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Platform Types."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="inc/ee.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ee_8h.html",tooltip="Main Collector."];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="inc/ee_conf.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ee__conf_8h.html",tooltip="Main Configuration Collector."];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="inc/ee_hal.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ee__hal_8h.html",tooltip="HAL support visible to the application."];
+  Node4 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="inc/ee_oo_api_osek.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ee__oo__api__osek_8h.html",tooltip="OSEK Kernel APIs."];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="inc/ee_api.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ee__api_8h.html",tooltip="OSEK Kernel APIs Collector."];
+  Node6 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="inc/ee_api_types.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ee__api__types_8h.html",tooltip="OSEK Kernel API Types."];
+  Node7 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="inc/ee_oo_api_extension.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ee__oo__api__extension_8h.html",tooltip="OSEK Kernel Extended APIs."];
+  Node8 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node8 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="inc/ee_kernel_types.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ee__kernel__types_8h.html",tooltip="OSEK Kernel Internal Types."];
+  Node9 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node9 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="inc/ee_get_kernel_and\l_core.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ee__get__kernel__and__core_8h.html",tooltip="HAL internal."];
+  Node10 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="inc/ee_scheduler_types.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ee__scheduler__types_8h.html",tooltip="Contains the types for different scheduler data structures."];
+  Node11 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node11 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node11 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+}

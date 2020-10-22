@@ -1,0 +1,10 @@
+E\+R\+I\+K\+A3 supports multicore execution following the A\+U\+T\+O\+S\+AR OS specification.
+
+In particular\+:
+\begin{DoxyItemize}
+\item Scheduling is partitioned on each core.
+\item Each application task is statically partitioned on a given core.
+\item Each counter is statically partitioned on a given core; Alarms and Schedule Table are handled on the same core of the counter they are assigned to.
+\item Startup and Shutdown are done in a coordinated way using barriers, as specified by the A\+U\+T\+O\+S\+AR OS standard.
+\item Spin Locks are available for implementing mutual exclusion. 
+\end{DoxyItemize}

@@ -1,0 +1,394 @@
+\hypertarget{group__primitives-alarm}{}\doxysection{Alarm and Counter Primitives}
+\label{group__primitives-alarm}\index{Alarm and Counter Primitives@{Alarm and Counter Primitives}}
+
+
+The Alarm Primitives are related to periodic or one-\/shot notification useful to implement timeouts or periodic activities.  
+
+
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structAlarmBaseType}{Alarm\+Base\+Type}}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{structAlarmBaseType}{Alarm\+Base\+Type}} stores information about a counter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__primitives-alarm_gae38670593ce93e38380396e9f1f7b09f}{I\+N\+V\+A\+L\+I\+D\+\_\+\+A\+L\+A\+RM}}~((\mbox{\hyperlink{group__primitives-alarm_gac0db96397f5d9817124ffc05a9755b85}{Alarm\+Type}})-\/1)
+\begin{DoxyCompactList}\small\item\em Invalid alarm ID. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__primitives-alarm_ga63bf892b6ff4bd4e9841b053fc2e33ed}{Declare\+Alarm}}(Alarm)
+\begin{DoxyCompactList}\small\item\em Alarm Declaration. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__primitives-alarm_ga051669c3fa80c56260c8a02de803d20a}{A\+L\+A\+R\+M\+C\+A\+L\+L\+B\+A\+CK}}(cbk)~void cbk (void)
+\begin{DoxyCompactList}\small\item\em This macro is used both to declare and to define an alarm callback. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{ee__api__types_8h_a5729e8f24953268ffe18e86b881c7f7f}{O\+S\+E\+E\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+T\+Y\+PE}} \mbox{\hyperlink{group__primitives-alarm_ga871c90fa43c4c8b68846b89d036a753c}{Counter\+Type}}
+\begin{DoxyCompactList}\small\item\em Type representing a counter. \end{DoxyCompactList}\item 
+typedef O\+S\+E\+E\+\_\+\+T\+I\+C\+K\+\_\+\+T\+Y\+PE \mbox{\hyperlink{group__primitives-alarm_ga169b940dbe47167e06113454538d3484}{Tick\+Type}}
+\begin{DoxyCompactList}\small\item\em Type representing the value of ticks a counter can store. \end{DoxyCompactList}\item 
+typedef \mbox{\hyperlink{group__primitives-alarm_ga169b940dbe47167e06113454538d3484}{Tick\+Type}} $\ast$ \mbox{\hyperlink{group__primitives-alarm_gaf7915c4762698a00e6a4d4d60eb9f998}{Tick\+Ref\+Type}}
+\begin{DoxyCompactList}\small\item\em This is a pointer to a Tick\+Type. \end{DoxyCompactList}\item 
+typedef \mbox{\hyperlink{ee__api__types_8h_ae634ad90564c1481bb02785b5498faf1}{O\+S\+E\+E\+\_\+\+A\+L\+A\+R\+M\+\_\+\+I\+D\+\_\+\+T\+Y\+PE}} \mbox{\hyperlink{group__primitives-alarm_gac0db96397f5d9817124ffc05a9755b85}{Alarm\+Type}}
+\begin{DoxyCompactList}\small\item\em Type for Alarm I\+Ds. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{ee__api__types_8h_a79bf54a17078edb124b553c51129396a}{Status\+Type}} \mbox{\hyperlink{group__primitives-alarm_ga53c97ea958364f5d99684f871a462aad}{Set\+Rel\+Alarm}} (\mbox{\hyperlink{group__primitives-alarm_gac0db96397f5d9817124ffc05a9755b85}{Alarm\+Type}} Alarm\+ID, \mbox{\hyperlink{group__primitives-alarm_ga169b940dbe47167e06113454538d3484}{Tick\+Type}} increment, \mbox{\hyperlink{group__primitives-alarm_ga169b940dbe47167e06113454538d3484}{Tick\+Type}} cycle)
+\begin{DoxyCompactList}\small\item\em Arm the alarm based on a relative counter value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ee__api__types_8h_a79bf54a17078edb124b553c51129396a}{Status\+Type}} \mbox{\hyperlink{group__primitives-alarm_gaa8dae0adc5647efdfb479e7c82f89754}{Set\+Abs\+Alarm}} (\mbox{\hyperlink{group__primitives-alarm_gac0db96397f5d9817124ffc05a9755b85}{Alarm\+Type}} Alarm\+ID, \mbox{\hyperlink{group__primitives-alarm_ga169b940dbe47167e06113454538d3484}{Tick\+Type}} start, \mbox{\hyperlink{group__primitives-alarm_ga169b940dbe47167e06113454538d3484}{Tick\+Type}} cycle)
+\begin{DoxyCompactList}\small\item\em Arm the alarm based on a absolute counter value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ee__api__types_8h_a79bf54a17078edb124b553c51129396a}{Status\+Type}} \mbox{\hyperlink{group__primitives-alarm_gaf4ec030009919c1e52a1fb6f654e744e}{Get\+Alarm}} (\mbox{\hyperlink{group__primitives-alarm_gac0db96397f5d9817124ffc05a9755b85}{Alarm\+Type}} Alarm\+ID, \mbox{\hyperlink{group__primitives-alarm_gaf7915c4762698a00e6a4d4d60eb9f998}{Tick\+Ref\+Type}} Tick)
+\begin{DoxyCompactList}\small\item\em Returns relative tick value before alarm expiration. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ee__api__types_8h_a79bf54a17078edb124b553c51129396a}{Status\+Type}} \mbox{\hyperlink{group__primitives-alarm_gac2896b1e98a206eaa45d3d76f2a184a9}{Get\+Alarm\+Base}} (\mbox{\hyperlink{group__primitives-alarm_gac0db96397f5d9817124ffc05a9755b85}{Alarm\+Type}} Alarm\+ID, \mbox{\hyperlink{ee__api__types_8h_a2ccea1c01502210d149699869ac513f3}{Alarm\+Base\+Ref\+Type}} Info)
+\begin{DoxyCompactList}\small\item\em Returns the alarm base characteristics. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ee__api__types_8h_a79bf54a17078edb124b553c51129396a}{Status\+Type}} \mbox{\hyperlink{group__primitives-alarm_ga7bfac685beaa3a62872ed44161e07e09}{Cancel\+Alarm}} (\mbox{\hyperlink{group__primitives-alarm_gac0db96397f5d9817124ffc05a9755b85}{Alarm\+Type}} Alarm\+ID)
+\begin{DoxyCompactList}\small\item\em Cancels an active alarm. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ee__api__types_8h_a79bf54a17078edb124b553c51129396a}{Status\+Type}} \mbox{\hyperlink{group__primitives-alarm_gaa0cf5297acb15cf35903879e19cac5b4}{Get\+Counter\+Value}} (\mbox{\hyperlink{group__primitives-alarm_ga871c90fa43c4c8b68846b89d036a753c}{Counter\+Type}} Counter\+ID, \mbox{\hyperlink{group__primitives-alarm_gaf7915c4762698a00e6a4d4d60eb9f998}{Tick\+Ref\+Type}} Value)
+\begin{DoxyCompactList}\small\item\em Reads a counter value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ee__api__types_8h_a79bf54a17078edb124b553c51129396a}{Status\+Type}} \mbox{\hyperlink{group__primitives-alarm_gac831b2f7b67e61a5b6ff94200f3a8d81}{Get\+Elapsed\+Value}} (\mbox{\hyperlink{group__primitives-alarm_ga871c90fa43c4c8b68846b89d036a753c}{Counter\+Type}} Counter\+ID, \mbox{\hyperlink{group__primitives-alarm_gaf7915c4762698a00e6a4d4d60eb9f998}{Tick\+Ref\+Type}} Value, \mbox{\hyperlink{group__primitives-alarm_gaf7915c4762698a00e6a4d4d60eb9f998}{Tick\+Ref\+Type}} Elapsed\+Value)
+\begin{DoxyCompactList}\small\item\em Gets the number of ticks since the last read. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ee__api__types_8h_a79bf54a17078edb124b553c51129396a}{Status\+Type}} \mbox{\hyperlink{group__primitives-alarm_gabce1bd0e22433552b5c67aba978e4890}{Increment\+Counter}} (\mbox{\hyperlink{group__primitives-alarm_ga871c90fa43c4c8b68846b89d036a753c}{Counter\+Type}} Counter\+ID)
+\begin{DoxyCompactList}\small\item\em Increment a software counter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+E\+R\+I\+K\+A3 supports a notification mechanism based on {\itshape Counters} and {\itshape Alarms}.
+
+A Counter is basically an integer value that can be incremented by 1 \+\_\+\+Tick using the primitive \mbox{\hyperlink{group__primitives-alarm_gabce1bd0e22433552b5c67aba978e4890}{Increment\+Counter()}}.
+
+An Alarm is a notification that is attached to a specific Counter (the link between a Counter and an Alarm is specified at compile time in the O\+IL Configuration file).
+
+An Alarm can be set to fire at a specified tick value using the primitives \mbox{\hyperlink{group__primitives-alarm_ga53c97ea958364f5d99684f871a462aad}{Set\+Rel\+Alarm()}} and \mbox{\hyperlink{group__primitives-alarm_gaa8dae0adc5647efdfb479e7c82f89754}{Set\+Abs\+Alarm()}}. Alarms can be set to be cyclically reactivated. Alarms can be canceled using the primitive \mbox{\hyperlink{group__primitives-alarm_ga7bfac685beaa3a62872ed44161e07e09}{Cancel\+Alarm()}}.
+
+When an Alarm fires, a notification takes place. A notification is set to be one of the following actions\+:
+
+
+\begin{DoxyItemize}
+\item Task activation. In this case, a task is activated when the Alarm fires.
+\item Event set. In this case, an event mask is set on a task when the Alarm fires.
+\item Alarm callback. In this case, an alarm callback (defined using \mbox{\hyperlink{group__primitives-alarm_ga051669c3fa80c56260c8a02de803d20a}{A\+L\+A\+R\+M\+C\+A\+L\+L\+B\+A\+C\+K()}}) is called. Alarm callbacks are {\itshape D\+E\+P\+R\+E\+C\+A\+T\+ED} by A\+U\+T\+O\+S\+AR.
+\end{DoxyItemize}
+
+The notifications are executed inside the \mbox{\hyperlink{group__primitives-alarm_gabce1bd0e22433552b5c67aba978e4890}{Increment\+Counter()}} function. It is up to the developer placing the counter in meaningful places (e.\+g., a timer interrupt).
+
+Counters, Alarms, and their notifications are specified inside the O\+IL configuration file.
+
+On multicore systems, Counters are statically assigned to C\+P\+Us at compile time. Counters are local to (and only visible in) a C\+PU. Alarms are local to the C\+PU that hosts the counter they are linked to.
+
+The O\+S\+E\+K/\+V\+DX standard provides support for {\itshape System Counters} (e.\+g., counters that are automatically linked to hardware timers). Please check on the E\+R\+I\+K\+A3 wiki whether the architecture you are using supports this feature (especially for the configuration of the hardware interrupt source). If the architecture does not support the feature, then all the counters have to be defined inside the O\+IL Configuration file, and the user have to call \mbox{\hyperlink{group__primitives-alarm_gabce1bd0e22433552b5c67aba978e4890}{Increment\+Counter()}} to increment them. 
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__primitives-alarm_ga051669c3fa80c56260c8a02de803d20a}\label{group__primitives-alarm_ga051669c3fa80c56260c8a02de803d20a}} 
+\index{Alarm and Counter Primitives@{Alarm and Counter Primitives}!ALARMCALLBACK@{ALARMCALLBACK}}
+\index{ALARMCALLBACK@{ALARMCALLBACK}!Alarm and Counter Primitives@{Alarm and Counter Primitives}}
+\doxysubsubsection{\texorpdfstring{ALARMCALLBACK}{ALARMCALLBACK}}
+{\footnotesize\ttfamily \#define A\+L\+A\+R\+M\+C\+A\+L\+L\+B\+A\+CK(\begin{DoxyParamCaption}\item[{}]{cbk }\end{DoxyParamCaption})~void cbk (void)}
+
+This macro is used both to declare and to define an alarm callback.
+
+Reference\+: O\+S\+EK OS -\/ I\+SO 17356-\/3 -\/ 13.\+7.\+5
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em cbk} & the callback name \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__primitives-alarm_ga63bf892b6ff4bd4e9841b053fc2e33ed}\label{group__primitives-alarm_ga63bf892b6ff4bd4e9841b053fc2e33ed}} 
+\index{Alarm and Counter Primitives@{Alarm and Counter Primitives}!DeclareAlarm@{DeclareAlarm}}
+\index{DeclareAlarm@{DeclareAlarm}!Alarm and Counter Primitives@{Alarm and Counter Primitives}}
+\doxysubsubsection{\texorpdfstring{DeclareAlarm}{DeclareAlarm}}
+{\footnotesize\ttfamily \#define Declare\+Alarm(\begin{DoxyParamCaption}\item[{}]{Alarm }\end{DoxyParamCaption})}
+
+Declares an alarm.
+
+This declaration is currently not mandatory because alarm identifiers are all declared within the code generated by R\+T-\/\+Druid.
+
+Reference\+: O\+S\+EK OS -\/ I\+SO 17356-\/3 -\/ 13.\+7.\+2.\+1
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Alarm} & The alarm to be declared. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__primitives-alarm_gae38670593ce93e38380396e9f1f7b09f}\label{group__primitives-alarm_gae38670593ce93e38380396e9f1f7b09f}} 
+\index{Alarm and Counter Primitives@{Alarm and Counter Primitives}!INVALID\_ALARM@{INVALID\_ALARM}}
+\index{INVALID\_ALARM@{INVALID\_ALARM}!Alarm and Counter Primitives@{Alarm and Counter Primitives}}
+\doxysubsubsection{\texorpdfstring{INVALID\_ALARM}{INVALID\_ALARM}}
+{\footnotesize\ttfamily \#define I\+N\+V\+A\+L\+I\+D\+\_\+\+A\+L\+A\+RM~((\mbox{\hyperlink{group__primitives-alarm_gac0db96397f5d9817124ffc05a9755b85}{Alarm\+Type}})-\/1)}
+
+A constant representing an invalid alarm ID. 
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{group__primitives-alarm_gac0db96397f5d9817124ffc05a9755b85}\label{group__primitives-alarm_gac0db96397f5d9817124ffc05a9755b85}} 
+\index{Alarm and Counter Primitives@{Alarm and Counter Primitives}!AlarmType@{AlarmType}}
+\index{AlarmType@{AlarmType}!Alarm and Counter Primitives@{Alarm and Counter Primitives}}
+\doxysubsubsection{\texorpdfstring{AlarmType}{AlarmType}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{ee__api__types_8h_ae634ad90564c1481bb02785b5498faf1}{O\+S\+E\+E\+\_\+\+A\+L\+A\+R\+M\+\_\+\+I\+D\+\_\+\+T\+Y\+PE}} \mbox{\hyperlink{group__primitives-alarm_gac0db96397f5d9817124ffc05a9755b85}{Alarm\+Type}}}
+
+Type used to store an Alarm ID. \mbox{\Hypertarget{group__primitives-alarm_ga871c90fa43c4c8b68846b89d036a753c}\label{group__primitives-alarm_ga871c90fa43c4c8b68846b89d036a753c}} 
+\index{Alarm and Counter Primitives@{Alarm and Counter Primitives}!CounterType@{CounterType}}
+\index{CounterType@{CounterType}!Alarm and Counter Primitives@{Alarm and Counter Primitives}}
+\doxysubsubsection{\texorpdfstring{CounterType}{CounterType}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{ee__api__types_8h_a5729e8f24953268ffe18e86b881c7f7f}{O\+S\+E\+E\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+T\+Y\+PE}} \mbox{\hyperlink{group__primitives-alarm_ga871c90fa43c4c8b68846b89d036a753c}{Counter\+Type}}}
+
+This type represents a counter. \mbox{\Hypertarget{group__primitives-alarm_gaf7915c4762698a00e6a4d4d60eb9f998}\label{group__primitives-alarm_gaf7915c4762698a00e6a4d4d60eb9f998}} 
+\index{Alarm and Counter Primitives@{Alarm and Counter Primitives}!TickRefType@{TickRefType}}
+\index{TickRefType@{TickRefType}!Alarm and Counter Primitives@{Alarm and Counter Primitives}}
+\doxysubsubsection{\texorpdfstring{TickRefType}{TickRefType}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{group__primitives-alarm_ga169b940dbe47167e06113454538d3484}{Tick\+Type}}$\ast$ \mbox{\hyperlink{group__primitives-alarm_gaf7915c4762698a00e6a4d4d60eb9f998}{Tick\+Ref\+Type}}}
+
+This type is a pointer to a Tick\+Type, used as parameter of a primitive. \mbox{\Hypertarget{group__primitives-alarm_ga169b940dbe47167e06113454538d3484}\label{group__primitives-alarm_ga169b940dbe47167e06113454538d3484}} 
+\index{Alarm and Counter Primitives@{Alarm and Counter Primitives}!TickType@{TickType}}
+\index{TickType@{TickType}!Alarm and Counter Primitives@{Alarm and Counter Primitives}}
+\doxysubsubsection{\texorpdfstring{TickType}{TickType}}
+{\footnotesize\ttfamily typedef O\+S\+E\+E\+\_\+\+T\+I\+C\+K\+\_\+\+T\+Y\+PE \mbox{\hyperlink{group__primitives-alarm_ga169b940dbe47167e06113454538d3484}{Tick\+Type}}}
+
+This type represents the value of ticks a counter can store. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__primitives-alarm_ga7bfac685beaa3a62872ed44161e07e09}\label{group__primitives-alarm_ga7bfac685beaa3a62872ed44161e07e09}} 
+\index{Alarm and Counter Primitives@{Alarm and Counter Primitives}!CancelAlarm@{CancelAlarm}}
+\index{CancelAlarm@{CancelAlarm}!Alarm and Counter Primitives@{Alarm and Counter Primitives}}
+\doxysubsubsection{\texorpdfstring{CancelAlarm()}{CancelAlarm()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ee__api__types_8h_a79bf54a17078edb124b553c51129396a}{Status\+Type}} Cancel\+Alarm (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__primitives-alarm_gac0db96397f5d9817124ffc05a9755b85}{Alarm\+Type}}}]{Alarm\+ID }\end{DoxyParamCaption})}
+
+The primitive cancels the alarm {\itshape Alarm\+ID}. Allowed on task level and in I\+SR, but not in hook routines.
+
+Conformance Classes\+: B\+C\+C1, B\+C\+C2, E\+C\+C1, E\+C\+C2
+
+Reference\+: O\+S\+EK OS -\/ I\+SO 17356-\/3 -\/ 13.\+7.\+3.\+5
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Alarm\+ID} & Alarm identifier. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The function returns a Status\+Type.
+\begin{DoxyItemize}
+\item E\+\_\+\+OK No error.
+\item E\+\_\+\+O\+S\+\_\+\+N\+O\+F\+U\+NC Alarm\+ID not in use.
+\item E\+\_\+\+O\+S\+\_\+\+ID (Extended) Reference Alarm\+ID is invalid. 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__primitives-alarm_gaf4ec030009919c1e52a1fb6f654e744e}\label{group__primitives-alarm_gaf4ec030009919c1e52a1fb6f654e744e}} 
+\index{Alarm and Counter Primitives@{Alarm and Counter Primitives}!GetAlarm@{GetAlarm}}
+\index{GetAlarm@{GetAlarm}!Alarm and Counter Primitives@{Alarm and Counter Primitives}}
+\doxysubsubsection{\texorpdfstring{GetAlarm()}{GetAlarm()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ee__api__types_8h_a79bf54a17078edb124b553c51129396a}{Status\+Type}} Get\+Alarm (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__primitives-alarm_gac0db96397f5d9817124ffc05a9755b85}{Alarm\+Type}}}]{Alarm\+ID,  }\item[{\mbox{\hyperlink{group__primitives-alarm_gaf7915c4762698a00e6a4d4d60eb9f998}{Tick\+Ref\+Type}}}]{Tick }\end{DoxyParamCaption})}
+
+The system service \mbox{\hyperlink{group__primitives-alarm_gaf4ec030009919c1e52a1fb6f654e744e}{Get\+Alarm()}} returns the relative value in ticks before the alarm Alarm\+ID expires. If Alarm\+ID is not in use, Tick has an undefined value. Allowed on task level, I\+SR, and in several hook routines.
+
+Conformance Classes\+: B\+C\+C1, B\+C\+C2, E\+C\+C1, E\+C\+C2
+
+Reference\+: O\+S\+EK OS -\/ I\+SO 17356-\/3 -\/ 13.\+7.\+3.\+2
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Alarm\+ID} & Alarm identifier. \\
+\hline
+\mbox{\texttt{ out}}  & {\em Tick} & Relative value in ticks before the alarm expires. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The function returns a Status\+Type.
+\begin{DoxyItemize}
+\item E\+\_\+\+OK No error.
+\item E\+\_\+\+O\+S\+\_\+\+N\+O\+F\+U\+NC Alarm\+ID is not used.
+\item E\+\_\+\+O\+S\+\_\+\+ID (Extended) Reference Alarm\+ID is invalid. 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__primitives-alarm_gac2896b1e98a206eaa45d3d76f2a184a9}\label{group__primitives-alarm_gac2896b1e98a206eaa45d3d76f2a184a9}} 
+\index{Alarm and Counter Primitives@{Alarm and Counter Primitives}!GetAlarmBase@{GetAlarmBase}}
+\index{GetAlarmBase@{GetAlarmBase}!Alarm and Counter Primitives@{Alarm and Counter Primitives}}
+\doxysubsubsection{\texorpdfstring{GetAlarmBase()}{GetAlarmBase()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ee__api__types_8h_a79bf54a17078edb124b553c51129396a}{Status\+Type}} Get\+Alarm\+Base (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__primitives-alarm_gac0db96397f5d9817124ffc05a9755b85}{Alarm\+Type}}}]{Alarm\+ID,  }\item[{\mbox{\hyperlink{ee__api__types_8h_a2ccea1c01502210d149699869ac513f3}{Alarm\+Base\+Ref\+Type}}}]{Info }\end{DoxyParamCaption})}
+
+Returns the alarm base characteristics. The return value Info is a structure in which the information of data type \mbox{\hyperlink{structAlarmBaseType}{Alarm\+Base\+Type}} is stored.
+
+Allowed on task level, I\+SR, and in several hook routines.
+
+Conformance Classes\+: B\+C\+C1, B\+C\+C2, E\+C\+C1, E\+C\+C2
+
+Reference\+: O\+S\+EK OS -\/ I\+SO 17356-\/3 -\/ 13.\+7.\+3.\+1
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Alarm\+ID} & Alarm identifier. \\
+\hline
+\mbox{\texttt{ out}}  & {\em Info} & Reference to the structure containing the constants that define the alarm base. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The function returns a Status\+Type.
+\begin{DoxyItemize}
+\item E\+\_\+\+OK No error.
+\item E\+\_\+\+O\+S\+\_\+\+ID (Extended) Reference Alarm\+ID is invalid. 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__primitives-alarm_gaa0cf5297acb15cf35903879e19cac5b4}\label{group__primitives-alarm_gaa0cf5297acb15cf35903879e19cac5b4}} 
+\index{Alarm and Counter Primitives@{Alarm and Counter Primitives}!GetCounterValue@{GetCounterValue}}
+\index{GetCounterValue@{GetCounterValue}!Alarm and Counter Primitives@{Alarm and Counter Primitives}}
+\doxysubsubsection{\texorpdfstring{GetCounterValue()}{GetCounterValue()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ee__api__types_8h_a79bf54a17078edb124b553c51129396a}{Status\+Type}} Get\+Counter\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__primitives-alarm_ga871c90fa43c4c8b68846b89d036a753c}{Counter\+Type}}}]{Counter\+ID,  }\item[{\mbox{\hyperlink{group__primitives-alarm_gaf7915c4762698a00e6a4d4d60eb9f998}{Tick\+Ref\+Type}}}]{Value }\end{DoxyParamCaption})}
+
+This service reads the current count value of a counter returning or the software ticks.
+
+Conformance Classes\+: B\+C\+C1, B\+C\+C2, E\+C\+C1, E\+C\+C2
+
+Reference\+: A\+U\+T\+O\+S\+AR OS -\/ S\+W\+S\+\_\+\+Os\+\_\+00383
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Counter\+ID} & The counter whose tick value should be read. \\
+\hline
+\mbox{\texttt{ out}}  & {\em Value} & The value read from the Counter \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The function returns a Status\+Type.
+\begin{DoxyItemize}
+\item E\+\_\+\+OK No Error.
+\item E\+\_\+\+O\+S\+\_\+\+ID (Extended) Reference Counter\+ID is invalid. 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__primitives-alarm_gac831b2f7b67e61a5b6ff94200f3a8d81}\label{group__primitives-alarm_gac831b2f7b67e61a5b6ff94200f3a8d81}} 
+\index{Alarm and Counter Primitives@{Alarm and Counter Primitives}!GetElapsedValue@{GetElapsedValue}}
+\index{GetElapsedValue@{GetElapsedValue}!Alarm and Counter Primitives@{Alarm and Counter Primitives}}
+\doxysubsubsection{\texorpdfstring{GetElapsedValue()}{GetElapsedValue()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ee__api__types_8h_a79bf54a17078edb124b553c51129396a}{Status\+Type}} Get\+Elapsed\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__primitives-alarm_ga871c90fa43c4c8b68846b89d036a753c}{Counter\+Type}}}]{Counter\+ID,  }\item[{\mbox{\hyperlink{group__primitives-alarm_gaf7915c4762698a00e6a4d4d60eb9f998}{Tick\+Ref\+Type}}}]{Value,  }\item[{\mbox{\hyperlink{group__primitives-alarm_gaf7915c4762698a00e6a4d4d60eb9f998}{Tick\+Ref\+Type}}}]{Elapsed\+Value }\end{DoxyParamCaption})}
+
+This service gets the number of ticks between the current tick value and a previously read tick value. If the timer already passed the {\itshape Value} value a second (or multiple) time, the result returned is wrong. The reason is that the service can not detect such a relative overflow.
+
+Conformance Classes\+: B\+C\+C1, B\+C\+C2, E\+C\+C1, E\+C\+C2
+
+Reference\+: A\+U\+T\+O\+S\+AR OS -\/ S\+W\+S\+\_\+\+Os\+\_\+00392
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Counter\+ID} & The Counter which tick value should be read. \\
+\hline
+\mbox{\texttt{ out}}  & {\em Value} & Contains the previously read tick value the counter. \\
+\hline
+\mbox{\texttt{ out}}  & {\em Elapsed\+Value} & Will contains the difference to the previous value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The function returns a Status\+Type.
+\begin{DoxyItemize}
+\item E\+\_\+\+OK No error.
+\item E\+\_\+\+O\+S\+\_\+\+ID (Extended) Reference Counter\+ID is invalid.
+\item E\+\_\+\+O\+S\+\_\+\+V\+A\+L\+UE (Extended) The given Value is invalid. 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__primitives-alarm_gabce1bd0e22433552b5c67aba978e4890}\label{group__primitives-alarm_gabce1bd0e22433552b5c67aba978e4890}} 
+\index{Alarm and Counter Primitives@{Alarm and Counter Primitives}!IncrementCounter@{IncrementCounter}}
+\index{IncrementCounter@{IncrementCounter}!Alarm and Counter Primitives@{Alarm and Counter Primitives}}
+\doxysubsubsection{\texorpdfstring{IncrementCounter()}{IncrementCounter()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ee__api__types_8h_a79bf54a17078edb124b553c51129396a}{Status\+Type}} Increment\+Counter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__primitives-alarm_ga871c90fa43c4c8b68846b89d036a753c}{Counter\+Type}}}]{Counter\+ID }\end{DoxyParamCaption})}
+
+This function receives a counter identifier as parameter, and it increments it by 1. This function is typically called inside an I\+SR type 2 or inside a task to notify that the trigger the counter is counting has happened.
+
+The function also implements the notification of expired alarms, that is implemented, depending on the alarm configuration, as\+:
+
+
+\begin{DoxyItemize}
+\item an alarm callback function;
+\item a task activation;
+\item an event mask set on an extended task.
+\end{DoxyItemize}
+
+The function is atomic, and a reschedule will happen at the end if the primitive is called at task level. If called at I\+SR level, the reschedule will happen at the end of the outermost nested I\+RQ.
+
+Conformance Classes\+: B\+C\+C1, B\+C\+C2, E\+C\+C1, E\+C\+C2
+
+Reference\+: A\+U\+T\+O\+S\+AR OS S\+W\+S\+\_\+\+Os\+\_\+00301
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Counter\+ID} & The counter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The function returns a Status\+Type.
+\begin{DoxyItemize}
+\item E\+\_\+\+OK No error.
+\item E\+\_\+\+O\+S\+\_\+\+ID (Extended) Counter\+ID is invalid or counter is implemented in hardware and can not be incremented by software. 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__primitives-alarm_gaa8dae0adc5647efdfb479e7c82f89754}\label{group__primitives-alarm_gaa8dae0adc5647efdfb479e7c82f89754}} 
+\index{Alarm and Counter Primitives@{Alarm and Counter Primitives}!SetAbsAlarm@{SetAbsAlarm}}
+\index{SetAbsAlarm@{SetAbsAlarm}!Alarm and Counter Primitives@{Alarm and Counter Primitives}}
+\doxysubsubsection{\texorpdfstring{SetAbsAlarm()}{SetAbsAlarm()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ee__api__types_8h_a79bf54a17078edb124b553c51129396a}{Status\+Type}} Set\+Abs\+Alarm (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__primitives-alarm_gac0db96397f5d9817124ffc05a9755b85}{Alarm\+Type}}}]{Alarm\+ID,  }\item[{\mbox{\hyperlink{group__primitives-alarm_ga169b940dbe47167e06113454538d3484}{Tick\+Type}}}]{start,  }\item[{\mbox{\hyperlink{group__primitives-alarm_ga169b940dbe47167e06113454538d3484}{Tick\+Type}}}]{cycle }\end{DoxyParamCaption})}
+
+The primitive occupies the alarm {\itshape Alarm\+ID} element. When {\itshape start} ticks are reached, the {\itshape Alarm\+ID} notification is executed.
+
+If the absolute value {\itshape start} is equal to the actual counter value, the alarm not expire immediately but will expire the next time the counter will reach the {\itshape start} value.
+
+If {\itshape cycle} is unequal zero, the alarm element is logged on again immediately after expiry with the relative value {\itshape cycle}.
+
+The alarm {\itshape Alarm\+ID} shall not already be in use. To change values of alarms already in use the alarm shall be canceled first. If the alarm is already in use, this call will be ignored and the error E\+\_\+\+O\+S\+\_\+\+S\+T\+A\+TE is returned. Allowed on task level and in I\+SR, but not in hook routines.
+
+Conformance Classes\+: B\+C\+C1, B\+C\+C2, E\+C\+C1, E\+C\+C2
+
+Reference\+: O\+S\+EK OS -\/ I\+SO 17356-\/3 -\/ 13.\+7.\+3.\+4
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Alarm\+ID} & Alarm identifier. \\
+\hline
+\mbox{\texttt{ in}}  & {\em start} & Absolute value in ticks representing the absolute offset of the first alarm expiration. \\
+\hline
+\mbox{\texttt{ in}}  & {\em cycle} & Cycle value in case of cyclic alarm. In case of single alarms, this parameter must be set to 0. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The function returns a Status\+Type.
+\begin{DoxyItemize}
+\item E\+\_\+\+OK No error.
+\item E\+\_\+\+O\+S\+\_\+\+S\+T\+A\+TE Alarm is already in use.
+\item E\+\_\+\+O\+S\+\_\+\+ID (Extended) reference Alarm\+ID is invalid.
+\item E\+\_\+\+O\+S\+\_\+\+V\+A\+L\+UE (Extended) Value of {\itshape increment} outside of the admissible limits, or value of {\itshape cycle} unequal to 0 and outside of the admissible counter limits. 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__primitives-alarm_ga53c97ea958364f5d99684f871a462aad}\label{group__primitives-alarm_ga53c97ea958364f5d99684f871a462aad}} 
+\index{Alarm and Counter Primitives@{Alarm and Counter Primitives}!SetRelAlarm@{SetRelAlarm}}
+\index{SetRelAlarm@{SetRelAlarm}!Alarm and Counter Primitives@{Alarm and Counter Primitives}}
+\doxysubsubsection{\texorpdfstring{SetRelAlarm()}{SetRelAlarm()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ee__api__types_8h_a79bf54a17078edb124b553c51129396a}{Status\+Type}} Set\+Rel\+Alarm (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__primitives-alarm_gac0db96397f5d9817124ffc05a9755b85}{Alarm\+Type}}}]{Alarm\+ID,  }\item[{\mbox{\hyperlink{group__primitives-alarm_ga169b940dbe47167e06113454538d3484}{Tick\+Type}}}]{increment,  }\item[{\mbox{\hyperlink{group__primitives-alarm_ga169b940dbe47167e06113454538d3484}{Tick\+Type}}}]{cycle }\end{DoxyParamCaption})}
+
+After {\itshape increment} ticks have elapsed, the {\itshape Alarm\+ID} notification is executed.
+
+If the relative value {\itshape increment} is very small, the alarm may expire, and the notification can be executed before the system service returns to the user. If {\itshape cycle} is unequal zero, the alarm element is logged on again immediately after expiry with the relative value {\itshape cycle}.
+
+The alarm {\itshape Alarm\+ID} must not already be in use. To change values of alarms already in use the alarm shall be canceled first.
+
+If the alarm is already in use, this call will be ignored and the error E\+\_\+\+O\+S\+\_\+\+S\+T\+A\+TE is returned. Allowed on task level and in I\+SR, but not in hook routines.
+
+Conformance Classes\+: B\+C\+C1, B\+C\+C2, E\+C\+C1, E\+C\+C2
+
+Reference\+: O\+S\+EK OS -\/ I\+SO 17356-\/3 -\/ 13.\+7.\+3.\+3
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Alarm\+ID} & Alarm identifier. \\
+\hline
+\mbox{\texttt{ in}}  & {\em increment} & Relative value in ticks representing the offset with respect to the current time of the first alarm expiration. \\
+\hline
+\mbox{\texttt{ in}}  & {\em cycle} & Cycle value in case of cyclic alarm. In case of single alarms, this parameter must be set to 0. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The function returns a Status\+Type.
+\begin{DoxyItemize}
+\item E\+\_\+\+OK No error.
+\item E\+\_\+\+O\+S\+\_\+\+S\+T\+A\+TE Alarm is already in use.
+\item E\+\_\+\+O\+S\+\_\+\+ID (Extended) reference Alarm\+ID is invalid.
+\item E\+\_\+\+O\+S\+\_\+\+V\+A\+L\+UE Value of {\itshape increment} equal to 0.
+\item E\+\_\+\+O\+S\+\_\+\+V\+A\+L\+UE (Extended) Value of {\itshape increment} outside of the admissible limits, or value of {\itshape cycle} unequal to 0 and outside of the admissible counter limits. 
+\end{DoxyItemize}
+\end{DoxyReturn}

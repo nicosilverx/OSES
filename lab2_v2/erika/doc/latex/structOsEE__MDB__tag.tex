@@ -1,0 +1,54 @@
+\hypertarget{structOsEE__MDB__tag}{}\doxysection{Os\+E\+E\+\_\+\+M\+D\+B\+\_\+tag Struct Reference}
+\label{structOsEE__MDB__tag}\index{OsEE\_MDB\_tag@{OsEE\_MDB\_tag}}
+
+
+Mutual exclusion descriptor block.  
+
+
+
+
+{\ttfamily \#include $<$ee\+\_\+kernel\+\_\+types.\+h$>$}
+
+
+
+Collaboration diagram for Os\+E\+E\+\_\+\+M\+D\+B\+\_\+tag\+:
+% FIG 0
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structOsEE__MDB__tag_af12d4104f9432c9b40923093e8a8dcaa}\label{structOsEE__MDB__tag_af12d4104f9432c9b40923093e8a8dcaa}} 
+\mbox{\hyperlink{structOsEE__MCB}{Os\+E\+E\+\_\+\+M\+CB}} $\ast$ \mbox{\hyperlink{structOsEE__MDB__tag_af12d4104f9432c9b40923093e8a8dcaa}{p\+\_\+cb}}
+\begin{DoxyCompactList}\small\item\em pointer to the flash descriptor (shortcut to optimize the system access \end{DoxyCompactList}\item 
+Os\+E\+E\+\_\+spin\+\_\+lock $\ast$ \mbox{\hyperlink{structOsEE__MDB__tag_a456c4f13788ddcb0860fa341b683eaf1}{p\+\_\+spinlock\+\_\+arch}}
+\begin{DoxyCompactList}\small\item\em H\+AL part of the spinlock. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__primitives-task_ga2fbf8607316afe2fe7d402a8f6e00008}{Task\+Prio}} \mbox{\hyperlink{structOsEE__MDB__tag_af726ccdef1064ba81d639961e0a78770}{prio}}
+\begin{DoxyCompactList}\small\item\em ceiling priority of the resource or of the spinlock (note that the spinlock may be configured to have its own ceiling. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structOsEE__MDB__tag_af52b4dfdfe345ba183651647ae1254bb}\label{structOsEE__MDB__tag_af52b4dfdfe345ba183651647ae1254bb}} 
+\mbox{\hyperlink{group__primitives-multicore_ga679c3963e5157e5ec5f771462ffe464c}{Core\+Mask\+Type}} \mbox{\hyperlink{structOsEE__MDB__tag_af52b4dfdfe345ba183651647ae1254bb}{allowed\+\_\+core\+\_\+mask}}
+\begin{DoxyCompactList}\small\item\em these are the cores that are allowed to use the resource/spinlock \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structOsEE__MDB__tag_a655531d43f20f7347dcba697eb72cda8}\label{structOsEE__MDB__tag_a655531d43f20f7347dcba697eb72cda8}} 
+\mbox{\hyperlink{ee__kernel__types_8h_aac88ce5982bf0bc00cd6af0cccb98910}{Os\+E\+E\+\_\+m\+\_\+type}} \mbox{\hyperlink{structOsEE__MDB__tag_a655531d43f20f7347dcba697eb72cda8}{m\+\_\+type}}
+\begin{DoxyCompactList}\small\item\em type that says whether this data structure is related to a resource or a spinlock \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The descriptor block tracks the specific mutual exclusion object, which can be either a Resource or a Spin Lock. They are handled together because they have to be released in L\+I\+FO order \mbox{[}S\+W\+S\+\_\+\+Os\+\_\+00801\mbox{]}. 
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{structOsEE__MDB__tag_a456c4f13788ddcb0860fa341b683eaf1}\label{structOsEE__MDB__tag_a456c4f13788ddcb0860fa341b683eaf1}} 
+\index{OsEE\_MDB\_tag@{OsEE\_MDB\_tag}!p\_spinlock\_arch@{p\_spinlock\_arch}}
+\index{p\_spinlock\_arch@{p\_spinlock\_arch}!OsEE\_MDB\_tag@{OsEE\_MDB\_tag}}
+\doxysubsubsection{\texorpdfstring{p\_spinlock\_arch}{p\_spinlock\_arch}}
+{\footnotesize\ttfamily Os\+E\+E\+\_\+spin\+\_\+lock$\ast$ Os\+E\+E\+\_\+\+M\+D\+B\+\_\+tag\+::p\+\_\+spinlock\+\_\+arch}
+
+a register if the spinlock is hardware, or a data structure if done in memory \mbox{\Hypertarget{structOsEE__MDB__tag_af726ccdef1064ba81d639961e0a78770}\label{structOsEE__MDB__tag_af726ccdef1064ba81d639961e0a78770}} 
+\index{OsEE\_MDB\_tag@{OsEE\_MDB\_tag}!prio@{prio}}
+\index{prio@{prio}!OsEE\_MDB\_tag@{OsEE\_MDB\_tag}}
+\doxysubsubsection{\texorpdfstring{prio}{prio}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__primitives-task_ga2fbf8607316afe2fe7d402a8f6e00008}{Task\+Prio}} Os\+E\+E\+\_\+\+M\+D\+B\+\_\+tag\+::prio}
+
+The virtual priorities in E\+R\+I\+K\+A3 allows a simple way to obtain the various levels of priority raising for the spinlocks (e.\+g., O\+S\+E\+E\+\_\+\+I\+S\+R\+\_\+\+A\+L\+L\+\_\+\+P\+R\+IO means that all I\+SR are blocked) 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+inc/\mbox{\hyperlink{ee__kernel__types_8h}{ee\+\_\+kernel\+\_\+types.\+h}}\end{DoxyCompactItemize}

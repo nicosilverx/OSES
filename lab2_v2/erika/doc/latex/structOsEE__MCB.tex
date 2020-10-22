@@ -1,0 +1,35 @@
+\hypertarget{structOsEE__MCB}{}\doxysection{Os\+E\+E\+\_\+\+M\+CB Struct Reference}
+\label{structOsEE__MCB}\index{OsEE\_MCB@{OsEE\_MCB}}
+
+
+Mutual exclusion control block.  
+
+
+
+
+{\ttfamily \#include $<$ee\+\_\+kernel\+\_\+types.\+h$>$}
+
+
+
+Collaboration diagram for Os\+E\+E\+\_\+\+M\+CB\+:
+% FIG 0
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structOsEE__MCB_a3b211c947ac5eafe54a6b6385885641a}\label{structOsEE__MCB_a3b211c947ac5eafe54a6b6385885641a}} 
+struct \mbox{\hyperlink{structOsEE__MDB__tag}{Os\+E\+E\+\_\+\+M\+D\+B\+\_\+tag}} const  $\ast$ \mbox{\hyperlink{structOsEE__MCB_a3b211c947ac5eafe54a6b6385885641a}{p\+\_\+next}}
+\begin{DoxyCompactList}\small\item\em pointer to the next \textquotesingle{}\textquotesingle{}mutex\textquotesingle{}\textquotesingle{} (the system needs to guarantee the L\+I\+FO order of the semaphore/spin lock allocation) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structOsEE__MCB_a0e0e68699fa8d3bcfad0135ad2184ccc}\label{structOsEE__MCB_a0e0e68699fa8d3bcfad0135ad2184ccc}} 
+\mbox{\hyperlink{group__primitives-task_ga2fbf8607316afe2fe7d402a8f6e00008}{Task\+Prio}} \mbox{\hyperlink{structOsEE__MCB_a0e0e68699fa8d3bcfad0135ad2184ccc}{prev\+\_\+prio}}
+\begin{DoxyCompactList}\small\item\em this is the previous task priority when the mutex was locked. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structOsEE__MCB_a9b57c2b9cbfb3f264a9d61f47bc83f15}\label{structOsEE__MCB_a9b57c2b9cbfb3f264a9d61f47bc83f15}} 
+struct \mbox{\hyperlink{structOsEE__TDB__tag}{Os\+E\+E\+\_\+\+T\+D\+B\+\_\+tag}} const  $\ast$ \mbox{\hyperlink{structOsEE__MCB_a9b57c2b9cbfb3f264a9d61f47bc83f15}{p\+\_\+owner}}
+\begin{DoxyCompactList}\small\item\em owner of the mutex/spinlock \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The system needs to track the order in which Resources and Spin-\/locks are taken in order to verify they are released in L\+I\+FO order \mbox{[}S\+W\+S\+\_\+\+Os\+\_\+00801\mbox{]}. Also the owner has to be tracked. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+inc/\mbox{\hyperlink{ee__kernel__types_8h}{ee\+\_\+kernel\+\_\+types.\+h}}\end{DoxyCompactItemize}

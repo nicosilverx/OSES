@@ -1,0 +1,29 @@
+digraph "OsEE_SN_tag"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="OsEE_SN_tag",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Scheduler node data structure."];
+  Node1 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" p_next" ];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" p_tdb" ];
+  Node2 [label="OsEE_TDB_tag",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structOsEE__TDB__tag.html",tooltip="The Task Descriptor Block."];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" p_tcb" ];
+  Node3 [label="OsEE_TCB",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structOsEE__TCB.html",tooltip="The Task Control Block."];
+  Node1 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" p_own_sn" ];
+  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" p_last_m" ];
+  Node4 [label="OsEE_MDB_tag",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structOsEE__MDB__tag.html",tooltip="Mutual exclusion descriptor block."];
+  Node5 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" p_cb" ];
+  Node5 [label="OsEE_MCB",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structOsEE__MCB.html",tooltip="Mutual exclusion control block."];
+  Node2 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" p_owner" ];
+  Node4 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" p_next" ];
+  Node6 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" hdb" ];
+  Node6 [label="OsEE_HDB_tag",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structOsEE__HDB__tag.html",tooltip=" "];
+  Node7 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" p_scb" ];
+  Node7 [label="OsEE_SCB_tag",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structOsEE__SCB__tag.html",tooltip=" "];
+  Node8 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" p_tos" ];
+  Node8 [label="OsEE_CTX_tag",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structOsEE__CTX__tag.html",tooltip=" "];
+  Node8 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" p_ctx" ];
+  Node9 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" p_sdb" ];
+  Node9 [label="OsEE_SDB_tag",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structOsEE__SDB__tag.html",tooltip=" "];
+  Node8 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" p_bos" ];
+}
